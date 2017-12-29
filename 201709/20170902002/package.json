@@ -1,0 +1,19 @@
+{
+  "name": "20170902002",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "luojianet <997948809@163.com>",
+  "license": "ISC",
+  "dependencies": {
+    "animate.css": "^3.5.2",
+    "font-awesome": "^4.7.0",
+    "resetcss": "^1.0.3",
+    "vue": "^2.4.2",
+    "vue2-animate": "^1.0.4"
+  }
+}

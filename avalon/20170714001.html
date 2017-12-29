@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="node_modules/avalon2/dist/avalon.js"></script>
+    <script>
+        var vm = avalon.define({
+                $id: "validate1",
+                aaa: "",
+                bbb: '',
+                ccc: '',
+                tabId:'1',
+                validate: {
+                    onError: function (reasons) {
+                        reasons.forEach(function (reason) {
+                            console.log(reason.getMessage())
+                        })
+                    },
+                    onValidateAll: function (reasons) {
+                        console.log(reasons);
+                        if (reasons.length) {
+                            console.log('有表单没有通过')
+                        } else {
+                            vm.submit(tabId);
+                            console.log('全部通过')
+                        }
+                    }
+                },
+                submit: function() {
+
+                    var data= {
+                            username: vm.aaa,
+                            password: vm.bbb,
+                            confirmP:vm.ccc
+                        }
+                    var url = 'http://dy.help.xunlei.com/index.php?c=invoice&a=submit'
+                    console.log(data);
+                    /*$.ajax({
+                        url: url,
+                        data: data,
+                        dataType: 'jsonp',
+                        success: function(r) {
+                            if (r.result) {
+
+                            } else {
+
+                            }
+                        }
+                    });*/
+                }
+            })
+    </script>
+</head>
+<body>
+    <div ms-controller="validate1">
+      <form ms-validate="@validate">
+          <p><input placeholder="username" ms-rules='{required:true,chs:true}' ms-duplex="@aaa" >{{@aaa}}</p>
+          <p><input type="password" id="pw" placeholder="password" ms-rules='{required:true}' ms-duplex="@bbb" /></p>
+          <p><input type="password"  placeholder="再填一次" ms-rules="{required:true,equalto:'pw'}" ms-duplex="@ccc | change" /></p>
+          <p><input type="submit"  ms-click="submit(1)" value="submit"/></p>
+      </form>
+    </div>
+</body>
+
+</html>

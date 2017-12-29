@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
+		<style type="text/css">
+				.invoice_cont_box{width: 90px !important;}
+				.invoice_cont_box .select-cont{z-index: 1 !important;}
+				/*气泡提示*/
+				.bubbleTip{
+					z-index: 5;
+					white-space: nowrap;
+				    left: 0;
+					color: #fff;
+					top: -30px;
+					display: inline-block;
+				    border:1px solid #ccc;
+				    position:absolute;
+				    background-color:#615c20;
+				    padding: 2px 8px;
+				    border-radius: 10px;
+				}
+				.bubbleTip:after{
+				    content:"";
+				    display:block;
+				    border-width:5px;
+				    position:absolute; 
+				    bottom:-10px;
+				    left:10px;
+				    border-style:solid dashed dashed;
+				    border-color:#615c20 transparent transparent;
+				    font-size:0;
+				    line-height:0;
+				}
+				.bubbleTip a{
+					color:#ffee02;
+					text-decoration : none
+				}
+			</style>
+	</head>
+	<body>
+		<form id="loginForm">
+			<div>
+				<div>请登录：</div>
+				<div>
+					<input class="test" type="text" maxlength="20" name="userAccount" placeholder="用户名（手机号）" />
+				</div>
+				<div>
+					<input type="password" name="password" placeholder="密码" />
+				</div>
+				<div>
+					<input type="text" id="captcha" placeholder="验证码，大小写都可以"/>
+					<span id="captchaChecked" style="display:none;color:green;font-weight:bold">√</span>
+				</div>
+				<div class="captchaDiv">
+					<img class="captcha_img" id="captchaImg" alt="点击刷新验证码">看不清楚？点我！
+				</div>
+				<div>
+					<a href="javascript:;" id="submit">登录</a>
+				</div>
+			</div>
+		</form>
+		<script>
+		$(document).ready(function(){
+			$("#submit").click(function(){
+				$("#loginForm input").each(function(){
+					if ($(this).attr("name")=="userAccount"&&$(this).val()=="") {
+							$(this).after('<div class="bubbleTip">是必填项目</div>').parent().css("position","relative");
+							/*setTimeout(function(){
+								$("."+x).find(".bubbleTip").remove();
+							},1500);*/
+							return false
+						
+					}else if($(this).val()==""){
+						$(this).after('<div class="bubbleTip">是必填项目</div>').parent().css("position","relative");
+						return false
+					}
+				});
+			});
+		});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MVVM</title>
+    <script type="text/javascript" src="index.js"></script>
+    <style type="text/css">
+        .mvvm{
+            color: #fff;
+            background-color: #55ffaa;
+        }
+        .super_box {
+            border: 1px solid;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body foio-controller='mvvm'>
+    <!-- 超会专享 -->
+    <section class="main_sec super">
+        <header class="sub_hd">
+            <h2>超会专享</h2>
+            <p class="txt_sub">超级会员每月补贴<em>100万</em></p>
+            <p class="txt_tie">本月已补贴<em><span class="num">70</span>万</em></p>
+        </header>
+        <div class="super_wp">
+            <div class="super_box">
+                <div class="super_cont">
+                    <div class="txt_box">
+                        <p class="txt_tt">低价购特权</p>
+                        <p><span class="mvvm">你的名字:</span>{{nickname}}</p>
+                        <input type="text" foio-model="nickname">
+                        <div class="ic_box"><img src="img/super/1.png" alt="腾讯会员卡"></div>
+                        <p class="txt_super">16元开腾讯视频会员</p>
+                        <a href="#" class="btn_super">领取资格</a>
+                    </div>
+                </div>
+            </div>
+            <div class="super_box">
+                <div class="super_cont">
+                    <div class="txt_box">
+                        <p class="txt_tt">娱乐特权</p>
+                        <p><span class="mvvm">你的年龄:</span>{{age}}</p>
+                        <div class="ic_box"><img src="img/super/2.png" alt="iphone8"></div>
+                        <p class="txt_super">每天免费抽iPhone8</p>
+                        <a href="#" class="btn_super">查看详情</a>
+                    </div>
+                </div>
+            </div>
+            <div class="super_box">
+                <div class="super_cont">
+                    <div class="txt_box">
+                        <p class="txt_tt">兑换特权</p>
+                        <p><span class="mvvm">性别:</span>{{sex}}</p>
+                        <div class="ic_box">
+                            <div class="ic_ball">
+                                <i class="ic_wave" style="height: 40%">
+                                    <i class="ic_w1"></i>
+                                    <i class="ic_w2"></i>
+                                </i>
+                                <span class="num"><em>58</em>点</span>
+                                <i class="ic_float"></i>
+                            </div>
+                        </div>
+                        <p class="txt_super">88点能量开启礼盒</p>
+                        <a href="#" class="btn_super">收集能量</a>
+                    </div>
+                </div>
+            </div>
+            <div class="super_box">
+                <div class="super_cont">
+                    <div class="txt_box">
+                        <p class="txt_tt">兑换特权</p>
+                        <p><span class="mvvm">你的自我介绍:</span>{{speak}}</p>
+                        <div class="ic_box">
+                            <div class="ic_ball">
+                                <i class="ic_wave" style="height: 40%">
+                                    <i class="ic_w1"></i>
+                                    <i class="ic_w2"></i>
+                                </i>
+                                <span class="num"><em>58</em>点</span>
+                                <i class="ic_float"></i>
+                            </div>
+                        </div>
+                        <p class="txt_super">88点能量开启礼盒</p>
+                        <a href="#" class="btn_super">收集能量</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript">
+        var mvvm_bak = {
+            init:function(){
+                this.binding();
+                this.logic();
+            },
+            binding:function(){
+                this.vm = foio.controller({
+                    $id: 'mvvm',
+                    nickname: "luojianet",
+                    age: 27,
+                    sex:'男',
+                    speak: '我是一名前端开发工程师'
+                });
+            },
+            logic:function(){
+                this.setName();
+            },
+            setName:function(){
+                var _this = this;
+                this.vm.nickname="颜虎";
+                setInterval(function(){
+                    _this.vm.nickname = new Date().getTime();
+
+                },3000);
+            },
+            setAge:function(){
+
+            }
+        };
+        // mvvm.init();
+    </script>
+</body>
+
+</html>

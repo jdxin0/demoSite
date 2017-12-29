@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<style type="text/css">
+		.bannerbox {
+			width:500px;
+			height:333px;
+			position:relative;
+			overflow:hidden;
+			margin: 0 auto;
+		}
+		.banner {
+			width:500px; /*图片宽度*/
+			height:333px;
+			position:absolute;
+			left: -100%;
+		}
+	</style>
+</head>
+<body>
+<div class="content">
+	<div class="bannerbox" id="scroll1">
+		<ul>
+			
+		</ul>
+	</div>
+	<div class="bannerbox" id="scroll2">
+		<ul>
+			
+		</ul>
+	</div>
+</div>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$.ajax({
+			type:"get",
+			url:"http://test.scpoo.com/myTools/public/index.php/index/testTu",
+			dataType:"json",
+			success:function(rs){
+				if (rs.ret==100) {
+					var imgArr=rs.data;
+					var tplArr=[];
+					for(var x in imgArr){
+						tplArr.push('<li class="banner"><a href="javascript:;"><img src="'+imgArr[x]+'" width="500" height="333" alt=""></a></li>');
+					}
+					$("#scroll1 ul").html(tplArr.join());
+					var curNum = 0;
+					var liNums = $("#scroll1 .banner").length-1;
+					$("#scroll1 .banner").eq(0).css("left", "0");
+					function autoScroll(){
+						$("#scroll1 .banner").finish();
+						var temp = curNum;
+						curNum--;
+						if (curNum == -1) {
+							curNum = liNums;
+						}
+						$("#scroll1 .banner").eq(curNum).css("left", "100%").animate({left: "0"});
+						$("#scroll1 .banner").eq(temp).animate({left: "-100%"});
+					};
+					var clearIn=setInterval(autoScroll, 3000);
+					$("#scroll1").hover(function(){
+						clearInterval(clearIn);
+					},function(){
+						clearIn=setInterval(autoScroll, 3000);
+					});
+				}else{
+					alert(rs.msg);
+				}
+			},
+			error:function(){
+				alert("网络异常");
+			}
+		});
+		$.ajax({
+			type:"get",
+			url:"http://test.scpoo.com/myTools/public/index.php/index/testTu",
+			dataType:"json",
+			success:function(rs){
+				if (rs.ret==100) {
+					var imgArr=rs.data;
+					var tplArr=[];
+					for(var x in imgArr){
+						tplArr.push('<li class="banner"><a href="javascript:;"><img src="'+imgArr[x]+'" width="500" height="333" alt=""></a></li>');
+					}
+					$("#scroll2 ul").html(tplArr.join());
+					var curNum = 0;
+					var liNums = $("#scroll2 .banner").length-1;
+					$("#scroll2 .banner").eq(0).css("left", "0");
+					function autoScroll(){
+						$("#scroll2 .banner").finish();
+						var temp = curNum;
+						curNum--;
+						if (curNum == -1) {
+							curNum = liNums;
+						}
+						$("#scroll2 .banner").eq(curNum).css("left", "100%").animate({left: "0"});
+						$("#scroll2 .banner").eq(temp).animate({left: "-100%"});
+					};
+					var clearIn=setInterval(autoScroll, 3000);
+					$("#scroll2").hover(function(){
+						clearInterval(clearIn);
+					},function(){
+						clearIn=setInterval(autoScroll, 3000);
+					});
+				}else{
+					alert(rs.msg);
+				}
+			},
+			error:function(){
+				alert("网络异常");
+			}
+		});
+	})
+</script>
+			
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="/js/jquery.js"></script>
+</head>
+<body>
+	<div class="nickname"></div>
+	<script type="text/javascript">
+		var obj = {};
+		var initValue = 'hello';
+		Object.defineProperty(obj,"newKey",{
+		 get:function (){
+		 //当获取值的时候触发的函数
+		 $(".nickname").text(initValue);
+		 return initValue; 
+		 },
+		 set:function (value){
+		 //当设置值的时候触发的函数,设置的新值通过参数value拿到
+		 $(".nickname").text(value);
+		 initValue = value;
+		 }
+		});
+	</script>
+</body>
+</html>

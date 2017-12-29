@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.clearfix:after { content:'\200B';display: block; clear:both;height:0; }
+		.clearfix {*zoom:1;}
+		.icons{width: 225px;}
+		.icons .icon-container{width: 64px; float: left; margin:5px; text-align: center;}
+		.icons .icon{width: 48px; height: 48px; margin: auto; background-image: url(img/animation-icons-gray.png); background-size: 228px 348px;}
+		.icons .icon-container{cursor: pointer;}
+		.icon-container:hover{background: #E1E1E1}
+		.select .icon,.app .app-text-edit .icon-container:hover .icon{background-image: url(img/animation-icons.png);}
+		.icons .no-effect{background-position: 0px 0px;}
+		.icons .fade-in-normal{background-position: -60px 0px;}
+		.icons .rotate-in-down-left{background-position: -120px 0px;}
+		.icons .rotate-in-down-right{background-position: -180px 0px;}
+		.icons .zoom-in{background-position: 0px -60px;}
+		.icons .zoom-in-down{background-position: -60px -60px;}
+		.icons .zoom-elastically{background-position: -120px -60px;}
+		.icons .shrink-elastically{background-position: -180px -60px;}
+		.icons .fade-in-left{background-position: 0px -120px;}
+		.icons .fade-in-right{background-position: -60px -120px;}
+		.icons .fade-in-up{background-position: -120px -120px;}
+		.icons .fade-in-down{background-position: -180px -120px;}
+		.icons .rotate-in{background-position: 0px -180px;}
+		.icons .flip-in-Y{background-position: -60px -180px;}
+		.icons .flip-in-X{background-position: -120px -180px;}
+		.icons .light-speed-in{background-position: -180px -180px;}
+		.icons .slide-right{background-position: 0px -240px;}
+		.icons .slide-left{background-position: -60px -240px;}
+		.icons .slide-up{background-position: -120px -240px;}
+		.icons .slide-down{background-position: -180px -240px;}
+		.icons .stretch-right{background-position: 0px -300px;}
+		.icons .stretch-left{background-position: -60px -300px;}
+		.icons .stretch-up{background-position: -120px -300px;}
+		.icons .stretch-down{background-position: -180px -300px;}
+	</style>
+</head>
+<body>
+	<div class="clearfix icons">
+		<div class="icon-container select" ng-click="eleAnimationIns('noEffect', $event)">
+			<div class="icon no-effect"></div>
+			<div class="name">无效果</div>
+		</div>
+		<div class="icon-container"  ng-click="eleAnimationIns('fadeInNormal', $event);">
+			<div class="icon fade-in-normal"></div>
+			<div class="name">淡入</div><!--fadeIn-->
+		</div>
+		<div class="icon-container"  ng-click="eleAnimationIns('rotateInDownLeft', $event);">
+			<div class="icon rotate-in-down-left"></div>
+			<div class="name">从左滚入</div><!--rotateInDownLeft-->
+		</div>
+		<div class="icon-container"  ng-click="eleAnimationIns('rotateInDownRight', $event);">
+			<div class="icon rotate-in-down-right"></div>
+			<div class="name">从右滚入</div><!--rotateInDownRight-->
+		</div>
+		<div class="icon-container"  ng-click="eleAnimationIns('zoomIn', $event);">
+			<div class="icon zoom-in"></div>
+			<div class="name">放大</div><!--zoomIn-->
+		</div>
+		<div class="icon-container"  ng-click="eleAnimationIns('zoomInDown', $event);">
+			<div class="icon zoom-in-down"></div>
+			<div class="name">下落放大</div><!--zoomInDown-->
+		</div>
+		<div class="icon-container"  ng-click="eleAnimationIns('fadeIn', $event);">
+			<div class="icon zoom-elastically"></div>
+			<div class="name">弹性放大</div>
+		</div>
+		<div class="icon-container"  ng-click="eleAnimationIns('expandOpen', $event);">
+			<div class="icon shrink-elastically"></div>
+			<div class="name">弹性缩小</div>
+		</div>
+		<div class="icon-container"  ng-click="eleAnimationIns('fadeInRight', $event);">
+			<div class="icon fade-in-left"></div>
+			<div class="name">向右飞入</div><!--fadeInLeft-->
+		</div>
+		<div class="icon-container"  ng-click="eleAnimationIns('fadeInLeft', $event);">
+			<div class="icon fade-in-right"></div>
+			<div class="name">向左飞入</div><!--fadeInRight-->
+		</div>
+		<div class="icon-container"  ng-click="eleAnimationIns('fadeInUp', $event);">
+			<div class="icon fade-in-up"></div>
+			<div class="name">向上飞入</div><!--fadeInUp-->
+		</div>
+		<div class="icon-container"  ng-click="eleAnimationIns('fadeInDown', $event);">
+			<div class="icon fade-in-down"></div>
+			<div class="name">向下飞入</div><!--fadeInDown-->
+		</div>
+		<div class="icon-container"  ng-click="eleAnimationIns('rotateIn', $event);">
+			<div class="icon rotate-in"></div>
+			<div class="name">旋转出现</div><!--rotateIn-->
+		</div>
+		<div class="icon-container"  ng-click="eleAnimationIns('flipInY', $event);">
+			<div class="icon flip-in-Y"></div>
+			<div class="name">左右翻转</div><!--flipInY-->
+		</div>
+		<div class="icon-container"  ng-click="eleAnimationIns('flipInX', $event);">
+			<div class="icon flip-in-X"></div>
+			<div class="name">上下翻转</div><!--flipInX-->
+		</div>
+		<div class="icon-container"  ng-click="eleAnimationIns('lightSpeedIn', $event);">
+			<div class="icon light-speed-in"></div>
+			<div class="name">刹车</div><!--lightSpeedIn-->
+		</div>
+		<div class="icon-container"  ng-click="eleAnimationIns('slideRight', $event);">
+			<div class="icon slide-right"></div>
+			<div class="name">向右滑入</div><!--slideInRight-->
+		</div>
+		<div class="icon-container"  ng-click="eleAnimationIns('slideLeft', $event);">
+			<div class="icon slide-left"></div>
+			<div class="name">向左滑入</div><!--slideInLeft-->
+		</div>
+		<div class="icon-container"  ng-click="eleAnimationIns('slideUp', $event);">
+			<div class="icon slide-up"></div>
+			<div class="name">向上滑入</div><!--slideInUp-->
+		</div>
+		<div class="icon-container"  ng-click="eleAnimationIns('slideDown', $event);">
+			<div class="icon slide-down"></div>
+			<div class="name">向下滑入</div><!--slideInDown-->
+		</div>
+		<div class="icon-container"  ng-click="eleAnimationIns('stretchRight', $event);">
+			<div class="icon stretch-right"></div>
+			<div class="name">向右展开</div>
+		</div>
+		<div class="icon-container"  ng-click="eleAnimationIns('stretchLeft', $event);">
+			<div class="icon stretch-left"></div>
+			<div class="name">向左展开</div>
+		</div>
+		<div class="icon-container"  ng-click="eleAnimationIns('pullUp', $event);">
+			<div class="icon stretch-up"></div>
+			<div class="name">向上展开</div>
+		</div>
+		<div class="icon-container"  ng-click="eleAnimationIns('pullDown', $event);">
+			<div class="icon stretch-down"></div>
+			<div class="name">向下展开</div>
+		</div>
+	</div>
+</body>
+</html>

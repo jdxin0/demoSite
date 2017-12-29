@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript" src="js/jquery.js"></script>
+</head>
+<body>
+  <script type="text/javascript">
+    (function($){
+        // 提示框组件 author: anle
+        $.tooltip = function(ops){
+            var ops = $.extend({
+                    html    : '',
+                    delay   : 2000,
+                    callback: null
+                }, ops);
+                // tool = {
+                //     remove : function(){
+                //         obj.remove();
+                //     }
+                // };
+
+            var obj = null,
+                text= ops.html,
+                html= '<div id="tool_tip" style="position:fixed; max-width:300px; z-index:9999999; top:0;'
+                    + ' left:0; opacity:1; padding:40px 60px; background:rgba(0,0,0,0.7);'
+                    + 'color:#fff; border-radius:8px; text-align:center; font-size:18px; font-weight:bold">'
+                    + text +'</div>';
+
+            $('#tool_tip').remove();
+            obj = $(html).appendTo('body');
+
+            // obj.css({'margin-left': '-' + obj.width()/2 + 'px', 'margin-top':'-'+obj.height()/2+'px',
+            obj.css({'-webkit-transform': 'translate(-50%, -50%)', transform : 'translate(-50%, -50%)',
+                     left:'50%', top:'50%'});
+
+            setTimeout(function(){
+                obj.animate({
+                    opacity : 0
+                }, 500, 'linear', function(){
+                    obj.remove();
+                    $.isFunction(ops.callback) && ops.callback();
+                });
+            }, ops.delay);
+
+            // return tool;
+        };
+
+        //
+        var defaultSettings = {
+          width            : 300,
+          height           : 'auto',
+          minHeight        : 150,
+          title            : '',
+          shadow           : true,
+          close            : null,
+          btnText          : '确定',
+          submit           : null
+        };
+        $.fn.zDialog = function(options) {
+          return this.each(function() {
+            var _dialog = $(this).find('.zhichi-content'),
+                settings = $.extend({}, defaultSettings, options),
+                marginLeft = -settings.width/2,
+                marginTop = -settings.height/2,
+                titleObject = $('<header class="zhichi-title"><span class="zhichi-title-content">'+settings.title+'</span></header>'),
+                closeObject = $('<span class="zhichi-close"></span>');
+
+            (!settings.shadow) && _dialog.parent().css('background-color','transparent');
+
+            _dialog.css({
+              'width'      : settings.width,
+              'height'     : settings.height,
+              'min-height' : settings.minHeight,
+              'margin-left': marginLeft,
+              'margin-top' : marginTop
+            });
+
+            closeObject.appendTo(titleObject);
+            titleObject.prependTo(_dialog);
+            if( $.isFunction(settings.submit) ){
+              $('<span class="zhichi-submit-btn">'+settings.btnText+'</span>').appendTo(_dialog).click(function(event) {
+                /* Act on the event */
+                settings.submit();
+              });
+            }
+
+            closeObject.click(function(event) {
+              /* Act on the event */
+              $.isFunction(settings.close) && settings.close();
+              _dialog.parent().hide('slow');
+            });
+          });
+        }
+
+    })(jQuery);
+    setTimeout(function(){
+      $.tooltip({html:"网络有问题"})
+    },2000);
+  </script>
+</body>
+</html>

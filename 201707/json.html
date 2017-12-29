@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$.ajax({
+				type:"get",
+				url:"http://www.top100.hk/interface/api.php",
+				dataType:"jsonp",
+				success:function(rs){
+					var rs={"result":0,"msg":"\u606d\u559c\u60a8\u83b7\u5f97\u4e86\u201c\u671f\u201d\u5b57\u62fc\u56fe","data":{"id":534,"prize":"vip2017openday710","tname":"\u201c\u671f\u201d\u5b57\u62fc\u56fe","frontid":"0","addtime":"2017-07-27 10:14","fafang":"virtual","btn_title":"","btn_class":"","btn_url":"","lotterytimes2":"48","prizeInfo":{"part1":0,"part2":0,"part3":1,"part4":0,"vip2017openday707":0,"vip2017openday708":0,"vip2017openday709":0,"vip2017openday710":1,"total":1,"received":0}}};
+					alert(rs.result);
+				}
+			});
+		});
+	</script>
+</body>
+</html>

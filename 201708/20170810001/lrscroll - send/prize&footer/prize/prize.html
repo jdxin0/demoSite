@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <link rel="stylesheet" type="text/css" href="css/common.css">
+ <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+ <title>抽奖</title>
+
+ <style>
+ #bg{
+       width: 325px;
+       height: 300px;
+       margin: 0 auto;
+       background: url(imgs/turntable-bg.jpg) no-repeat;
+       background-size: 325px;
+       position: relative;
+ }
+ .img1{
+       display: block;
+       position: absolute;
+       z-index: 10;
+       top: 77.5px;
+       left: 123.5px;
+       width: 87px;
+       height: 114px;
+       background-size: 87px;
+ }
+ .img2{
+       display: block;
+       position: absolute;
+       z-index: 5;
+       top: 30px;
+       left: 58px;
+       transition: all 4s;
+       width: 225px;
+       height: 225px;
+       background-size: 225px;
+
+ }
+
+  @media only screen and (min-width: 1024px){
+      .prize{zoom:2.88;} 
+    }
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+      .prize{zoom:2.16;}
+    }
+    @media only screen and (min-width: 640px) and (max-width: 767px) {
+      .prize{zoom:1.8;}
+    }
+    @media only screen and (min-width: 540px) and (max-width: 639px) {
+      .prize{zoom:1.51875;}
+    }
+    @media only screen and (min-width: 480px) and (max-width: 539px) {
+      .prize{zoom:1.35;}
+    }
+    @media only screen and (min-width: 414px) and (max-width: 479px) {
+      .prize{zoom:1.164375;}
+    }
+    @media only screen and (min-width: 400px) and (max-width: 413px) {
+        .prize{zoom:1.125;}
+    }
+    @media only screen and (min-width: 393px) and (max-width: 399px) {
+      .prize{zoom:1.1053;}
+    }
+    @media only screen and (min-width: 384px) and (max-width: 392px) {
+      .prize{zoom:1.08;}
+    }
+    @media only screen and (min-width: 375px) and (max-width: 383px) {
+      .prize{zoom:1.0546875;}
+    }
+    @media only screen and (min-width: 360px) and (max-width:374px) {
+      .prize{zoom:1.0125;}
+    }
+    @media only screen and (min-width: 320px) and (max-width:359px) {
+      .prize{zoom:0.9;}
+    }
+
+
+ </style>
+</head>
+<body>
+
+<div class="prize">
+    <div id="bg">
+        <img src="imgs/pointer.png" alt="pointer" class="img1">
+        <img src="imgs/turntable.png" alt="turntable" class="img2">
+    </div>
+</div>
+ 
+
+
+ <script>
+ 
+     var oPointer=document.getElementsByTagName("img")[0];
+
+     var oTurntable=document.getElementsByTagName("img")[1];
+
+     var cat=51.4; 
+
+     var num=0;
+
+     var offOn=true;
+
+     document.title="";
+  
+ oPointer.onclick=function(){
+
+           if(offOn){
+
+           oTurntable.style.transform="rotate(0deg)";
+
+           offOn=!offOn;
+
+           ratating();
+    }
+ }
+ 
+ function ratating(){
+
+             var timer=null;
+             
+             var rdm=0;
+             clearInterval(timer);
+
+             timer=setInterval(function(){
+
+                          if(Math.floor(rdm/360)<3){
+
+                          rdm=Math.floor(Math.random()*3600); 
+
+                        }else{
+
+                                oTurntable.style.transform="rotate("+rdm+"deg)";
+
+                                clearInterval(timer);
+
+                                setTimeout(function(){
+
+                                           offOn=!offOn;
+
+                                           num=rdm%360;
+
+                                          if(num<=cat*1){
+
+                                                      alert("4999元");
+
+                                        }else if(num<=cat*2){
+
+                                                      alert("条50元");
+
+                                        }else if(num<=cat*3){
+
+                                                      alert("10元");
+
+                                        }else if(num<=cat*4){
+
+                                                      alert("5元");
+
+                                        }else if(num<=cat*5){
+
+                                                      alert("免息服务");
+
+                                        }else if(num<=cat*6){
+
+                                                     alert("提交白金");
+
+                                        }else if(num<=cat*7){
+
+                                                    alert("未中奖");
+
+                           }
+
+                         },4000);
+
+                     } 
+
+         },30); 
+ }
+ </script>
+</body>
+</html> 

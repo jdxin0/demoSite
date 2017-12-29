@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>歌词直接放在lrc字段里</title>
+</head>
+<body>
+	<div id="player1" class="aplayer"></div>
+	<script type="text/javascript" src="node_modules/aplayer/dist/APlayer.min.js"></script>
+	<script type="text/javascript">
+		var ap = new APlayer({
+		    element: document.getElementById('player1'),                       // Optional, player element
+		    narrow: false,                                                     // Optional, narrow style
+		    autoplay: true,                                                    // Optional, autoplay song(s), not supported by mobile browsers
+		    showlrc: 1,                                                        // Optional, show lrc, can be 0, 1, 2, see: ###With lrc
+		    mutex: true,                                                       // Optional, pause other players when this player playing
+		    theme: '#e6d0b2',                                                  // Optional, theme color, default: #b7daff
+		    mode: 'random',                                                    // Optional, play mode, can be `random` `single` `circulation`(loop) `order`(no loop), default: `circulation`
+		    preload: 'metadata',                                               // Optional, the way to load music, can be 'none' 'metadata' 'auto', default: 'auto'
+		    listmaxheight: '513px',                                             // Optional, max height of play list
+		    music: {                                                           // Required, music info, see: ###With playlist
+		        title: '春天的芭蕾',                                          // Required, music title
+		        author: '常思思',                          // Required, music author
+		        url: 'mp3/常思思 - 春天的芭蕾.mp3',  // Required, music url
+		        pic: 'images/常思思.jpg',  // Optional, music picture
+		        lrc: '[00:00.11]春天的芭蕾\n[00:01.27]作词：王磊 作曲：胡庭江\n[00:05.77]演唱：常思思\n[00:13.17]\n[00:20.09]随着脚步起舞纷飞\n[00:24.97]跳一曲春天的芭蕾\n[00:29.64]天使般的容颜最美\n[00:33.30]尽情绽放青春无悔\n[00:39.29]\n[00:39.59]啊春天已来临 有鲜花点缀\n[00:44.58]雪地上的足迹是欢乐相随\n[00:49.28]看那天空雪花飘洒\n[00:52.40]这一刻我们的心紧紧依偎\n[00:59.06]\n[00:59.33]啊 春天的芭蕾\n[01:04.26]啊 幸福的芭蕾\n[01:09.36]啊 啊 啊 啊 啊\n[01:14.42]春天的芭蕾 芭蕾\n[01:19.43]\n[01:29.11]随着脚步起舞纷飞\n[01:35.32]跳一曲春天的芭蕾\n[01:39.70]天使般的容颜最美\n[01:44.95]尽情绽放青春无悔\n[01:49.22]\n[01:50.53]啊春天已来临 有鲜花点缀\n[01:54.44]雪地上的足迹是欢乐相随\n[01:58.70]看那天空雪花飘洒\n[02:02.33]这一刻我们的心紧紧依偎\n[02:07.79]\n[02:08.23]啊 春天的芭蕾\n[02:13.56]啊 幸福的芭蕾\n[02:18.36]啊 啊 啊 啊 啊\n[02:23.43]春天的芭蕾 芭蕾\n[02:27.67]\n[02:28.14]脚步起舞纷飞\n[02:30.74]跳出纯真韵味\n[02:33.21]大地从梦幻中醒来开出花卉\n[02:38.08]雪人也想扭动身体\n[02:40.62]来减减肥\n[02:42.78]\n[02:43.13]春天的芭蕾\n[02:45.22]灿烂的芭蕾\n[02:48.01]啊 啊 啊 啊\n[03:09.26]\n[03:12.96]随着脚步起舞纷飞\n[03:18.55]跳一曲春天的芭蕾\n[03:24.58]天使般的容颜最美\n[03:30.44]尽情绽放青春无悔\n[03:36.35]\n[03:36.74]啊哈哈 啊哈哈 啊哈哈 啊哈哈\n[03:41.31]啊哈哈 啊哈哈 啊\n[03:47.55]春天 的芭蕾\n[03:59.91]\n'                   // Optional, lrc, see: ###With lrc
+		    }
+		});
+	</script>
+</body>
+</html>

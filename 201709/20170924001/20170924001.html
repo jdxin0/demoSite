@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var brandInfo = '';
+			$.ajax({
+				url:'test.php?schoolName=武汉大学&tel=15927572994&brandInfo=自强、弘毅、求是、拓新&schoolDesc=武汉大学（Wuhan University），简称“武大”，是一所位于湖北武汉市的综合研究型大学，其办学源头溯源于清朝末期1893年湖广总督张之洞奏请清政府创办的自强学堂，已有一百多年历史，1913年改名国立武昌高等师范学校， 1926年组建国立武昌...',
+				data:{},
+				async:false,
+				type:'POST',
+				dataType:'jsonp',
+				beforeSend:function(){
+					console.log('show loading status');
+				},
+				success:function(rs){
+					console.log('hide loading status');
+					brandInfo = rs.data.brandInfo;
+				},
+				error:function(){
+
+				}
+			});
+			alert(brandInfo);
+			/*setTimeout(function(){
+				alert(brandInfo);
+			},2000);*/
+		});
+	</script>
+</body>
+</html>

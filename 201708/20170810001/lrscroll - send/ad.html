@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>公告栏</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/lrscroll.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="fonts/css/font-awesome.min.css">
+	<style type="text/css">
+    #element_id{overflow:hidden;}
+    #element_id ul li{float:left;}
+    .content{
+	    	height: 2rem;
+	    	background-color: #ebece7;
+	    	font-size: 0.5rem;
+	    	font-family: Microsoft YaHei;
+	    	line-height: 2rem;
+	    	text-align: center;}
+	    .adv{width: 29%;margin-right: 0.5rem;}
+	    .botton-scroll{width: 66%;height: 2rem;}		
+	    .adv,.botton-scroll{float: left;}
+	    .featureBox{margin-right: 0.5rem;}
+
+	.content .fa{color:red!important;}
+	 
+
+	</style>
+ 
+</head>
+<body>
+<div class="content">
+    <div class="adv"><span>最新新闻公告</span>&nbsp;&nbsp;<span class="fa fa-volume-up" ></span></div>
+    <div class="botton-scroll" id="element_id">
+        <ul class="featureUL" >
+            <li class="featureBox">
+               <div class="box">
+			       <a class="imgtitle" href="">俞敏洪：善于停止也是一种幸福&gt;&gt;</a>
+                </div>
+            </li>
+            <li class="featureBox">
+               <div class="box">
+			        <a class="imgtitle" href="">教育部：教师大交流遏止“择校热”&gt;&gt;</a>
+                </div>
+            </li>
+            <li class="featureBox">
+                <div class="box">
+			        <a class="imgtitle" href="">“小刘星”成高考明星 张一山成人礼上念师恩&gt;&gt;</a>
+                </div>
+            </li>
+            <li class="featureBox">
+                <div class="box">
+			        <a class="imgtitle"  href="">俞敏洪：善于停止也是一种幸福&gt;&gt;</a>
+                </div>
+            </li>
+            <li class="featureBox">
+               <div class="box">
+			        <a class="imgtitle"  href="">教育部：教师大交流遏止“择校热”&gt;&gt;</a>
+               </div>
+            </li>
+            <li class="featureBox">
+                <div class="box">
+			        <a class="imgtitle" href="">“小刘星”成高考明星 张一山成人礼上念师恩&nbsp;&nbsp;</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script type="text/javascript">
+            $(document).ready(function(){
+                $._parseFloat = function(B) {
+                    var A = parseFloat(B);
+                    if (isNaN(A)) {
+                        return 0
+                    }
+                    return A
+                }
+                $('#element_id').kxbdMarquee({
+                    direction:"left",
+                    isEqual:true
+                });
+            });
+        </script>
+</body>
+</html>

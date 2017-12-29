@@ -1,0 +1,41 @@
+<!doctype HTML>
+<html>
+	<head>
+		<title>CSS link[rel=preload] Polyfill</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="https://master-origin-loadcss.fgview.com/test/slow.css.php">
+		<style>
+			/* a few demo styles */
+			body {
+				font-family: sans-serif;
+				margin: 50px auto;
+				max-width: 40em;
+				padding: 0 20px;
+				line-height: 1.5
+			}
+			pre {
+				white-space: normal;
+				background: #fff;
+				padding: 15px;
+				border: 1px solid rgba(0,0,0,.3);
+				color: #333;
+			}
+
+		</style>
+		<script></script><!-- here to ensure a non-blocking load still occurs in IE and Edge, even if scripts follow loadCSS in head -->
+	</head>
+	<body>
+		<h1>Async CSS w/ link[rel=preload]</h1>
+		<p>This is a test page that references a slow-loading stylesheet using the new standard <code>link[rel=preload]</code>.<p>
+
+		<p>That markup looks like this:</p>
+		<pre><code>&lt;link rel="preload" href="https://master-origin-loadcss.fgview.com/test/slow.css.php" as="style" onload="this.rel='stylesheet'"&gt;</code></pre>
+
+		<p>In supporting browsers (such as Chrome Canary at time of writing), this markup will cause the browser to fetch the CSS file in an asynchronous, non-render-blocking manner, and once loaded, its onload event handler will change its rel property to "stylesheet" causing it to apply visibly in the page (the CSS file will color the page background green once loaded).</p>
+
+		<p>For browsers that do not yet support <code>link[rel=preload]</code>, this page includes a small script, loadCSS.js, and a feature-test-based polyfill function (cssrelpreload.js) to fetch all <code>link[rel=preload]</code> stylesheets asynchronously and apply them to the page. The function polls the document for new links to preload until the window's onload event fires, and requires no configuration to work.</p>
+
+		<p>Note: The CSS file  has a 5 second delay built into its server response time. If it is loaded in a non-blocking manner as desired, you should be able to read this text before the page is styled as white text on green background.</p>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>pre code</title>
+	<style type="text/css">
+		.contener{
+			width: 500px;
+		}
+		pre{
+			    overflow: auto;
+			    font-size: 85%;
+			    line-height: 1.45;
+			    background-color: #f6f8fa;
+			    border-radius: 3px;
+			    word-wrap: normal;
+			}
+		code{
+			display: inline;
+			    max-width: auto;
+			    border: 0;
+			    padding: 0;
+			    margin: 0;
+			    overflow: visible;
+			    line-height: inherit;
+			    word-wrap: normal;
+			    background-color: transparent;
+			    font-size: 100%;
+			    word-break: normal;
+			    white-space: pre;
+			    background: transparent;
+		}
+	</style>
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+</head>
+<body>
+	<div class="contener">
+<pre>
+<code>
+$(".lotteryBtn").click(function(){
+	var isvip=getCookie("vip_isvip");
+	var payIdListNum=common.objectLength(fanpai.data.payidList);
+	var paytimes=fanpai.data.paytimes;
+	var lotterytimes=_this.data.lotterytimes;
+	if (isvip==0) {
+	    if (payIdListNum==0) {
+	        msgbox.showmsg("大人，您还没有领取今日折扣哦，看你如此执着，送你1张9折通用券，立即开通，马上开启捡钱模式！",{
+	            btn_title:'立即开通',
+	            btn_class:"tyqPayBtn"
+	        })
+	    }else{
+	        msgbox.showmsg("大人，您已领取了超值折扣，立即以最低折扣开通，马上开启捡钱模式！",{
+	            btn_title:'立即开通',
+	            btn_class:"maxDiscountBtn"
+	        })
+	    }
+	}else{
+	    if (paytimes==0) {
+	        msgbox.showmsg("大人，本活动为过期会员续费专享，您目前还是会员，暂不能参与哦。还有更多精彩活动正在火热进行！", {
+	            btn_title: '立即查看',
+	            btn_href: "http://act.vip.xunlei.com/m/vip/2017/laxin/?referfrom=v_wap_hygw_acti_fp5zdl"
+	        });
+	    }else if (paytimes==1&&lotterytimes==0) {
+	        msgbox.showmsg("大人，你已经参加过这个活动，不能贪心哦！点击立即查看，更多精彩活动等你参与！", {
+	            btn_title: '立即查看',
+	            btn_href: "http://act.vip.xunlei.com/m/vip/2017/laxin/?referfrom=v_wap_hygw_acti_fp5zdl"
+	        });
+	    }else{
+	        pickMoney();
+	    }
+	}
+});
+</code>
+</pre>
+	</div>
+	<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

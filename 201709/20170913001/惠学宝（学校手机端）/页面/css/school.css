@@ -1,0 +1,236 @@
+*{font-family: "Microsoft YaHei"!important;}
+.empty_box{height: 5rem;border: 1px solid red;}
+.school_title ul{overflow: hidden;display: -webkit-flex;
+    -webkit-flex-flow: nowrap;
+    justify-content: space-between;margin: 0 1rem;}
+.school_title ul li{float: left;}
+.wrap .mid_title {overflow: hidden;display: -webkit-flex;
+    -webkit-flex-flow: nowrap;
+    justify-content: space-between;}
+.wrap .mid_title li{ float: left; }
+ ul li a{color: #666666 !important;font-size: 1.5rem;display: block;height: 3.9rem;line-height: 3.9rem;}
+
+.act{color: #2c618b!important; border-bottom: 1px solid #2c618b;}
+.mid_title{margin: 0 4.85rem;}
+.line_bot{height: 1rem;background-color: #eeeeee;}
+
+.name_infor{height: 14.1rem;}
+.name_infor .pict_head{
+	width: 6rem;
+	height: 6rem;
+	border-radius: 50%;
+	background: url(../img/pict.png) no-repeat;
+	background-size: 6rem;
+	margin: 0 auto;
+	margin-top: 1.55rem;
+
+}
+.name_infor .p_one{font-size: 1.6rem;color: #333333;text-align: center;padding-top: 1.5rem;}
+
+/*学校基本信息*/
+.basic_information{margin: 0 1rem;}
+.basic_information h3{color: #333333;font-size: 1.5rem; height: 5.05rem;line-height: 5.05rem;border-bottom: 1px solid #eeeeee;}
+.basic_information h3 span{color:#2c618b; }
+.basic_infor table tr{height: 4.5rem;border-bottom:1px solid #eeeeee;}
+.basic_infor table{width: 100%;}
+
+.basic_infor table .title_l{width: 25%;text-align:left;color: #666666;font-size: 1.3rem;}
+.basic_infor table .title_r{text-align:right;color: #333333;font-size: 1.5rem;;}
+
+.basic_infor table .title_ch{color: #6189a8;font-size: 1.3rem;}
+.basic_infor table .title_cer{color: #6189a8;font-size: 1.3rem;}
+
+.basic_infor table .title_left{width: 25%;text-align: left; color: #666666;font-size: 1.3rem;}
+.basic_infor table .title_right{text-align: right;width: 75%; color: #333333;font-size: 1.3rem;}
+
+.school_area h3{color: #333333;font-size: 1.5rem; height: 5.05rem;line-height: 5.05rem;border-bottom: 1px solid #eeeeee;}
+.school_area h3 span{color:#2c618b; }
+.school_area{margin: 0 0.5rem;}
+.school_area ul li{display: inline-block;font-size: 1.3rem;color: #666666;text-align: left;}
+.school_area ul{display: -webkit-flex;
+    -webkit-flex-flow: nowrap;
+    justify-content: space-between;}
+
+.school_area .tit{color: #333333;width: 12%;text-align: left;white-space: nowrap;}
+.school_area .address{width: 50%;text-align: left;white-space: nowrap;text-overflow:ellipsis;overflow: hidden;}
+.school_area .num{width: 33%;text-align: right;white-space: nowrap;}
+.box_one{margin: 1.5rem auto;width: 100%;}
+
+.button a{display: block;
+	width: 28rem;
+	height: 5.5rem;
+	line-height: 5.5rem;
+	border-radius: 0.25rem;
+	background-color: #2c618b;
+	color: #ffffff;
+	text-align: center; 
+    margin: 0 auto;
+    font-size: 1.6rem;
+    margin-bottom: 2.5rem;}
+.school_area{position: relative;}
+.school_area .add{position: absolute;
+	top: 1.5rem;
+	right: 0;
+	background: url(../img/add.png) no-repeat;
+	background-size: 2rem;
+}
+.school_area .add a{padding-left: 2.6rem;display: block;color: #93c971;font-size: 1.5rem;}
+/*
+域名设置*/
+.name_set{background-color: #eeeeee;}
+.name_set .second_name{height: 3.5rem;line-height: 3.5rem;margin-left: 0.9rem;font-size: 1.5rem;color: #333333;}
+
+.name_set .write{height: 4.5rem;background-color: #ffffff;line-height: 4.5rem;margin: 0 1rem;overflow: hidden;}
+.name_set .write input{color: #999999;font-size: 1.2rem;width: 20.5rem;font-family: "Microsoft YaHei";}
+.name_set .write span{float: right;font-size: 1.2rem;color: #33333;}
+.name_set p{margin: 0 1rem;font-size: 1.2rem;color: #999999;margin-top: 1rem;}
+
+.name_set .look{color: #2c618b;}
+
+.name_set .button_two{margin-top: 2rem;padding-bottom: 12.05rem;}
+
+
+/*角色权限----角色管理*/
+.j_power .mid_title {
+    overflow: hidden;
+    display: -webkit-flex;
+    -webkit-flex-flow: nowrap;
+    justify-content: space-between;}
+.j_power .mid_title li{ float: left; }
+.tab2{margin: 0 1rem;}
+.tab2 span{
+    display: inline-block;
+    font-size:1.4rem;
+    color: #999999;
+    text-overflow:ellipsis;
+    overflow: hidden;
+    width: 14.4rem;
+    white-space: nowrap;}
+ .tab2 .tab2_top{padding-top: 2rem;}
+ .tab2 .tab2_bottom{padding-bottom: 1.6rem;}
+ .tab2 ul{border-bottom: 0.05rem solid #eeeeee;}
+ .tab2 ul li{
+    display: -webkit-flex;
+    -webkit-flex-flow: nowrap;
+    justify-content: space-between;
+}
+.tab3 ul {background: url(../img/arrrow.png) no-repeat right center; background-size:1rem;}
+.tab3 .right{text-align: center;color: #333333;}
+.tab3 .control{text-align: right;}
+
+/*角色权限---团队管理*/
+.name_list ul{overflow: hidden; display: -webkit-flex;
+    -webkit-flex-flow: nowrap;
+    justify-content: space-between;
+    margin: 0 6.8rem;}
+.name_list ul li{
+    width: 4.4rem;
+    float: left;
+    background: url(../img/trangle.png) no-repeat right center;
+    background-size: 1rem;
+   }
+.box{height: 8.25rem;background-color: #eeeeee;}
+
+
+/*安全设置*/
+.safe_set h3 {
+    font-size: 1.5rem;
+    color: #333333;
+    height: 5rem;
+    line-height: 5rem;
+    padding-left: 1rem;
+    border-bottom: 1px solid #eeeeee;
+}
+.safe_set h3 span{color: #2c618b;}
+.safe_set table tr {height: 4.5rem;line-height: 4.5rem;border-bottom:  1px solid #eeeeee;}
+.safe_set table{width: 100%;}
+.safe_set table tr .left{width: 30%}
+.safe_set table tr .left span{font-size: 1.3rem;color:#666666;}
+.safe_set table tr .center{width: 50%;}
+.safe_set table tr .center input {font-size: 1.4rem;color: #333;}
+.safe_set table tr .right{width: 20%;}
+.safe_set table a{
+    display: block;
+    width: 6.7rem;
+    height: 2.95rem;
+    line-height: 2.95rem;
+    color: #fff;
+    font-size: 1.3rem;
+    background-color: #93c971;
+    border-radius: 0.25rem;text-align: center;}
+.safe_set{margin: 0 1rem;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ @media only screen and (max-width: 640px), only screen and (max-device-width:640px) {
+     html,body {
+         font-size:20px;
+     }
+
+   }
+     @media only screen and (max-width: 600px), only screen and (max-device-width:600px) {
+     html,body {
+         font-size:18.75px;
+     }
+     
+   }
+     @media only screen and (max-width: 540px), only screen and (max-device-width:540px) {
+     html,body {
+         font-size:16.875px;
+     }
+     
+   }
+     @media only screen and (max-width: 480px), only screen and (max-device-width:480px) {
+     html,body {
+         font-size:15px;
+     }
+   
+   }
+     @media only screen and (max-width: 414px), only screen and (max-device-width:414px) {
+     html,body {
+         font-size:12.9375px;
+     }
+    
+   }
+     @media only screen and (max-width: 400px), only screen and (max-device-width:400px) {
+     html,body {
+         font-size:12.5px;
+     }
+    
+   }
+     @media only screen and (max-width: 375px), only screen and (max-device-width:375px) {
+     html,body {
+         font-size:11.71875px;
+     }
+  
+   }
+     @media only screen and (max-width: 360px), only screen and (max-device-width:360px) {
+	html,body{font-size: 11px;}
+	
+   }
+     @media only screen and (max-width: 320px), only screen and (max-device-width:320px) {
+     html,body {
+         font-size:10px;
+     }
+   }
+     @media only screen and (max-width: 240px), only screen and (max-device-width:240px) {
+     html,body {
+         font-size:7.5px;
+     }
+   }

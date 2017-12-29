@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+</head>
+<body>
+<script>
+    function en(code, h){
+        //简单的jS加密解密<br>//code为对应的字符串，h为（2，8，10，16）就是要转成的几进制<br>function en(code, h) {
+        var monyer = new Array();var i;
+        for(i=0;i<code.length;i++)
+            monyer+=code.charCodeAt(i).toString(h)+"_";//就是把字符串转成ascll码，然后再转成你想的几进制
+        return monyer;
+    };
+    function de(code, h) {
+        var i,s="",code = code.split("_");
+        for(i=0;i<code.length;i++) {
+            s += String.fromCharCode(parseInt(code[i],h));
+        };
+        return s
+    };
+
+    en("1哇哈哈",8) //=> "61_52307_52310_52310_"
+    de("61_52307_52310_52310_",8) //=> "1哇哈哈
+</script>
+</body>
+</html>

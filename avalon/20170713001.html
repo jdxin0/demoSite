@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="node_modules/avalon2/dist/avalon.js"></script>
+	<script src="node_modules/jquery/dist/jquery.js"></script>
+	<style type="text/css">
+		.btn-select{display: block;position: relative;height: 38px;width:90px;line-height: 38px;border: 1px solid #ccc;border-radius: 4px;font-size: 12px;color: #333;text-indent: 6px;}
+		.select-cont{position: absolute;top: 100%;left: 0;right: 0;border: 1px solid #ccc;background: #fff;border-radius: 4px;max-height: 144px;overflow-y: auto;}
+		.select-box{display: block;position: relative;height: 40px;}
+		.select-box .btn-select{display: block;position: relative;height: 38px;line-height: 38px;border: 1px solid #ccc;border-radius: 4px;font-size: 12px;color: #333;text-indent: 6px;}
+		.select-box .ic-arr{position: absolute;font-size: 0;line-height: 0;width: 0;height: 0;border-width: 4px;border-style: solid dashed dashed dashed;border-color: #333 transparent transparent transparent;top: 17px;: 9px;}
+		.select-box .select-cont{position: absolute;top: 100%;left: 0;right: 0;border: 1px solid #ccc;background: #fff;border-radius: 4px;max-height: 144px;overflow-y: auto;}
+		.select-box .select-cont{scrollbar-arrow: hidden;scrollbar-arrow-color: #999;scrollbar-face-color: #999;scrollbar-darkshadow-color: #999;
+		-highlight-color: #999;scrollbar-3dlight-color: #999;scrollbar-shadow-color: #999;scrollbar-track-color: #fff;}
+		.select-box .select-cont::-webkit-scrollbar{width:8px;}
+		.select-box .select-cont::-webkit-scrollbar-track{background:transparent;}
+		.select-box .select-cont::-webkit-scrollbar-thumb{background:#999;}
+		.select-box .select-cont a{display: block;font-size: 12px;line-height: 24px;color: #ccc;text-indent: 6px;color: #333;}
+		.select-box .select-cont a:hover{color: #0096ff;}
+	</style>
+</head>
+<body ms-controller="test">
+	<div class="input-box">
+		<label>姓名：</label>
+		<input type="text" placeholder="" ms-duplex='username'>
+	</div>
+	<div class="input-box">
+		<label>联系电话：</label>
+		<input type="text" placeholder="" ms-duplex='phone'>
+	</div>
+	<div class="date">
+		<input type="date" ms-duplex="lose_start">
+	</div>
+	<div class="input-box">
+		<label>票据内容：</label>
+		<div>
+			<div class="select-box">
+				<a href="javascript:;" class="btn-select">
+					{{invoice_cont[in_cont_id]}}<i class="ic-arr"></i>
+				</a>
+				<div class="select-cont" style="display: none;">
+					<ul>
+						<li ms-for="(i, p) in invoice_cont" ms-attr="{a: 1,b:2}" ms-click="in_cont_fn(@i)"><a href="javascript:;">{{p}}</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+	    var vm=avalon.define({
+	        $id:"test",
+	        lose_start:'2017-07-15',
+	        invoice_cont:{1:"信息费",2:"信息服务费"},
+	        in_cont_id:'1',
+        	in_cont_fn:function(x){//avalon-events="click:eclick_0_in95cont95fn4064i41"
+        		this.in_cont_id=x;
+        	}
+	    });
+	    $('.btn-select').on('click', function() {
+	    	$(this).next().show();
+	    	return false;
+	    });
+	    $('body').on('click', function() {
+	    	$('.select-cont').hide();
+	    });
+	</script>
+</body>
+</html>

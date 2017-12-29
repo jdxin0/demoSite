@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="/js/jquery.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		  
+		$(document).ready(function(){
+			var oTimer = null;
+			function queryHandle(){  
+			    $.getJSON("data.json", {}, function(json){  
+			        var status = json.status;  
+			        if(status==='0'){  
+			            console.log('状态代码 '+status+':'+json.message);  
+			        }else{  
+			            console.log('处理成功！');  
+			            window.clearInterval(oTimer);
+			        }  
+			    });  
+			}
+		    oTimer = setInterval(queryHandle,5000);  
+		});  
+	</script>
+</body>
+</html>

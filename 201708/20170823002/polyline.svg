@@ -1,0 +1,11 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
+
+<!-- <polyline points="0,0 0,20 20,20 20,40 40,40 40,60" style="fill:white;    fill-opacity: 0;stroke:red;stroke-width:2"/> -->
+<polyline points="0,34 90,113 177,70 270,15" style="fill:white;    fill-opacity: 0;stroke:yellow;stroke-width:2"/>
+<polyline points="0,117 90,30 177,142 270,103" style="fill:white;    fill-opacity: 0;stroke:red;stroke-width:2"/>
+<polyline points="0,136 90,138 177,93 270,5" style="fill:white;    fill-opacity: 0;stroke:gray;stroke-width:2"/>
+
+</svg>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	function MyF(){
+		getName = function(){
+			console.log(1);
+			return this;
+		}
+	}
+	MyF.getName = function(){
+		console.log(2);
+	}
+	MyF.prototype.getName = function(){
+		console.log(3)
+	}
+	var getName = function(){
+		console.log(4);
+	}
+	function getName(){
+		console.log(5);
+	}
+	MyF.getName();//2
+	getName();//4
+	MyF().getName();//'getName'undefined
+	getName();//4
+	new MyF.getName();//2
+	new MyF().getName();//3
+	new new MyF().getName();//3
+</script>
+</body>
+</html>

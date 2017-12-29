@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="/js/jquery.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		var arr = $.map( [0,1,2], function(n){
+		  return n + 4;
+		});
+		console.log(arr);
+		$("p").append($("input").map(function() {
+			return $(this).val();
+		}).get().join(", "));
+	</script>
+</body>
+</html>

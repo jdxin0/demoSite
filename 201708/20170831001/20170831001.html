@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/pc.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="/js/jquery.js"></script>
+</head>
+<body>
+<div class="style-con animate-content" id="animate-content">
+    <h4><span class="ui-accordion-header-icon"></span>进入动画</h4>
+    <div class="ui-accordion-content" style="display: block;">
+        <ul class="animate-ul">
+            <li class="active"><span class="iconfont icon-uniE965"></span>淡入</li>
+            <li><span class="iconfont icon-uniE966"></span>弹入</li>
+            <li><span class="iconfont icon-uniE96B"></span>平移</li>
+            <li><span class="iconfont icon-uniE96D"></span>旋转</li>
+            <li><span class="iconfont icon-uniE96A"></span>光速</li>
+            <li><span class="iconfont icon-uniE969"></span>飞入</li>
+            <li><span class="iconfont icon-uniE96E"></span>展开</li>
+            <li><span class="iconfont icon-uniE967"></span>翻滚</li>
+            <li><span class="iconfont icon-uniE96C"></span>缩放</li>
+            <li><span class="iconfont icon-uniE968"></span>立体翻转</li>
+        </ul>
+    </div>
+    <h4><span class="ui-accordion-header-icon"></span>强调动画</h4>
+    <div class="ui-accordion-content" id="ui-id-10" style="display: none;">
+        <ul class="animate-ul" data-index="1">
+            <li><span class="iconfont icon-uniE95B"></span>摇动</li>
+            <li><span class="iconfont icon-uniE95A"></span>跳动</li>
+            <li><span class="iconfont icon-uniE95C"></span>转动</li>
+            <li><span class="iconfont icon-uniE957"></span>呼吸灯</li>
+            <li><span class="iconfont icon-uniE959"></span>闪动</li>
+            <li><span class="iconfont icon-uniE954"></span>抖动</li>
+            <li><span class="iconfont icon-uniE958"></span>乱抖动</li>
+            <li><span class="iconfont icon-uniE955"></span>翻转</li>
+            <li><span class="iconfont icon-uniE956"></span>果冻</li>
+        </ul>
+    </div>
+    <h4><span class="ui-accordion-header-icon"></span>退出动画</h4>
+    <div class="ui-accordion-content" style="display: none;">
+        <ul class="animate-ul">
+            <li><span class="iconfont icon-uniE95D"></span>淡出</li>
+            <li><span class="iconfont icon-uniE95E"></span>弹出</li>
+            <li><span class="iconfont icon-uniE962"></span>移出</li>
+            <li><span class="iconfont icon-uniE961"></span>光速</li>
+            <li><span class="iconfont icon-uniE95F"></span>翻滚</li>
+            <li><span class="iconfont icon-uniE963"></span>缩放</li>
+            <li><span class="iconfont icon-uniE968"></span>立体翻转</li>
+            <li><span class="iconfont icon-uniE964"></span>脱落</li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#animate-content h4").click(function(){
+            $(this).next().slideToggle();
+            $(this).next().siblings(".ui-accordion-content").slideUp();
+        });
+    });
+</script>
+</body>
+</html>

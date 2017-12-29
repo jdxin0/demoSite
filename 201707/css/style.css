@@ -1,0 +1,216 @@
+
+		.content{
+			min-width: 1024px; 
+		}
+		.screen2{
+			height: 668px;
+			background: url(../img/screen2.jpg) no-repeat center;
+		}
+		.screen3{
+			height: 758px;
+			background: url(../img/screen3.jpg) no-repeat center;
+		}
+		.screen4{
+			height: 680px;
+			background: url(../img/screen4.jpg) no-repeat center;
+		}
+		.screen5{
+			height: 758px;
+			background: url(../img/screen5.jpg) no-repeat center;
+		}
+		.screen6{
+			height: 545px;
+			background: url(../img/screen6.jpg) no-repeat center;
+		}
+		.bannerbox {
+			width:100%;
+			height:758px;
+		    max-width: 1920px;
+			position:relative;
+			overflow:hidden;
+			margin: 0 auto;
+		}
+		.banner {
+			width:1920px; /*图片宽度*/
+			position:absolute;
+			left: -250%;
+			margin-left:-960px; /*图片宽度的一半*/
+		}
+		.btnCommon{
+			width:50px;
+			height:70px;
+			font-size: 20px;
+			color:#fff;
+			background: rgba(0,0,0,0.5);
+			position: absolute;
+			top:45%;
+			line-height:70px;
+			text-align: center;
+			cursor: pointer;
+			z-index: 10;
+			display: none;
+		}
+		.rightB{
+			right:0;
+		}
+		.leftB{
+			left:0;
+		}
+		.focusBox{
+		    position: absolute;
+		    left: 50%;
+		    bottom: 5px;
+		    transform: translateX(-50%);
+		}
+		.focusBox li{
+			display: inline-block;
+			margin-right: 10px;
+			list-style-type: none;
+		   	width: 10px;
+		   	height: 10px;
+		   	border-radius: 10px;
+		   	background-color: #fff;
+		   	cursor: pointer;
+		}
+		.focusBox li.cur{
+			background-color: orange;
+			box-shadow: 0 0 5px 2px orange
+		}
+
+    .footer{
+    	text-align: center;
+    	background: #282828; 
+    	color: #666666;
+    	font-size: 14px;
+    	max-width: 1920px;
+    	margin: 0 auto;
+    }
+    .footer p{
+    	padding-top: 36px;
+    	padding-bottom: 35px;
+    	line-height: 25px;
+    }
+
+    .t_window{
+    	background: url(../img/fix.png) repeat-x;
+    	height: 59px;
+    	text-align: center;
+    	position: fixed;
+    	bottom: 0;
+    	width:100%;
+	    z-index: 11
+    }
+    .t_window li{
+    	display: inline-block; 
+    	font-size: 20px;
+    	color: #fff;
+    }
+    .t_window li span{
+    	font-weight: bold; 
+    	font-size: 30px;
+    }
+    .t_window .speci{
+    	display: block;
+    	background: url(../img/yuanjiao.png) no-repeat;
+    	text-align: center;
+    	color: #0674d8;
+    	font-size: 18px;
+    	height: 26px;
+    	width: 104px;
+    	margin-left: 19px;
+    	margin-right: 263px;
+    }
+    .t_window .speci2{
+    	vertical-align: middle;
+    }
+
+    .sm_window {
+    	background: url(../img/input.png)  no-repeat;
+    	width: 368px;
+    	height: 348px;
+    	position: fixed;
+    	left: 50%;
+    	top:50%;
+    	margin-left: -184px;
+    	margin-top: -175px;
+    	z-index: 13;
+    }
+    .sm_window .first_td{
+    	width: 105px;
+    	text-align: right;
+    	padding-right: 16px;
+    	font-size: 16px;
+    	color: #333;
+    	font-family: Microsoft YaHei;
+    }
+    .sm_window .window_line{
+    	border: 1px solid #dddddd;
+    	height: 28px;
+    	width: 172px;
+    	border-radius: 5px;
+    	padding: 0 5px;
+    }
+    .sm_window  a.submit {
+    	height:30px;
+    	width: 70px;
+    	background:url(../img/submit.png) no-repeat;
+    	display: inline-block;
+    	font-size: 16px;
+    	color: #fff;
+    	font-family: Microsoft YaHei;
+    	text-align: center;
+	    line-height: 30px;
+	    margin-left: 150px;
+	    margin-top: 8px;
+    }
+    .sm_window  a.close {
+    	height:13px;
+    	width: 13px;
+    	background:url(../img/sx.png) no-repeat;
+    	display: inline-block;
+		position: absolute;
+		top:12px;
+		right: 16px;
+    }
+	.sm_window  a.close:hover{
+		transform: rotate(360deg);
+	    transition: transform 0.3s;
+	}
+    .sm_window p{
+    	background: url(../img/font.png) no-repeat;
+    	width: 165px;
+    	height: 24px;
+    	margin: 0 auto;
+    	margin-bottom: 29px;
+    	margin-top: 34px;
+    }
+
+    .sm_window input{
+    	height: 28px;
+    	width: 172px;
+    }
+	.gray{
+		background: url(../img/tcbg.png) repeat;
+		position: fixed;
+		left: 0px;
+		top: 0px;
+		bottom: 0px;
+		right: 0px;
+		z-index: 12;
+	}
+	.manager{
+		width: 116px;
+		height: 306px;
+		background: url(../img/pict.png) no-repeat;
+		position: fixed;
+		z-index: 11;
+		right: 100px;
+		top: 350px;
+	}
+	.manager .qq{
+		width: 82px;
+		height: 30px;
+		position: absolute;
+		top: 135px;
+		left: 16px;
+	}

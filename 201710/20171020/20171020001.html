@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>浮动元素 面试题 WEB前端开发</title>
+
+		<meta author='独行冰海' />
+
+		<link rel="stylesheet" type="text/css" href="reset.css">
+		<style>
+			div{background:#fcc;}
+			.first{float:left;width:100px; height:150px}/*第一个块发生浮动*/
+			.second{clear:left;float:left;margin-top:10px;width:100px;height:150px}/*第二个块先清除浮动再发生浮动*/
+			.third{zoom:1; width:200px;height:310px;margin-left:110px;_margin-left:107px; }
+		</style>
+	</head>
+	<body>
+		<div class="first">1</div>
+		<div class="second">2</div>
+		<div class="third">3</div>
+	</body>
+</html>

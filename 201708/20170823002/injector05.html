@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.nav_top{
+		  width: 42px;
+		  height: 174px;
+		  position: fixed;
+		  top: 30px;
+		  left: 50px;
+		  z-index: 999999;
+		  box-shadow: 0px 0px 2px #E7E7E7;
+		}
+		.nav_top span{
+		  width: 100%;
+		  position: relative;
+		  display: block;
+		  background: #fff;
+		  height: 57px;
+		  line-height: 57px;
+		  text-align: center;
+		  border-bottom: 1px solid #E7E7E7;
+		}
+		svg{
+			color: #FFB300;
+			width: 23px;
+			height: 23px;
+			margin-top: 18px;
+			fill: currentColor; 
+			overflow: hidden;
+		}
+	</style>
+</head>
+<body>
+	<div class="nav_top">
+		<span class="nav_help">
+			<a href="javascript:;" target="_blank">
+				<span class="use"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="symbol-btn.svg#icon-help"></use></svg></span>
+			</a>
+			<div class="help_con" style="display: none;">
+				<p>新手入门教程</p>
+			</div>
+		</span>
+		<span style="margin: 1px 0;" class="nav_video">
+			<a href="javascript:;" target="_blank">
+				<span class="use"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="symbol-btn.svg#icon-video"></use></svg></span>
+			</a>
+			<div class="video_con" style="display: none;">
+				<p>最新视频教程</p>
+			</div>
+		</span>
+		<span class="scrollTop use"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="symbol-btn.svg#icon-book"></use></svg></span>
+	</div>
+</body>
+</html>

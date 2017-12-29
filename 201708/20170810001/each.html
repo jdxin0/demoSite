@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="/js/jquery.js"></script>
+</head>
+<body>
+	<p><b>Values: </b></p>
+	<form>
+		<input type="text" name="name" value="John"/>
+		<input type="text" name="password" value="password"/>
+		<input type="text" name="url" value="http://w3school.com.cn/"/>
+	</form>
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+	</ul>
+	<script type="text/javascript">
+		// 遍历数组
+		$.each( [8,12,32], function(key, value){
+		  console.log( "Item #" + key + ": " + value );
+		});
+		// 遍历对象
+		$.each( { name: "John", lang: "JS" }, function(key, value){
+		  console.log( "Name: " + key + ", Value: " + value );
+		});
+		// 遍历jquery对象
+		$.each($("li"),function(key,value){
+			console.log(this);
+		});
+		$("li").each(function(key,value){
+			console.log(this);
+		});
+		// 将一个数组中的元素转换到另一个数组中
+		var arr0=$.map( [0,1,2], function(n){
+		  return n + 4;
+		});
+		var arr1=$("input").map(function() {
+			return $(this).val();
+		});
+		//将jquery"类数组"转化为数组
+		var arr2=$("input").map(function() {
+			return $(this).val();
+		}).get();
+		console.log(arr1);
+		console.log(arr2);
+		console.log(arr1 instanceof jQuery); //return true
+		console.log(arr2 instanceof jQuery); //return false
+		console.log(arr1 instanceof Array); //return false
+		console.log(arr2 instanceof Array); //return true
+		// API：get
+		// get([index])
+		// 概述
+		// 取得其中一个匹配的元素。 num表示取得第几个匹配的元素。从0开始，返回的是DOM对象，类似的有eq(index),不过eq(index)返回的是jQuery对象。
+		// 这能够让你选择一个实际的DOM 元素并且对他直接操作，而不是通过 jQuery 函数。$(this).get(0)与$(this)[0]等价。
+		// 参数
+		// [index]Number
+		// 取得第 index 个位置上的元素
+		// get()
+		// 取得所有匹配的 DOM 元素集合。
+	</script>
+</body>
+</html>

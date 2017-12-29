@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>创建播放列表</title>
+</head>
+<body>
+	<div id="player1" class="aplayer"></div>
+	<script type="text/javascript" src="node_modules/aplayer/dist/APlayer.min.js"></script>
+	<script type="text/javascript">
+		var ap = new APlayer({
+		    element: document.getElementById('player1'),                       // Optional, player element
+		    narrow: false,                                                     // Optional, narrow style
+		    autoplay: false,                                                    // Optional, autoplay song(s), not supported by mobile browsers
+		    showlrc: 0,                                                        // Optional, show lrc, can be 0, 1, 2, see: ###With lrc
+		    mutex: true,                                                       // Optional, pause other players when this player playing
+		    theme: '#e6d0b2',                                                  // Optional, theme color, default: #b7daff
+		    mode: 'random',                                                    // Optional, play mode, can be `random` `single` `circulation`(loop) `order`(no loop), default: `circulation`
+		    preload: 'metadata',                                               // Optional, the way to load music, can be 'none' 'metadata' 'auto', default: 'auto'
+		    listmaxheight: '513px',                                             // Optional, max height of play list
+		    music: [
+		        {
+		            title: '春天的芭蕾',                                          // Required, music title
+		        	author: '常思思',                          // Required, music author
+		        	url: 'mp3/常思思 - 春天的芭蕾.mp3',  // Required, music url
+		        	pic: 'images/常思思.jpg',  // Optional, music picture
+		        	lrc: 'lrc/春天的芭蕾.lrc'                   // Optional, lrc, see: ###With lrc
+		        },{
+		            title: '我悄悄蒙上你的眼睛',
+		            author: '陈艾湄、高明骏',
+		            url: 'mp3/陈艾湄、高明骏 - 我悄悄蒙上你的眼睛.mp3',
+		            pic: 'images/001.jpg'
+		        },{
+		            title: '生日礼物',
+		            author: '江涛',
+		            url: 'mp3/江涛 - 生日礼物.mp3',
+		            pic: 'images/002.jpg'
+		        },{
+		            title: '梦中的额吉',
+		            author: '乌达木',
+		            url: 'mp3/乌达木 - 梦中的额吉.mp3',
+		            pic: 'images/003.jpg'
+		        },{
+		            title: '家乡',
+		            author: '赵雷',
+		            url: 'mp3/赵雷 - 家乡.mp3',
+		            pic: 'images/004.jpg'
+		        }
+		    ]
+		});
+	</script>
+</body>
+</html>

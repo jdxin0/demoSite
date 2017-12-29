@@ -1,0 +1,84 @@
+		body{
+			background-color: #99CCCC
+		}
+		.content{
+			min-width: 1024px; 
+		}
+		.screen2{
+			height: 668px;
+			background: url(../img/screen2.jpg) no-repeat center;
+		}
+		.screen3{
+			height: 758px;
+			background: url(../img/screen3.jpg) no-repeat center;
+		}
+		.screen4{
+			height: 680px;
+			background: url(../img/screen4.jpg) no-repeat center;
+		}
+		.screen5{
+			height: 758px;
+			background: url(../img/screen5.jpg) no-repeat center;
+		}
+		.screen6{
+			height: 545px;
+			background: url(../img/screen6.jpg) no-repeat center;
+		}
+		.bannerbox {
+			width:100%;
+			height:758px;
+		    max-width: 1920px;
+			position:relative;
+			overflow:hidden;
+			margin: 0 auto;
+		}
+		.banner {
+			width:1920px; /*图片宽度*/
+			position:absolute;
+			left: -250%;
+			margin-left:-960px; /*图片宽度的一半*/
+		}
+		.btnCommon{
+			width:50px;
+			height:70px;
+			font-size: 20px;
+			color:#fff;
+			background: rgba(0,0,0,0.5);
+			position: absolute;
+			top:45%;
+			line-height:70px;
+			text-align: center;
+			cursor: pointer;
+			z-index: 10;
+			display: none;
+		}
+		.rightB{
+			right:0;
+		}
+		.leftB{
+			left:0;
+		}
+		.focusBox{
+		    position: absolute;
+		    left: 50%;
+		    bottom: 5px;
+		    transform: translateX(-50%);
+		    background: #99cccc;
+		    border-radius: 9px;
+		    padding: 5px 20px;
+		}
+		.focusBox li{
+			display: inline-block;
+			margin-right: 10px;
+			list-style-type: none;
+		   	width: 10px;
+		   	height: 10px;
+		   	border-radius: 10px;
+		   	background-color: #fff;
+		   	cursor: pointer;
+		}
+		.focusBox li.cur{
+			background-color: orange;
+			box-shadow: 0 0 5px 2px orange
+		}
+

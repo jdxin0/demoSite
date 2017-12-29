@@ -1,0 +1,17 @@
+  .empty_box{height: 5rem;border: 1px solid red;width: 100%;} 
+  .information_title ul{overflow: hidden;margin-left: 1.6rem;}
+  .information_title ul li{
+  	float: left;
+  	font-size: 1.4rem;
+  	background: url(../img/trangle.png) no-repeat right center;}
+
+ @media only screen and (max-width: 640px), only screen and (max-device-width:640px) {
+     html,body {
+         font-size:20px;
+     }
+ }
+@media only screen and (max-width: 320px), only screen and (max-device-width:320px) {
+     html,body {
+         font-size:10px;
+     }
+ }

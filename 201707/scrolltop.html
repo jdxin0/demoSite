@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="js/jquery.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$.ajax({
+				type:"get",
+				data:{
+					phone:15927572994,
+					nickname:"luojianet",
+					name:"颜虎"
+				},
+				dataType:"jsonp",
+				url:"http://www.yanhu.com/201707/htmlspecialchars.php",
+				success:function(rs){
+					console.log(rs);
+				},
+				error:function(){
+
+				}
+			});
+		});
+(function(b) {
+	function c() {}
+	for (var d = "assert,count,debug,dir,dirxml,error,exception,group,groupCollapsed,groupEnd,info,log,timeStamp,profile,profileEnd,time,timeEnd,trace,warn".split(","), a; a = d.pop();) {
+		b[a] = b[a] || c
+	}
+})((function() {
+	try {
+		console.log();
+		return window.console;
+	} catch (err) {
+		return window.console = {};
+	}
+})());
+	</script>
+</body>
+</html>

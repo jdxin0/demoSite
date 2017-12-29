@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>first example</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="node_modules/avalon2/dist/avalon.js"></script>
+        <style type="text/css">
+            
+        </style>
+    </head>
+
+    <body>
+        <div ms-controller="AAA">
+            <div ms-attr="{align:'left'}">{{@name}} : {{@color}}</div>
+            <div ms-controller="BBB">
+                <div>{{@name}} : {{@color}}</div>
+                <div ms-controller="CCC">
+                    <div>{{@name}} : {{@color}}</div>
+                </div>
+                <div ms-important="DDD">
+                    <div>{{@name}} : {{@color}}</div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            avalon.define({
+                $id: "AAA",
+                name: "liger",
+                color: "green"　　
+            });
+            avalon.define({
+                $id: "BBB",
+                name: "sphinx",
+                color: "red"　　
+            });　　
+            avalon.define({
+                $id: "CCC",
+                name: "dragon" //不存在color
+
+            });
+            avalon.define({
+                $id: "DDD",
+                name: "sirenia" //不存在color
+
+            });　
+        </script>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>手雷API-Demo</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<style type="text/css">
+	    .toLiveRoom{
+	        display: block;
+	        margin-top: 10px;
+	        height: 44px;
+	        line-height: 44px;
+	        font-size: 16px;
+	        color: #fff;
+	        text-align: center;
+	        background: #e41e27;
+	        -webkit-border-radius: 4px;
+	    }
+	    .animated {
+	        animation-duration: 1s;
+	        animation-fill-mode: both
+	    }
+	    @keyframes fadeInUp {
+	        0% {
+	            opacity: 0;
+	            transform: translate3d(0,100%,0)
+	        }
+
+	        to {
+	            opacity: 1;
+	            transform: none
+	        }
+	    }
+
+	    .fadeInUp {
+	        animation-name: fadeInUp
+	    }
+	</style>
+</head>
+<body>
+	<a href="javascript:location.reload()" class="toLiveRoom">刷新</a>
+	<a href="http://www.yanhu.com/201709/20170915001/TrackPoint.html" class="toLiveRoom">RedPoint</a>
+	<a href="http://www.yanhu.com/201709/20170915001/Scroll.html" class="toLiveRoom">Scroll</a>
+	<a href="api.html" class="toLiveRoom animated fadeInUp">API</a>
+</body>
+</html>

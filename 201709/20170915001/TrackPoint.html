@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<style type="text/css">
+		.circle{
+			width: 50px;
+			height: 50px;
+			background: red;
+			/*border-radius: 50px;*/
+			position: absolute;
+			left:0;
+            top:0;
+		}
+		.container{
+			position:relative;
+			width: 100%;
+			height: 500px;
+			border: 1px solid black;
+            overflow: hidden;
+		}
+	</style>
+</head>
+<body>
+<h1>addEventListener</h1>
+<div class="container">
+	<div class="circle" style="left:0;top:0" id="div1"></div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+    var redPoint = {
+        init:function(){
+            this.event();
+        },
+        event:function(){
+            document.getElementById('div1').addEventListener("touchstart",this.EventListener,false);
+            document.getElementById('div1').addEventListener('touchmove',this.EventListener,false);
+            document.getElementById('div1').addEventListener('touchend',this.EventListener,false);
+        },
+        EventListener:{
+            startPos:{},
+            endPos:{},
+            divPos:{},
+            handleEvent:function(event){
+                // console.log(event)
+                if(event.type == 'touchstart'){
+                    // console.log(event.type);
+                    this.touchstart(event);
+                }else if(event.type == 'touchmove'){
+                    // console.log(event.type);
+                    this.touchmove(event);
+                }else if(event.type == 'touchend'){
+                    // console.log(event.type);
+                    this.touchend(event);
+                }else if(event.type == 'click'){
+                    // console.log(event.type);
+                    // this.end(event);
+                }
+            },touchstart:function(event){
+                var touch = event.targetTouches[0];    //touches数组对象获得屏幕上所有的touch，取第一个touch
+                this.divPos = {x:document.getElementById('div1').style.left.match(/\d+(\.\d+)?/)[0],y:document.getElementById('div1').style.top.match(/\d+(\.\d+)?/)[0]};
+                this.startPos = {x:touch.pageX-this.divPos.x,y:touch.pageY-this.divPos.y,time:+new Date};
+                // console.log(this.divPos)
+                console.log(this.startPos)
+            },
+            touchmove:function(event){
+                event.preventDefault()
+                var touch = event.targetTouches[0];
+                this.endPos = {x:touch.pageX - this.startPos.x  , y:touch.pageY - this.startPos.y };
+                    document.getElementById('div1').style.left = this.endPos.x + 'px';
+                    document.getElementById('div1').style.top = this.endPos.y + 'px';
+                console.log(this.endPos)
+            },
+            touchend : function(event){
+                // console.log(this.endPos)
+                this.endPos={}
+                this.divPos={}
+            }
+        }
+    };
+    redPoint.init();
+</script>

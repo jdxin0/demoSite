@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>first example</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="node_modules/avalon2/dist/avalon.js"></script>
+    </head>
+
+    <body>
+        <div ms-controller="test">
+            <input type="text" name="nickName" ms-duplex="@name">
+            <p>Hello,{{@name}}!</p>
+            <p ms-skip='true'>Hello,{{@name}}!</p>
+            <ul>
+                <li ms-for="($index,value) in @array">{{$index+":"+value}}</li>
+            </ul>
+        </div>
+        <script type="text/javascript">
+            var vm=avalon.define({
+                $id:"test",
+                name:"SidYan",
+                array:[11,33,55]
+            });
+            console.log(vm.array);
+            vm.array.set(0,66);
+        </script>
+    </body>
+</html>

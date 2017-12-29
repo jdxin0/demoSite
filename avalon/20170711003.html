@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>first example</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="node_modules/avalon2/dist/avalon.js"></script>
+        <style type="text/css">
+            
+        </style>
+    </head>
+
+    <body ms-controller="test">
+        <span ms-attr="@obj">直接引用对象</span>
+            <img ms-attr="{src: @path}" />
+            <ul>
+                <li ms-for="el in @arr"><a ms-attr="{href:'http://www.ccc.xxx/ddd/'+ el.img}">下载</a></li>
+            </ul>
+            <span :attr="{width: @width, height: @height}">使用对象字面量</span><br/>
+            <span :attr="@array">直接引用数组</span><br/>
+            <span :attr="[@obj, @toggle && @active ]" :click="@toggle = !@toggle">选择性添加多余属性或重写已有属性</span>
+        <script type="text/javascript">
+            avalon.define({
+                       $id: 'test',
+                       obj: {title: '普通 ', algin: 'left'},
+                       active: {title: '激活'},
+                       width: 111,
+                       height: 222,
+                       arr: [{img: 'aaa'}, {img: 'bbb'}, {img: 'ccc'}],
+                       path: './img/xiaoqingxinxinxin.jpg',
+                       toggle: false,
+                       array: [{width: 1}, {height: 2}]
+                   })
+        </script>
+    </body>
+</html>

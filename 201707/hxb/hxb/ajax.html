@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/json2.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		$.ajax({
+			type: "get",
+			url:"http://www.yanhu.com/2017/test.php",
+			data: '',
+			dataType: "jsonp",
+			success: function(rs){
+				if(rs.ret==100){
+					$(".remain").html(rs.data.places);
+				}else {
+					alert(rs.msg);
+				}
+			},
+			error: function(rs){
+				// console.log("网络错误！");
+			}
+		 });
+	</script>
+</body>
+</html>
