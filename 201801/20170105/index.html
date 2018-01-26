@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>认证手机号，赢迅雷年费会员</title>
+<meta name="description" content="认证手机号，赢迅雷年费会员">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <script src="http://act.vip.xunlei.com/zt_common/act_header_js.html"></script>
+    <div class="wrap-auth">
+        <div class="auth-top">
+            <h1>认证手机号，赢迅雷年费会员</h1>
+        </div>
+        <div class="auth-wp">
+            <div class="auth-main">
+                <div class="auth-lot">
+                    <div class="auth-lot-list">
+                        <ul>
+                            <li>
+                                 <div class="back"><img src="images/card-bg.png" alt=""></div>
+                                <div class="front"><img src="images/card1.png" alt=""></div>
+                            </li>
+                            <li>
+                                 <div class="back"><img src="images/card-bg.png" alt=""></div>
+                                <div class="front"><img src="images/card2.png" alt=""></div>
+                            </li>
+                            <li>
+                                 <div class="back"><img src="images/card-bg.png" alt=""></div>
+                                <div class="front"><img src="images/card3.png" alt=""></div>
+                            </li>
+                            <li>
+                                 <div class="back"><img src="images/card-bg.png" alt=""></div>
+                                <div class="front"><img src="images/card4.png" alt=""></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="txt">我的抽奖机会<span>1</span>次</p>
+                    <a href="javascript:;" class="btn-lot">立即抽奖</a><!-- 无效叠加disable -->
+                </div>
+                <div class="auth-des">
+                   <h2>获奖直播</h2> 
+                   <div class="auth-des-list">
+                       <ul>
+                            <li>
+                                <p><span class="user-name">我是**鱼</span>抽中3个月白金会员</p>
+                                <p class="date">2017-12-26</p>
+                            </li>
+                            <li>
+                                <p><span class="user-name">我是是是是**鱼</span>抽中3个月白金会员</p>
+                                <p class="date">2017-12-26</p>
+                            </li>
+                            <li>
+                                <p><span class="user-name">我是**鱼</span>抽中3个月白金会员</p>
+                                <p class="date">2017-12-26</p>
+                            </li>
+                            <li>
+                                <p><span class="user-name">我是**鱼</span>抽中3个月白金会员</p>
+                                <p class="date">2017-12-26</p>
+                            </li>
+                            <li>
+                               <p><span class="user-name">我是**鱼</span>抽中3个月白金会员</p>
+                               <p class="date">2017-12-26</p>
+                           </li>
+                       </ul>
+                   </div>
+                </div>
+            </div>
+            <div class="auth-rule">
+                <h2>活动规则</h2>
+                <ul>
+                    <li>1. 活动时间：2018年1月1日至2018年2月28日；</li>
+                    <li>2. 每一个完成手机认证的账号将获得3次抽奖机会；</li>
+                    <li>3. 已获得过抽奖机会的用户，修改认证手机号无法再次获得抽奖机会；</li>
+                    <li>4. 2元代金券，开通会员无使用门槛限制；5元代金券，金额满35元即可使用；10元代金券，金额满75元即可使用；</li>
+                    <li>5. 子帐号不可参与此活动，手机包月用户参与此活动后，需先退订手机包月服务会员才会生效；</li>
+                     <li>6. 如对本次活动有疑问，可联系<a href="#">迅雷在线客服&gt;&gt;</a></li>
+                </ul>
+               
+            </div>
+        </div>
+    </div>
+<script>
+var trans = false;
+var lot = true;
+var li = document.querySelectorAll('.auth-lot-list li');
+document.querySelector('.btn-lot').addEventListener('click',function(){
+    for(var i=0;i<li.length;i++){
+        if(lot == true){
+            li[i].classList.add('trans')
+        }    
+    }
+    trans = true;
+})
+for(var i=0;i<li.length;i++){
+    li[i].addEventListener('click',function(){
+        if(trans==true){
+            this.classList.remove('trans');
+            trans = false;
+            lot = false;
+            document.querySelector('.btn-lot').classList.add('disable')
+        }
+    })
+
+}
+
+</script>
+</body>
+</html>

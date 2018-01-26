@@ -1,0 +1,45 @@
+/***
+ @author ----- ningwenjing 
+ @design ----- huangjunkai
+ @time   ----- 2017-12-22
+***/
+body,dl,dd,h1,h2,h3,h4,h5,h6,p,form{margin:0;}ol,ul,input{margin:0; padding:0;}body,button,input,select,textarea{font:12px/1.5 \5FAE\8F6F\96C5\9ED1,tahoma,arial,\5b8b\4f53,sans-serif;outline:none;}ul,ol{list-style:none;}a{text-decoration:none;outline:0 none;color:#000;}img{border:0;}table{border-collapse:collapse;border-spacing:0;}
+
+body{background: #faece0;}
+.wrap-auth{background: url(../img/bg.jpg) center no-repeat;background-size: cover;}
+.auth-top{height: 296px;display: flex;align-items: center;justify-content: center;}
+.auth-top h1{background: url(../img/spr.png) no-repeat;width: 395px;height: 136px;line-height: 100;overflow: hidden;}
+.auth-wp{width: 806px;margin: 0 auto;}
+.auth-main{display: flex;justify-content: space-between;}
+.auth-lot{width: 592px;height: 320px;background: #e63535;border-radius: 5px;text-align: center;}
+.auth-lot-list{margin: 10px 15px 0;}
+.auth-lot-list ul{display: flex;}
+.auth-lot-list li{width: 136px;height: 200px;position: relative;margin: 0 9px 0 0;}
+.auth-lot-list li:nth-last-child(1){margin: 0;}
+.auth-lot-list li>div{transition: .5s;position:absolute;width: 100%;height: 100%;left: 0;top: 0;backface-visibility:hidden; }
+.back{transform:perspective(1000px) rotateY(180deg); }
+.front{transform:perspective(1000px) rotateY(0);}
+.trans{cursor: pointer;transition: .2s}
+
+.trans .front{transform:perspective(1000px) rotateY(-180deg); }
+.trans .back{transform:perspective(1000px) rotateY(0deg); }
+.auth-lot .txt{color: #ffeba5;font-size: 15px;line-height: 40px;}
+.auth-lot .txt span{font-weight: bold;margin: 0 5px;}
+.btn-lot{width: 194px;height: 50px;line-height: 50px;background: #ffe184;border-radius: 25px;font-size: 20px;font-weight: bold;color: #9c4117;display: block;margin: 0 auto;transition: .2s}
+.btn-lot:hover{text-decoration: none;background: #ffe9a3;}
+.btn-lot.disable{color: #deb165;cursor: not-allowed;}
+.auth-des{width: 210px;height: 320px;background: #e54c2e;border-radius: 5px;color: #ffeba5;}
+.auth-des h2{line-height: 65px;font-size: 15px;text-align: center;}
+.auth-des-list{margin: 0 18px}
+.auth-des-list li{margin: 0 0 10px;}
+.auth-des-list .user-name{margin: 0 10px 0 0;display: inline-block;vertical-align: top;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;max-width: 5em;}
+.date{color: #d8b582}
+
+.auth-rule{color: #a66142;margin: 20px 0 0;}
+.auth-rule h2{font-size: 18px;line-height: 44px;}
+.auth-rule li{font-size: 15px;line-height: 2;}
+.auth-rule a{color: #ff4848}
+
+.modwp{width: 806px !important}
+.vip-header .menu .mid_link{padding: 0 15px !important}
+
