@@ -351,6 +351,7 @@ function handleTouchStart(evt) {
 };
 
 function handleTouchMove(evt) {
+  event.preventDefault()
     var prevGame = [].concat(game);
     if (!xDown || !yDown) {
         return;
