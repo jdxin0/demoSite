@@ -20,12 +20,15 @@
 		    var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate + " " + date.getHours() + seperator2 + date.getMinutes() + seperator2 + date.getSeconds();//return type 2017-08-28 15:48:36
 		    return currentdate;
 		}
+		
 	</script>
 </head>
 <body>
+	<div id="time"></div>
 	<script type="text/javascript">
-		setTimeout(function(){
-			document.write(getNowFormatDate());
+		var timeBox = document.getElementById("time");
+		setInterval(function(){
+			timeBox.innerText=getNowFormatDate();
 		},1000);
 	</script>
 </body>
