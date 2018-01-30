@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<title></title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<link rel="stylesheet" type="text/css" href="css/reset-min-1.3.css">
+	<style type="text/css">
+		/* pop */
+		.mask{position:fixed;top:0;bottom:0;left:0;right:0;background:rgba(0,0,0,0.4);z-index:100;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66000000,endColorstr=#66000000);}
+		.pop-act {
+			line-height:1;
+			position:fixed;
+			width:390px;height:430px;
+			top:50%;left:50%;margin-top:-215px;margin-left:-195px;
+			z-index:101;
+			background-image:url(img/spr-pop.png);
+			background-position:0px 0px;
+			background-repeat:no-repeat;
+			text-align:center;
+		}
+		.pop-act .pop-close{
+			position: absolute;right:15px;top:15px;
+			width:18px;height:18px;
+			background-image:url(img/spr-pop.png);
+			background-position:-564px -377px;
+			background-repeat:no-repeat;
+			-webkit-transition:.3s;
+			-o-transition:.3s;
+			transition:.3s;
+		}
+		.pop-act .pop-close:hover{
+			-webkit-transform:rotate(180deg);
+			    -ms-transform:rotate(180deg);
+			        transform:rotate(180deg);
+		}
+		.pop-act .pop-hd h3{
+			font-size:28px;color:#fdda89;
+			padding:29px 0 14px;
+		}
+		.pop-act .pop-hd h3 em{
+			display:inline-block;vertical-align:top;
+			max-width:180px;overflow:hidden;-o-text-overflow:ellipsis;text-overflow:ellipsis;white-space:nowrap;
+		}
+		.pop-act .pop-hd p{
+			font-size:20px;color:#ffffff;
+		}
+		.pop-act .pop-bd{
+			position: relative;
+		}
+		.pop-act .pop-bd .code{
+			width:150px;
+			margin:41px auto 32px;
+		}
+		.pop-act .pop-bd .code img{
+			width:100%;height:auto;
+			margin-bottom:19px;
+		}
+		.pop-act .pop-bd .code p{
+			font-size:18px;color:#fcdb89;
+		}
+		.pop-act .pop-bd .code.cbind{
+			margin:41px auto 0;
+		}
+		.pop-act .pop-fd .step li{
+			font-size:18px;color:#fdda89;
+			position: relative;
+			margin-bottom:54px;
+		}
+		.pop-act .pop-fd .step .step01:after{
+			content:'';
+			position: absolute;left:50%;margin-left:-14px;bottom:-35px;
+			width:28px;height:15px;
+			background-image:url(img/spr-pop.png);
+			background-position:-686px -350px;
+			background-repeat:no-repeat;
+		}
+		.pop-act{
+			-webkit-animation:slideInDown .4s both;
+			        animation:slideInDown .4s both;
+		}
+	</style>
+</head>
+<body>
+<div class="scanRich">
+	<div class="mask"></div>
+	<div class="pop-act">
+		<a class="pop-close" href="javascript:;"></a>
+		<div class="pop-hd">
+			<h3>扫一扫</h3>
+			<p>随时随地2048手机版</p>
+		</div>
+		<div class="pop-bd">
+			<div class="code cbind">
+				<img src="images/code.png" alt="二维码">
+			</div>
+		</div>
+		<div class="pop-fd">
+			<ul class="step">
+				<li class="step01">1. 手机扫码打开2048</li>
+				<li class="step02">2. 开始挑战</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	function isMobile() {
+	    var userAgentInfo = navigator.userAgent;
+	    var Agents = new Array("Android","iPhone","SymbianOS","Windows Phone","iPad","iPod","MicroMessenger","micromessenger");
+	    var flag = false;
+	    var v = 0
+	    for (v = 0; v < Agents.length; v++) {
+	        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+	            flag = true;
+	            break;
+	        }
+	    }
+	    if (flag) {
+	        return true;
+	    } else {
+	        return false;
+	    }
+	}
+	if (!isMobile()) {
+		// alert("请手机查看");
+	}
+</script>
+</body>
+</html>

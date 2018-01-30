@@ -1,51 +1,66 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
-<title>随时随地2048</title>
-
-<link rel="stylesheet" href="css/reset.min.css">
-<link rel="stylesheet" href="css/style.css">
-
-</head>
-
-<body>
-
-<header>
-	<div class="container">
-		<h1><span>2</span><span>0</span><span>4</span><span>8</span></h1>
-	</div>
-</header>
-
-<div class="container">
-	<div class="scores">
-		<div class="score-container best-score">
-			最佳: 
-			<div class="score">
-				<div id="bestScore">0</div>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
+		<title>随时随地2048</title>
+		<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.11.3/jquery.js"></script>
+		<link rel="stylesheet" href="css/reset.min.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<h1><span>2</span><span>0</span><span>4</span><span>8</span></h1>
+			</div>
+		</header>
+		<div class="container">
+			<div class="scores">
+				<div class="score-container best-score">
+					最佳:
+					<div class="score">
+						<div id="bestScore">0</div>
+					</div>
+				</div>
+				<div class="score-container">
+					分数:
+					<div class="score">
+						<div id="score">0</div>
+						<div class="add" id="add"></div>
+					</div>
+				</div>
+			</div>
+			<div class="game">
+				<div id="tile-container" class="tile-container"></div>
+				<div class="end" id="end">游戏结束<div class="monkey">🙈</div><button class="btn not-recommended__item js-restart-btn" id="try-again">再试一次</button></div>
+			</div>
+			<div class="not-recommended">
+				<button class="btn not-recommended__item js-restart-btn" id="restart">重新启动游戏</button>
+				<span class="not-recommended__annotation"></span>
 			</div>
 		</div>
-		<div class="score-container">
-			分数: 
-			<div class="score">
-				<div id="score">0</div>
-				<div class="add" id="add"></div>
+		<!-- 浮层 -->
+		<div class="scanRich" style="display: none">
+			<div class="mask"></div>
+			<div class="pop-act">
+				<a class="pop-close" href="javascript:;"></a>
+				<div class="pop-hd">
+					<h3>扫一扫</h3>
+					<p>手机扫码玩2048小游戏</p>
+				</div>
+				<div class="pop-bd">
+					<div class="code cbind">
+						<img src="images/code.png" alt="二维码">
+					</div>
+				</div>
+				<div class="pop-fd">
+					<ul class="step">
+						<li class="step01">1. 手机扫码打开2048</li>
+						<li class="step02">2. 开始挑战</li>
+					</ul>
+				</div>
 			</div>
 		</div>
-	</div>
-	<div class="game">
-		<div id="tile-container" class="tile-container"></div>
-		<div class="end" id="end">游戏结束<div class="monkey">🙈</div><button class="btn not-recommended__item js-restart-btn" id="try-again">再试一次</button></div>
-	</div>
-
-	<div class="not-recommended">
-		<button class="btn not-recommended__item js-restart-btn" id="restart">重新启动游戏</button>
-		<span class="not-recommended__annotation"></span>
-	</div>
-
-</div>
-
-<script src="js/index.js?v=3"></script>
-</body>
+		<script src="js/index.js?v=3"></script>
+	</body>
 </html>

@@ -1,5 +1,27 @@
 'use strict';
-
+function isMobile() {
+    var userAgentInfo = navigator.userAgent;
+    var Agents = new Array("Android","iPhone","SymbianOS","Windows Phone","iPad","iPod","MicroMessenger","micromessenger");
+    var flag = false;
+    var v = 0
+    for (v = 0; v < Agents.length; v++) {
+        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+            flag = true;
+            break;
+        }
+    }
+    if (flag) {
+        return true;
+    } else {
+        return false;
+    }
+}
+if (!isMobile()) {
+    $(".scanRich").show();
+}
+$(".pop-close").click(function(){
+    $(".scanRich").hide();
+});
 var _extends = Object.assign || function(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var game = null;
