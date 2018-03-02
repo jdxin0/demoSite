@@ -1,0 +1,1 @@
+define(["jQuery"],function(n){var e=0;return{printCurrentCounter:function(){console.log("printCurrentCounter:",e)},incrementCounter:function(){return console.log("incrementCounter:",++e)},resetCounter:function(){console.log("counter的值将被清空,现在的值是:"+e),e=0}}});

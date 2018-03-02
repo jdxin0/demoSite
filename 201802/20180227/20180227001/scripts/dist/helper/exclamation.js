@@ -1,0 +1,1 @@
+define([],function(){function n(){console.log("exclamation Object")}return n.load=function(){console.log("exclamation 静态方法")},n});
