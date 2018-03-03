@@ -5,7 +5,7 @@
          name: './main'
      }],
      fileExclusionRegExp: /^(require|i18n|r|build)\.js$/,
-     optimize:'none',//uglify|none
+     optimize:'uglify',//uglify|none
      optimizeCss: 'standard',
      // removeCombined: false,
      paths: {
