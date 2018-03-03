@@ -10,13 +10,13 @@ require.config({
         "domReady": "lib/domReady",
         "text": "lib/text",
         "review": "app/review.txt",
+        "tpl": "app/template.html",
         "Util": "app/util",
         "exclamation": "app/exclamation"
     }
 });
 //requireJS插件列表https://github.com/requirejs/requirejs/wiki/Plugins
-var moduleArr = ['domReady', 'jQuery', 'Util', 'exclamation', 'text!review','app/commonjsModule'];
-require(moduleArr, function(domReady, $, util, exclamation, txt,commonjsModule) {
+require(['domReady', 'jQuery', 'Util', 'exclamation', 'text!review', 'text!tpl'], function(domReady, $, util, exclamation, txt,tpl) {
     domReady(function() {
         console.log("document ready 1");
         console.log($.fn.jquery);
@@ -36,12 +36,8 @@ require(moduleArr, function(domReady, $, util, exclamation, txt,commonjsModule) 
     domReady(function() {
         console.log("document ready 4");
         console.log("text模块");
+        console.log(tpl);
         $("body").html(txt);
-    });
-    domReady(function() {
-        console.log("document ready 5");
-        console.log("shirt模块");
-        console.log(commonjsModule);
     });
 })
 requirejs.onResourceLoad = function (context, map, depArray) {
