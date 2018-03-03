@@ -4,9 +4,10 @@
      modules: [{
          name: './main'
      }],
-     fileExclusionRegExp: /^(i18n|r|build)\.js$/,
+     fileExclusionRegExp: /^(require|i18n|r|build)\.js$/,
+     optimize:'none',//uglify|none
      optimizeCss: 'standard',
-     // removeCombined: true,
+     // removeCombined: false,
      paths: {
          domReady: 'helper/domReady',
          text: 'helper/text',
@@ -17,7 +18,7 @@
      },
      shim: {
          'jQuery': {
-             exports: '$'
+             exports: 'jQuery'
          }
      }
  })

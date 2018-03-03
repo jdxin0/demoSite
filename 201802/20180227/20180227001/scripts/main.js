@@ -1,10 +1,10 @@
 require.config({
 	shim: {
         'jQuery': {
-            exports: '$'
+            exports: 'jQuery'
         }
     },
-	baseUrl: "scripts/helper",
+	baseUrl: "scripts/helper/",
     paths: {
     	"domReady":"domReady",
     	"text":"text",
@@ -15,7 +15,7 @@ require.config({
     }
 });
 //requireJS插件列表https://github.com/requirejs/requirejs/wiki/Plugins
-require(['domReady','jQuery','Util','exclamation','text!review'],function(domReady,$,util,exclamation,txt){
+require(['domReady','Util','exclamation','text!review','jQuery'],function(domReady,util,exclamation,txt,$){
 	domReady(function(){
 		console.log("document ready 1");
 		console.log($.fn.jquery);
