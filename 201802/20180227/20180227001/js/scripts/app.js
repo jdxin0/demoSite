@@ -15,7 +15,8 @@ require.config({
     }
 });
 //requireJS插件列表https://github.com/requirejs/requirejs/wiki/Plugins
-require(['domReady', 'Util', 'exclamation', 'text!review', 'jQuery'], function(domReady, util, exclamation, txt, $) {
+var moduleArr = ['domReady', 'jQuery', 'Util', 'exclamation', 'text!review','app/commonjsModule'];
+require(moduleArr, function(domReady, $, util, exclamation, txt,commonjsModule) {
     domReady(function() {
         console.log("document ready 1");
         console.log($.fn.jquery);
@@ -37,4 +38,19 @@ require(['domReady', 'Util', 'exclamation', 'text!review', 'jQuery'], function(d
         console.log("text模块");
         $("body").html(txt);
     });
+    domReady(function() {
+        console.log("document ready 5");
+        console.log("shirt模块");
+        console.log(commonjsModule);
+    });
 })
+requirejs.onResourceLoad = function (context, map, depArray) {
+    console.log(map);
+}
+require(["http://www.xuliehaonet.com/interface/jsonp.php?callback=define"],
+    function (data) {
+        //The data object will be the API response for the
+        //JSONP data call.
+        console.log(data);
+    }
+);
