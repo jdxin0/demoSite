@@ -4,7 +4,7 @@ require.config({
             exports: 'jQuery'
         }
     },
-    baseUrl: "scripts/",
+    baseUrl: "js/scripts/",
     paths: {
         "jQuery": "lib/jquery",
         "domReady": "lib/domReady",

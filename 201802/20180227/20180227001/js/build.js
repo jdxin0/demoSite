@@ -2,7 +2,7 @@
  ({
      dir: './dist',
      modules: [{
-         name: './main'
+         name: './app'
      }],
      fileExclusionRegExp: /^(i18n|r|build)\.js$/,
      optimize: 'uglify', //uglify|none
