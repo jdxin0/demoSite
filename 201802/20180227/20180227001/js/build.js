@@ -2,10 +2,10 @@
  ({
      dir: './dist',
      modules: [{
-         name: './main'
+         name: './app'
      }],
      fileExclusionRegExp: /^(i18n|r|build)\.js$/,
-     optimize: 'uglify', //uglify|none
+     optimize: 'none', //uglify|none
      optimizeCss: 'standard',
      // removeCombined: false,
      baseUrl: "scripts/",
@@ -13,6 +13,7 @@
          "jQuery": "lib/jquery",
          "domReady": "lib/domReady",
          "text": "lib/text",
+         "tpl": "app/template.html",
          "review": "app/review.txt",
          "Util": "app/util",
          "exclamation": "app/exclamation"

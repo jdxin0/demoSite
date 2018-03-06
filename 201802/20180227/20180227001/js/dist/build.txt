@@ -1,5 +1,5 @@
 
-./main.js
+./app.js
 ----------------
 lib/domReady.js
 lib/jquery.js
@@ -7,4 +7,5 @@ app/util.js
 app/exclamation.js
 lib/text.js
 text!review
-main.js
+text!tpl
+app.js
