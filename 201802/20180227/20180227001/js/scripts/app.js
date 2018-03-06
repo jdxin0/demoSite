@@ -53,9 +53,9 @@ require([ 'Util', 'exclamation', 'text!review', 'text!tpl','Modernizr','domReady
         console.log(M.json);
     });
 })
-requirejs.onResourceLoad = function (context, map, depArray) {
+/*requirejs.onResourceLoad = function (context, map, depArray) {
     console.log(map);
-}
+}*/
 // require(["http://www.xuliehaonet.com/interface/jsonp.php?callback=define"],
 //     function (data) {
 //         //The data object will be the API response for the
