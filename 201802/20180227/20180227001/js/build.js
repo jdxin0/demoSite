@@ -6,7 +6,7 @@
         name: './app'
     }],
     fileExclusionRegExp: /^(i18n|r|build)\.js$/,
-    optimize: 'uglify2', //uglify2|none
+    optimize: 'none', //uglify2|none
     uglify2: {
         //Example of a specialized config. If you are fine
         //with the default options, no need to specify
