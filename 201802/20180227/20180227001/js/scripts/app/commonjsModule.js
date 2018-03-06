@@ -1,4 +1,4 @@
- define(function(require, exports, module) {
+ define(['console'],function(require, exports, module) {
      var a = require('js/scripts/app/shirt1.js'),
          b = require('js/scripts/app/shirt2.js');
      	return function(){

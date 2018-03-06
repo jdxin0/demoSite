@@ -2,13 +2,21 @@ require.config({
     shim: {
         'jQuery': {
             exports: 'jQuery'
+        },
+        'Modernizr':{
+            exports:'Modernizr'
+        },
+        'console':{
+            exports:'console'
         }
     },
     baseUrl: "js/scripts/",
     paths: {
         "jQuery": "lib/jquery",
         "domReady": "lib/domReady",
+        "Modernizr":"lib/Modernizr",
         "text": "lib/text",
+        "console": "lib/console",
         "review": "app/review.txt",
         "tpl": "app/template.html",
         "Util": "app/util",
@@ -16,7 +24,7 @@ require.config({
     }
 });
 //requireJS插件列表https://github.com/requirejs/requirejs/wiki/Plugins
-require(['domReady', 'jQuery', 'Util', 'exclamation', 'text!review', 'text!tpl'], function(domReady, $, util, exclamation, txt,tpl) {
+require([ 'Util', 'exclamation', 'text!review', 'text!tpl','Modernizr','domReady', 'jQuery','console'], function( util, exclamation, txt,tpl,M,domReady, $,C) {
     domReady(function() {
         console.log("document ready 1");
         console.log($.fn.jquery);
@@ -39,14 +47,19 @@ require(['domReady', 'jQuery', 'Util', 'exclamation', 'text!review', 'text!tpl']
         console.log(tpl);
         $("body").html(txt);
     });
+    domReady(function(){
+        console.log("document ready 5");
+        console.log("Modernizr");
+        console.log(M.json);
+    });
 })
 requirejs.onResourceLoad = function (context, map, depArray) {
     console.log(map);
 }
-require(["http://www.xuliehaonet.com/interface/jsonp.php?callback=define"],
-    function (data) {
-        //The data object will be the API response for the
-        //JSONP data call.
-        console.log(data);
-    }
-);
+// require(["http://www.xuliehaonet.com/interface/jsonp.php?callback=define"],
+//     function (data) {
+//         //The data object will be the API response for the
+//         //JSONP data call.
+//         console.log(data);
+//     }
+// );

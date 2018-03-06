@@ -1,11 +1,13 @@
 
 ./app.js
 ----------------
-lib/domReady.js
-lib/jquery.js
+lib/jquery.min.js
+lib/console.js
 app/util.js
 app/exclamation.js
 lib/text.js
 text!review
 text!tpl
+lib/Modernizr.js
+lib/domReady.js
 app.js

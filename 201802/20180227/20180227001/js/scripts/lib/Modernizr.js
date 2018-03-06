@@ -1,6 +1,6 @@
-   /*!
+/*!
  * modernizr v3.6.0
- * Build https://modernizr.com/download?-ie8compat-dontmin
+ * Build https://modernizr.com/download?-json-dontmin
  *
  * Copyright (c)
  *  Faruk Ates
@@ -82,27 +82,10 @@
     // Fake some of Object.create so we can force non test results to be non "own" properties.
     var Modernizr = function() {};
     Modernizr.prototype = ModernizrProto;
+
     // Leak modernizr globally when you `require` it rather than force it here.
     // Overwrite name so constructor name is nicer :D
     Modernizr = new Modernizr();
-
-    /*!
-{
-  "name": "IE8 compat mode",
-  "property": "ie8compat",
-  "authors": ["Erich Ocean"]
-}
-!*/
-    /* DOC
-Detects whether or not the current browser is IE8 in compatibility mode (i.e. acting as IE7).
-*/
-
-    // In this case, IE8 will be acting as IE7. You may choose to remove features in this case.
-
-    // related:
-    // james.padolsey.com/javascript/detect-ie-in-js-using-conditional-comments/
-
-    Modernizr.addTest('ie8compat', (!window.addEventListener && !!document.documentMode && document.documentMode === 7));
 
     /**
    * is returns a boolean if the typeof an obj is exactly type.
@@ -187,7 +170,27 @@ Detects whether or not the current browser is IE8 in compatibility mode (i.e. ac
             }
         }
     }
-    ;
+    ;/*!
+{
+  "name": "JSON",
+  "property": "json",
+  "caniuse": "json",
+  "notes": [{
+    "name": "MDN documentation",
+    "href": "https://developer.mozilla.org/en-US/docs/Glossary/JSON"
+  }],
+  "polyfills": ["json2"]
+}
+!*/
+    /* DOC
+Detects native support for JSON handling functions.
+*/
+
+    // this will also succeed if you've loaded the JSON2.js polyfill ahead of time
+    //   ... but that should be obvious. :)
+
+    Modernizr.addTest('json', 'JSON'in window && 'parse'in JSON && 'stringify'in JSON);
+
     // Run each test
     testRunner();
 
@@ -201,6 +204,7 @@ Detects whether or not the current browser is IE8 in compatibility mode (i.e. ac
 
     // Leak Modernizr namespace
     window.Modernizr = Modernizr;
+
     ;
 
 }

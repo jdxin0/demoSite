@@ -1,4 +1,4 @@
-define(function(){
+define(['console'],function(){
 	var private="私有属性";
 	function exclamation(){
 		console.log("exclamation Object");

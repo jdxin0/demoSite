@@ -1,1 +1,10 @@
-define([],function(){function exclamation(){console.log("exclamation Object")}return exclamation.load=function(){console.log("exclamation 静态方法")},exclamation});
+define(['console'],function(){
+	var private="私有属性";
+	function exclamation(){
+		console.log("exclamation Object");
+	}
+	exclamation.load = function(){
+		console.log("exclamation 静态方法");
+	}
+	return exclamation;
+});
