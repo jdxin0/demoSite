@@ -1,0 +1,100 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-align: left;
+}
+
+body {
+    font-family: "宋体",Arial,Verdana;
+    font-size: 12px;
+    line-height:22px;
+    background-color: #e5e5e5;
+}
+
+li{
+    list-style:none;
+}
+
+a:link, a:visited, a:active {
+    color:#ccff44;
+    text-decoration:none;
+}
+#contain{
+    width:1002px;
+    margin:0 auto;
+}
+
+#top{
+    margin-bottom:5px;
+}
+#bottom{
+    height:80px;
+    width:1000px;
+    margin-top:5px;
+    border:1px solid #4b4b4b;
+    background-color:#fff;
+}
+#wrapper{
+    padding:10px 0;
+    background-image:url(img/bg.jpg);
+	}
+
+#atleft{
+    float:left;
+    width:200px;
+	}
+
+#sidebar{
+    float:right;
+	width:200px;
+	}
+
+#content{
+    margin-left:205px;
+    margin-right:205px;
+	}
+
+#dash{
+    clear:both;
+}
+
+.currentLink a{
+    color:#fff;
+}
+
+p{
+	margin:5px 10px 0 10px;
+	letter-spacing:1px;
+ }
+
+.quan1{
+	font-weight:bold;
+	color:red;}
+
+.quan2{
+	font-weight:bold;
+	color:green;}
+
+.quan3{
+	font-weight:bold;
+	color:blue;}
+table {  
+    font-size: x-small
+}
+.shortcutcols {
+    border-bottom: thin solid gray 
+}
+.superscript { 
+    font-size:small; 
+    vertical-align:super;
+}
+
+.tag{
+    background-color:yellow;
+    font-weight:bold; 
+    color:red;
+}

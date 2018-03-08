@@ -1,0 +1,338 @@
+Alaska 阿拉斯加 907 
+Albany(NY) 奥尔巴尼 518 
+Annapolis 安纳波利斯 410 
+Atlanta(GA) 亚特兰大 404 
+Augusta(ME) 奥古斯塔（缅因） 207 
+Austin(TX) 奥斯汀 512 
+Baton Rouge 巴吞鲁日 504 
+Bismarck 俾斯麦 701 
+Boise 博伊西 208 
+Boston 波士顿 617 
+Carson City 卡森城 702 
+Charleston(WV) 查尔斯顿 304 
+Cheyenne 夏延 307 
+Chicago 芝加哥 312 
+Cincinati 辛辛那提 513 
+Cleveland(OH) 克利夫兰 440 
+Columbia(SC) 哥伦比亚 803 
+Columbus(OH) 哥伦布 740 
+Concord(NH) 康科德 603 
+Dallas 达拉斯 214 
+Denver 丹佛 303 
+Des Moines 得梅因 515 
+Detroit 底特律 313 
+Dover(DE) 多佛 302 
+Frankfort(KY) 法兰克福 502 
+Harrisburg 哈里斯堡 717 
+Hartford(AL) 哈特福德 334 
+Hawaii 夏威夷 808 
+Helena(MT) 海伦娜 406 
+Houston 休斯敦 713 
+Indianapolis 印第安纳波利斯 317 
+Jackson(MS) 杰克逊 228 
+Jefferson City(MO) 杰斐逊城 573 
+Kansas City(KS) 堪萨斯城 913 
+Lansing(MI) 兰辛 517 
+Lincoln(NE) 林肯 402 
+Little Rock 小石城 501 
+Los Angeles 洛杉矶 213 
+Madison(WI) 麦迪逊 608 
+Memphis 孟菲斯 901 
+Miami(FL) 迈阿密 305 
+Minneapolis 明尼阿波利斯 612 
+Montgomery(AL) 蒙哥马利 334 
+Montpelier(VT) 蒙彼利埃 802 
+Morristown(NJ) 莫利斯顿 973 
+Nashville 纳什维尔 615 
+New Orleans 新奥尔良 504 
+New York 纽约 212 
+Oklahoma City 俄克拉何马城 405 
+Olympia 奥林匹亚 360 
+Philadelphia(PA) 费城 215 
+Phoenix 菲尼克斯 602 
+Portland(OR) 波特兰 503 
+Providence(RI) 普罗维登斯 401 
+Raleigh 罗利 919 
+Richmond(VA) 里士满 804 
+Sacramento 萨克拉门托 916 
+Salem(OR) 塞勒姆 503 
+Salt Lake City 盐湖城 801 
+San Francisco 旧金山 415 
+Santa Fe(NM) 圣菲 505 
+Seattle 西雅图 206 
+Springfield(IL) 斯普林菲尔德 217 
+St Louis 圣路易斯 314 
+St Paul 圣保罗 612 
+Tallahassee 塔拉哈西 904 
+Topeka 托皮卡 913 
+Trenton(NJ) 特伦顿 609 
+Washington D. C. 华盛顿 202 
+
+
+美国大学名称
+Adelphi University
+
+亚狄非大学 
+American University　　美国大学 
+Arizona State University 亚利桑那州立大学 
+Andrews University       安德鲁斯大学 
+Boston University 　　 波士顿大学 
+Biola University            比奥拉大学 
+Baylor University         贝勒大学 
+Ball State University   鲍尔州立大学 
+Duke University         杜克大学 
+Drexel University      德雷塞尔大学 
+DePaul University 德宝大学 
+Colorado State University 科罗拉多州立大学 
+Colorado School of Mines 科罗拉多矿学院 
+College of William and Mary 威廉与玛丽学院 
+Cleveland State University 克利夫兰州立大学 
+Clemson University 克莱姆森大学 
+Clarkson University 克拉逊大学
+Clark University 克拉克大学 
+Carnegie-Mellon University 卡内基美隆大学
+Brown University 布朗大学 
+Brigham Young University 杨百翰大学
+Brandeis University 布兰迪斯大学 
+Bowling Green State University 鲍灵格林大学
+Duquesne University 迪尤肯大学 
+Emory University 艾摩雷大学
+Florida Atlantic University 佛罗里达大西洋大学 
+Florida Institute of Technology 佛罗里达科技大学 
+Florida International University 佛州国际大学
+Florida State University 佛罗里达州立大学 
+George Mason University　　 乔治梅森大学
+George Washington University 乔治华盛顿大学
+Georgetown University 乔治敦大学
+Georgia State University 佐治亚州立大学 
+Howard University 霍华德大学 
+Idaho State University 爱达荷州立大学 
+Illinois State University 伊利诺州立大学
+Illionis Institute of Technology 伊利诺理工学院
+Indiana State University 印第安纳州立大学 
+Indiana University of Pennsylvania 宾州印第安纳大学 
+Indiana University，Bloomington 印第安纳布卢明顿大学 
+Iowa State University of Science And Technology依阿华州立大学 
+John F. Kennedy University 约翰.肯尼迪大学 
+Kansas State University 堪萨斯州立大学 
+Kent State University 肯特州立大学 
+La Sierra University 拉西拉大学 
+Loma Linda University 洛玛连达大学 
+Lehigh University 利哈伊大学 
+Louisiana State University, Baton Rouge 路易斯安那州立大学
+Louisiana Tech University 路易斯安那理工大学 
+Loyola University of Chicago 莱奥那芝加哥大学 
+Marquette University 马奎特大学 
+Massachusetts Institute of Technology 麻省理工学院 
+Miami University, Oxford 迈阿密大学 
+Michigan State University 密执安州立大学 
+Michigan Technological University 密执安理工大学 
+Middle Tennessee State University 中田纳西州州立大学 
+Mississippi State University 密西西比州立大学 
+Montana State University 蒙大拿州立大学 
+National Hispanic University 西班牙语裔国民大学 
+Naval Postgraduate School 海军研究生院 
+New College of California 加利福尼亚新学院 
+New Jersey Institute of Technology 新泽西理工学院 
+New Mexico State University 新墨西哥州立大学 
+New school for Social Research 社会研究新学院 
+New York University 纽约大学 
+North Carlonia State University ay Raleigh北卡罗来纳州立大学 
+North Dakota State University 北达科他州立大学 
+Northeastern University 东北大学 
+Northern Illinois University 北伊利诺伊大学 
+Northwestern University 西北大学 
+Nova Southeastern University 诺瓦东南大学 
+Ohio State University 俄亥俄州立大学 
+Ohio University 俄亥俄大学 
+Oklahoma State University 俄克拉荷马州立大学 
+Old Dominion University 奥多明尼昂大学 
+Oregon State University 俄勒冈州立大学 
+Pace University 佩斯大学 
+Pacific Union College 太平洋联合大学 
+Pennsylvania State University 宾州州立大学 
+Pepperdine University 佩波戴恩大学 
+Pepperdine Univrsity 佩普丁大学 
+Pittsburg State University 匹兹堡州立大学 
+Polytechnic University 理工大学 
+Portland State University 波特兰州立大学 
+princeton university 普林斯顿大学 
+Purdue University 珀杜大学 
+Rensselaer Polytechnic Institute　伦斯莱尔科技学院　　
+Rice University莱斯大学　　
+Rutgers at New Brunswick拉杰斯大学　　
+SCHILLER INTERNATIONAL UNIVERSITY　席勒国际大学　　
+Seton Hall University薛顿贺尔大学　　
+Southern Illinois University at Carbondale　南伊利诺伊卡本代尔大学　　
+Southern Methodist University　南卫理工会大学　　
+St.John’s University　圣约翰大学　　
+st.Louis University　圣路易斯大学　　
+Stanford University　斯坦福大学　　
+Stevens Institute of Technology史蒂文斯科技学院　　
+SUNY at Albany　纽约州立奥尔巴尼大学　　
+SUNY at Binghamton　纽约州立宾汉姆顿大学　　
+SUNY at Stony Brook　纽约州立石溪大学　　
+SUNY at Buffalo　纽约州立水牛城大学　　
+Syracuse University　雪城大学　　
+CHRISTCHURCH POLYTECHNIC基督城理工学院　　
+The johns Hopkins university　约翰霍普金斯大学　　
+The University of Akron　阿克伦大学　　
+The University of Texas at Arlington　德州阿灵顿大学　　
+Thomas Aquinas College　托马斯阿奎那斯学院　　
+Tufts University　塔夫脱大学　　
+Tulane University　杜伦大学　　
+Tulane University图兰大学　　
+United States International University　美国国际大学　　
+Univ. Of North Carolina-Chapel Hill　北卡罗来纳-教堂山大学　　
+Univerity of North Carolina at Greensboro北卡罗来纳格林斯伯勒大学　
+University of Alabama at Birmingham　阿拉巴马伯明翰大学　　
+University of Alaska阿拉斯加大学　　
+University of Arkansas　阿肯色大学　　
+Tennessee State Univerity　田纳西州立大学　　
+Texas A&M University　德克萨斯州A＆M大学　　
+Texas Christian University　德州基督教大学　　
+Texas Southern Univrsity南德州大学　　
+Texas Tech University　德州理工大学　　
+Texas Woman’s University　德州女子大学　　
+The Catholic University of America　美国天主教大学　　
+University of California at Berkeley　加州柏克莱大学　　
+University of California at Los Angeles　加州洛衫矶大学　　
+University of California at Santa Cruz　加州圣克鲁斯大学　　
+University of California, Davis　加州戴维斯大学　　
+University of California, Riverside　加州河畔大学　　
+University of California, San Diego　加州圣迭戈大学　　
+University of California, Santa Barbara　加州圣芭芭拉大学　　
+University of California-Irvine　加州伊荣大学　　
+University of Central Florida　中佛罗里达大学　　
+University of Chicago芝加哥大学　　
+University of Cincinnati辛辛那提大学　　
+University of Colorado at Boulder科罗拉多博尔德大学　　
+University of Connecticut at Storrs　康涅狄格斯托斯大学　　
+University of Delaware　特拉华大学　　
+University of Denver　丹佛大学　　
+University of Florida　佛罗里达大学　　
+University of Georgia　佐治亚大学　　
+University of Hawaii at Manoa　夏威夷马诺大学　　
+University of Huston　休斯顿大学　　
+University of Idaho　爱达荷大学　　
+University of Illinois，Urbana－Champaign　伊利诺伊大学　　
+University of Iowa依阿华大学　　
+University of Kansas　堪萨斯大学　　
+University of Kentucky　肯塔基大学　　
+University of La Verne　加州拉文大学　　
+University of Louisville　路易斯维尔大学　　
+University of Maine at Orono　缅因州奥罗诺大学　　
+University of Maryland　马里兰大学　　
+University of Massachusetts at Amherst　阿默斯特大学　　
+University of Massachusetts at Lowell　卢维尔大学　　
+University of Memphis　孟菲斯大学　　
+University of Minnesota，Twin Cities明尼苏达双城大学　　
+University of Mississippi　密西西比大学　　
+University of Missouri, Columbia　密苏里哥伦比亚大学　　
+University of Missouri/Kansas City　密苏里堪萨斯大学　　
+University of Montana　蒙大拿大学　　
+University of Nebraska at Lincoln　内布拉斯加林肯大学　　
+University of Nevada, Reno内华达里诺大学　　
+University of New Hampshire　新罕布什尔大学　　
+University of New Mexico at Main Campus新墨西哥大学　 
+University of New Orleans新奥尔良大学　　
+University of North Dakota　北达科他大学　　
+University of North Texas　北德州大学　　
+University of Northern Colorado北科罗拉多大学　　
+University of Notre Dame圣母大学　　
+University of Oklahoma　俄克拉荷马大学　　
+University of Oregon　俄勒冈大学　　
+University of Pennsylvania　宾夕法尼亚大学　　
+University of Pittsburgh匹兹堡大学　　
+University of Rhode Island　罗德岛大学　　
+University of San Diego　圣迭戈大学　　
+University of San Franciso　旧金山大学　　
+University of South Carolina at Columbia　南卡罗来纳哥伦比亚大学　　
+University of Southern California　南加利福尼亚大学　　
+University of South Dakota　南达科他大学　　
+University of Southern Mississippi　南密西西比大学　　
+University of Southwestern Louisiana　西南路易斯安那大学　　
+University of Texas at Dallas　德州达拉斯大学　　
+University of Texas-Austin德州大学奥斯汀分校　　
+University of the Pacific　太平洋大学　　
+University of Toledo　托莱多大学　　
+University of Tulsa　塔尔萨大学　　
+University of Utah　犹他大学　　
+University of Vermont　佛蒙特大学　　
+University of Virginia　弗吉尼亚大学　　
+University of Washington　西雅图华盛顿大学　　
+University of Wisconsin，Milwaukee　米尔沃基大学　　
+University of Wisconsin-Madison　威斯康星大学麦迪逊分校　　
+University of Wyoming　怀俄明大学　　
+University ofTennessee, Knoxville　诺斯维尔田纳西大学　　
+Univresity of Arizona亚利桑那大学　　
+Utah State University　犹他州立大学　　
+Vanderbilt University　范德比大学　　
+Virginia Tech弗吉尼亚科技大学　　
+Wake Forest University　威克森林大学　　
+Washington State University华盛顿州立大学　　
+Washington University　华盛顿大学　　
+Wayne State University　韦恩州立大学　　
+West Virginia University　西弗吉尼亚大学　　
+Western Michigan University　西密执安大学　　
+Wichita State University　维奇托州立大学　　
+Woodbury University　伍德布里大学　　
+Worcester Polytechnic Institute伍斯特科技学院　　
+Wright State University　　莱特州立大学　　
+Yale University耶鲁大学　　
+Yeshiva University　耶希华大学　　
+Georgia Institute of Technology　乔治亚理工学院　　
+Harvard University　哈佛大学　　
+Occidental College　西方学院　　
+The Wharton Business School沃顿商学院　　
+VALLEY FORGE MILITARY ACADAMY AND COLLEGE美国翠谷军校　　
+UNIVERSITY OF MICHIGAN　密歇根大学　　
+Art Institute of Atlanta　亚特兰大(Atlanta)艺术学院　　
+Art Institute of Dallas　达拉斯艺术学院　　
+Art Institute of Fort Lauderdale　弗特劳德达尔艺术学院　　
+Art Institute of Houston　休斯顿艺术学院　　
+Art Institute of Los Angeles洛杉矶艺术学院 
+Art Institute of Colorado　科罗拉多艺术学院　　
+Art Institute of Philadelphia费城（Philadelphia）艺术学院　　
+Art Institute of Phoenix　凤凰艺术学院　　
+Art Institute of Pittsburgh　匹兹堡（Pittsburgh）艺术学院　　
+Art Institute of Seattle　西雅图艺术学院　　
+Art Institute of Portland　波特兰艺术学院　　
+Art Institutes International at San Francisco旧金山国际艺术学院　　
+Art Institute of California加里福尼亚艺术学院　　
+California State University-Stanislaus加州州立大学-斯坦尼斯劳斯分校　　
+Embry-Riddle Aeronautical University艾姆伯里-利德尔航空学院　　
+Illinois Institute of Art Chicago　伊利诺斯芝加哥艺术学院　　
+BUENA VISTA UNIVERSITY比尤纳维斯特大学　　
+AMERICAN UNIVERSITY　美利坚大学　　
+BERRY COLLEGE贝里学院　　
+AGNES SCOTT COLLEGE阿格尼斯?斯科特学院　　
+BETHEL COLLEGE贝塞尔学院　　
+RICE UNIVERSITY　赖斯大学　　
+BELLARMINE COLLEGE贝拉明学院　　
+BARD COLLEGE　巴德学院　　
+ALLEGHENY COLLEGE　阿勒格尼学院　　
+BENNINGTON COLLEGE　本宁顿学院　　
+BOWDOIN COLLEGE　鲍登学院　　
+COLLEGE OF THE ATLANTIC　大西洋学院　　
+BALDWIN-WALLACE COLLEGE鲍德温—华莱士学院　　
+ALBION COLLEGE阿尔比恩学院　　
+ECKERD COLLEGE　埃克德学院　　
+ST. JOHN'S UNIVERSITY圣琼斯大学　　
+ALBERTSON COLLEGE OF IDAHO爱达荷艾伯森学院　　
+ALBRIGHT COLLEGE奥尔布赖特学院　　
+FRANKLIN AND MARSHALL COLLEGE富兰克林与马歇尔学院　　
+AUGUSTANA COLLEGE奥古斯塔那学院　　
+BIRMINGHAM-SOUTHERN COLLEGE伯明翰-南方学院　　
+EARLHAM COLLEGE厄勒姆学院　　
+JOHNS HOPKINS UNIVERSITY　约翰霍普金斯大学　　
+COLLEGE OF WILLIAMS AND MARY　威廉姆玛丽亚大学　　
+UNIVERSITY OF SOUTH FLORIDA　南佛罗里达大学　　
+LOUISIANA STATE UNIVERSITY-BATON ROUGE　路易斯安那州立大学巴顿汝之分校　　
+OLD DOMINION UNIVERSITY多米尼恩大学　　
+BRADLEY UNIVERSITY布拉德利大学　　
+Dickson State University狄克森州立大学　　　　
+Stanford Graduate School of Business　美国斯坦福商学院　　
+Southern New Hampshair University南新罕布什尔大学 
+Johns　Hopkins　University约翰-霍普金斯大学 
+ 
