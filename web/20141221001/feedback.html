@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link href="css/common.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <title></title>
+</head>
+<body>
+    <div id="container">
+        <div id="top">
+            <div id="menue">
+                <ul>
+                    <li><a href="index.html" class="mainlink">网站首页</a></li>
+                    <li><a href="about.html" class="mainlink">公司简介</a></li>
+                    <li><a href="news.html" class="mainlink">新闻动态</a></li>
+                    <li><a href="product.html" class="mainlink">作品展示</a></li>
+                    <li><a href="feedback.html" class="mainlink">作品订购</a></li>
+                    <li><a href="download.html" class="mainlink">资料下载</a></li>
+                    <li><a href="hr.html" class="mainlink">人才招聘</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="content">
+            <div id="left">
+                <div id="leftmenuecon">
+                    <div id="leftmenue">
+                        <ul>
+                            <li><a href="#" class="leftlink">书 法</a></li>
+                            <li><a href="#" class="leftlink">人 物</a></li>
+                            <li><a href="#" class="leftlink">山 水</a></li>
+                            <li><a href="#" class="leftlink">花 鸟</a></li>
+                            <li><a href="#" class="leftlink">水 彩</a></li>
+                            <li><a href="#" class="leftlink">油 画</a></li>
+                            <li><a href="#" class="leftlink">版 画</a></li>
+                            <li><a href="#" class="leftlink">年 画</a></li>
+                            <li><a href="#" class="leftlink">国 画</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="searchcon">
+                    <div><img src="img/lfsertop.jpg" /></div>
+                    <div id="serch">
+                        <div id="sertitle">作品搜索</div>
+                        <div>
+                            <form method="get" action="action.html">
+                                <div>
+                                    <select class="serchtext" name="myord">
+                                        <option value="uptime">按更新时间排序</option>
+                                        <option value="dtime">按发布时间排序</option>
+                                        <option value="cl">按点击次数排序</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <select class="serchtext" name="myshownums">
+                                        <option value="20">每页20条</option>
+                                        <option value="30">每页30条</option>
+                                        <option value="50">每页50条</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <input class="serchtext key" name="key" type="text" />
+                                </div>
+                                <div>
+                                    <input id="subbut" type="image" src="img/serch.jpg" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div><img src="img/lfserbot.jpg" /></div>
+                </div>
+            </div>
+            <div id="right">
+                <div style="width:686px;height:15px;background: url(img/top_b.jpg) no-repeat; "></div>
+                <div id="selfzs">
+                    <div class="title">
+                        <div class="titlef">作品订购</div>
+                        <div class="titrit"><a href="#">更多</a></div>
+                    </div>
+                    <div id="form">
+                        <div id="fdtitle">作品订购</div>
+                        <div>
+                            <form method="get" action="xx">
+                                <ul>
+                                    <li class="fmli">作品名称：<input type="text" class="fmtext bordersty" /><span style="color:red">*</span></li>
+                                    <li class="fmli">订购数量：<input type="text" class="fmtext bordersty" /><span style="color:red">*</span></li>
+                                    <li class="fmli">您的姓名：<input type="text" class="fmtext bordersty" /><span style="color:red">*</span></li>
+                                    <li class="fmli">联系电话：<input type="text" class="fmtext bordersty" /></li>
+                                    <li class="fmli">通信地址：<input type="text" class="fmtext bordersty" /></li>
+                                    <li class="fmli">电子邮件：<input type="text" class="fmtext bordersty" /></li>
+                                    <li class="fmli">
+                                        <table style="border-spacing:0;">
+                                            <tr>
+                                                <td>您的要求：</td>
+                                                <td><textarea class="bordersty"></textarea></td>
+                                            </tr>
+                                        </table>
+                                    </li>
+                                    <li class="fmli"><div style="width:280px;">验 证 码：<input type="text" class="bordersty" style="width:45px;" /><span style="float:right"><a href="#">看不清？更换一张</a></span><img src="img/codeimg.jpg" style="border: 1px solid #ddd; float:right; margin-right:10px;" /></div></li>
+                                    <li><input type="submit" title="提交" style="width: 39px; height: 20px; text-align: center; margin-left: 68px; border: 1px solid #aaa;" /></li>
+                                </ul>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfloat"></div>
+        </div>
+        <div id="bottom">
+            <div id="botbg"></div>
+            <div id="botlink">
+                <div id="botleft">
+                    | <a href="#">公司介绍</a>
+                    | <a href="#">联系方法</a>
+                    | <a href="#">友情链接</a>
+                    | <a href="#">给我留言</a> |
+                </div>
+                <div id="botright">书画经营公司网站 Copyright(C)2009-2010</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

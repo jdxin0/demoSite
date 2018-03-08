@@ -1,0 +1,373 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            text-align: left;
+        }
+
+        body {
+            font-family: "宋体",Arial,Verdana;
+            font-size: 12px;
+            text-align: center;
+            background-color: #fff;
+            background: url(img/bg.jpg) repeat-x;
+        }
+
+        li {
+            list-style: none;
+        }
+        .clear {
+            clear: left;
+        }
+        p{
+            text-indent:2em;
+        }
+
+        a:link, a:visited, a:active {
+            color: #FFF;
+            text-decoration: none;
+        }
+
+        #contain {
+            width: 1002px;
+            margin: 0 auto;
+        }
+
+        #top {
+            position: relative;
+            width: 1002px;
+            height: 578px;
+        }
+
+        #content {
+            width: 1002px;
+            background: url(img/conbg.jpg) repeat-y;
+        }
+
+        #bottom {
+            position: relative;
+            width: 1002px;
+            height: 152px;
+            background: url(img/botbg.jpg) repeat-x;
+        }
+
+        #logo {
+            position: absolute;
+            left: 30px;
+            top: 50px;
+        }
+
+        #serch {
+            position: absolute;
+            left: 540px;
+            top: 60px;
+            width: 444px;
+            height: 40px;
+        }
+
+        #key {
+            width: 340px;
+            height: 40px;
+            float: left;
+            background-image: url(img/serchbg.jpg);
+        }
+
+            #key input {
+                width: 300px;
+                height: 40px;
+                margin-left: 15px;
+                color: #fff;
+                background-color: #6f9203;
+                font-size: 16px;
+            }
+
+        #button_serch {
+            width: 101px;
+            height: 40px;
+            float: right;
+        }
+
+        #menue {
+            position: absolute;
+            left: 15px;
+            top: 170px;
+            width: 973px;
+            height: 63px;
+        }
+
+        .menueli {
+            margin-right: 1px;
+            float: left;
+        }
+
+        .menuelink {
+            display: block;
+            width: 138px;
+            text-align: center;
+            background: url(img/menuebg.jpg) no-repeat;
+            font: 14px/63px 'microsoft yahei',Verdana,Arial;
+        }
+
+        a.menuelink:hover {
+            background: url(img/menuebghover.jpg) no-repeat;
+        }
+
+        .menuenow {
+            background: url(img/menuebghover.jpg) no-repeat;
+        }
+
+        .dropmenue {
+            position: absolute;
+            background-color: #576f06;
+            margin-top: 1px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            z-index: 100;
+            visibility: hidden;
+        }
+
+        .dropmenuelink {
+            display: block;
+            width: 138px;
+            text-align: center;
+            font: 14px/36px 'arial';
+        }
+
+        a.dropmenuelink:hover {
+            background-color: #9bb710;
+        }
+
+        #banner {
+            position: absolute;
+            left: 0;
+            top: 234px;
+            width: 1002px;
+            height: 332px;
+        }
+
+        #banner_but {
+            position: absolute;
+            left: 0;
+            top: 565px;
+            width: 1002px;
+            height: 12px;
+            background-color: #6c9106;
+        }
+
+        #banner_but div {
+            width: 120px;
+            height: 12px;
+            float: right;
+            margin-left: 1px;
+            background-color: #4f523c;
+        }
+
+        #botleft {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 20px;
+            height: 152px;
+            background-image: url(img/botlf.jpg);
+        }
+
+        #botright {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 20px;
+            height: 152px;
+            background-image: url(img/botrt.jpg);
+        }
+
+        .botcont1 {
+            font-family: Arial;
+            color: #fff;
+            text-align: center;
+            padding-top: 10px;
+            font: 12px/40px 'Microsoft YaHei',SimSun,Arial,Sans-Serif;
+        }
+
+        .botcont2 {
+            color: #fff;
+            text-align: center;
+            font: 12px/20px 'Microsoft YaHei',SimSun,Arial,Sans-Serif;
+        }
+        #conleft{
+            width:250px;
+            float:left;
+        }
+        #conright{
+            width:752px;
+            float:right;
+        }
+        #clear{
+            clear:both;
+        }
+        #conleftbg{
+            width:250px;
+            height:41px;
+            background:url(img/conleftbg.jpg) repeat-x;
+        }
+            #conleftbg span {
+                color: #fff;
+                line-height: 41px;
+                margin-left: 20px;
+            }
+        #conleftcont {
+            margin: 15px;
+        }
+            #conleftcont li {
+                background: url(img/conleftcontbg.jpg) repeat-x;
+            }
+            #conleftcont a {
+                display:block;
+                font-size: 12px;
+                width: 200px;
+                height: 30px;
+                margin-left:20px;
+                line-height: 30px;
+            }
+        .listarr {
+            width: 9px;
+            height: 30px;
+            float:left;
+            background-image: url(img/conleftcontarr.jpg);
+        }
+        #nav {
+            width: 752px;
+            height: 41px;
+            background: url(img/conrightnav.jpg) repeat-x;
+        }
+            #nav span {
+                color:#fff;
+                line-height: 41px;
+                margin-left: 20px;
+            }
+        #pagecontent{
+            margin:35px;
+        }
+        #pagecontent img{
+            float:left;
+            margin-right:15px;
+            margin-bottom:15px;
+        }
+        #pagecontent p{
+            font:12px/22px 'yahei';
+        }
+    </style>
+    <title></title>
+    <script type="text/javascript" src="js/base.js"></script>
+    <script type="text/javascript" src="js/lrtk.js"></script>
+    <script language="javascript" src="js/searchform.js"></script>
+    <script language="javascript" src="js/mainuymjd.cn.js"></script>
+</head>
+<body>
+    <div id="contain">
+        <div id="top">
+            <div id="logo"><img src="img/logo.jpg" /></div>
+            <div id="serch">
+                <form>
+                    <div id="key"><input id="serch_text" type="text" value="" /></div>
+                    <div id="button_serch"><input type="image" src="img/serch.jpg"></div>
+                </form>
+            </div>
+            <div id="menue">
+                <ul>
+                    <li class="menueli"><a class="menuelink" href="index.html">HOME</a></li>
+                    <li class="menueli">
+                        <a class="menuelink menuenow" href="aboutus.html">ABOUT US</a>
+                        <ul class="dropmenue">
+                            <li><a class="dropmenuelink" href="#">About Us</a></li>
+                            <li><a class="dropmenuelink" href="#">Culture</a></li>
+                            <li><a class="dropmenuelink" href="#">Equipment</a></li>
+                            <li><a class="dropmenuelink" href="#">Certificate</a></li>
+                            <li><a class="dropmenuelink" href="#">Service</a></li>
+                        </ul>
+                    </li>
+                    <li class="menueli"><a class="menuelink" href="products.html">PRODUCTS</a></li>
+                    <li class="menueli">
+                        <a class="menuelink" href="news.html">NEWS</a>
+                        <ul class="dropmenue">
+                            <li><a class="dropmenuelink" href="news.html">NEWS</a></li>
+                            <li><a class="dropmenuelink" href="#">Infomation</a></li>
+                        </ul>
+                    </li>
+                    <li class="menueli"><a class="menuelink" href="equipment.html">EQUIPMENT</a></li>
+                    <li class="menueli"><a class="menuelink" href="jobs.html">JOBS</a></li>
+                    <li class="menueli">
+                        <a class="menuelink" href="contact.html">CONTACT US</a>
+                        <ul class="dropmenue">
+                            <li><a class="dropmenuelink" href="#">CONTACT US</a></li>
+                            <li><a class="dropmenuelink" href="#">Feedback</a></li>
+                        </ul>
+                    </li>
+                    <li class="clear"></li>
+                </ul>
+            </div>
+            <div id="banner" style="height:330px">
+                <link rel="stylesheet" href="css/ymjd.cn.lb.css" />
+                <script type="text/javascript" src="js/ymjd.cn.js"></script>
+                <script>
+                    $(function () {
+                        $('#s1_slides').slides({
+                            preload: true,
+                            preloadImage: 'img/s1-loading.gif',
+                            play: 5000,
+                            pause: 2500,
+                            hoverPause: true
+                        });
+                    });
+                </script>
+                <div id="s1_container">
+                    <div id="s1_example">
+                        <div id="s1_slides">
+                            <div class="slides_container">
+                                <a href='http://' title='' target='_blank'><img src='img/1330577342.jpg' width='1002' height='330' alt='' border='0' /></a>
+                                <a href='http://' title='' target='_blank'><img src='img/1330577349.jpg' width='1002' height='330' alt='' border='0' /></a>
+                                <a href='http://' title='' target='_blank'><img src='img/1353136076.jpg' width='1002' height='330' alt='' border='0' /></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pagination_bg"></div>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <div id="conleft">
+                <div id="conleftbg"><span>Menue</span></div>
+                <div id="conleftcont">
+                    <ul>
+                        <li><div class="listarr"></div><a href="#">About us</a></li>
+                        <li><div class="listarr"></div><a href="#">Corporate Culture</a></li>
+                        <li><div class="listarr"></div><a href="#">Equipment</a></li>
+                        <li><div class="listarr"></div><a href="#">Certificate</a></li>
+                        <li><div class="listarr"></div><a href="#">Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="conright">
+                <div id="nav"><span>Menue > About US</span></div>
+                <div id="pagecontent">
+                    <img src="img/conrightimg.jpg" />
+                    <p>HangZhou Some Electronics Co., Ltd. specializes in R&D, production and sales of precision connectors. Its products are used in computers, telecom network equipments, industrial apparatuses, ect. The Company is armed with advanced precision mold manufacturing equipment, high-speed hardware pressing equipment, precision plastic injection equipment, automatic assembly line and inspection/testing devices.The company adheres to the business principle of "technology for development and quality for existence", and provides customers with quality products and considerate service based on its years of experience in R&D, procuction and management, great technical strength and the mature quality management system.</p>
+                    <p>HangZhou Some Electronics Co., Ltd. specializes in R&D, production and sales of precision connectors. Its products are used in computers, telecom network equipments, industrial apparatuses, ect. The Company is armed with advanced precision mold manufacturing equipment, high-speed hardware pressing equipment, precision plastic injection equipment, automatic assembly line and inspection/testing devices.The company adheres to the business principle of "technology for development and quality for existence", and provides customers with quality products and considerate service based on its years of experience in R&D, procuction and management, great technical strength and the mature quality management system.</p>
+                </div>
+            </div>
+            <div id="clear"></div>
+        </div>
+        <div id="bottom">
+            <div id="botleft"></div>
+            <div id="botright"></div>
+            <div class="botcont1">|&nbsp;&nbsp;About us&nbsp;&nbsp;|&nbsp;&nbsp;Jobs&nbsp;&nbsp;|&nbsp;&nbsp;Download&nbsp;&nbsp;|&nbsp;&nbsp;Contact Us&nbsp;|&nbsp;Feedback&nbsp;&nbsp;|&nbsp;&nbsp;Links&nbsp;&nbsp;|</div>
+            <div class="botcont2">Copyright(C)2009-2012 Building Materials company </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,301 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-align: left;
+}
+
+body {
+    background-image:url(../img/bg.jpg);
+}
+
+li {
+    list-style: none;
+}
+
+p {
+    text-indent: 2em;
+    font: 12px/22px 'arial';
+}
+
+.clearfloat{
+    clear:both;
+}
+
+a:link, a:visited, a:active {
+    text-decoration: none;
+    color:#654320;
+}
+
+#container {
+    width: 900px;
+    margin: 0 auto;
+    background-color:#FFF;
+}
+
+#top {
+    position: relative;
+    width: 900px;
+    height: 259px;
+    background-image:url(../img/top.jpg);
+}
+
+#content {
+    position: relative;
+    width: 900px;
+}
+
+#bottom {
+    position: relative;
+    width: 900px;
+    height: 60px;
+    padding-bottom:15px;
+}
+#menue{
+    position:absolute;
+    left:22px;
+    top:226px;
+}
+#menue li{
+    float:left;
+}
+.mainlink{
+    display:block;
+    width:80px;
+    margin-right:14px;
+    font:bold 14px/30px 'Arial';
+}
+a.mainlink:link,a.mainlink:visited,a.mainlink:hover{
+    color:#FFF;
+}
+#botbg{
+    width:900px;
+    height:22px;
+    background:url(../img/botbg.jpg) repeat-x;
+}
+#botlink{
+    height:38px;
+    margin:0 120px;
+    color:#654320;
+    font:13px/38px 'arial';
+}
+#botleft{
+    float:left;
+}
+#botright{
+    float:right;
+}
+#left{
+    width:206px;
+    float:left;
+}
+#leftmenuecon{
+    width:206px;
+    font:14px/37px 'Microsoft YaHei';
+    background:url(../img/leftbg.jpg) repeat-y;
+}
+#leftmenue{
+    padding-left:20px;
+    padding-top:7px;
+    padding-bottom:7px;
+}
+.leftlink{
+    display:block;
+    width:174px;
+    line-height:37px;
+    text-align:center;
+    margin-bottom:13px;
+    background-image:url(../img/leftmenuebg.jpg);
+}
+#searchcon{
+    width:206px;
+    height:220px;
+    background-image:url(../img/leftserchbg.jpg);
+}
+#serch{
+    width:164px;
+    height:170px;
+    margin:0 auto;
+}
+#sertitle{
+    margin:4px auto 10px 22px;
+    font-weight:bold;
+}
+.serchtext{
+    border:1px solid #abadb3;
+    width:154px;
+    height:18px;
+    margin:3px;
+}
+.key{
+    width:152px;
+}
+#subbut {
+    margin-left: 3px;
+}
+#right{
+    width:686px;
+    float:right;
+}
+#selfzs{
+    position:relative;
+    width:686px;
+}
+.title{
+    height:35px;
+    color:#709700;
+    font:bold 16px/35px 'Microsoft YaHei';
+    border-bottom:1px solid #000;
+    background:url(../img/titlebg.jpg) no-repeat #fefdeb;
+}
+.titlef{
+    float:left;
+    width:136px;
+    height:35px;
+    text-align:center;
+}
+.titrit{
+    float:right;
+    padding-right:5px;
+}
+#selfzscon{
+    padding:10px;
+}
+#selfzscon img{
+    float:left;
+    margin-right:10px;
+}
+#selfzscon p{
+    font:12px/22px 'arial';
+}
+#selfqyxw{
+    float:left;
+    width:340px;
+}
+#selfxyzx{
+    float:right;
+    width:340px;
+}
+#selfqyxwcon{
+    padding:7px;
+}
+.listbg{
+    color:#6e6e6e;
+    font:12px/22px 'arial';
+    background:url(../img/selnewlist.jpg) no-repeat;
+}
+.newslistbg{
+    line-height:34px;
+    border-bottom:1px dotted;
+    padding-right:25px;
+    background:url(../img/newlist.jpg) no-repeat;
+ }
+.downbg{
+    background:url(../img/downbg.jpg) no-repeat;
+}
+.time{
+    float:right;
+}
+.listbg a{
+    display:block;
+    padding-left:20px;
+}
+#proscroll{
+    width:686px;
+}
+.productlist{
+    float:left;
+    margin:17px 10px;
+}
+.scrolllink{
+    display:block;
+    width:138px;
+    line-height:44px;
+    text-align:center;
+}
+.ns_ul li{
+            float:left;
+            list-style-type:none;
+            margin:2px 5px;
+            border:1px solid #bcbcbc;
+            background-color:#bcbcbc;
+            padding:2px 5px;
+        }
+.product{
+    float:left;
+    width:300px;
+    height:160px;
+    font:12px/18px 'arial';
+}
+.product tr{
+    height:24px;
+}
+.product img{
+    float:left;
+    margin:10px;
+}
+.lable{
+    width:40px;
+}
+#form{
+    position:absolute;
+    left:20px;
+    top:56px;
+}
+#fdtitle{
+    width:640px;
+    padding-left:22px;
+    font:14px/28px 'arial';
+    border-bottom:1px solid #ddeeff;
+    background:url(../img/fdtitlebg.jpg) no-repeat;
+}
+#form form{
+    margin:15px auto 15px 24px;
+}
+.bordersty{
+    height:20px;
+    border:1px solid #ddd;
+}
+#form form textarea{
+    width:405px;
+    height:146px;
+}
+.fmtext{
+    width:405px;
+    margin-right:5px;
+}
+.fmli{
+    margin-bottom:11px;
+    font:12px/22px 'arial';
+}
+table {
+    border-spacing: 0px;
+    color: #505050;
+    font-size:12px;
+}
+
+#cola {
+    width: 350px;
+}
+
+#colb {
+    width: 130px;
+}
+
+#colc {
+    width: 90px;
+}
+
+#cold {
+    width: 50px;
+}
+
+tr {
+    height: 40px;
+}
+
+#tra {
+    background-color: #FFF;
+    font-weight: bold;
+    height: 38px;
+}

@@ -1,0 +1,383 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            text-align: left;
+        }
+
+        body {
+            font-family: "宋体",Arial,Verdana;
+            font-size: 12px;
+            text-align: center;
+            background-color: #fff;
+            background: url(img/bg.jpg) repeat-x;
+        }
+
+        li {
+            list-style: none;
+        }
+        .clear {
+            clear: left;
+        }
+        a:link, a:visited, a:active {
+            color: #FFF;
+            text-decoration: none;
+        }
+
+        #contain {
+            width: 1002px;
+            margin: 0 auto;
+        }
+
+        #top {
+            position: relative;
+            width: 1002px;
+            height: 578px;
+        }
+
+        #content {
+            position: relative;
+            width: 1002px;
+            height: 230px;
+            background-color: #eaeaea;
+        }
+
+        #bottom {
+            position: relative;
+            width: 1002px;
+            height: 152px;
+            background: url(img/botbg.jpg) repeat-x;
+        }
+
+        #logo {
+            position: absolute;
+            left: 30px;
+            top: 50px;
+        }
+
+        #serch {
+            position: absolute;
+            left: 540px;
+            top: 60px;
+            width: 444px;
+            height: 40px;
+        }
+
+        #key {
+            width: 340px;
+            height: 40px;
+            float: left;
+            background-image: url(img/serchbg.jpg);
+        }
+
+            #key input {
+                width: 300px;
+                height: 40px;
+                margin-left: 15px;
+                color: #fff;
+                background-color: #6f9203;
+                font-size: 16px;
+            }
+
+        #button_serch {
+            width: 101px;
+            height: 40px;
+            float: right;
+        }
+
+        #menue {
+            position: absolute;
+            left: 15px;
+            top: 170px;
+            width: 973px;
+            height: 63px;
+        }
+        .menueli {
+            margin-right: 1px;
+            float: left;
+        }
+
+        .menuelink {
+            display: block;
+            width: 138px;
+            text-align: center;
+            background: url(img/menuebg.jpg) no-repeat;
+            font: 14px/63px 'microsoft yahei',Verdana,Arial;
+        }
+        a.menuelink:hover {
+            background: url(img/menuebghover.jpg) no-repeat;
+        }
+        .menuenow {
+            background: url(img/menuebghover.jpg) no-repeat;
+        }
+        .dropmenue {
+            position: absolute;
+            background-color: #576f06;
+            margin-top: 1px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            z-index: 100;
+            visibility:hidden;
+        }
+        .dropmenuelink {
+            display: block;
+            width: 138px;
+            text-align: center;
+            font: 14px/36px 'arial';
+        }
+        a.dropmenuelink:hover {
+            background-color: #9bb710;
+        }
+        #banner {
+            position: absolute;
+            left: 0;
+            top: 234px;
+            width: 1002px;
+            z-index:0;
+        }
+
+        #profile {
+            width: 380px;
+            height: 190px;
+            position: absolute;
+            top: 30px;
+            left: 30px;
+        }
+
+            #profile span {
+                font: 24px/32px 'Microsoft YaHei',SimSun,Arial,Sans-Serif;
+                color: #4f523c;
+            }
+
+            #profile p {
+                font: 12px/20px 'Microsoft YaHei',SimSun,Arial,Sans-Serif;
+            }
+
+        #productlist {
+            position: absolute;
+            right: 16px;
+            top: 27px;
+            width: 534px;
+            height: 194px;
+        }
+
+        .leftarr {
+            position: absolute;
+            top: 50px;
+            width: 11px;
+            height: 69px;
+            background-image: url(img/leftarr.jpg);
+            z-index: 100;
+        }
+
+        .rightarr {
+            position: absolute;
+            top: 50px;
+            right: 0px;
+            width: 11px;
+            height: 69px;
+            background-image: url(img/rightarr.jpg);
+        }
+
+        .rollbox {
+            position: relative;
+            height: 194px;
+            width: 510px;
+            overflow: hidden;
+            margin-left: 12px;
+            margin-right: 12px;
+        }
+
+        .mainlist {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .rollbox ul li {
+            list-style: none;
+            float: left;
+        }
+
+        .proimg {
+            height: 150px;
+            width: 150px;
+            padding: 4px;
+            margin: 0 5px;
+            border: 1px solid #96b30f;
+        }
+
+        .procont {
+            width: 160px;
+            height: 34px;
+            line-height: 34px;
+            text-align: center;
+        }
+
+            .procont a:link, .procont a:visited, .procont a:hover {
+                color: #505050;
+            }
+
+        #botleft {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 20px;
+            height: 152px;
+            background-image: url(img/botlf.jpg);
+        }
+
+        #botright {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 20px;
+            height: 152px;
+            background-image: url(img/botrt.jpg);
+        }
+
+        .botcont1 {
+            font-family: Arial;
+            color: #fff;
+            text-align: center;
+            padding-top: 10px;
+            font: 12px/40px 'Microsoft YaHei',SimSun,Arial,Sans-Serif;
+        }
+
+        .botcont2 {
+            color: #fff;
+            text-align: center;
+            font: 12px/20px 'Microsoft YaHei',SimSun,Arial,Sans-Serif;
+        }
+    </style>
+    <title></title>
+    <script type="text/javascript" src="js/base.js"></script>
+    <script type="text/javascript" src="js/lrtk.js"></script>
+    <script language="javascript" src="js/searchform.js"></script>
+    <script language="javascript" src="js/mainuymjd.cn.js"></script>
+</head>
+<body>
+    <div id="contain">
+        <div id="top">
+            <div id="logo"><img src="img/logo.jpg" /></div>
+            <div id="serch">
+                <form>
+                    <div id="key"><input id="serch_text" type="text" value="" /></div>
+                    <div id="button_serch"><input type="image" src="img/serch.jpg"></div>
+                </form>
+            </div>
+            <div id="menue">
+                <ul>
+                    <li class="menueli"><a class="menuelink menuenow" href="index.html">HOME</a></li>
+                    <li class="menueli">
+                        <a class="menuelink" href="aboutus.html">ABOUT US</a>
+                        <ul class="dropmenue">
+                            <li><a class="dropmenuelink" href="#">About Us</a></li>
+                            <li><a class="dropmenuelink" href="#">Culture</a></li>
+                            <li><a class="dropmenuelink" href="#">Equipment</a></li>
+                            <li><a class="dropmenuelink" href="#">Certificate</a></li>
+                            <li><a class="dropmenuelink" href="#">Service</a></li>
+                        </ul>
+                    </li>
+                    <li class="menueli"><a class="menuelink" href="products.html">PRODUCTS</a></li>
+                    <li class="menueli">
+                        <a class="menuelink" href="news.html">NEWS</a>
+                        <ul class="dropmenue">
+                            <li><a class="dropmenuelink" href="news.html">NEWS</a></li>
+                            <li><a class="dropmenuelink" href="#">Infomation</a></li>
+                        </ul>
+                    </li>
+                    <li class="menueli"><a class="menuelink" href="equipment.html">EQUIPMENT</a></li>
+                    <li class="menueli"><a class="menuelink" href="jobs.html">JOBS</a></li>
+                    <li class="menueli">
+                        <a class="menuelink" href="contact.html">CONTACT US</a>
+                        <ul class="dropmenue">
+                            <li><a class="dropmenuelink" href="#">CONTACT US</a></li>
+                            <li><a class="dropmenuelink" href="#">Feedback</a></li>
+                        </ul>
+                    </li>
+                    <li class="clear"></li>
+                </ul>
+            </div>
+            <div id="banner" style="height:330px">
+                <link rel="stylesheet" href="css/ymjd.cn.lb.css" />
+                <script type="text/javascript" src="js/ymjd.cn.js"></script>
+                <script>
+                    $(function () {
+                        $('#s1_slides').slides({
+                            preload: true,
+                            preloadImage: 'img/s1-loading.gif',
+                            play: 5000,
+                            pause: 2500,
+                            hoverPause: true
+                        });
+                    });
+                </script>
+                <div id="s1_container">
+                    <div id="s1_example">
+                        <div id="s1_slides">
+                            <div class="slides_container">
+                                <a href='http://' title='' target='_blank'><img src='img/1330577342.jpg' width='1002' height='330' alt='' border='0' /></a>
+                                <a href='http://' title='' target='_blank'><img src='img/1330577349.jpg' width='1002' height='330' alt='' border='0' /></a>
+                                <a href='http://' title='' target='_blank'><img src='img/1353136076.jpg' width='1002' height='330' alt='' border='0' /></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pagination_bg"></div>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <div id="profile">
+                <span>COMPANY PROFILE</span>
+                <p>Hangzhou Agricultural Products Co.,Ltd. is proud to offer Chinese truffle,boletus edulis and other agricultural products.It is widely regarded as one of the major suppliers of wild mushrooms in China.customer driven focus and commitment to total quality in everything it does.A strict quality control traceability system is applied from mushrooms harvesting, processing, packing to shipping. Workers are fully trained...</p>
+            </div>
+            <div id="productlist">
+                <div class="leftarr"></div>
+                <div class="rightarr"></div>
+                <div class="rollbox">
+                    <ul class="piclist mainlist">
+                        <li>
+                            <div class="proimg"><a href="#"><img src="img/pro1.jpg" /></a></div>
+                            <div class="procont"><a href="#">Product Name</a></div>
+                        </li>
+                        <li>
+                            <div class="proimg"><a href="#"><img src="img/pro2.jpg" /></a></div>
+                            <div class="procont"><a href="#">Product Name</a></div>
+                        </li>
+                        <li>
+                            <div class="proimg"><a href="#"><img src="img/pro3.jpg" /></a></div>
+                            <div class="procont"><a href="#">Product Name</a></div>
+                        </li>
+                        <li>
+                            <div class="proimg"><a href="#"><img src="img/pro1.jpg" /></a></div>
+                            <div class="procont"><a href="#">Product Name</a></div>
+                        </li>
+                        <li>
+                            <div class="proimg"><a href="#"><img src="img/pro2.jpg" /></a></div>
+                            <div class="procont"><a href="#">Product Name</a></div>
+                        </li>
+                        <li>
+                            <div class="proimg"><a href="#"><img src="img/pro3.jpg" /></a></div>
+                            <div class="procont"><a href="#">Product Name</a></div>
+                        </li>
+                    </ul>
+                    <ul class="piclist swaplist" style="position: absolute;top: 0px"></ul>
+                </div>
+            </div>
+        </div>
+        <div id="bottom">
+            <div id="botleft"></div>
+            <div id="botright"></div>
+            <div class="botcont1">|&nbsp;&nbsp;About us&nbsp;&nbsp;|&nbsp;&nbsp;Jobs&nbsp;&nbsp;|&nbsp;&nbsp;Download&nbsp;&nbsp;|&nbsp;&nbsp;Contact Us&nbsp;|&nbsp;Feedback&nbsp;&nbsp;|&nbsp;&nbsp;Links&nbsp;&nbsp;|</div>
+            <div class="botcont2">Copyright(C)2009-2012 Building Materials company </div>
+        </div>
+    </div>
+</body>
+</html>
