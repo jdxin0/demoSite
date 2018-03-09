@@ -1,7 +1,7 @@
 
 ./app.js
 ----------------
-require.js
+require-2.3.5.js
 lib/jquery.min.js
 lib/console.js
 app/util.js

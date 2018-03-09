@@ -1,4 +1,11 @@
 require.config({
+    // baseUrl: "./js",
+    //1、入口文件通过data-main形式加载，同时设置了bashUrl
+    //2、通过 RequireJS config设置bashUrl
+    //3、非如上两种，bashUrl是引用requireJS的html路径
+    modules: [{
+        name: './app'
+    }],
     shim: {
         'jQuery': {
             exports: 'jQuery'
@@ -13,10 +20,9 @@ require.config({
             exports:'requirejs'
         }
     },
-    baseUrl: "js/scripts/",
-    paths: {
-        "requirejs":"require",
-        "jQuery": "lib/jquery",
+    paths: {//module IDs map with path
+        "requirejs":"require-2.3.5",
+        "jQuery": "lib/jquery.min",
         "domReady": "lib/domReady",
         "Modernizr":"lib/Modernizr",
         "text": "lib/text",
@@ -49,7 +55,7 @@ require([ 'requirejs','Util', 'exclamation', 'text!review', 'text!tpl','Moderniz
         console.log("document ready 4");
         console.log("text模块");
         console.log(tpl);
-        $("body").html(txt);
+        $("#poem").html(txt);
     });
     domReady(function(){
         console.log("document ready 5");
@@ -57,9 +63,9 @@ require([ 'requirejs','Util', 'exclamation', 'text!review', 'text!tpl','Moderniz
         console.log(M.json);
     });
 })
-/*requirejs.onResourceLoad = function (context, map, depArray) {
+requirejs.onResourceLoad = function (context, map, depArray) {
     console.log(map);
-}*/
+}
 // require(["http://www.xuliehaonet.com/interface/jsonp.php?callback=define"],
 //     function (data) {
 //         //The data object will be the API response for the
