@@ -1,4 +1,4 @@
-// node r.js -o build.js
+//node js/r.js -o 201802/20180227/20180227001/js/build.js
 // node r.js -v
 ({
     dir: './dist',
