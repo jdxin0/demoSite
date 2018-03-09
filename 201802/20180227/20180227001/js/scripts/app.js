@@ -8,10 +8,14 @@ require.config({
         },
         'console':{
             exports:'console'
+        },
+        'requirejs':{
+            exports:'requirejs'
         }
     },
     baseUrl: "js/scripts/",
     paths: {
+        "requirejs":"require",
         "jQuery": "lib/jquery",
         "domReady": "lib/domReady",
         "Modernizr":"lib/Modernizr",
@@ -24,7 +28,7 @@ require.config({
     }
 });
 //requireJS插件列表https://github.com/requirejs/requirejs/wiki/Plugins
-require([ 'Util', 'exclamation', 'text!review', 'text!tpl','Modernizr','domReady', 'jQuery','console'], function( util, exclamation, txt,tpl,M,domReady, $,C) {
+require([ 'requirejs','Util', 'exclamation', 'text!review', 'text!tpl','Modernizr','domReady', 'jQuery','console'], function( requirejs,util, exclamation, txt,tpl,M,domReady, $,C) {
     domReady(function() {
         console.log("document ready 1");
         console.log($.fn.jquery);

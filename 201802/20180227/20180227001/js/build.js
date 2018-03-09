@@ -30,6 +30,7 @@
     // removeCombined: false,
     baseUrl: "scripts/",
     paths: {
+        "requirejs":"require",
         "jQuery": "lib/jquery.min",
         "domReady": "lib/domReady",
         "Modernizr": "lib/Modernizr",
@@ -49,6 +50,9 @@
         },
         'console': {
             exports: 'console'
+        },
+        'requirejs':{
+            exports:'requirejs'
         }
     }
 })
