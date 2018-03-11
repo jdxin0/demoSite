@@ -1,4 +1,4 @@
-define(['jQuery','console'],function($) {
+define(['jquery','console'],function($) {
     var counter = 0;
     return {
         printCurrentCounter: function() {

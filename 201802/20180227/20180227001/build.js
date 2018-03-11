@@ -9,7 +9,7 @@
     // "closure"： 使用 Google's Closure Compiler 进行压缩合并，需要 Java 环境；
     // "closure.keepLines"：使用 Closure Compiler 进行压缩合并并保留换行；
     // "none"：不做压缩合并；
-    optimize: 'none',
+    optimize: 'uglify2',
     uglify2: {
         //Example of a specialized config. If you are fine
         //with the default options, no need to specify
@@ -42,8 +42,13 @@
         name: './app'
     }],
     shim: {
-        'jQuery': {
-            exports: 'jQuery'
+        'jQueryMigrate':{
+            deps:['jquery'],
+            exports:'jQuery.migrateVersion'
+        },
+        'jquery.pagination':{
+            deps:['jquery'],
+            exports:'jQuery.fn.pagination'
         },
         'Modernizr':{
             exports:'Modernizr'
@@ -55,16 +60,18 @@
             exports:'requirejs'
         }
     },
-    paths: {
+    paths: {//module IDs map with path
         "requirejs":"require-2.3.5",
-        "jQuery": "lib/jquery.min",
-        "domReady": "lib/domReady",
-        "Modernizr":"lib/Modernizr",
-        "text": "lib/text",
-        "console": "lib/console",
+        "jquery": "lib/jquery-1.12.4",
+        "jQueryMigrate": "lib/jquery-migrate-1.4.1",
+        "domReady": "RequireJS-plugins/domReady",
+        "text": "RequireJS-plugins/text",
+        "jquery.pagination": "tools/jquery.pagination",
+        "Modernizr":"tools/Modernizr",
+        "console": "tools/console",
+        "exclamation": "app/exclamation",
         "review": "app/review.txt",
         "tpl": "app/template.html",
-        "Util": "app/util",
-        "exclamation": "app/exclamation"
+        "Util": "app/util"
     }
 })

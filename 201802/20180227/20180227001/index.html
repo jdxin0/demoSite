@@ -3,12 +3,108 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 	<div id="poem"></div>
-	<!-- <script type="text/javascript" data-main="js/app.js" src="js/require-2.3.5.js"></script> -->
+	<hr>
+	<div title="分页模块">
+		<h1>jQuery Pagination分页插件demo</h1>
+		<div id="Pagination" class="pagination"><!-- 这里显示分页 --></div>
+		<div id="Searchresult">分页初始化完成后这里的内容会被替换。</div>
+		<div id="hiddenresult" style="display:none;">
+			<!-- 列表元素 -->
+		    <div class="result">第1项内容</div>
+		    <div class="result">第2项内容</div>
+		    <div class="result">第3项内容</div>
+		    <div class="result">第4项内容</div>
+		    <div class="result">第5项内容</div>
+		    <div class="result">第6项内容</div>
+		    <div class="result">第7项内容</div>
+		    <div class="result">第8项内容</div>
+		</div>
+	</div>
+	<hr>
+	<div title="分页模块ajax Demo">
+		<h1>jQuery Pagination分页插件ajax demo</h1>
+		<div id="AJAXPagination" class="pagination"><!-- 这里显示分页 --></div>
+		<div id="AJAXSearchresult">分页初始化完成后这里的内容会被替换。</div>
+		<div id="AJAXhiddenresult" style="display:none;">
+			<!-- 列表元素 -->
+		</div>
+	</div>
+	<h3>参数</h3>
+	<table class="params_table" width="80%" border="0" cellspacing="1" cellpadding="0">
+	  <tr>
+	    <th scope="col">参数名</th>
+	    <th scope="col">描述</th>
+	    <th scope="col">参数值</th>
+	  </tr>
+	  <tr>
+	    <td>maxentries</td>
+	    <td>总条目数</td>
+	    <td>必选参数，整数</td>
+	  </tr>
+	  <tr>
+	    <td>items_per_page</td>
+	    <td>每页显示的条目数</td>
+	    <td>可选参数，默认是10</td>
+	  </tr>
+	  <tr>
+	    <td>num_display_entries</td>
+	    <td>连续分页主体部分显示的分页条目数</td>
+	    <td>可选参数，默认是10</td>
+	  </tr>
+	  <tr>
+	    <td>current_page</td>
+	    <td>当前选中的页面</td>
+	    <td>可选参数，默认是0，表示第1页</td>
+	  </tr>
+	  <tr>
+	    <td>num_edge_entries</td>
+	    <td>两侧显示的首尾分页的条目数</td>
+	    <td>可选参数，默认是0</td>
+	  </tr>
+	  <tr>
+	    <td>link_to</td>
+	    <td>分页的链接</td>
+	    <td>字符串，可选参数，默认是&quot;#&quot;</td>
+	  </tr>
+	  <tr>
+	    <td>prev_text</td>
+	    <td>“前一页”分页按钮上显示的文字</td>
+	    <td>字符串参数，可选，默认是&quot;Prev&quot;</td>
+	  </tr>
+	  <tr>
+	    <td>next_text</td>
+	    <td>“下一页”分页按钮上显示的文字</td>
+	    <td>字符串参数，可选，默认是&quot;Next&quot;</td>
+	  </tr>
+	  <tr>
+	    <td>ellipse_text</td>
+	    <td>省略的页数用什么文字表示</td>
+	    <td>可选字符串参数，默认是&quot;...&quot;</td>
+	  </tr>
+	  <tr>
+	    <td>prev_show_always</td>
+	    <td>是否显示“前一页”分页按钮</td>
+	    <td>布尔型，可选参数，默认为true，即显示“前一页”按钮</td>
+	  </tr>
+	  <tr>
+	    <td>next_show_always</td>
+	    <td>是否显示“下一页”分页按钮</td>
+	    <td>布尔型，可选参数，默认为true，即显示“下一页”按钮</td>
+	  </tr>
+	  <tr>
+	    <td>callback</td>
+	    <td>回调函数</td>
+	    <td>默认无执行效果</td>
+	  </tr>
+	</table>
+	<hr>
+	<script type="text/javascript" data-main="js/app.js" src="js/require-2.3.5.js"></script>
 	<!-- <script type="text/javascript" src="dist/app.js"></script> -->
-	<script type="text/javascript" src="js/require.js"></script>
-	<script type="text/javascript" src="js/app.js"></script>
+	<!-- <script type="text/javascript" src="js/require.js"></script> -->
+	<!-- <script type="text/javascript" src="js/app.js"></script> -->
 </body>
 </html>
