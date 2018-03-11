@@ -7,7 +7,7 @@
  * addbook.do();
  */
 
-
+define(function(require,exports,module){
 	var addBook = {},title,url,content;
 
 	addBook.init = function(opts){
@@ -37,3 +37,4 @@
 	}
 
 	module.exports = addBook;
+});

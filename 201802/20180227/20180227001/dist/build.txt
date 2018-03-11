@@ -13,4 +13,8 @@ tools/Modernizr.js
 RequireJS-plugins/domReady.js
 lib/jquery-migrate-1.4.1.js
 tools/jquery.pagination.js
+tools/addbook.js
+tools/ball.js
+tools/countUp.js
+tools/loop.js
 app.js

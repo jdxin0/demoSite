@@ -9,7 +9,7 @@
     // "closure"： 使用 Google's Closure Compiler 进行压缩合并，需要 Java 环境；
     // "closure.keepLines"：使用 Closure Compiler 进行压缩合并并保留换行；
     // "none"：不做压缩合并；
-    optimize: 'uglify2',
+    optimize: 'none',
     uglify2: {
         //Example of a specialized config. If you are fine
         //with the default options, no need to specify
@@ -37,10 +37,13 @@
     optimizeCss: 'standard',
     removeCombined: false,
     fileExclusionRegExp: /^(i18n|r|build)\.js$/,
-    baseUrl: "./js",//build.js文件的相对路径
     modules: [{
         name: './app'
     }],
+    baseUrl: "./js",
+    //1、入口文件通过data-main形式加载，同时设置了bashUrl
+    //2、通过 RequireJS config设置bashUrl
+    //3、非如上两种，bashUrl是引用requireJS的html路径
     shim: {
         'jQueryMigrate':{
             deps:['jquery'],
@@ -69,6 +72,10 @@
         "jquery.pagination": "tools/jquery.pagination",
         "Modernizr":"tools/Modernizr",
         "console": "tools/console",
+        "addbook": "tools/addbook",
+        "ball": "tools/ball",
+        "CountUp": "tools/countUp",
+        "loop": "tools/loop",
         "exclamation": "app/exclamation",
         "review": "app/review.txt",
         "tpl": "app/template.html",

@@ -1,4 +1,4 @@
-require.config({
+var requireOne = require.config({
     baseUrl: "./js",
     //1、入口文件通过data-main形式加载，同时设置了bashUrl
     //2、通过 RequireJS config设置bashUrl
@@ -31,6 +31,10 @@ require.config({
         "jquery.pagination": "tools/jquery.pagination",
         "Modernizr":"tools/Modernizr",
         "console": "tools/console",
+        "addbook": "tools/addbook",
+        "ball": "tools/ball",
+        "CountUp": "tools/countUp",
+        "loop": "tools/loop",
         "exclamation": "app/exclamation",
         "review": "app/review.txt",
         "tpl": "app/template.html",
@@ -48,7 +52,11 @@ require([ 'requirejs',
     'jquery',
     'console',
     'jQueryMigrate',
-    'jquery.pagination'], function( requirejs,
+    'jquery.pagination',
+    'addbook',
+    'ball',
+    'CountUp',
+    'loop'], function( requirejs,
         util, 
         exclamation, 
         txt,
@@ -58,7 +66,11 @@ require([ 'requirejs',
         $,
         console,
         jQueryMigrate,
-        pagination) {
+        pagination,
+        addbook,
+        ball,
+        CountUp,
+        loop) {
     domReady(function() {
         console.log("%c document ready 1", "color:red");
         console.log($.fn.jquery);
@@ -84,7 +96,8 @@ require([ 'requirejs',
     domReady(function(){
         console.log("%c document ready 5", "color:red");
         console.log("Modernizr");
-        console.log(Modernizr.json);
+        console.log(Modernizr);
+        console.log(Modernizr.canvas);
     });
     domReady(function(){
         console.log("%c document ready 6", "color:red");
@@ -132,6 +145,52 @@ require([ 'requirejs',
             }
             //ajax加载
             $("#AJAXhiddenresult").load("js/app/load.html", null, initPagination);
+    });
+    domReady(function(){
+        console.log("%c document ready 7", "color:red");
+        console.log("addbook");
+        //绑定按钮
+        $("#btn_addbook").click(function() {
+          addbook.init({'title':'RequireJS模块化','url':'http://http://www.yanhu.com/201802/20180227/20180227001/index.html','content':'请按Ctrl+D将本页面放入收藏夹，RequireJS模块化！'})
+          addbook.add();
+          return false;
+        });
+    });
+    domReady(function(){
+        console.log("%c document ready 8", "color:red");
+        console.log("ball");
+        if (Modernizr.canvas) {
+            ball.ballPlay();
+            setTimeout(function(){
+                ball.ballBack();
+            },3000)
+        }else{
+            console.log("浏览器不支持");
+        }
+        
+    })
+    domReady(function(){
+        console.log("%c document ready 9", "color:red");
+        console.log("CountUp");
+        console.log(CountUp);
+        new CountUp('myTargetElement',10,1888,0,1,{
+            useEasing: false,
+            useGrouping: false,
+            formattingFn: function(num) {
+                var html = '';
+                $.each(("00000" + num.toString()).slice(-5).split(''), function(key, value) {
+                    html += "<em>" + value + "</em>";
+                });
+                return html;
+            }
+        }).start();
+    });
+    domReady(function(){
+        if (Modernizr.canvas) {
+            loop();
+        }else{
+            console.log("浏览器不支持");
+        }
     });
 })
 /*requirejs.onResourceLoad = function (context, map, depArray) {
