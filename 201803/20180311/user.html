@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="/js/jquery.js"></script>
+</head>
+<body>
+	<h1>XML实例</h1>
+	<input type="button" id="getXml" value="获取和解析xml"/>
+	<div id="load"></div>
+	<script type="text/javascript">
+	        $(function(){
+	            $("#getXml").click(function(){
+	                $.ajax({
+	                    url:"./user.xml",
+	                    data:{},
+	                    dataType:"xml",
+	                    success:function(xml){
+	                        var frag = $("<ul/>");      //建立一个代码片段
+	                        $(xml).find("student").each(function(i){
+	                            var id = $(this).children("id").text();   //获取id节点
+	                            var name = $(this).children("name").text();   //获取id节点
+	                            var email = $(this).attr("email");   //获取id节点
+	                            //构造html字符串，通过append()方法添加到之前建立的代码段
+	                            frag.append("<li>UserID："+id+"</li>");
+	                            frag.append("<li>NickName："+name+"</li>");
+	                            frag.append("<li>Email："+email+"</li>");
+	                        });
+	                        frag.appendTo("#load");
+	                    }
+	                });
+	            })
+	        })
+	    </script>
+</body>
+</html>

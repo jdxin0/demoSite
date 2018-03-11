@@ -9,7 +9,7 @@
     // "closure"： 使用 Google's Closure Compiler 进行压缩合并，需要 Java 环境；
     // "closure.keepLines"：使用 Closure Compiler 进行压缩合并并保留换行；
     // "none"：不做压缩合并；
-    optimize: 'uglify2',
+    optimize: 'none',
     uglify2: {
         //Example of a specialized config. If you are fine
         //with the default options, no need to specify

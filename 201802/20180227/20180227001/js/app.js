@@ -1,5 +1,5 @@
 require.config({
-    // baseUrl: "./js",
+    baseUrl: "./js",
     //1、入口文件通过data-main形式加载，同时设置了bashUrl
     //2、通过 RequireJS config设置bashUrl
     //3、非如上两种，bashUrl是引用requireJS的html路径
