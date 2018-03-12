@@ -3,7 +3,7 @@
 ----------------
 require-2.3.5.js
 lib/jquery-1.12.4.js
-tools/console.js
+common/console.js
 app/util.js
 app/exclamation.js
 RequireJS-plugins/text.js
