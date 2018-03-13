@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var src = ["js/1.js", "js/2.js", "js/3.js", "js/4.js", "js/5.js"];
+		var docFram = document.createDocumentFragment();
+		for (var key in src) {
+		    var script = document.createElement("script");
+		    script.type = "text/javascript";
+		    script.src = src[key];
+		    docFram.appendChild(script);
+		}
+		document.getElementsByTagName("head").item(0).appendChild(docFram);
+		console.log(docFram);
+	</script>
+</body>
+</html>
