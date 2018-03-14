@@ -2,7 +2,7 @@
 ./app.js
 ----------------
 require-2.3.5.js
-lib/jquery-1.12.4.js
+lib/jquery-1.12.4.min.js
 common/console.js
 app/util.js
 app/exclamation.js
@@ -11,7 +11,7 @@ text!review
 text!tpl
 tools/Modernizr.js
 RequireJS-plugins/domReady.js
-lib/jquery-migrate-1.4.1.js
+lib/jquery-migrate-1.4.1.min.js
 tools/jquery.pagination.js
 tools/addbook.js
 tools/ball.js

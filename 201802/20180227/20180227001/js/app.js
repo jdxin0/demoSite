@@ -25,14 +25,13 @@ var requireOne = require.config({
     paths: {//module IDs map with path
         "requirejs":"require-2.3.5",
         "jquery": "lib/jquery-1.12.4",
+        "underscore": "lib/underscore",
         "jQueryMigrate": "lib/jquery-migrate-1.4.1",
         "domReady": "RequireJS-plugins/domReady",
         "text": "RequireJS-plugins/text",
         "console": "common/console",
         "jquery.pagination": "tools/jquery.pagination",
         "Modernizr":"tools/Modernizr",
-        "addbook": "tools/addbook",
-        "ball": "tools/ball",
         "CountUp": "tools/countUp",
         "loop": "tools/loop",
         "exclamation": "app/exclamation",
@@ -53,10 +52,11 @@ require([ 'requirejs',
     'console',
     'jQueryMigrate',
     'jquery.pagination',
-    'addbook',
-    'ball',
+    'tools/addbook',
+    'tools/ball',
     'CountUp',
-    'loop'], function( requirejs,
+    'loop',
+    'underscore'], function( requirejs,
         util, 
         exclamation, 
         txt,
@@ -70,7 +70,8 @@ require([ 'requirejs',
         addbook,
         ball,
         CountUp,
-        loop) {
+        loop,
+        _) {
     domReady(function() {
         console.log("%c document ready 1", "color:red");
         console.log($.fn.jquery);
@@ -191,6 +192,11 @@ require([ 'requirejs',
         }else{
             console.log("浏览器不支持");
         }
+    });
+    domReady(function(){
+        console.log("%c document ready 10", "color:red");
+        console.log("underscore");
+        console.log(_.template)
     });
 })
 /*requirejs.onResourceLoad = function (context, map, depArray) {

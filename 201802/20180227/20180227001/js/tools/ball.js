@@ -1,5 +1,6 @@
 define(function(require,exports,module){
     // var modernizr = require("js/tools/Modernizr.js");
+      // var cssUrl = require.toUrl("./Modernizr.js");
     var Modernizr = require("Modernizr");
     if (!Modernizr.canvas) {return function(){}}
     var ballObj = {};
