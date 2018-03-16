@@ -13,12 +13,14 @@
 
 axios接口调用[DEMO](http://demo.xuliehaonet.com/201709/20170924001/20170924002.html)
 
-进制转换[DEMO](http://www.yanhu.com/201710/20171012/20171012001.html)
+进制转换[DEMO](http://demo.xuliehaonet.com/201710/20171012/20171012001.html)
 
-简单的jS加密解密[DEMO](http://www.yanhu.com/201710/20171012/20171012002.html)
+简单的jS加密解密[DEMO](http://demo.xuliehaonet.com/201710/20171012/20171012002.html)
 
-手雷会员中心焦点图[DEMO](http://www.yanhu.com/201710/20171019/)
+手雷会员中心焦点图[DEMO](http://demo.xuliehaonet.com/201710/20171019/)
 
-浮动元素[DEMO](http://www.yanhu.com/201710/20171020/20171020001.html)
+浮动元素[DEMO](http://demo.xuliehaonet.com/201710/20171020/20171020001.html)
 
-avalon [DEMO](http://www.yanhu.com/201711/20170711/)
+avalon [DEMO](http://demo.xuliehaonet.com/201711/20170711/)
+
+BaiDu地铁API [DEMO](http://demo.xuliehaonet.com/201711/20171104/map.html)
