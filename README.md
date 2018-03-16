@@ -6,3 +6,7 @@
 手雷API-[Demo](http://demo.xuliehaonet.com/201709/20170910002/)
 
 气泡提示[DEMO](http://demo.xuliehaonet.com/201709/20170912001/20170912001.html)
+
+移动端触摸滑动[DEMO](http://www.yanhu.com/201709/20170915001/Scroll.html)
+
+移动端拖动小红点[DEMO](http://www.yanhu.com/201709/20170915001/TrackPoint.html)
