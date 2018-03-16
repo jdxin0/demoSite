@@ -17,6 +17,6 @@ axios接口调用[DEMO](http://demo.xuliehaonet.com/201709/20170924001/201709240
 
 简单的jS加密解密[DEMO](http://www.yanhu.com/201710/20171012/20171012002.html)
 
-
+手雷会员中心焦点图[DEMO](http://www.yanhu.com/201710/20171019/)
 
 
