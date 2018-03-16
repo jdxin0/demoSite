@@ -3,4 +3,6 @@
 
 长期更新维护一个RequireJS(AMD模块化DEMO)[RequireJS](http://demo.xuliehaonet.com/201802/20180227/20180227001/index.html)
 
-手雷API-[Demo](http://www.yanhu.com/201709/20170910002/)
+手雷API-[Demo](http://demo.xuliehaonet.com/201709/20170910002/)
+
+气泡提示[DEMO](http://demo.xuliehaonet.com/201709/20170912001/20170912001.html)
