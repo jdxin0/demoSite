@@ -1,4 +1,3 @@
-
 (function( $ ) {
 	var default_options  = {
 		i18n:{
