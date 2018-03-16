@@ -23,6 +23,7 @@ var requireOne = require.config({
         }
     },
     paths: {//module IDs map with path
+        "bluebird":"lib/bluebird",
         "requirejs":"require-2.3.5",
         "jquery": "lib/jquery-1.12.4",
         "underscore": "lib/underscore",
@@ -41,7 +42,9 @@ var requireOne = require.config({
     }
 });
 //requireJS插件列表https://github.com/requirejs/requirejs/wiki/Plugins
-require([ 'requirejs',
+require([ 
+    'bluebird',
+    'requirejs',
     'Util', 
     'exclamation', 
     'text!review', 
@@ -56,7 +59,9 @@ require([ 'requirejs',
     'tools/ball',
     'CountUp',
     'loop',
-    'underscore'], function( requirejs,
+    'underscore'], function( 
+        Promise,
+        requirejs,
         util, 
         exclamation, 
         txt,
@@ -197,6 +202,34 @@ require([ 'requirejs',
         console.log("%c document ready 10", "color:red");
         console.log("underscore");
         console.log(_.template)
+    });
+    domReady(function(){
+        console.log("%c document ready 11", "color:red");
+        console.log("Promise");
+        new Promise(function(resolve,reject){
+            setTimeout(function(){
+                console.log(1);
+                resolve();
+            },3000);
+        }).then(function(){
+            return new Promise(function(resolve,reject){
+                setTimeout(function(){
+                    console.log(2);
+                    resolve();
+                },3000);
+            });
+        }).then(function(){
+            return new Promise(function(resolve,reject){
+                setTimeout(function(){
+                    console.log(3);
+                    resolve();
+                },3000);
+            });
+        }).then(function(){
+            setTimeout(function(){
+                console.log("Promise End!")
+            },3000);
+        });
     });
 })
 /*requirejs.onResourceLoad = function (context, map, depArray) {
