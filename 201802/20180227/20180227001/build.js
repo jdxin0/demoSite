@@ -9,7 +9,7 @@
     // "closure"： 使用 Google's Closure Compiler 进行压缩合并，需要 Java 环境；
     // "closure.keepLines"：使用 Closure Compiler 进行压缩合并并保留换行；
     // "none"：不做压缩合并；
-    optimize: 'none',
+    optimize: 'uglify2',
     uglify2: {
         //Example of a specialized config. If you are fine
         //with the default options, no need to specify
@@ -60,14 +60,16 @@
             exports:'console'
         },
         'requirejs':{
+            deps:['console'],
             exports:'requirejs'
         }
     },
     paths: {//module IDs map with path
+        "bluebird":"lib/bluebird.min",
         "requirejs":"require-2.3.5",
-        "jquery": "lib/jquery-1.12.4",
-        "underscore": "lib/underscore",
-        "jQueryMigrate": "lib/jquery-migrate-1.4.1",
+        "jquery": "lib/jquery-1.12.4.min",
+        "underscore": "lib/underscore-min",
+        "jQueryMigrate": "lib/jquery-migrate-1.4.1.min",
         "domReady": "RequireJS-plugins/domReady",
         "text": "RequireJS-plugins/text",
         "console": "common/console",

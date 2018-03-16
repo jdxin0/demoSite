@@ -2,8 +2,9 @@
 ./app.js
 ----------------
 require-2.3.5.js
-lib/jquery-1.12.4.min.js
+lib/bluebird.min.js
 common/console.js
+lib/jquery-1.12.4.min.js
 app/util.js
 app/exclamation.js
 RequireJS-plugins/text.js
@@ -17,4 +18,5 @@ tools/addbook.js
 tools/ball.js
 tools/countUp.js
 tools/loop.js
+lib/underscore-min.js
 app.js

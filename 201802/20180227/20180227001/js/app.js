@@ -19,6 +19,7 @@ var requireOne = require.config({
             exports:'console'
         },
         'requirejs':{
+			deps:['console'],
             exports:'requirejs'
         }
     },
@@ -232,9 +233,9 @@ require([
         });
     });
 })
-/*requirejs.onResourceLoad = function (context, map, depArray) {
+requirejs.onResourceLoad = function (context, map, depArray) {
     console.log(map);
-}*/
+}
 // require(["http://www.xuliehaonet.com/interface/jsonp.php?callback=define"],
 //     function (data) {
 //         //The data object will be the API response for the
