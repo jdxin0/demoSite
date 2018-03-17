@@ -21,12 +21,22 @@ var requireOne = require.config({
         'requirejs':{
 			deps:['console'],
             exports:'requirejs'
+        },
+        'multipleGlobalFun':{
+            init:function(){//暴露多个全局变量
+                console.log(this);
+                return {
+                    multipleGlobalFun1:multipleGlobalFun1,
+                    multipleGlobalFun2:multipleGlobalFun2
+                }
+            },
+            exports:'multipleGlobalFun1'//当 exports 与 init 同时存在的时候， exports 将被忽略。
         }
     },
     paths: {//module IDs map with path
         "bluebird":"lib/bluebird",
         "requirejs":"require-2.3.5",
-        "jquery": "lib/jquery-1.12.4",
+        "jquery": ["https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery","lib/jquery-1.12.4"],//这里cdn多了个后缀.js会报错，会加载本地jquery
         "underscore": "lib/underscore",
         "jQueryMigrate": "lib/jquery-migrate-1.4.1",
         "domReady": "RequireJS-plugins/domReady",
@@ -39,7 +49,9 @@ var requireOne = require.config({
         "exclamation": "app/exclamation",
         "review": "app/review.txt",
         "tpl": "app/template.html",
-        "Util": "app/util"
+        "Util": "app/util",
+        "urlTest":"app/urlTest",
+        "multipleGlobalFun":"app/multipleGlobalFun"
     }
 });
 //requireJS插件列表https://github.com/requirejs/requirejs/wiki/Plugins
@@ -60,7 +72,9 @@ require([
     'tools/ball',
     'CountUp',
     'loop',
-    'underscore'], function( 
+    'underscore',
+    'urlTest',
+    'multipleGlobalFun'], function( 
         Promise,
         requirejs,
         util, 
@@ -77,8 +91,13 @@ require([
         ball,
         CountUp,
         loop,
-        _) {
+        _,
+        urlTest,
+        multipleGlobalFun) {
     domReady(function() {
+        console.log("require.s.contexts._.config:",require.s.contexts._.config);
+        console.log("require.s.contexts._.defined:",require.s.contexts._.defined);
+        console.log("require.s.contexts._.urlFetched:",require.s.contexts._.urlFetched);
         console.log("%c document ready 1", "color:red");
         console.log($.fn.jquery);
     });
@@ -179,7 +198,7 @@ require([
     domReady(function(){
         console.log("%c document ready 9", "color:red");
         console.log("CountUp");
-        console.log(CountUp);
+        // console.log(CountUp);
         new CountUp('myTargetElement',10,1888,0,1,{
             useEasing: false,
             useGrouping: false,
@@ -202,11 +221,12 @@ require([
     domReady(function(){
         console.log("%c document ready 10", "color:red");
         console.log("underscore");
-        console.log(_.template)
+        // console.log(_.template)
     });
     domReady(function(){
         console.log("%c document ready 11", "color:red");
         console.log("Promise");
+        return //跳过promise代码
         new Promise(function(resolve,reject){
             setTimeout(function(){
                 console.log(1);
@@ -232,10 +252,20 @@ require([
             },3000);
         });
     });
+    domReady(function(){
+        console.log("%c document ready 12", "color:red");
+        console.log("urlTest");
+        console.log(urlTest);
+    });
+    domReady(function(){
+        console.log("%c document ready 12", "color:red");
+        console.log("multipleGlobalFun");
+        console.log(multipleGlobalFun);
+    })
 })
-requirejs.onResourceLoad = function (context, map, depArray) {
+/*requirejs.onResourceLoad = function (context, map, depArray) {
     console.log(map);
-}
+}*/
 // require(["http://www.xuliehaonet.com/interface/jsonp.php?callback=define"],
 //     function (data) {
 //         //The data object will be the API response for the
