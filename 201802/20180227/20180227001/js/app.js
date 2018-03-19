@@ -258,7 +258,7 @@ require([
         console.log(urlTest);
     });
     domReady(function(){
-        console.log("%c document ready 12", "color:red");
+        console.log("%c document ready 13", "color:red");
         console.log("multipleGlobalFun");
         console.log(multipleGlobalFun);
     })
