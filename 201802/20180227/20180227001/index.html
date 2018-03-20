@@ -4,8 +4,25 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/html5.css">
+	<!--[if lt IE 9]>
+		<script type="text/javascript" src="js/common/html5shiv.js"></script>
+	<![endif]-->
 </head>
 <body>
+	<div title="HTML5 Tag">
+	    <article class="article" style="color:red">article</article>
+	    <aside class="aside">aside</aside>
+	    <dialog class="dialog">dialog</dialog>
+	    <figcaption class="figcaption">figcaption</figcaption>
+	    <figure class="figure">figure</figure>
+	    <footer class="footer">footer</footer>
+	    <header class="header">header</header>
+	    <hgroup class="hgroup">hgroup</hgroup>
+	    <main class="main">main</main>
+	    <nav class="nav">nav</nav>
+	    <section class="section">section</section>
+	</div>
 	<!--下面是一首小诗《纽约时间比加州时间早三个小时》-->
 	<div id="poem" class="poemClass" title="一首小诗" lang="ch-zh" dir="ltr" data-nums="5"></div>plain text<hr>
 	<div title="分页模块">
@@ -122,6 +139,7 @@
 		<canvas id="loop" width="500" height="400"></canvas>
 		2
 	</div>
+	
 	<script type="text/javascript" data-main="js/app.js" src="js/require-2.3.5.js"></script>
 	<!-- <script type="text/javascript" src="dist/app.js"><h1>script有src属性时，script标签内元素，代码不会执行</h1>alert(1);</script> -->
 	<!-- <script type="text/javascript" src="js/require.js"></script> -->
