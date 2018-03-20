@@ -46,6 +46,7 @@ var requireOne = require.config({
         "Modernizr":"tools/Modernizr",
         "CountUp": "tools/countUp",
         "loop": "tools/loop",
+        "textSlider":"tools/textSlider",
         "exclamation": "app/exclamation",
         "review": "app/review.txt",
         "tpl": "app/template.html",
@@ -74,7 +75,8 @@ require([
     'loop',
     'underscore',
     'urlTest',
-    'multipleGlobalFun'], function( 
+    'multipleGlobalFun',
+    'textSlider'], function( 
         Promise,
         requirejs,
         util, 
@@ -93,7 +95,8 @@ require([
         loop,
         _,
         urlTest,
-        multipleGlobalFun) {
+        multipleGlobalFun,
+        txtSlid) {
     domReady(function() {
         console.log("require.s.contexts._.config:",require.s.contexts._.config);
         console.log("require.s.contexts._.defined:",require.s.contexts._.defined);
@@ -221,7 +224,33 @@ require([
     domReady(function(){
         console.log("%c document ready 10", "color:red");
         console.log("underscore");
-        // console.log(_.template)
+        var prizeList=[{"money":12000,"nickname":"\u534a\u6e05\u9192***d","ctime":"02-08 08:20"},{"nickname":"\u9b54***\u5c0a","ctime":"02-07 11:09","money":10000},{"money":18000,"nickname":"\u90a3\u4e00\u6cab***\u70e7","ctime":"02-06 21:18"},{"nickname":"\u65ed\u65e5\u79be***\u98ce","ctime":"02-06 02:48","money":18000},{"money":5000,"nickname":"\u62b9\u4e0d\u6389***\u8ff9","ctime":"02-06 02:47"},{"money":18000,"nickname":"sun***\u3002","ctime":"02-05 09:48"},{"nickname":"183***0","ctime":"02-04 15:47","money":18000},{"money":18000,"nickname":"\u5e74\u5c11\u75f4***\u3002","ctime":"02-04 10:21"}]
+        var tpl = '<li><%= list.ctime %>恭喜<em class="name col-in-yel"><%= list.nickname %></em>获得<em><%= list.money %>元</em></li>';
+        var html = '';
+        for (var i = 0, len = prizeList.length; i < len; i++) {
+            html += _.template(tpl)({
+                list: prizeList[i]
+            });
+        }
+        $('#sliderLeft ul').html(html);
+        $('#sliderUp ul').html(html);
+        $('#sliderLeft').textSlider({
+            direction: 'left',
+            speed: 1000,
+            wait: 1000,
+            line: 1,
+            per: 1,
+            child: 'ul'
+        });
+        $('#sliderUp').textSlider({
+            direction: 'top',
+            speed: 1000,
+            wait: 1000,
+            line: 1,
+            per: 1,
+            child: 'ul'
+        });
+        
     });
     domReady(function(){
         console.log("%c document ready 11", "color:red");

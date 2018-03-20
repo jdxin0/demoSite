@@ -4,7 +4,8 @@
 	overflow: auto;
 }
 
-@charset "utf-8";      
+@charset "utf-8";
+ul{padding: 0}
 .pagination a {
     text-decoration: none;
 	border: 1px solid #AAE;

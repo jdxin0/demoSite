@@ -1,0 +1,66 @@
+.slider #sliderLeft {
+    display: inline-block;
+    width: 764px;
+    height: 58px;
+    overflow: hidden;
+    position: relative
+}
+
+.slider #sliderLeft ul {
+    font-size: 0;
+    white-space: nowrap;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.slider #sliderLeft ul li {
+    display: inline-block;
+    font-size: 16px;
+    color: #85430a;
+    margin-right: 10px
+}
+
+.slider #sliderLeft ul li .name {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 64px;
+    overflow: hidden;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis
+}
+
+
+.slider #sliderUp {
+    display: inline-block;
+    width: 284px;
+    height: 58px;
+    overflow: hidden;
+    position: relative
+}
+
+.slider #sliderUp ul {
+    font-size: 0;
+    white-space: nowrap;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.slider #sliderUp ul li {
+    display: inline-block;
+    font-size: 16px;
+    color: #85430a;
+    margin-right: 10px
+}
+
+.slider #sliderUp ul li .name {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 64px;
+    overflow: hidden;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis
+}
