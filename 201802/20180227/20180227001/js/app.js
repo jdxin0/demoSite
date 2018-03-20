@@ -31,6 +31,15 @@ var requireOne = require.config({
                 }
             },
             exports:'multipleGlobalFun1'//当 exports 与 init 同时存在的时候， exports 将被忽略。
+        },
+        'jquery.path':{
+            deps:['jquery'],
+            init:function(){
+                return {
+                    bezier:$.path.bezier,
+                    arc:$.path.arc
+                }
+            }
         }
     },
     paths: {//module IDs map with path
@@ -47,6 +56,7 @@ var requireOne = require.config({
         "CountUp": "tools/countUp",
         "loop": "tools/loop",
         "textSlider":"tools/textSlider",
+        "jquery.path":"tools/jquery.path",
         "exclamation": "app/exclamation",
         "review": "app/review.txt",
         "tpl": "app/template.html",
@@ -78,7 +88,8 @@ require([
     'urlTest',
     'multipleGlobalFun',
     'textSlider',
-    'testAnim'], function( 
+    'testAnim',
+    'jquery.path'], function( 
         Promise,
         requirejs,
         util, 
@@ -99,7 +110,8 @@ require([
         urlTest,
         multipleGlobalFun,
         txtSlid,
-        testAnim) {
+        testAnim,
+        path) {
     domReady(function() {
         console.log("require.s.contexts._.config:",require.s.contexts._.config);
         console.log("require.s.contexts._.defined:",require.s.contexts._.defined);
@@ -191,31 +203,38 @@ require([
     domReady(function(){
         console.log("%c document ready 8", "color:red");
         console.log("ball");
-        if (Modernizr.canvas) {
-            ball.ballPlay();
-            setTimeout(function(){
-                ball.ballBack();
-            },3000)
-        }else{
-            console.log("浏览器不支持");
-        }
-        
+        var flag=1;
+        $(".ballPalyBtn").click(function(){
+            if (Modernizr.canvas&&flag==1) {
+                ball.ballPlay();
+                flag=0;
+                setTimeout(function(){
+                    ball.ballBack();
+                    flag=1;
+                },3000)
+            }else if (flag==0) {
+                console.log("ballplaying");
+            }else{
+                console.log("浏览器不支持");
+            }
+        });
     })
     domReady(function(){
         console.log("%c document ready 9", "color:red");
         console.log("CountUp");
-        // console.log(CountUp);
-        new CountUp('myTargetElement',10,1888,0,1,{
-            useEasing: false,
-            useGrouping: false,
-            formattingFn: function(num) {
-                var html = '';
-                $.each(("00000" + num.toString()).slice(-5).split(''), function(key, value) {
-                    html += "<em>" + value + "</em>";
-                });
-                return html;
-            }
-        }).start();
+        $(".myTargetElementBtn").click(function(){
+            new CountUp('myTargetElement',10,1888,0,1,{
+                useEasing: false,
+                useGrouping: false,
+                formattingFn: function(num) {
+                    var html = '';
+                    $.each(("00000" + num.toString()).slice(-5).split(''), function(key, value) {
+                        html += "<em>" + value + "</em>";
+                    });
+                    return html;
+                }
+            }).start();
+        });
     });
     domReady(function(){
         if (Modernizr.canvas) {
@@ -306,6 +325,35 @@ require([
         $('.js--animations').change(function(){
           var anim = $(this).val();
           testAnim(anim);
+        });
+    })
+    domReady(function(){
+        console.log("%c document ready 15", "color:red");
+        console.log("$.path.bezier");
+        var mpath = new $.path.bezier({
+            start: {
+                x: 0,
+                y: 430,
+                angle: 300,
+                length: 1,
+                opacity: 1
+            },
+            end: {
+                x: 895,
+                y: 430,
+                angle: 0,
+                length: 0,
+                opacity: 0
+            }
+        });
+        $(".animatePathBtn").click(function(){
+            $(".moneyfly").animate({
+                path: mpath,
+                opacity: 1,
+                // zoom: '0.8'
+            }, 1000, function() {
+
+            });
         });
     })
 })
