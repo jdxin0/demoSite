@@ -287,29 +287,28 @@ require([
     domReady(function(){
         console.log("%c document ready 11", "color:red");
         console.log("Promise");
-        return //跳过promise代码
         new Promise(function(resolve,reject){
             setTimeout(function(){
-                console.log(1);
+                $("#bluebired").append('1,');
                 resolve();
             },3000);
         }).then(function(){
             return new Promise(function(resolve,reject){
                 setTimeout(function(){
-                    console.log(2);
+                    $("#bluebired").append('2,');
                     resolve();
                 },3000);
             });
         }).then(function(){
             return new Promise(function(resolve,reject){
                 setTimeout(function(){
-                    console.log(3);
+                    $("#bluebired").append('3,');
                     resolve();
                 },3000);
             });
         }).then(function(){
             setTimeout(function(){
-                console.log("Promise End!")
+                $("#bluebired").append('Promise End!');
             },3000);
         });
     });
