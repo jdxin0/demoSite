@@ -40,6 +40,9 @@ var requireOne = require.config({
                     arc:$.path.arc
                 }
             }
+        },
+        'qrcode':{
+            exports:'QRCode'
         }
     },
     paths: {//module IDs map with path
@@ -57,6 +60,7 @@ var requireOne = require.config({
         "loop": "tools/loop",
         "textSlider":"tools/textSlider",
         "jquery.path":"tools/jquery.path",
+        "qrcode":"tools/qrcode",
         "exclamation": "app/exclamation",
         "review": "app/review.txt",
         "tpl": "app/template.html",
@@ -89,7 +93,8 @@ require([
     'multipleGlobalFun',
     'textSlider',
     'testAnim',
-    'jquery.path'], function( 
+    'jquery.path',
+    'qrcode'], function( 
         Promise,
         requirejs,
         util, 
@@ -111,7 +116,8 @@ require([
         multipleGlobalFun,
         txtSlid,
         testAnim,
-        path) {
+        path,
+        QRCode) {
     domReady(function() {
         console.log("require.s.contexts._.config:",require.s.contexts._.config);
         console.log("require.s.contexts._.defined:",require.s.contexts._.defined);
@@ -355,6 +361,19 @@ require([
 
             });
         });
+    })
+    domReady(function(){
+        new QRCode(document.getElementById("QRCode"), {
+            text: document.URL,
+            width: 180,
+            height: 180,
+            colorDark: "#000000",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.H
+        });
+        setTimeout(function() {
+            $("#QRCode").css("visibility", "visible")
+        }, 0);
     })
 })
 /*requirejs.onResourceLoad = function (context, map, depArray) {

@@ -46,3 +46,7 @@ ul{padding: 0}
 	   border-radius: 5px;
 	   margin: 0 4px
 }
+
+#QRCode img{
+	margin: 0 auto;
+}
