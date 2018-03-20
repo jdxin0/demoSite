@@ -290,30 +290,39 @@ require([
     domReady(function(){
         console.log("%c document ready 11", "color:red");
         console.log("Promise");
-        new Promise(function(resolve,reject){
-            setTimeout(function(){
-                $("#bluebired").append('1,');
-                resolve();
-            },3000);
-        }).then(function(){
-            return new Promise(function(resolve,reject){
-                setTimeout(function(){
-                    $("#bluebired").append('2,');
-                    resolve();
-                },3000);
-            });
-        }).then(function(){
-            return new Promise(function(resolve,reject){
-                setTimeout(function(){
-                    $("#bluebired").append('3,');
-                    resolve();
-                },3000);
-            });
-        }).then(function(){
-            setTimeout(function(){
-                $("#bluebired").append('Promise End!');
-            },3000);
+        var flag=1;
+        $(".promiseBtn").click(function(){
+            if (flag) {
+                flag=0;
+                $("#bluebired").empty();
+                new Promise(function(resolve,reject){
+                    setTimeout(function(){
+                        $("#bluebired").append('1,');
+                        resolve();
+                    },3000);
+                }).then(function(){
+                    return new Promise(function(resolve,reject){
+                        setTimeout(function(){
+                            $("#bluebired").append('2,');
+                            resolve();
+                        },3000);
+                    });
+                }).then(function(){
+                    return new Promise(function(resolve,reject){
+                        setTimeout(function(){
+                            $("#bluebired").append('3,');
+                            resolve();
+                        },3000);
+                    });
+                }).then(function(){
+                    setTimeout(function(){
+                        $("#bluebired").append('Promise End!');
+                        flag=1;
+                    },3000);
+                });
+            }
         });
+        
     });
     domReady(function(){
         console.log("%c document ready 12", "color:red");
