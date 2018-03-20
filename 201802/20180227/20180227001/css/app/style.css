@@ -1,7 +1,8 @@
 #poem{
-	width: 550px;
+	width: 960px;
 	height: 300px;
 	overflow: auto;
+	margin: 0 auto;
 }
 
 @charset "utf-8";
@@ -31,4 +32,17 @@ ul{padding: 0}
 	background:#fff;
 }
 
-#Searchresult{width:300px; height:100px; padding:20px; background:#f0f3f9;}
+#Searchresult{width:300px; height:100px; padding:20px; background:#f0f3f9;margin: 0 auto}
+
+#myTargetElement em{
+	font-size: 24px;
+	   font-weight: 700;
+	   color: #ed1049;
+	   display: inline-block;
+	   width: 33px;
+	   height: 33px;
+	   line-height: 33px;
+	   border: 2px solid #b57230;
+	   border-radius: 5px;
+	   margin: 0 4px
+}

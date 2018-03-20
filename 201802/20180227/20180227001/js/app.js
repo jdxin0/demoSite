@@ -52,7 +52,8 @@ var requireOne = require.config({
         "tpl": "app/template.html",
         "Util": "app/util",
         "urlTest":"app/urlTest",
-        "multipleGlobalFun":"app/multipleGlobalFun"
+        "multipleGlobalFun":"app/multipleGlobalFun",
+        "testAnim":"app/animate.css"
     }
 });
 //requireJS插件列表https://github.com/requirejs/requirejs/wiki/Plugins
@@ -76,7 +77,8 @@ require([
     'underscore',
     'urlTest',
     'multipleGlobalFun',
-    'textSlider'], function( 
+    'textSlider',
+    'testAnim'], function( 
         Promise,
         requirejs,
         util, 
@@ -96,7 +98,8 @@ require([
         _,
         urlTest,
         multipleGlobalFun,
-        txtSlid) {
+        txtSlid,
+        testAnim) {
     domReady(function() {
         console.log("require.s.contexts._.config:",require.s.contexts._.config);
         console.log("require.s.contexts._.defined:",require.s.contexts._.defined);
@@ -290,6 +293,20 @@ require([
         console.log("%c document ready 13", "color:red");
         console.log("multipleGlobalFun");
         console.log(multipleGlobalFun);
+    })
+    domReady(function(){
+        console.log("%c document ready 14", "color:red");
+        console.log("Animation.CSS");
+        $('.js--triggerAnimation').click(function(e){
+          e.preventDefault();
+          var anim = $('.js--animations').val();
+          testAnim(anim);
+        });
+
+        $('.js--animations').change(function(){
+          var anim = $(this).val();
+          testAnim(anim);
+        });
     })
 })
 /*requirejs.onResourceLoad = function (context, map, depArray) {
