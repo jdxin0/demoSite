@@ -65,3 +65,7 @@ ul {
 #QRCode table {
     margin: 0 auto!important;
 }
+
+.center p {
+    font-size: 1.5rem;
+}
