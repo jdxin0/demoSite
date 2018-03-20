@@ -135,7 +135,7 @@ require([
         console.log("%c document ready 4", "color:red");
         console.log("text模块");
         console.log(tpl);
-        $("#poem").html(txt);
+        $("#poem").append(txt);
     });
     domReady(function(){
         console.log("%c document ready 5", "color:red");
@@ -204,7 +204,7 @@ require([
         console.log("%c document ready 8", "color:red");
         console.log("ball");
         var flag=1;
-        $(".ballPalyBtn").click(function(){
+        $(".ballplayBtn").click(function(){
             if (Modernizr.canvas&&flag==1) {
                 ball.ballPlay();
                 flag=0;
