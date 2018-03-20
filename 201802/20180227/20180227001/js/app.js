@@ -340,6 +340,7 @@ require([
     domReady(function(){
         console.log("%c document ready 15", "color:red");
         console.log("$.path.bezier");
+        var flag=1;
         var mpath = new $.path.bezier({
             start: {
                 x: 0,
@@ -357,14 +358,18 @@ require([
             }
         });
         $(".animatePathBtn").click(function(){
-            $(".moneyfly").animate({
-                path: mpath,
-                opacity: 1,
-                // zoom: '0.8'
-            }, 1000, function() {
-
-            });
+            if (flag) {
+                flag=0;
+                $(".moneyfly").animate({
+                    path: mpath,
+                    opacity: 1,
+                    // zoom: '0.8'
+                }, 1000, function() {
+                    flag=1;
+                });
+            }
         });
+        
     })
     domReady(function(){
         new QRCode(document.getElementById("QRCode"), {
