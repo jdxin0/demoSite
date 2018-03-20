@@ -1,3 +1,4 @@
+// http://wmh.github.io/jquery-scrollbox/
 var jQuery = $ = require('jquery');
 $.fn.scrollbox = function(config) {
     //default config
