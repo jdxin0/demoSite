@@ -223,7 +223,7 @@ require([
         console.log("%c document ready 9", "color:red");
         console.log("CountUp");
         $(".myTargetElementBtn").click(function(){
-            new CountUp('myTargetElement',10,1888,0,1,{
+            new CountUp('myTargetElement',10,88888,0,1,{
                 useEasing: false,
                 useGrouping: false,
                 formattingFn: function(num) {
