@@ -12,6 +12,10 @@ var requireOne = require.config({
             deps:['jquery'],
             exports:'jQuery.fn.pagination'
         },
+        'textSlider':{
+            deps:['jquery'],
+            exports:'jQuery.fn.textSlider'
+        },
         'Modernizr':{
             exports:'Modernizr'
         },
@@ -50,16 +54,16 @@ var requireOne = require.config({
         "requirejs":"require-2.3.5",
         "jquery": ["https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery","lib/jquery-1.12.4"],//这里cdn多了个后缀.js会报错，会加载本地jquery
         "underscore": "lib/underscore",
-        "jQueryMigrate": "lib/jquery-migrate-1.4.1",
+        "jQueryMigrate": "jQuery-plugins/jquery-migrate-1.4.1",
         "domReady": "RequireJS-plugins/domReady",
         "text": "RequireJS-plugins/text",
         "console": "common/console",
-        "jquery.pagination": "tools/jquery.pagination",
+        "jquery.pagination": "jQuery-plugins/jquery.pagination",
         "Modernizr":"tools/Modernizr",
         "CountUp": "tools/countUp",
         "loop": "tools/loop",
-        "textSlider":"tools/textSlider",
-        "jquery.path":"tools/jquery.path",
+        "textSlider":"jQuery-plugins/jquery.textSlider",
+        "jquery.path":"jQuery-plugins/jquery.path",
         "qrcode":"tools/qrcode",
         "exclamation": "app/exclamation",
         "review": "app/review.txt",
