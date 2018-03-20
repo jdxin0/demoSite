@@ -65,6 +65,7 @@ var requireOne = require.config({
         "textSlider":"jQuery-plugins/jquery.textSlider",
         "jquery.path":"jQuery-plugins/jquery.path",
         "qrcode":"tools/qrcode",
+        "danmu":"tools/danmu",
         "exclamation": "app/exclamation",
         "review": "app/review.txt",
         "tpl": "app/template.html",
@@ -98,7 +99,8 @@ require([
     'textSlider',
     'testAnim',
     'jquery.path',
-    'qrcode'], function( 
+    'qrcode',
+    'danmu'], function( 
         Promise,
         requirejs,
         util, 
@@ -121,7 +123,8 @@ require([
         txtSlid,
         testAnim,
         path,
-        QRCode) {
+        QRCode,
+        danmu) {
     domReady(function() {
         console.log("require.s.contexts._.config:",require.s.contexts._.config);
         console.log("require.s.contexts._.defined:",require.s.contexts._.defined);
@@ -382,6 +385,57 @@ require([
         setTimeout(function() {
             $("#QRCode").css("visibility", "visible")
         }, 0);
+    })
+    domReady(function(){
+        var prizelistDanMu=[{"prize":"1\u5929\u767d\u91d1\u4f1a\u5458","nickname":"180***7","addtime":"2017-11-21 09:43:59"},{"prize":"1\u5929\u767d\u91d1\u4f1a\u5458","nickname":"180***7","addtime":"2017-11-21 09:43:53"},{"prize":"1\u5929\u767d\u91d1\u4f1a\u5458","nickname":"\u4e09\u5343\u9662***\u5dfd","addtime":"2017-11-13 21:06:02"},{"prize":"30\u5929\u767d\u91d1\u4f1a\u5458","nickname":"\u4e09\u5343\u9662***\u5dfd","addtime":"2017-11-13 21:05:54"},{"prize":"1\u5929\u767d\u91d1\u4f1a\u5458","nickname":"\u4e09\u5343\u9662***\u5dfd","addtime":"2017-11-13 21:05:43"},{"prize":"PPTV\u4e00\u4e2a\u6708\u4f1a\u5458","nickname":"\u4e00\u591c\u4e94***\u90ce","addtime":"2017-11-12 18:00:21"},{"prize":"1\u5929\u767d\u91d1\u4f1a\u5458","nickname":"\u679c\u6c41***\u4eec","addtime":"2017-11-01 15:39:33"},{"prize":"1\u5929\u767d\u91d1\u4f1a\u5458","nickname":"\u679c\u6c41***\u4eec","addtime":"2017-11-01 15:39:19"},{"prize":"1\u5929\u767d\u91d1\u4f1a\u5458","nickname":"lao***u","addtime":"2017-10-29 23:12:16"},{"prize":"1\u5929\u767d\u91d1\u4f1a\u5458","nickname":"lao***u","addtime":"2017-10-29 23:12:03"},{"prize":"PPTV\u4e00\u4e2a\u6708\u4f1a\u5458","nickname":"lao***u","addtime":"2017-10-29 23:08:34"},{"prize":"1\u5929\u767d\u91d1\u4f1a\u5458","nickname":"021***7","addtime":"2017-10-13 21:37:02"},{"prize":"1\u5929\u767d\u91d1\u4f1a\u5458","nickname":"021***7","addtime":"2017-10-13 21:36:56"},{"prize":"1\u5929\u767d\u91d1\u4f1a\u5458","nickname":"021***7","addtime":"2017-10-13 21:36:48"},{"prize":"10\u5929\u767d\u91d1\u4f1a\u5458","nickname":"\u671b\u98ce***\u9601","addtime":"2017-10-04 16:06:19"},{"nickname":"zac***_zc","prize":"1\u5929\u767d\u91d1\u4f1a\u5458"},{"nickname":"\u5929\u4f7f*\u57ce","prize":"10\u5929\u767d\u91d1\u4f1a\u5458"},{"nickname":"812**48","prize":"30\u5929\u767d\u91d1\u4f1a\u5458","addtime":"2015-09-08 14:25:45"},{"nickname":"tfb**s","prize":"90\u5929\u767d\u91d1\u4f1a\u5458"},{"nickname":"\u4e09\u53d4","prize":"365\u5929\u767d\u91d1\u4f1a\u5458"},{"nickname":"\u62c9\u5361*\u65cf","prize":"1\u5929\u8d85\u7ea7\u4f1a\u5458"},{"nickname":"\u4eba\u795e*\u6124","prize":"10\u5929\u8d85\u7ea7\u4f1a\u5458"},{"nickname":"\u4e2d\u5927*\u4e86","prize":"30\u5929\u8d85\u7ea7\u4f1a\u5458"}]
+        function buildData(arr){
+
+            var sizeArr = [14, 16, 18, 20, 22, 24];
+            var newArr = [];
+            var stimeCount = 0;
+            var copyDataCount = 10;  //将原始数据复制10份
+            var tempArr = [];
+            for(var i = 0; i < copyDataCount; i++){
+                tempArr = arr.concat(tempArr);
+            }
+            arr = tempArr;
+
+            for(var i = 0, len = arr.length; i < len; i++){
+
+                var obj = {
+                    "time": 0,  //从何时开始
+                    "duration": 30000,  //经过的时间
+                    "top": 10,  //舞台偏移的高度
+                    "size": "16px",  //弹幕文字大小
+                    "color": "#fdeb00",  //弹幕颜色
+                    "text": ""  //内容
+                };
+
+                obj["text"] = '恭喜<span>' + arr[i].nickname + '</span>获得额外<em>' + arr[i].prize + '</em>奖励';
+                obj["time"] = stimeCount + 1;
+                obj["top"] = (i % 4) * 40 + 10;
+                if (typeof arr[i].addtime=="string") {
+                    obj["color"] = color(arr[i].addtime.charAt(arr[i].addtime.length-1));
+                }else {
+                    obj["color"] = "#27ae60";
+                }
+                stimeCount = (i % 2) == 0 ? stimeCount - 200 : stimeCount + 2000;
+                newArr.push(obj);
+            }
+
+            return newArr;
+        }
+        function color(num){
+            var colors = ["#2ecc71", "#3498db", "#9b59b6", "#34495e", "#f1c40f", "#e67e22", "#e74c3c", "#ecf0f1", "#95a5a6", "#0984e3"];
+            return colors[num];
+        }
+        function getRandom(k){
+            return Math.floor(Math.random() * 10)%k;
+        }
+        danmu({
+            Time: 900000,  //所有弹幕跑动的总时间
+            playList: buildData(prizelistDanMu)
+        });
     })
 })
 /*requirejs.onResourceLoad = function (context, map, depArray) {
