@@ -53,6 +53,10 @@
             deps:['jquery'],
             exports:'jQuery.fn.pagination'
         },
+        'textSlider':{
+            deps:['jquery'],
+            exports:'jQuery.fn.textSlider'
+        },
         'Modernizr':{
             exports:'Modernizr'
         },
@@ -62,24 +66,52 @@
         'requirejs':{
             deps:['console'],
             exports:'requirejs'
+        },
+        'multipleGlobalFun':{
+            init:function(){//暴露多个全局变量
+                console.log(this);
+                return {
+                    multipleGlobalFun1:multipleGlobalFun1,
+                    multipleGlobalFun2:multipleGlobalFun2
+                }
+            },
+            exports:'multipleGlobalFun1'//当 exports 与 init 同时存在的时候， exports 将被忽略。
+        },
+        'jquery.path':{
+            deps:['jquery'],
+            init:function(){
+                return {
+                    bezier:$.path.bezier,
+                    arc:$.path.arc
+                }
+            }
+        },
+        'qrcode':{
+            exports:'QRCode'
         }
     },
     paths: {//module IDs map with path
-        "bluebird":"lib/bluebird.min",
+        "bluebird":"lib/bluebird",
         "requirejs":"require-2.3.5",
-        "jquery": "lib/jquery-1.12.4.min",
-        "underscore": "lib/underscore-min",
-        "jQueryMigrate": "lib/jquery-migrate-1.4.1.min",
+        "jquery": "lib/jquery-1.12.4",//这里cdn多了个后缀.js会报错，会加载本地jquery
+        "underscore": "lib/underscore",
+        "jQueryMigrate": "jQuery-plugins/jquery-migrate-1.4.1",
         "domReady": "RequireJS-plugins/domReady",
         "text": "RequireJS-plugins/text",
         "console": "common/console",
-        "jquery.pagination": "tools/jquery.pagination",
+        "jquery.pagination": "jQuery-plugins/jquery.pagination",
         "Modernizr":"tools/Modernizr",
         "CountUp": "tools/countUp",
         "loop": "tools/loop",
+        "textSlider":"jQuery-plugins/jquery.textSlider",
+        "jquery.path":"jQuery-plugins/jquery.path",
+        "qrcode":"tools/qrcode",
         "exclamation": "app/exclamation",
         "review": "app/review.txt",
         "tpl": "app/template.html",
-        "Util": "app/util"
+        "Util": "app/util",
+        "urlTest":"app/urlTest",
+        "multipleGlobalFun":"app/multipleGlobalFun",
+        "testAnim":"app/animate.css"
     }
 })
