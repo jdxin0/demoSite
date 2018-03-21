@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!--[if lt IE 9]>
+		<script type="text/javascript" src="js/common/html5shiv.js"></script>
+	<![endif]-->
+	<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+	<link href='//fonts.googleapis.com/css?family=Roboto:400,100,400italic,700italic,700' rel='stylesheet' type='text/css'>
+	<link rel="dns-prefetch" href="//code.jquery.com" />
+</head>
+<body>
+	<div title="HTML5 Tag">
+		<h1>HTML5标签IE6-IE8支持</h1>
+	    <article class="article">article</article>
+	    <aside class="aside">aside</aside>
+	    <dialog class="dialog">dialog</dialog>
+	    <figcaption class="figcaption">figcaption</figcaption>
+	    <figure class="figure">figure</figure>
+	    <footer class="footer">footer</footer>
+	    <header class="header">header</header>
+	    <hgroup class="hgroup">hgroup</hgroup>
+	    <main class="main">main</main>
+	    <nav class="nav">nav</nav>
+	    <section class="section">section</section>
+	</div>
+	<div title="RequireJS txt插件，加载文本文件">
+		<!--下面是一首小诗《纽约时间比加州时间早三个小时》-->
+		<h1>RequireJS txt插件，加载文本文件</h1>
+		<div id="poem" class="poemClass" title="一首小诗" lang="ch-zh" dir="ltr" data-nums="5">
+		</div>plain text<hr>
+	</div>
+	<div title="分页模块">
+		<h1>jQuery Pagination分页插件demo</h1>
+		<div id="Pagination" class="pagination"><!-- 这里显示分页 --></div>
+		<div id="Searchresult">分页初始化完成后这里的内容会被替换。</div>
+		<div id="hiddenresult" style="display:none;">
+			<!-- 列表元素 -->
+		    <div class="result">第1项内容</div>
+		    <div class="result">第2项内容</div>
+		    <div class="result">第3项内容</div>
+		    <div class="result">第4项内容</div>
+		    <div class="result">第5项内容</div>
+		    <div class="result">第6项内容</div>
+		    <div class="result">第7项内容</div>
+		    <div class="result">第8项内容</div>
+		</div>
+	</div>
+	<hr>
+	<div title="分页模块ajax Demo">
+		<h1>jQuery Pagination分页插件ajax demo</h1>
+		<div id="AJAXPagination" class="pagination"><!-- 这里显示分页 --></div>
+		<div id="AJAXSearchresult">分页初始化完成后这里的内容会被替换。</div>
+		<div id="AJAXhiddenresult" style="display:none;">
+			<!-- 列表元素 -->
+		</div>
+	</div>
+	<h3>参数</h3>
+	<table class="params_table" width="80%" border="0" cellspacing="1" cellpadding="0" style="margin: 0 auto;">
+	  <tr>
+	    <th scope="col">参数名</th>
+	    <th scope="col">描述</th>
+	    <th scope="col">参数值</th>
+	  </tr>
+	  <tr>
+	    <td>maxentries</td>
+	    <td>总条目数</td>
+	    <td>必选参数，整数</td>
+	  </tr>
+	  <tr>
+	    <td>items_per_page</td>
+	    <td>每页显示的条目数</td>
+	    <td>可选参数，默认是10</td>
+	  </tr>
+	  <tr>
+	    <td>num_display_entries</td>
+	    <td>连续分页主体部分显示的分页条目数</td>
+	    <td>可选参数，默认是10</td>
+	  </tr>
+	  <tr>
+	    <td>current_page</td>
+	    <td>当前选中的页面</td>
+	    <td>可选参数，默认是0，表示第1页</td>
+	  </tr>
+	  <tr>
+	    <td>num_edge_entries</td>
+	    <td>两侧显示的首尾分页的条目数</td>
+	    <td>可选参数，默认是0</td>
+	  </tr>
+	  <tr>
+	    <td>link_to</td>
+	    <td>分页的链接</td>
+	    <td>字符串，可选参数，默认是&quot;#&quot;</td>
+	  </tr>
+	  <tr>
+	    <td>prev_text</td>
+	    <td>“前一页”分页按钮上显示的文字</td>
+	    <td>字符串参数，可选，默认是&quot;Prev&quot;</td>
+	  </tr>
+	  <tr>
+	    <td>next_text</td>
+	    <td>“下一页”分页按钮上显示的文字</td>
+	    <td>字符串参数，可选，默认是&quot;Next&quot;</td>
+	  </tr>
+	  <tr>
+	    <td>ellipse_text</td>
+	    <td>省略的页数用什么文字表示</td>
+	    <td>可选字符串参数，默认是&quot;...&quot;</td>
+	  </tr>
+	  <tr>
+	    <td>prev_show_always</td>
+	    <td>是否显示“前一页”分页按钮</td>
+	    <td>布尔型，可选参数，默认为true，即显示“前一页”按钮</td>
+	  </tr>
+	  <tr>
+	    <td>next_show_always</td>
+	    <td>是否显示“下一页”分页按钮</td>
+	    <td>布尔型，可选参数，默认为true，即显示“下一页”按钮</td>
+	  </tr>
+	  <tr>
+	    <td>callback</td>
+	    <td>回调函数</td>
+	    <td>默认无执行效果</td>
+	  </tr>
+	</table>
+	<hr>
+	<h1>添加至书签插件</h1>
+	<button id="btn_addbook">添加书签</button>
+	<hr>
+	<div title="bluebired模块">
+		<h1>bluebired模块</h1>
+		<button class="butt promiseBtn">promiseBtn</button>
+		<div class="center">
+			<p>console.log(<span id="bluebired"></span>)←1秒延迟</p>
+		</div>
+	</div>
+
+	<hr>
+	<h1>ballPlay</h1>
+	<div><button class="butt ballplayBtn">ballPlayBtn</button></div>
+	<canvas id="machine" width="263" height="114"></canvas>
+	<img src="img/spr24_lottery.png" alt="" id="spr_lottery" name="lotterBallImg" style="display:none;">
+	<hr>
+	<h1>moneyCountUp</h1>
+	<div><button class="butt myTargetElementBtn">myTargetElementBtn</button></div>
+	<div id="myTargetElement">
+		<em>0</em>
+		<em>0</em>
+		<em>0</em>
+		<em>0</em>
+		<em>0</em>
+	</div>
+	<hr>
+	<h1>loop.js</h1>
+	<div title="loop">
+		1
+		<canvas id="loop" width="500" height="400"></canvas>
+		2
+	</div>
+	<hr>
+	<div title="slider" class="slider">
+		<h1>$.fn.textSlider Up</h1>
+		<div id="sliderUp">
+			<ul></ul>
+		</div>
+		<h1>$.fn.textSlider Left</h1>
+		<div id="sliderLeft">
+			<ul></ul>
+		</div>
+	</div>
+	<hr>
+	<div title="animate.css" class="animate_box">
+		<header class="site__header island">
+		  <div class="wrap">
+		   <span id="animationSandbox" style="display: block;"><h1 class="site__title mega">Animate.css</h1></span>
+		    <span class="beta subhead">Just-add-water CSS animations</span>
+		  </div>
+		</header><!-- /.site__header -->
+
+		<main class="site__content island" role="content">
+		  <div class="wrap">
+		    <form>
+		      <select class="input input--dropdown js--animations">
+		        <optgroup label="Attention Seekers">
+		          <option value="bounce">bounce</option>
+		          <option value="flash">flash</option>
+		          <option value="pulse">pulse</option>
+		          <option value="rubberBand">rubberBand</option>
+		          <option value="shake">shake</option>
+		          <option value="swing">swing</option>
+		          <option value="tada">tada</option>
+		          <option value="wobble">wobble</option>
+		          <option value="jello">jello</option>
+		        </optgroup>
+
+		        <optgroup label="Bouncing Entrances">
+		          <option value="bounceIn">bounceIn</option>
+		          <option value="bounceInDown">bounceInDown</option>
+		          <option value="bounceInLeft">bounceInLeft</option>
+		          <option value="bounceInRight">bounceInRight</option>
+		          <option value="bounceInUp">bounceInUp</option>
+		        </optgroup>
+
+		        <optgroup label="Bouncing Exits">
+		          <option value="bounceOut">bounceOut</option>
+		          <option value="bounceOutDown">bounceOutDown</option>
+		          <option value="bounceOutLeft">bounceOutLeft</option>
+		          <option value="bounceOutRight">bounceOutRight</option>
+		          <option value="bounceOutUp">bounceOutUp</option>
+		        </optgroup>
+
+		        <optgroup label="Fading Entrances">
+		          <option value="fadeIn">fadeIn</option>
+		          <option value="fadeInDown">fadeInDown</option>
+		          <option value="fadeInDownBig">fadeInDownBig</option>
+		          <option value="fadeInLeft">fadeInLeft</option>
+		          <option value="fadeInLeftBig">fadeInLeftBig</option>
+		          <option value="fadeInRight">fadeInRight</option>
+		          <option value="fadeInRightBig">fadeInRightBig</option>
+		          <option value="fadeInUp">fadeInUp</option>
+		          <option value="fadeInUpBig">fadeInUpBig</option>
+		        </optgroup>
+
+		        <optgroup label="Fading Exits">
+		          <option value="fadeOut">fadeOut</option>
+		          <option value="fadeOutDown">fadeOutDown</option>
+		          <option value="fadeOutDownBig">fadeOutDownBig</option>
+		          <option value="fadeOutLeft">fadeOutLeft</option>
+		          <option value="fadeOutLeftBig">fadeOutLeftBig</option>
+		          <option value="fadeOutRight">fadeOutRight</option>
+		          <option value="fadeOutRightBig">fadeOutRightBig</option>
+		          <option value="fadeOutUp">fadeOutUp</option>
+		          <option value="fadeOutUpBig">fadeOutUpBig</option>
+		        </optgroup>
+
+		        <optgroup label="Flippers">
+		          <option value="flip">flip</option>
+		          <option value="flipInX">flipInX</option>
+		          <option value="flipInY">flipInY</option>
+		          <option value="flipOutX">flipOutX</option>
+		          <option value="flipOutY">flipOutY</option>
+		        </optgroup>
+
+		        <optgroup label="Lightspeed">
+		          <option value="lightSpeedIn">lightSpeedIn</option>
+		          <option value="lightSpeedOut">lightSpeedOut</option>
+		        </optgroup>
+
+		        <optgroup label="Rotating Entrances">
+		          <option value="rotateIn">rotateIn</option>
+		          <option value="rotateInDownLeft">rotateInDownLeft</option>
+		          <option value="rotateInDownRight">rotateInDownRight</option>
+		          <option value="rotateInUpLeft">rotateInUpLeft</option>
+		          <option value="rotateInUpRight">rotateInUpRight</option>
+		        </optgroup>
+
+		        <optgroup label="Rotating Exits">
+		          <option value="rotateOut">rotateOut</option>
+		          <option value="rotateOutDownLeft">rotateOutDownLeft</option>
+		          <option value="rotateOutDownRight">rotateOutDownRight</option>
+		          <option value="rotateOutUpLeft">rotateOutUpLeft</option>
+		          <option value="rotateOutUpRight">rotateOutUpRight</option>
+		        </optgroup>
+
+		        <optgroup label="Sliding Entrances">
+		          <option value="slideInUp">slideInUp</option>
+		          <option value="slideInDown">slideInDown</option>
+		          <option value="slideInLeft">slideInLeft</option>
+		          <option value="slideInRight">slideInRight</option>
+
+		        </optgroup>
+		        <optgroup label="Sliding Exits">
+		          <option value="slideOutUp">slideOutUp</option>
+		          <option value="slideOutDown">slideOutDown</option>
+		          <option value="slideOutLeft">slideOutLeft</option>
+		          <option value="slideOutRight">slideOutRight</option>
+		          
+		        </optgroup>
+		        
+		        <optgroup label="Zoom Entrances">
+		          <option value="zoomIn">zoomIn</option>
+		          <option value="zoomInDown">zoomInDown</option>
+		          <option value="zoomInLeft">zoomInLeft</option>
+		          <option value="zoomInRight">zoomInRight</option>
+		          <option value="zoomInUp">zoomInUp</option>
+		        </optgroup>
+		        
+		        <optgroup label="Zoom Exits">
+		          <option value="zoomOut">zoomOut</option>
+		          <option value="zoomOutDown">zoomOutDown</option>
+		          <option value="zoomOutLeft">zoomOutLeft</option>
+		          <option value="zoomOutRight">zoomOutRight</option>
+		          <option value="zoomOutUp">zoomOutUp</option>
+		        </optgroup>
+
+		        <optgroup label="Specials">
+		          <option value="hinge">hinge</option>
+		          <option value="jackInTheBox">jackInTheBox</option>
+		          <option value="rollIn">rollIn</option>
+		          <option value="rollOut">rollOut</option>
+		        </optgroup>
+		      </select>
+
+		      <button class="butt js--triggerAnimation">Animate it</button>
+		    </form>
+		    <hr />
+		    <p class="meta"><a href="https://raw.github.com/daneden/animate.css/master/animate.css" download="animate.css">Download Animate.css</a> or <a href="//github.com/daneden/animate.css">View on GitHub</a></p>
+		    <p><small>Another thing from <a href="//daneden.me">Daniel Eden</a>.</small></p>
+		  </div>
+		</main><!-- /.site__content -->
+	</div>
+	<hr>
+	<div title="$.path.bezier">
+		<h1>$.path.bezier</h1>
+		<div class="bezier">
+			<button class="butt animatePathBtn">animatePathBtn</button>
+			<div class="moneyfly">12元</div>
+			<div class="pointa"></div>
+			<div class="pointb"></div>
+		</div>
+	</div>
+	<hr>
+	<div title="QRCode">
+		<h1>QRCode模块</h1>
+		<div id="QRCode"></div>
+	</div>
+	<hr>
+	<div title="弹幕">
+		<h1>弹幕模块</h1>
+		<div id="act_danmu" class="list_danmu"></div>
+	</div>
+	<!-- <script type="text/javascript" data-main="js/app.js" src="js/require-2.3.5.js"></script> -->
+	<!-- <script type="text/javascript" src="dist/app.js"><h1>script有src属性时，script标签内元素，代码不会执行</h1>alert(1);</script> -->
+	<script type="text/javascript" src="js/require-2.3.5.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
