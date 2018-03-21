@@ -52,7 +52,7 @@ var requireOne = require.config({
     paths: {//module IDs map with path
         "bluebird":"lib/bluebird",
         "requirejs":"require-2.3.5",
-        "jquery": ["https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery","lib/jquery-1.12.4"],//这里cdn多了个后缀.js会报错，会加载本地jquery
+        "jquery":"lib/jquery-1.12.4",//这里cdn多了个后缀.js会报错，会加载本地jquery
         "underscore": "lib/underscore",
         "jQueryMigrate": "jQuery-plugins/jquery-migrate-1.4.1",
         "domReady": "RequireJS-plugins/domReady",
