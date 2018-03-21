@@ -22,10 +22,6 @@ var requireOne = require.config({
         'console':{
             exports:'console'
         },
-        'requirejs':{
-			deps:['console'],
-            exports:'requirejs'
-        },
         'multipleGlobalFun':{
             init:function(){//暴露多个全局变量
                 console.log(this);
@@ -51,7 +47,6 @@ var requireOne = require.config({
     },
     paths: {//module IDs map with path
         "bluebird":"lib/bluebird",
-        "requirejs":"require-2.3.5",
         "jquery":"lib/jquery-1.12.4",//这里cdn多了个后缀.js会报错，会加载本地jquery
         "underscore": "lib/underscore",
         "jQueryMigrate": "jQuery-plugins/jquery-migrate-1.4.1",
@@ -78,7 +73,6 @@ var requireOne = require.config({
 //requireJS插件列表https://github.com/requirejs/requirejs/wiki/Plugins
 require([ 
     'bluebird',
-    'requirejs',
     'Util', 
     'exclamation', 
     'text!review', 
@@ -102,7 +96,6 @@ require([
     'qrcode',
     'danmu'], function( 
         Promise,
-        requirejs,
         util, 
         exclamation, 
         txt,

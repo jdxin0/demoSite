@@ -1,9 +1,12 @@
 //node js/r.js -o 201802/20180227/20180227001/build.js
+//http://blog.csdn.net/qq362228416/article/details/46722327
 // node r.js -v
 ({
     //压缩文件放置目录
     //build.js文件的相对路径
     dir: './dist',
+    appDir: './',
+    // out:'./dist/app.min.js',
     // "uglify：使用 UglifyJS 压缩代码，默认值；
     // "uglify2"：使用 2.1.2+ 版本进行压缩；
     // "closure"： 使用 Google's Closure Compiler 进行压缩合并，需要 Java 环境；
@@ -45,73 +48,74 @@
     //2、通过 RequireJS config设置bashUrl
     //3、非如上两种，bashUrl是引用requireJS的html路径
     shim: {
-        'jQueryMigrate':{
-            deps:['jquery'],
-            exports:'jQuery.migrateVersion'
+        'jQueryMigrate': {
+            deps: ['jquery'],
+            exports: 'jQuery.migrateVersion'
         },
-        'jquery.pagination':{
-            deps:['jquery'],
-            exports:'jQuery.fn.pagination'
+        'jquery.pagination': {
+            deps: ['jquery'],
+            exports: 'jQuery.fn.pagination'
         },
-        'textSlider':{
-            deps:['jquery'],
-            exports:'jQuery.fn.textSlider'
+        'textSlider': {
+            deps: ['jquery'],
+            exports: 'jQuery.fn.textSlider'
         },
-        'Modernizr':{
-            exports:'Modernizr'
+        'Modernizr': {
+            exports: 'Modernizr'
         },
-        'console':{
-            exports:'console'
+        'console': {
+            exports: 'console'
         },
-        'requirejs':{
-            deps:['console'],
-            exports:'requirejs'
+        'requirejs': {
+            deps: ['console'],
+            exports: 'requirejs'
         },
-        'multipleGlobalFun':{
-            init:function(){//暴露多个全局变量
+        'multipleGlobalFun': {
+            init: function() { //暴露多个全局变量
                 console.log(this);
                 return {
-                    multipleGlobalFun1:multipleGlobalFun1,
-                    multipleGlobalFun2:multipleGlobalFun2
+                    multipleGlobalFun1: multipleGlobalFun1,
+                    multipleGlobalFun2: multipleGlobalFun2
                 }
             },
-            exports:'multipleGlobalFun1'//当 exports 与 init 同时存在的时候， exports 将被忽略。
+            exports: 'multipleGlobalFun1' //当 exports 与 init 同时存在的时候， exports 将被忽略。
         },
-        'jquery.path':{
-            deps:['jquery'],
-            init:function(){
+        'jquery.path': {
+            deps: ['jquery'],
+            init: function() {
                 return {
-                    bezier:$.path.bezier,
-                    arc:$.path.arc
+                    bezier: $.path.bezier,
+                    arc: $.path.arc
                 }
             }
         },
-        'qrcode':{
-            exports:'QRCode'
+        'qrcode': {
+            exports: 'QRCode'
         }
     },
-    paths: {//module IDs map with path
-        "bluebird":"lib/bluebird",
-        "requirejs":"require-2.3.5",
-        "jquery": "lib/jquery-1.12.4",//这里cdn多了个后缀.js会报错，会加载本地jquery
+    paths: { //module IDs map with path
+        "bluebird": "lib/bluebird",
+        "requirejs": "require-2.3.5",
+        "jquery": "lib/jquery-1.12.4", //这里cdn多了个后缀.js会报错，会加载本地jquery
         "underscore": "lib/underscore",
         "jQueryMigrate": "jQuery-plugins/jquery-migrate-1.4.1",
         "domReady": "RequireJS-plugins/domReady",
         "text": "RequireJS-plugins/text",
         "console": "common/console",
         "jquery.pagination": "jQuery-plugins/jquery.pagination",
-        "Modernizr":"tools/Modernizr",
+        "Modernizr": "tools/Modernizr",
         "CountUp": "tools/countUp",
         "loop": "tools/loop",
-        "textSlider":"jQuery-plugins/jquery.textSlider",
-        "jquery.path":"jQuery-plugins/jquery.path",
-        "qrcode":"tools/qrcode",
+        "textSlider": "jQuery-plugins/jquery.textSlider",
+        "jquery.path": "jQuery-plugins/jquery.path",
+        "qrcode": "tools/qrcode",
+        "danmu": "tools/danmu",
         "exclamation": "app/exclamation",
         "review": "app/review.txt",
         "tpl": "app/template.html",
         "Util": "app/util",
-        "urlTest":"app/urlTest",
-        "multipleGlobalFun":"app/multipleGlobalFun",
-        "testAnim":"app/animate.css"
+        "urlTest": "app/urlTest",
+        "multipleGlobalFun": "app/multipleGlobalFun",
+        "testAnim": "app/animate.css"
     }
 })
