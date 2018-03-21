@@ -299,26 +299,26 @@ require([
                     setTimeout(function(){
                         $("#bluebired").append('1,');
                         resolve();
-                    },3000);
+                    },1000);
                 }).then(function(){
                     return new Promise(function(resolve,reject){
                         setTimeout(function(){
                             $("#bluebired").append('2,');
                             resolve();
-                        },3000);
+                        },1000);
                     });
                 }).then(function(){
                     return new Promise(function(resolve,reject){
                         setTimeout(function(){
                             $("#bluebired").append('3,');
                             resolve();
-                        },3000);
+                        },1000);
                     });
                 }).then(function(){
                     setTimeout(function(){
                         $("#bluebired").append('Promise End!');
                         flag=1;
-                    },3000);
+                    },1000);
                 });
             }
         });
