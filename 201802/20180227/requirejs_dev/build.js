@@ -4,15 +4,15 @@
 ({
     //压缩文件放置目录
     //build.js文件的相对路径
-    dir: './dist',
     appDir: './',
+    dir: '../dist',
     // out:'./dist/app.min.js',
     // "uglify：使用 UglifyJS 压缩代码，默认值；
     // "uglify2"：使用 2.1.2+ 版本进行压缩；
     // "closure"： 使用 Google's Closure Compiler 进行压缩合并，需要 Java 环境；
     // "closure.keepLines"：使用 Closure Compiler 进行压缩合并并保留换行；
     // "none"：不做压缩合并；
-    optimize: 'uglify2',
+    optimize: 'none',
     uglify2: {
         //Example of a specialized config. If you are fine
         //with the default options, no need to specify
