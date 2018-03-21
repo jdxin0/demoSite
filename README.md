@@ -1,6 +1,6 @@
 # AMD模块化项目
-* RequireJS项目开发环境页面[RequireJS](http://demo.xuliehaonet.com/201802/20180227/requirejs_dev/index.html)
-* RequireJS项目生产环境页面[RequireJS](http://demo.xuliehaonet.com/201802/20180227/requirejs_pro/index.html)
+* RequireJS项目开发环境页面[RequireJS](http://demo.xuliehaonet.com/requirejs_dev/index.html)
+* RequireJS项目生产环境页面[RequireJS](http://demo.xuliehaonet.com/requirejs_pro/index.html)
 # 移动端DEMO
 * 移动端触摸滑动[DEMO](http://demo.xuliehaonet.com/201709/20170915001/Scroll.html)
 * 移动端拖动小红点[DEMO](http://demo.xuliehaonet.com/201709/20170915001/TrackPoint.html)
