@@ -1,18 +1,18 @@
-//node js/r.js -o 201802/20180227/20180227001/build.js
+//node js/r.js -o requirejs_dev/build.js
 //http://blog.csdn.net/qq362228416/article/details/46722327
 // node r.js -v
 ({
     //压缩文件放置目录
     //build.js文件的相对路径
     appDir: './',
-    dir: '../dist',
+    dir: '../requirejs_pro',
     // out:'./dist/app.min.js',
     // "uglify：使用 UglifyJS 压缩代码，默认值；
     // "uglify2"：使用 2.1.2+ 版本进行压缩；
     // "closure"： 使用 Google's Closure Compiler 进行压缩合并，需要 Java 环境；
     // "closure.keepLines"：使用 Closure Compiler 进行压缩合并并保留换行；
     // "none"：不做压缩合并；
-    optimize: 'none',
+    optimize: 'uglify2',
     uglify2: {
         //Example of a specialized config. If you are fine
         //with the default options, no need to specify
@@ -95,20 +95,20 @@
     },
     paths: { //module IDs map with path
         "bluebird": "lib/bluebird",
-        "requirejs": "require-2.3.5",
-        "jquery": "lib/jquery-1.12.4", //这里cdn多了个后缀.js会报错，会加载本地jquery
-        "underscore": "lib/underscore",
-        "jQueryMigrate": "jQuery-plugins/jquery-migrate-1.4.1",
+        "requirejs": "require-2.3.5.min",
+        "jquery": "lib/jquery-1.12.4.min", //这里cdn多了个后缀.js会报错，会加载本地jquery
+        "underscore": "lib/underscore-min",
+        "jQueryMigrate": "jQuery-plugins/jquery-migrate-1.4.1.min",
         "domReady": "RequireJS-plugins/domReady",
         "text": "RequireJS-plugins/text",
         "console": "common/console",
         "jquery.pagination": "jQuery-plugins/jquery.pagination",
         "Modernizr": "tools/Modernizr",
-        "CountUp": "tools/countUp",
+        "CountUp": "tools/countUp.min",
         "loop": "tools/loop",
         "textSlider": "jQuery-plugins/jquery.textSlider",
         "jquery.path": "jQuery-plugins/jquery.path",
-        "qrcode": "tools/qrcode",
+        "qrcode": "tools/qrcode.min",
         "danmu": "tools/danmu",
         "exclamation": "app/exclamation",
         "review": "app/review.txt",
