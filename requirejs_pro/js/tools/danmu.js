@@ -1,8 +1,1 @@
-/**
- * @license text 2.0.15 Copyright jQuery Foundation and other contributors.
- * Released under MIT license, http://github.com/requirejs/text/LICENSE
- */
-
-
 define(["jquery"],function($){function danmu(options){var playList=options.playList;Time=options.Time||Time,PlayCount=playList.length;var director=$({});stage.css({position:"relative",overflow:"hidden"}),$.each(playList,function(k,play){var session=Math.ceil(play.time/CheckTime);play.session=session;var actor=new Actor(play);director.on(session+"start",function(){actor.perform()})}),currentSession=0,setInterval(function(){director.trigger(currentSession+"start"),currentSession===PlayCount?currentSession=0:currentSession++},CheckTime)}var Time=2e4,CheckTime=1e3,PlayCount=0,Actor=function(play){this.play=play,this.appearance=this.makeUp(),this.appearance.hide().appendTo(stage)};Actor.prototype.makeUp=function(){return $('<div style="min-width:400px;font-size:'+this.play.size+";color:"+this.play.color+';">'+this.play.text+"</div>")},Actor.prototype.animate=function(){var that=this,appearance=that.appearance,mywidth=appearance.width();appearance.animate({left:-mywidth},that.play.duration,"swing",function(){appearance.hide()})},Actor.prototype.perform=function(){var that=this;that.appearance.css({position:"absolute",left:stage.width()+"px",top:that.play.top||0,zIndex:10,display:"block"});var delayTime=that.play.time-(that.play.session-1)*CheckTime;setTimeout(function(){that.animate()},delayTime)};var stage=$("#act_danmu");return danmu});
-//# sourceMappingURL=danmu.js.map

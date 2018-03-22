@@ -1,2 +1,1 @@
 define(["console"],function(){function exclamation(){console.log("exclamation Object")}return exclamation.load=function(){console.log("exclamation 静态方法")},exclamation});
-//# sourceMappingURL=exclamation.js.map
