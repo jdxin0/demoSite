@@ -1,11 +1,12 @@
 //node js/r.js -o requirejs_dev/build.js
-//http://blog.csdn.net/qq362228416/article/details/46722327
+//RequireJS进阶:模块的优化及配置的详解https://segmentfault.com/a/1190000002403806#articleHeader3
 // node r.js -v
 ({
     //压缩文件放置目录
     //build.js文件的相对路径
     appDir: './',
     dir: '../requirejs_pro',
+    generateSourceMaps: true,
     // out:'./dist/app.min.js',
     // "uglify：使用 UglifyJS 压缩代码，默认值；
     // "uglify2"：使用 2.1.2+ 版本进行压缩；
