@@ -5,6 +5,7 @@
 * 移动端触摸滑动[DEMO](http://demo.xuliehaonet.com/201709/20170915001/Scroll.html)
 * 移动端拖动小红点[DEMO](http://demo.xuliehaonet.com/201709/20170915001/TrackPoint.html)
 * 移动端手雷会员中心焦点图[DEMO](http://demo.xuliehaonet.com/201710/20171019/)
+* 移动端[PageSlider DEMO](http://demo.xuliehaonet.com/201711/20171106/20171106001.html)
 # 其它DEMO
 * 手雷API-[Demo](http://demo.xuliehaonet.com/201709/20170910002/)
 * 气泡提示[DEMO](http://demo.xuliehaonet.com/201709/20170912001/20170912001.html)
