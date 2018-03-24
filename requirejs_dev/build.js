@@ -6,6 +6,7 @@
     //build.js文件的相对路径
     appDir: './',
     dir: '../requirejs_pro',
+    // dir: './dist',
     generateSourceMaps: false,//设置为true会引起screw_ie8为true
     // out:'./dist/app.min.js',
     // "uglify：使用 UglifyJS 压缩代码，默认值；
