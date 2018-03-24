@@ -140,7 +140,7 @@ require([
     domReady(function() {
         console.log("%c document ready 4", "color:red");
         console.log("text模块");
-        console.log(tpl);
+        // console.log(tpl);
         $("#poem").append(txt);
     });
     domReady(function(){
