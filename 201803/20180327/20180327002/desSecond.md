@@ -237,3 +237,242 @@
 ```
 <input type="password" name="" id="" />
 ```
+## 缩写：input:datetime
+## 别名：inp[type=datetime]
+```
+<input type="datetime" name="" id="" />
+```
+## 缩写：input:date
+## 别名：inp[type=date]
+```
+<input type="date" name="" id="" />
+```
+## 缩写：input:datetime-local
+## 别名：inp[type=datetime-local]
+```
+<input type="datetime-local" name="" id="" />
+```
+## 缩写：input:month
+## 别名：inp[type=month]
+```
+<input type="month" name="" id="" />
+```
+## 缩写：input:week
+## 别名：inp[type=week]
+```
+<input type="week" name="" id="" />
+```
+## 缩写：input:time
+## 别名：inp[type=time]
+```
+<input type="time" name="" id="" />
+```
+## 缩写：input:number
+## 别名：inp[type=number]
+```
+<input type="number" name="" id="" />
+```
+## 缩写：input:color
+## 别名：inp[type=color]
+```
+<input type="color" name="" id="" />
+```
+## 缩写：input:checkbox
+## 别名：inp[type=checkbox]
+```
+<input type="checkbox" name="" id="" />
+```
+## 缩写：input:c
+## 别名：input:checkbox
+```
+<input type="checkbox" name="" id="" />
+```
+## 缩写：input:radio
+## 别名：inp[type=radio]
+```
+<input type="radio" name="" id="" />
+```
+## 缩写：input:r
+## 别名：input:radio
+```
+<input type="radio" name="" id="" />
+```
+## 缩写：input:range
+## 别名：inp[type=range]
+``` 
+<input type="range" name="" id="" />
+```
+## 缩写：input:file
+## 别名：inp[type=file]
+```
+<input type="file" name="" id="" />
+```
+## 缩写：input:f
+## 别名：input:file
+```
+<input type="file" name="" id="" />
+```
+## 缩写：input:submit
+```
+<input type="submit" value="" />
+```
+## 缩写：input:s
+## 别名：input:submit
+```
+<input type="submit" value="" />
+```
+## 缩写：input:image
+```
+<input type="image" src="" alt="" />
+```
+## 缩写：input:i
+## 别名：input:image
+```
+<input type="image" src="" alt="" />
+```
+## 缩写：input:button
+```
+<input type="button" value="" />
+```
+## 缩写：input:b
+## 别名：input:button
+```
+<input type="button" value="" />
+```
+## 缩写：isindex
+```
+<isindex />
+```
+## 缩写：input:reset
+## 别名：input:button[type=reset]
+```
+<input type="reset" value="" />
+```
+## 缩写：select
+```
+<select name="" id=""></select>
+```
+## 缩写：option
+```
+<option value=""></option>
+```
+## 缩写：textarea
+```
+<textarea name="" id="" cols="30" rows="10"></textarea>
+```
+## 缩写：menu:context
+## 别名：menu[type=context]>
+```
+<menu type="context"></menu>
+```
+## 缩写：menu:c
+## 别名：menu:context
+```
+<menu type="context"></menu>
+```
+## 缩写：menu:toolbar
+## 别名：menu[type=toolbar]>
+```
+<menu type="toolbar"></menu>
+```
+## 缩写：menu:t
+## 别名：menu:toolbar
+```
+<menu type="toolbar"></menu>
+```
+## 缩写：video
+```
+<video src=""></video>
+```
+## 缩写：audio
+```
+<audio src=""></audio>
+```
+## 缩写：html:xml
+```
+<html xmlns="http://www.w3.org/1999/xhtml"></html>
+```
+## 缩写：keygen
+```
+<keygen />
+```
+## 缩写：command
+```
+<command />
+```
+## 缩写：bq
+## 别名：blockquote
+```
+<blockquote></blockquote>
+```
+## 缩写：acr
+## 别名：acronym
+```
+<acronym title=""></acronym>
+```
+## 缩写：fig
+## 别名：figure
+```
+<figure></figure>
+```
+## 缩写：figc
+## 别名：figcaption
+```
+<figcaption></figcaption>
+```
+## 缩写：ifr
+## 别名：iframe
+```
+<iframe src="" frameborder="0"></iframe>
+```			
+## 缩写：emb
+## 别名：embed
+```
+<embed src="" type="" />
+```
+## 缩写：obj
+## 别名：object
+```
+<object data="" type=""></object>
+```
+## 缩写：src
+## 别名：source
+```
+<source></source>
+```
+## 缩写：cap
+## 别名：caption
+```
+<caption></caption>
+```
+## 缩写：colg
+## 别名：colgroup
+```
+<colgroup></colgroup>
+```
+## 缩写：fst, fset
+## 别名：fieldset
+```
+<fieldset></fieldset>
+```
+## 缩写：btn
+## 别名：button
+```
+<button></button>
+```
+## 缩写：btn:b
+## 别名：button[type=button]
+```
+<button type="button"></button>
+```
+## 缩写：btn:r
+## 别名：button[type=reset]
+```
+<button type="reset"></button>
+```
+## 缩写：btn:s
+## 别名：button[type=submit]
+```
+<button type="submit"></button>
+```
+
