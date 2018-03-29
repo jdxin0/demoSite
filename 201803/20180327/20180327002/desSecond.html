@@ -1,0 +1,1492 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  max-width: 980px;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 45px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><title>desSecond</title></head><body><article class="markdown-body"><h1 id="html"><a name="user-content-html" href="#html" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>HTML</h1>
+<p>所有未知的缩写都会转换成标签，例如，foo → <foo></foo></p>
+<h2 id="_1"><a name="user-content-_1" href="#_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：!</h2>
+<pre><code class="html">&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h2 id="a"><a name="user-content-a" href="#a" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：a</h2>
+<pre><code class="html">&lt;a href=&quot;&quot;&gt;&lt;/a&gt;
+</code></pre>
+
+<h2 id="alink"><a name="user-content-alink" href="#alink" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：a:link</h2>
+<pre><code class="html">&lt;a href=&quot;http://&quot;&gt;&lt;/a&gt;
+</code></pre>
+
+<h2 id="amail"><a name="user-content-amail" href="#amail" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：a:mail</h2>
+<pre><code class="html">&lt;a href=&quot;mailto:&quot;&gt;&lt;/a&gt;
+</code></pre>
+
+<h2 id="abbr"><a name="user-content-abbr" href="#abbr" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：abbr</h2>
+<pre><code class="html">&lt;abbr title=&quot;&quot;&gt;&lt;/abbr&gt;
+</code></pre>
+
+<h2 id="acronym"><a name="user-content-acronym" href="#acronym" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：acronym</h2>
+<pre><code class="html">&lt;acronym title=&quot;&quot;&gt;&lt;/acronym&gt;
+</code></pre>
+
+<h2 id="base"><a name="user-content-base" href="#base" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：base</h2>
+<pre><code class="html">&lt;base href=&quot;&quot; /&gt;
+</code></pre>
+
+<h2 id="basefont"><a name="user-content-basefont" href="#basefont" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：basefont</h2>
+<pre><code class="html">&lt;basefont /&gt;
+</code></pre>
+
+<h2 id="br"><a name="user-content-br" href="#br" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：br</h2>
+<pre><code class="html">&lt;br /&gt;
+</code></pre>
+
+<h2 id="frame"><a name="user-content-frame" href="#frame" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：frame</h2>
+<pre><code class="html">&lt;frame /&gt;
+</code></pre>
+
+<h2 id="hr"><a name="user-content-hr" href="#hr" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：hr</h2>
+<pre><code class="html">&lt;hr /&gt;
+</code></pre>
+
+<h2 id="bdo"><a name="user-content-bdo" href="#bdo" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：bdo</h2>
+<pre><code class="html">&lt;bdo dir=&quot;&quot;&gt;&lt;/bdo&gt;
+</code></pre>
+
+<h2 id="bdor"><a name="user-content-bdor" href="#bdor" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：bdo:r</h2>
+<pre><code class="html">&lt;bdo dir=&quot;rtl&quot;&gt;&lt;/bdo&gt;
+</code></pre>
+
+<h2 id="bdol"><a name="user-content-bdol" href="#bdol" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：bdo:l</h2>
+<pre><code class="html">&lt;bdo dir=&quot;ltr&quot;&gt;&lt;/bdo&gt;
+</code></pre>
+
+<h2 id="col"><a name="user-content-col" href="#col" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：col</h2>
+<pre><code class="html">&lt;col /&gt;
+</code></pre>
+
+<h2 id="link"><a name="user-content-link" href="#link" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：link</h2>
+<pre><code class="html">&lt;link rel=&quot;stylesheet&quot; href=&quot;&quot; /&gt;
+</code></pre>
+
+<h2 id="linkcss"><a name="user-content-linkcss" href="#linkcss" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：link:css</h2>
+<pre><code class="html">&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot; /&gt;
+</code></pre>
+
+<h2 id="linkprint"><a name="user-content-linkprint" href="#linkprint" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：link:print</h2>
+<pre><code class="html">&lt;link rel=&quot;stylesheet&quot; href=&quot;print.css&quot; media=&quot;print&quot; /&gt;
+</code></pre>
+
+<h2 id="linkfavicon"><a name="user-content-linkfavicon" href="#linkfavicon" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：link:favicon</h2>
+<pre><code class="html">&lt;link rel=&quot;shortcut icon&quot; type=&quot;image/x-icon&quot; href=&quot;favicon.ico&quot; /&gt;
+</code></pre>
+
+<h2 id="linktouch"><a name="user-content-linktouch" href="#linktouch" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：link:touch</h2>
+<pre><code class="html">&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;favicon.png&quot; /&gt;
+</code></pre>
+
+<h2 id="linkrss"><a name="user-content-linkrss" href="#linkrss" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：link:rss</h2>
+<pre><code class="html">&lt;link rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot; title=&quot;RSS&quot; href=&quot;rss.xml&quot; /&gt;
+</code></pre>
+
+<h2 id="linkatom"><a name="user-content-linkatom" href="#linkatom" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：link:atom</h2>
+<pre><code class="html">&lt;link rel=&quot;alternate&quot; type=&quot;application/atom+xml&quot; title=&quot;Atom&quot; href=&quot;atom.xml&quot; /&gt;
+</code></pre>
+
+<h2 id="meta"><a name="user-content-meta" href="#meta" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：meta</h2>
+<pre><code class="html">&lt;meta /&gt;
+</code></pre>
+
+<h2 id="metautf"><a name="user-content-metautf" href="#metautf" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：meta:utf</h2>
+<pre><code class="html">&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=UTF-8&quot; /&gt;
+</code></pre>
+
+<h2 id="metawin"><a name="user-content-metawin" href="#metawin" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：meta:win</h2>
+<pre><code class="html">&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=windows-1251&quot; /&gt;
+</code></pre>
+
+<h2 id="metavp"><a name="user-content-metavp" href="#metavp" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：meta:vp</h2>
+<pre><code class="html">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0&quot; /&gt;
+</code></pre>
+
+<h2 id="metacompat"><a name="user-content-metacompat" href="#metacompat" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：meta:compat</h2>
+<pre><code class="html">&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=7&quot; /&gt;
+</code></pre>
+
+<h2 id="style"><a name="user-content-style" href="#style" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：style</h2>
+<pre><code class="html">&lt;style&gt;&lt;/style&gt;
+</code></pre>
+
+<h2 id="script"><a name="user-content-script" href="#script" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：script</h2>
+<pre><code class="html">&lt;script&gt;&lt;/script&gt;
+</code></pre>
+
+<h2 id="scriptsrc"><a name="user-content-scriptsrc" href="#scriptsrc" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：script:src</h2>
+<pre><code class="html">&lt;script src=&quot;&quot;&gt;&lt;/script&gt;
+</code></pre>
+
+<h2 id="img"><a name="user-content-img" href="#img" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：img</h2>
+<pre><code class="html">&lt;img src=&quot;&quot; alt=&quot;&quot; /&gt;
+</code></pre>
+
+<h2 id="iframe"><a name="user-content-iframe" href="#iframe" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：iframe</h2>
+<pre><code class="html">&lt;iframe src=&quot;&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+</code></pre>
+
+<h2 id="embed"><a name="user-content-embed" href="#embed" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：embed</h2>
+<pre><code class="html">&lt;embed src=&quot;&quot; type=&quot;&quot; /&gt;
+</code></pre>
+
+<h2 id="object"><a name="user-content-object" href="#object" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：object</h2>
+<pre><code class="html">&lt;object data=&quot;&quot; type=&quot;&quot;&gt;&lt;/object&gt;
+</code></pre>
+
+<h2 id="param"><a name="user-content-param" href="#param" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：param</h2>
+<pre><code class="html">&lt;param name=&quot;&quot; value=&quot;&quot; /&gt;
+</code></pre>
+
+<h2 id="map"><a name="user-content-map" href="#map" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：map</h2>
+<pre><code class="html">&lt;map name=&quot;&quot;&gt;&lt;/map&gt;
+</code></pre>
+
+<h2 id="area"><a name="user-content-area" href="#area" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：area</h2>
+<pre><code class="html">&lt;area shape=&quot;&quot; coords=&quot;&quot; href=&quot;&quot; alt=&quot;&quot; /&gt;
+</code></pre>
+
+<h2 id="aread"><a name="user-content-aread" href="#aread" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：area:d</h2>
+<pre><code class="html">&lt;area shape=&quot;default&quot; href=&quot;&quot; alt=&quot;&quot; /&gt;
+</code></pre>
+
+<h2 id="areac"><a name="user-content-areac" href="#areac" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：area:c</h2>
+<pre><code class="html">&lt;area shape=&quot;circle&quot; coords=&quot;&quot; href=&quot;&quot; alt=&quot;&quot; /&gt;
+</code></pre>
+
+<h2 id="arear"><a name="user-content-arear" href="#arear" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：area:r</h2>
+<pre><code class="html">&lt;area shape=&quot;rect&quot; coords=&quot;&quot; href=&quot;&quot; alt=&quot;&quot; /&gt;
+</code></pre>
+
+<h2 id="areap"><a name="user-content-areap" href="#areap" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：area:p</h2>
+<pre><code class="html">&lt;area shape=&quot;poly&quot; coords=&quot;&quot; href=&quot;&quot; alt=&quot;&quot; /&gt;
+</code></pre>
+
+<h2 id="form"><a name="user-content-form" href="#form" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：form</h2>
+<pre><code class="html">&lt;form action=&quot;&quot;&gt;&lt;/form&gt;
+</code></pre>
+
+<h2 id="formget"><a name="user-content-formget" href="#formget" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：form:get</h2>
+<pre><code class="html">&lt;form action=&quot;&quot; method=&quot;get&quot;&gt;&lt;/form&gt;
+</code></pre>
+
+<h2 id="formpost"><a name="user-content-formpost" href="#formpost" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：form:post</h2>
+<pre><code class="html">&lt;form action=&quot;&quot; method=&quot;post&quot;&gt;&lt;/form&gt;
+</code></pre>
+
+<h2 id="label"><a name="user-content-label" href="#label" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：label</h2>
+<pre><code class="html">&lt;label for=&quot;&quot;&gt;&lt;/label&gt;
+</code></pre>
+
+<h2 id="input"><a name="user-content-input" href="#input" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：input</h2>
+<pre><code class="html">&lt;input type=&quot;text&quot; /&gt;
+</code></pre>
+
+<h2 id="inp"><a name="user-content-inp" href="#inp" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：inp</h2>
+<pre><code class="html">&lt;input type=&quot;text&quot; name=&quot;&quot; id=&quot;&quot; /&gt;
+</code></pre>
+
+<h2 id="inputhidden"><a name="user-content-inputhidden" href="#inputhidden" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：input:hidden</h2>
+<h2 id="inputtypehidden-name"><a name="user-content-inputtypehidden-name" href="#inputtypehidden-name" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>别名：input[type=hidden name]</h2>
+<pre><code class="html">&lt;input type=&quot;hidden&quot; name=&quot;&quot; /&gt;
+</code></pre>
+
+<h2 id="inputh"><a name="user-content-inputh" href="#inputh" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：input:h</h2>
+<h2 id="inputhidden_1"><a name="user-content-inputhidden_1" href="#inputhidden_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>别名：input:hidden</h2>
+<pre><code class="html">&lt;input type=&quot;hidden&quot; name=&quot;&quot; /&gt;
+</code></pre>
+
+<h2 id="inputtext-inputt"><a name="user-content-inputtext-inputt" href="#inputtext-inputt" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：input:text, input:t</h2>
+<h2 id="inp_1"><a name="user-content-inp_1" href="#inp_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>别名：inp</h2>
+<pre><code class="html">&lt;input type=&quot;text&quot; name=&quot;&quot; id=&quot;&quot; /&gt;
+</code></pre>
+
+<h2 id="inputsearch"><a name="user-content-inputsearch" href="#inputsearch" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：input:search</h2>
+<h2 id="inptypesearch"><a name="user-content-inptypesearch" href="#inptypesearch" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>别名：inp[type=search]</h2>
+<pre><code class="html">&lt;input type=&quot;search&quot; name=&quot;&quot; id=&quot;&quot; /&gt;
+</code></pre>
+
+<h2 id="inputemail"><a name="user-content-inputemail" href="#inputemail" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：input:email</h2>
+<h2 id="inptypeemail"><a name="user-content-inptypeemail" href="#inptypeemail" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>别名：inp[type=email]</h2>
+<pre><code class="html">&lt;input type=&quot;email&quot; name=&quot;&quot; id=&quot;&quot; /&gt;
+</code></pre>
+
+<h2 id="inputurl"><a name="user-content-inputurl" href="#inputurl" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：input:url</h2>
+<h2 id="inptypeurl"><a name="user-content-inptypeurl" href="#inptypeurl" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>别名：inp[type=url]</h2>
+<pre><code class="html">&lt;input type=&quot;url&quot; name=&quot;&quot; id=&quot;&quot; /&gt;
+</code></pre>
+
+<h2 id="inputpassword"><a name="user-content-inputpassword" href="#inputpassword" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：input:password</h2>
+<h2 id="inptypepassword"><a name="user-content-inptypepassword" href="#inptypepassword" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>别名：inp[type=password]</h2>
+<pre><code class="html">&lt;input type=&quot;password&quot; name=&quot;&quot; id=&quot;&quot; /&gt;
+</code></pre>
+
+<h2 id="inputp"><a name="user-content-inputp" href="#inputp" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：input:p</h2>
+<h2 id="inputpassword_1"><a name="user-content-inputpassword_1" href="#inputpassword_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>别名：input:password</h2>
+<pre><code class="html">&lt;input type=&quot;password&quot; name=&quot;&quot; id=&quot;&quot; /&gt;
+</code></pre>
+
+<h2 id="inputdatetime"><a name="user-content-inputdatetime" href="#inputdatetime" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：input:datetime</h2>
+<h2 id="inptypedatetime"><a name="user-content-inptypedatetime" href="#inptypedatetime" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>别名：inp[type=datetime]</h2>
+<pre><code class="html">&lt;input type=&quot;datetime&quot; name=&quot;&quot; id=&quot;&quot; /&gt;
+</code></pre>
+
+<h2 id="inputdate"><a name="user-content-inputdate" href="#inputdate" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：input:date</h2>
+<h2 id="inptypedate"><a name="user-content-inptypedate" href="#inptypedate" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>别名：inp[type=date]</h2>
+<pre><code class="html">&lt;input type=&quot;date&quot; name=&quot;&quot; id=&quot;&quot; /&gt;
+</code></pre>
+
+<h2 id="inputdatetime-local"><a name="user-content-inputdatetime-local" href="#inputdatetime-local" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：input:datetime-local</h2>
+<h2 id="inptypedatetime-local"><a name="user-content-inptypedatetime-local" href="#inptypedatetime-local" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>别名：inp[type=datetime-local]</h2>
+<pre><code class="html">&lt;input type=&quot;datetime-local&quot; name=&quot;&quot; id=&quot;&quot; /&gt;
+</code></pre>
+
+<h2 id="inputmonth"><a name="user-content-inputmonth" href="#inputmonth" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：input:month</h2>
+<h2 id="inptypemonth"><a name="user-content-inptypemonth" href="#inptypemonth" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>别名：inp[type=month]</h2>
+<pre><code class="html">&lt;input type=&quot;month&quot; name=&quot;&quot; id=&quot;&quot; /&gt;
+</code></pre>
+
+<h2 id="inputweek"><a name="user-content-inputweek" href="#inputweek" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：input:week</h2>
+<h2 id="inptypeweek"><a name="user-content-inptypeweek" href="#inptypeweek" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>别名：inp[type=week]</h2>
+<pre><code class="html">&lt;input type=&quot;week&quot; name=&quot;&quot; id=&quot;&quot; /&gt;
+</code></pre>
+
+<h2 id="inputtime"><a name="user-content-inputtime" href="#inputtime" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：input:time</h2>
+<h2 id="inptypetime"><a name="user-content-inptypetime" href="#inptypetime" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>别名：inp[type=time]</h2>
+<pre><code class="html">&lt;input type=&quot;time&quot; name=&quot;&quot; id=&quot;&quot; /&gt;
+</code></pre>
+
+<h2 id="inputnumber"><a name="user-content-inputnumber" href="#inputnumber" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：input:number</h2>
+<h2 id="inptypenumber"><a name="user-content-inptypenumber" href="#inptypenumber" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>别名：inp[type=number]</h2>
+<pre><code class="html">&lt;input type=&quot;number&quot; name=&quot;&quot; id=&quot;&quot; /&gt;
+</code></pre>
+
+<h2 id="inputcolor"><a name="user-content-inputcolor" href="#inputcolor" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：input:color</h2>
+<h2 id="inptypecolor"><a name="user-content-inptypecolor" href="#inptypecolor" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>别名：inp[type=color]</h2>
+<pre><code class="html">&lt;input type=&quot;color&quot; name=&quot;&quot; id=&quot;&quot; /&gt;
+</code></pre>
+
+<h2 id="inputcheckbox"><a name="user-content-inputcheckbox" href="#inputcheckbox" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：input:checkbox</h2>
+<h2 id="inptypecheckbox"><a name="user-content-inptypecheckbox" href="#inptypecheckbox" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>别名：inp[type=checkbox]</h2>
+<pre><code class="html">&lt;input type=&quot;checkbox&quot; name=&quot;&quot; id=&quot;&quot; /&gt;
+</code></pre>
+
+<h2 id="inputc"><a name="user-content-inputc" href="#inputc" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：input:c</h2>
+<h2 id="inputcheckbox_1"><a name="user-content-inputcheckbox_1" href="#inputcheckbox_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>别名：input:checkbox</h2>
+<pre><code class="html">&lt;input type=&quot;checkbox&quot; name=&quot;&quot; id=&quot;&quot; /&gt;
+</code></pre>
+
+<h2 id="inputradio"><a name="user-content-inputradio" href="#inputradio" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：input:radio</h2>
+<h2 id="inptyperadio"><a name="user-content-inptyperadio" href="#inptyperadio" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>别名：inp[type=radio]</h2>
+<pre><code class="html">&lt;input type=&quot;radio&quot; name=&quot;&quot; id=&quot;&quot; /&gt;
+</code></pre>
+
+<h2 id="inputr"><a name="user-content-inputr" href="#inputr" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：input:r</h2>
+<h2 id="inputradio_1"><a name="user-content-inputradio_1" href="#inputradio_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>别名：input:radio</h2>
+<pre><code class="html">&lt;input type=&quot;radio&quot; name=&quot;&quot; id=&quot;&quot; /&gt;
+</code></pre>
+
+<h2 id="inputrange"><a name="user-content-inputrange" href="#inputrange" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：input:range</h2>
+<h2 id="inptyperange"><a name="user-content-inptyperange" href="#inptyperange" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>别名：inp[type=range]</h2>
+<pre><code class="html">&lt;input type=&quot;range&quot; name=&quot;&quot; id=&quot;&quot; /&gt;
+</code></pre>
+
+<h2 id="inputfile"><a name="user-content-inputfile" href="#inputfile" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：input:file</h2>
+<h2 id="inptypefile"><a name="user-content-inptypefile" href="#inptypefile" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>别名：inp[type=file]</h2>
+<pre><code class="html">&lt;input type=&quot;file&quot; name=&quot;&quot; id=&quot;&quot; /&gt;
+</code></pre>
+
+<h2 id="inputf"><a name="user-content-inputf" href="#inputf" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：input:f</h2>
+<h2 id="inputfile_1"><a name="user-content-inputfile_1" href="#inputfile_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>别名：input:file</h2>
+<pre><code class="html">&lt;input type=&quot;file&quot; name=&quot;&quot; id=&quot;&quot; /&gt;
+</code></pre>
+
+<h2 id="inputsubmit"><a name="user-content-inputsubmit" href="#inputsubmit" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：input:submit</h2>
+<pre><code class="html">&lt;input type=&quot;submit&quot; value=&quot;&quot; /&gt;
+</code></pre>
+
+<h2 id="inputs"><a name="user-content-inputs" href="#inputs" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：input:s</h2>
+<h2 id="inputsubmit_1"><a name="user-content-inputsubmit_1" href="#inputsubmit_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>别名：input:submit</h2>
+<pre><code class="html">&lt;input type=&quot;submit&quot; value=&quot;&quot; /&gt;
+</code></pre>
+
+<h2 id="inputimage"><a name="user-content-inputimage" href="#inputimage" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：input:image</h2>
+<pre><code class="html">&lt;input type=&quot;image&quot; src=&quot;&quot; alt=&quot;&quot; /&gt;
+</code></pre>
+
+<h2 id="inputi"><a name="user-content-inputi" href="#inputi" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：input:i</h2>
+<h2 id="inputimage_1"><a name="user-content-inputimage_1" href="#inputimage_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>别名：input:image</h2>
+<pre><code class="html">&lt;input type=&quot;image&quot; src=&quot;&quot; alt=&quot;&quot; /&gt;
+</code></pre>
+
+<h2 id="inputbutton"><a name="user-content-inputbutton" href="#inputbutton" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：input:button</h2>
+<pre><code class="html">&lt;input type=&quot;button&quot; value=&quot;&quot; /&gt;
+</code></pre>
+
+<h2 id="inputb"><a name="user-content-inputb" href="#inputb" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：input:b</h2>
+<h2 id="inputbutton_1"><a name="user-content-inputbutton_1" href="#inputbutton_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>别名：input:button</h2>
+<pre><code class="html">&lt;input type=&quot;button&quot; value=&quot;&quot; /&gt;
+</code></pre>
+
+<h2 id="isindex"><a name="user-content-isindex" href="#isindex" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：isindex</h2>
+<pre><code class="html">&lt;isindex /&gt;
+</code></pre>
+
+<h2 id="inputreset"><a name="user-content-inputreset" href="#inputreset" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：input:reset</h2>
+<h2 id="inputbuttontypereset"><a name="user-content-inputbuttontypereset" href="#inputbuttontypereset" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>别名：input:button[type=reset]</h2>
+<pre><code class="html">&lt;input type=&quot;reset&quot; value=&quot;&quot; /&gt;
+</code></pre>
+
+<h2 id="select"><a name="user-content-select" href="#select" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：select</h2>
+<pre><code class="html">&lt;select name=&quot;&quot; id=&quot;&quot;&gt;&lt;/select&gt;
+</code></pre>
+
+<h2 id="option"><a name="user-content-option" href="#option" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：option</h2>
+<pre><code class="html">&lt;option value=&quot;&quot;&gt;&lt;/option&gt;
+</code></pre>
+
+<h2 id="textarea"><a name="user-content-textarea" href="#textarea" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：textarea</h2>
+<pre><code class="html">&lt;textarea name=&quot;&quot; id=&quot;&quot; cols=&quot;30&quot; rows=&quot;10&quot;&gt;&lt;/textarea&gt;
+</code></pre>
+
+<h2 id="menucontext"><a name="user-content-menucontext" href="#menucontext" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：menu:context</h2>
+<h2 id="menutypecontext"><a name="user-content-menutypecontext" href="#menutypecontext" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>别名：menu[type=context]&gt;</h2>
+<pre><code class="html">&lt;menu type=&quot;context&quot;&gt;&lt;/menu&gt;
+</code></pre>
+
+<h2 id="menuc"><a name="user-content-menuc" href="#menuc" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：menu:c</h2>
+<h2 id="menucontext_1"><a name="user-content-menucontext_1" href="#menucontext_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>别名：menu:context</h2>
+<pre><code class="html">&lt;menu type=&quot;context&quot;&gt;&lt;/menu&gt;
+</code></pre>
+
+<h2 id="menutoolbar"><a name="user-content-menutoolbar" href="#menutoolbar" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：menu:toolbar</h2>
+<h2 id="menutypetoolbar"><a name="user-content-menutypetoolbar" href="#menutypetoolbar" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>别名：menu[type=toolbar]&gt;</h2>
+<pre><code class="html">&lt;menu type=&quot;toolbar&quot;&gt;&lt;/menu&gt;
+</code></pre>
+
+<h2 id="menut"><a name="user-content-menut" href="#menut" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：menu:t</h2>
+<h2 id="menutoolbar_1"><a name="user-content-menutoolbar_1" href="#menutoolbar_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>别名：menu:toolbar</h2>
+<pre><code class="html">&lt;menu type=&quot;toolbar&quot;&gt;&lt;/menu&gt;
+</code></pre>
+
+<h2 id="video"><a name="user-content-video" href="#video" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：video</h2>
+<pre><code class="html">&lt;video src=&quot;&quot;&gt;&lt;/video&gt;
+</code></pre>
+
+<h2 id="audio"><a name="user-content-audio" href="#audio" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：audio</h2>
+<pre><code class="html">&lt;audio src=&quot;&quot;&gt;&lt;/audio&gt;
+</code></pre>
+
+<h2 id="htmlxml"><a name="user-content-htmlxml" href="#htmlxml" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：html:xml</h2>
+<pre><code class="html">&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;/html&gt;
+</code></pre>
+
+<h2 id="keygen"><a name="user-content-keygen" href="#keygen" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：keygen</h2>
+<pre><code class="html">&lt;keygen /&gt;
+</code></pre>
+
+<h2 id="command"><a name="user-content-command" href="#command" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：command</h2>
+<pre><code class="html">&lt;command /&gt;
+</code></pre>
+
+<h2 id="bq"><a name="user-content-bq" href="#bq" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：bq</h2>
+<h2 id="blockquote"><a name="user-content-blockquote" href="#blockquote" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>别名：blockquote</h2>
+<pre><code class="html">&lt;blockquote&gt;&lt;/blockquote&gt;
+</code></pre>
+
+<h2 id="acr"><a name="user-content-acr" href="#acr" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：acr</h2>
+<h2 id="acronym_1"><a name="user-content-acronym_1" href="#acronym_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>别名：acronym</h2>
+<pre><code class="html">&lt;acronym title=&quot;&quot;&gt;&lt;/acronym&gt;
+</code></pre>
+
+<h2 id="fig"><a name="user-content-fig" href="#fig" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：fig</h2>
+<h2 id="figure"><a name="user-content-figure" href="#figure" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>别名：figure</h2>
+<pre><code class="html">&lt;figure&gt;&lt;/figure&gt;
+</code></pre>
+
+<h2 id="figc"><a name="user-content-figc" href="#figc" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：figc</h2>
+<h2 id="figcaption"><a name="user-content-figcaption" href="#figcaption" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>别名：figcaption</h2>
+<pre><code class="html">&lt;figcaption&gt;&lt;/figcaption&gt;
+</code></pre>
+
+<h2 id="ifr"><a name="user-content-ifr" href="#ifr" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：ifr</h2>
+<h2 id="iframe_1"><a name="user-content-iframe_1" href="#iframe_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>别名：iframe</h2>
+<pre><code class="html">&lt;iframe src=&quot;&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+</code></pre>
+
+<h2 id="emb"><a name="user-content-emb" href="#emb" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：emb</h2>
+<h2 id="embed_1"><a name="user-content-embed_1" href="#embed_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>别名：embed</h2>
+<pre><code class="html">&lt;embed src=&quot;&quot; type=&quot;&quot; /&gt;
+</code></pre>
+
+<h2 id="obj"><a name="user-content-obj" href="#obj" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：obj</h2>
+<h2 id="object_1"><a name="user-content-object_1" href="#object_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>别名：object</h2>
+<pre><code class="html">&lt;object data=&quot;&quot; type=&quot;&quot;&gt;&lt;/object&gt;
+</code></pre>
+
+<h2 id="src"><a name="user-content-src" href="#src" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：src</h2>
+<h2 id="source"><a name="user-content-source" href="#source" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>别名：source</h2>
+<pre><code class="html">&lt;source&gt;&lt;/source&gt;
+</code></pre>
+
+<h2 id="cap"><a name="user-content-cap" href="#cap" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：cap</h2>
+<h2 id="caption"><a name="user-content-caption" href="#caption" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>别名：caption</h2>
+<pre><code class="html">&lt;caption&gt;&lt;/caption&gt;
+</code></pre>
+
+<h2 id="colg"><a name="user-content-colg" href="#colg" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：colg</h2>
+<h2 id="colgroup"><a name="user-content-colgroup" href="#colgroup" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>别名：colgroup</h2>
+<pre><code class="html">&lt;colgroup&gt;&lt;/colgroup&gt;
+</code></pre>
+
+<h2 id="fst-fset"><a name="user-content-fst-fset" href="#fst-fset" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：fst, fset</h2>
+<h2 id="fieldset"><a name="user-content-fieldset" href="#fieldset" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>别名：fieldset</h2>
+<pre><code class="html">&lt;fieldset&gt;&lt;/fieldset&gt;
+</code></pre>
+
+<h2 id="btn"><a name="user-content-btn" href="#btn" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：btn</h2>
+<h2 id="button"><a name="user-content-button" href="#button" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>别名：button</h2>
+<pre><code class="html">&lt;button&gt;&lt;/button&gt;
+</code></pre>
+
+<h2 id="btnb"><a name="user-content-btnb" href="#btnb" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：btn:b</h2>
+<h2 id="buttontypebutton"><a name="user-content-buttontypebutton" href="#buttontypebutton" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>别名：button[type=button]</h2>
+<pre><code class="html">&lt;button type=&quot;button&quot;&gt;&lt;/button&gt;
+</code></pre>
+
+<h2 id="btnr"><a name="user-content-btnr" href="#btnr" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：btn:r</h2>
+<h2 id="buttontypereset"><a name="user-content-buttontypereset" href="#buttontypereset" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>别名：button[type=reset]</h2>
+<pre><code class="html">&lt;button type=&quot;reset&quot;&gt;&lt;/button&gt;
+</code></pre>
+
+<h2 id="btns"><a name="user-content-btns" href="#btns" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>缩写：btn:s</h2>
+<h2 id="buttontypesubmit"><a name="user-content-buttontypesubmit" href="#buttontypesubmit" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>别名：button[type=submit]</h2>
+<pre><code class="html">&lt;button type=&quot;submit&quot;&gt;&lt;/button&gt;
+</code></pre></article></body></html>
