@@ -15,5 +15,6 @@
 * 浮动元素[DEMO](http://demo.xuliehaonet.com/201710/20171020/20171020001.html)
 * avalon [DEMO](http://demo.xuliehaonet.com/201711/20170711/)
 * BaiDu地铁API [DEMO](http://demo.xuliehaonet.com/201711/20171104/map.html)
+* 视频站[DEMO](http://demo.xuliehaonet.com/201803/20180326/)
 
 备注：整理到http://www.yanhu.com/201711/20171106/
