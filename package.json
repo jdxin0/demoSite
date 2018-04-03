@@ -7,7 +7,7 @@
     "doc": "doc"
   },
   "scripts": {
-    "noOptimizeCss":"node js/r.js -o cssIn=requirejs_dev/css/style.css out=requirejs_dev/css/style.min.css",
+    "build":"node js/r.js -o requirejs_dev/build.js",
     "none":"node js/r.js -o cssIn=requirejs_dev/css/style.css out=requirejs_dev/css/style.min.css optimizeCss=none",
     "standard":"node js/r.js -o cssIn=requirejs_dev/css/style.css out=requirejs_dev/css/style.min.css optimizeCss=standard",
     "standardKeepLines":"node js/r.js -o cssIn=requirejs_dev/css/style.css out=requirejs_dev/css/style.min.css optimizeCss=standard.keepLines",
