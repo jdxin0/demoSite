@@ -41,6 +41,8 @@
     // "none"：不压缩；
     optimizeCss: 'standard',
     removeCombined: false,
+    skipDirOptimize:true,
+    keepBuildDir: true,
     fileExclusionRegExp: /^(i18n|r|build)\.js$/,
     name: './app',
     include:"requireLib",
