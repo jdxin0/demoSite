@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>A标签中的事件顺序</title>
+		<script type="text/javascript" src="/js/jquery.js"></script>
+	</head>
+	<body>
+		<div style="height: 1500px;border:1px solid"></div>
+		<a href="#" id="link1">link1</a>
+		<a href="javascript:console.log('href');" onclick="console.log('onclick');" id="link2">link2</a>
+		<a href="#" onclick="console.log(this);console.log(arguments);console.log(event);console.log(event instanceof MouseEvent);">link3</a>
+		<a href="#" onclick="return false;">link4</a>
+		<a href="#" id="link3" class="link3Class" title="html事件处理程序" lang="en" dir="ltr" onclick="console.log(id);console.log(className);console.log(title);console.log(lang);console.log(dir);return false;">link4</a>
+		<a href="#" id="link4" class="link4Class" title="html事件处理程序" lang="en" dir="ltr" onclick="console.log(this.id);console.log(this.className);console.log(this.title);console.log(this.lang);console.log(this.dir);return false;">link4</a>
+		<a href="#" id="link5" class="link5Class" title="html事件处理程序" lang="en" dir="ltr">link5</a>
+		<a href="#" id="link6" class="link6Class" title="html事件处理程序" lang="en" dir="ltr">link6</a>
+		<a href="javascript:void(0)">link5</a>
+		<a href="javascript:;">link6</a>
+		<script type="text/javascript">
+			document.getElementById("link5").onclick = function(e){
+				console.log(this);
+				console.log(arguments);
+				console.log(e);
+				return false;
+			};
+			document.getElementById("link6").addEventListener("click",function(e){
+				console.log(e);
+			},{capture:true});
+			document.getElementById("link1").addEventListener("click",function(e){
+				console.log(this);
+				console.log(arguments);
+				console.log(e);
+				return false;
+			})
+			document.getElementById("link2").addEventListener("click",function(){
+				console.log("addEventListener");
+				return false;
+			})
+		</script>
+	</body>
+</html>
