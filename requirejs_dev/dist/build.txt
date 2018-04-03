@@ -1,6 +1,7 @@
 
 ./app.js
 ----------------
+require-2.3.5.min.js
 lib/bluebird.js
 lib/jquery-1.12.4.min.js
 common/console.js
