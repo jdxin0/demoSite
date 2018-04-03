@@ -33,13 +33,6 @@ css/common/normalize.css
 
 css/style.css
 ----------------
-css/common/normalize.css
-css/common/animate.css
-css/app/style.css
-css/app/html5.css
-css/app/slider.css
-css/app/path.css
-css/app/animate.css
 css/style.css
 
 css/style.min.css
