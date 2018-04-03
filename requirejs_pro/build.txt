@@ -42,6 +42,10 @@ css/app/path.css
 css/app/animate.css
 css/style.css
 
+css/style.min.css
+----------------
+css/style.min.css
+
 js/./app.js
 ----------------
 js/lib/bluebird.js
