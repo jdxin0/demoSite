@@ -48,6 +48,7 @@ css/style.min.css
 
 js/./app.js
 ----------------
+js/require-2.3.5.min.js
 js/lib/bluebird.js
 js/lib/jquery-1.12.4.min.js
 js/common/console.js
