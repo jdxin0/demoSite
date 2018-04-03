@@ -14,3 +14,7 @@ See https://github.com/requirejs/r.js for usage.
 * REQUIREJS OPTIMIZER [Optimization](http://requirejs.org/docs/optimization.html)
 * There is an [example.build.js](https://github.com/requirejs/r.js/blob/master/build/example.build.js) file in the requirejs/build directory that details all of the allowed optimizer configuration options.
 * `cssIn` is typically used as a command line option. It can be used along with `out` to optimize a single CSS file.
+* Since "require" is a reserved dependency name, you create a "requireLib" dependency and map it to the require.js file.Once that optimization is done, you can change the script tag to reference "main-built.js" instead of "require.js", and your optimized project will only need to make one script request.
+* If you only intend to optimize a module (and its dependencies), with a single file as the output, you can specify the module options inline, instead of using the 'modules' section above. 'exclude', 'excludeShallow', 'include' and 'insertRequire' are all allowed as siblings to `name`. The name of the optimized file is specified by 'out'.
+* [requirejs/example-multipage](https://github.com/requirejs/example-multipage) is an example of a project that has multiple pages, but shares a common configuration and a common optimized build layer.
+* If doing a whole project optimization, but only want to minify the build layers specified in `modules` options and not the rest of the JS files in the build output directory, you can set `skipDirOptimize` to true.
