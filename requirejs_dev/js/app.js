@@ -46,6 +46,7 @@ var requireOne = require.config({
         }
     },
     paths: {//module IDs map with path
+        "requireLib":"require-2.3.5",
         "bluebird":"lib/bluebird",
         "jquery":"lib/jquery-1.12.4",//这里cdn多了个后缀.js会报错，会加载本地jquery
         "underscore": "lib/underscore",
