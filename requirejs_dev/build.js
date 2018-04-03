@@ -42,13 +42,13 @@
     optimizeCss: 'standard',
     removeCombined: false,
     fileExclusionRegExp: /^(i18n|r|build)\.js$/,
-    modules: [{
-        name: './app'
-    }],
+    name: './app',
+    include:"requireLib",
     baseUrl: "./js",
     //1、入口文件通过data-main形式加载，同时设置了bashUrl
     //2、通过 RequireJS config设置bashUrl
     //3、非如上两种，bashUrl是引用requireJS的html路径
+    //4、对于的baseUrl，它是相对于APPDIR。如果没有appDir，那么baseUrl是相对于build.js文件
     shim: {
         'jQueryMigrate': {
             deps: ['jquery'],
@@ -96,6 +96,7 @@
         }
     },
     paths: { //module IDs map with path
+        "requireLib":"require-2.3.5.min",
         "bluebird": "lib/bluebird",
         "requirejs": "require-2.3.5.min",
         "jquery": "lib/jquery-1.12.4.min", //这里cdn多了个后缀.js会报错，会加载本地jquery
