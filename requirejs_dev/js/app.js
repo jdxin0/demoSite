@@ -210,7 +210,7 @@ require([
         console.log("%c document ready 8", "color:red");
         console.log("ball");
         var flag=1;
-        $(".ballplayBtn").click(function(){
+        $(document).on("click",".ballplayBtn",function(){
             if (Modernizr.canvas&&flag==1) {
                 ball.ballPlay();
                 flag=0;
@@ -223,7 +223,7 @@ require([
             }else{
                 console.log("浏览器不支持");
             }
-        });
+        })
     })
     domReady(function(){
         console.log("%c document ready 9", "color:red");
