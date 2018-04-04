@@ -1,0 +1,5 @@
+.cont {
+    transition: margin-right 2s;
+    border-radius: 5px;
+    display:flex;
+}

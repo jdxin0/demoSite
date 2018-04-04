@@ -1,0 +1,25 @@
+{
+  "name": "20180404",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "browserslist": ["last 4 versions","> 0.1%"],
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "scripts": {
+    "buildNoPostcssProperty":"postcss src/style.css --use autoprefixer --output dist/style.min.css --no-map",
+    "build":"postcss src/style.css --output dist/style.min.css --no-map"
+  },
+  "keywords": [],
+  "author": "luojianet <997948809@163.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^8.2.0",
+    "postcss-import": "^11.1.0",
+    "postcss-url": "^7.3.2",
+    "sugarss": "^1.0.1"
+  }
+}
