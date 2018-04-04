@@ -1,3 +1,4 @@
+
 .cont {
     -webkit-transition: margin-right 2s;
     -o-transition: margin-right 2s;
@@ -7,6 +8,19 @@
     display:-ms-flexbox;
     display:flex;
 }
+
+.transitionWidth{
+    width:100px;
+    height:100px;
+    background:red;
+    -webkit-transition:width 2s;
+    -o-transition:width 2s;
+    transition:width 2s;
+}
+.transitionWidth:hover{
+    width: 300px;
+}
+
 
 .banner-steps ul {
     font-size: 0;

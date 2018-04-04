@@ -9,17 +9,12 @@
   ],
   "postcss": {
     "plugins": {
-      "autoprefixer": {},
-      "postcss-assets":{
-        "options":{
-           "cachebuster":true
-        }
-      }
+      "autoprefixer": {}
     }
   },
   "scripts": {
-    "buildNoPostcssProperty": "postcss css/style.css --use autoprefixer --output dist/style.min.css --no-map",
-    "build": "postcss css/style.css --output dist/style.min.css --no-map"
+    "buildNoPostcssProperty": "postcss css/style.css --use autoprefixer --output dist/style.css --no-map",
+    "build": "postcss css/style.css --output dist/style.css --no-map"
   },
   "keywords": [],
   "author": "luojianet <997948809@163.com>",

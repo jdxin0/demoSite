@@ -1,8 +1,20 @@
+
 .cont {
     transition: margin-right 2s;
     border-radius: 5px;
     display:flex;
 }
+
+.transitionWidth{
+    width:100px;
+    height:100px;
+    background:red;
+    transition:width 2s;
+}
+.transitionWidth:hover{
+    width: 300px;
+}
+
 
 .banner-steps ul {
     font-size: 0;
