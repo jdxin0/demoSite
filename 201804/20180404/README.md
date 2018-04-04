@@ -166,3 +166,4 @@ samsung 4
 Last 2 versions
 IE 8 # sorry
 ```
+*  When `postcss-loader` is used standalone (without `css-loader`) don't use `@import` in your CSS, since this can lead to quite bloated bundles
