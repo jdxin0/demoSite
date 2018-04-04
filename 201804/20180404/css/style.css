@@ -1,10 +1,6 @@
 .cont {
-    -webkit-transition: margin-right 2s;
-    -o-transition: margin-right 2s;
     transition: margin-right 2s;
     border-radius: 5px;
-    display:-webkit-box;
-    display:-ms-flexbox;
     display:flex;
 }
 

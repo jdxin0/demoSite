@@ -3,23 +3,31 @@
   "version": "1.0.0",
   "description": "",
   "private": true,
-  "browserslist": ["last 4 versions","> 0.1%"],
+  "browserslist": [
+    "last 4 versions",
+    "> 0.1%"
+  ],
   "postcss": {
     "plugins": {
-      "autoprefixer": {}
+      "autoprefixer": {},
+      "postcss-assets":{
+        "options":{
+           "cachebuster":true
+        }
+      }
     }
   },
   "scripts": {
-    "buildNoPostcssProperty":"postcss src/style.css --use autoprefixer --output dist/style.min.css --no-map",
-    "build":"postcss src/style.css --output dist/style.min.css --no-map"
+    "buildNoPostcssProperty": "postcss css/style.css --use autoprefixer --output dist/style.min.css --no-map",
+    "build": "postcss css/style.css --output dist/style.min.css --no-map"
   },
   "keywords": [],
   "author": "luojianet <997948809@163.com>",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^8.2.0",
-    "postcss-import": "^11.1.0",
-    "postcss-url": "^7.3.2",
-    "sugarss": "^1.0.1"
+    "postcss": "^6.0.21",
+    "postcss-assets": "^5.0.0",
+    "postcss-cli": "^5.0.0"
   }
 }
