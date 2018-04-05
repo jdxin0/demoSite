@@ -7,3 +7,10 @@
 .transitionWidth:hover{
     width: 300px;
 }
+
+.oaicon{
+	width: 100px;
+	height: 100px;
+	background-image: url("../img/oaicon.png");
+	background-size: 100px
+}

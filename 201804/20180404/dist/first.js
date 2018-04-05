@@ -231,13 +231,13 @@ function toComment(sourceMap) {
 /* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/spr-bg.png";
+module.exports = __webpack_require__.p + "img/spr-bg.png?49483f0cd52cc7e032301215764b150d";
 
 /***/ }),
 /* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/spr.png";
+module.exports = __webpack_require__.p + "img/spr.png?8e202c4de467358dd3ee3d3374bf78f8";
 
 /***/ }),
 /* 7 */

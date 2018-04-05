@@ -34,10 +34,7 @@ module.exports = {
 		}, {
 			test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
 			use:[{
-			  loader: 'file-loader',
-			  options: {
-			    name: '[path][name].[ext]'
-			  }  
+			  loader: 'url-loader?limit=10240&name=[path][name].[ext]?[hash]&emitFile=false'
 			}]
 		}]
 	},
