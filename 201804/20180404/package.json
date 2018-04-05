@@ -14,7 +14,9 @@
   },
   "scripts": {
     "buildNoPostcssProperty": "postcss css/style.css --use autoprefixer --output dist/style.css --no-map",
-    "build": "postcss css/style.css --output dist/style.css --no-map"
+    "build": "postcss css/style.css --output dist/style.css --no-map",
+    "development":"set NODE_ENV=development && node env.js",
+    "production":"set NODE_ENV=production && node env.js"
   },
   "keywords": [],
   "author": "luojianet <997948809@163.com>",
@@ -22,12 +24,12 @@
   "devDependencies": {
     "autoprefixer": "^8.2.0",
     "css-loader": "^0.28.11",
+    "style-loader": "^0.20.3",
     "file-loader": "^1.1.11",
+    "url-loader": "^1.0.1",
     "postcss": "^6.0.21",
     "postcss-assets": "^5.0.0",
     "postcss-cli": "^5.0.0",
-    "style-loader": "^0.20.3",
-    "url-loader": "^1.0.1",
     "webpack": "^4.5.0",
     "webpack-cli": "^2.0.13"
   },
