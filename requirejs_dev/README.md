@@ -11,6 +11,26 @@ r.js: 2.3.5, RequireJS: 2.3.5, UglifyJS: 2.8.29
 $ node js/r.js
 See https://github.com/requirejs/r.js for usage.
 ```
+* input css,output minify css
+```
+$ npm run standard
+
+> requirejs_dev@1.0.0 standard C:\wamp64\www\www.yanhu.com\requirejs_dev
+> node ../js/r.js -o cssIn=css/style.css out=css/style.min.css optimizeCss=standard
+
+
+C:/wamp64/www/www.yanhu.com/requirejs_dev/css/style.min.css
+----------------
+C:/wamp64/www/www.yanhu.com/requirejs_dev/css/common/normalize.css
+C:/wamp64/www/www.yanhu.com/requirejs_dev/css/common/animate.css
+C:/wamp64/www/www.yanhu.com/requirejs_dev/css/app/style.css
+C:/wamp64/www/www.yanhu.com/requirejs_dev/css/app/html5.css
+C:/wamp64/www/www.yanhu.com/requirejs_dev/css/app/slider.css
+C:/wamp64/www/www.yanhu.com/requirejs_dev/css/app/path.css
+C:/wamp64/www/www.yanhu.com/requirejs_dev/css/app/animate.css
+C:/wamp64/www/www.yanhu.com/requirejs_dev/css/style.css
+
+```
 # 笔记
 * REQUIREJS API [API](http://requirejs.org/docs/api.html)
 * REQUIREJS OPTIMIZER [Optimization](http://requirejs.org/docs/optimization.html)
