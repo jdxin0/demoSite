@@ -1,0 +1,14 @@
+/*node build/r.js -o cssIn=src/main/webapp/static/css/styles.css out=src/main/webapp/static/css/all.css optimizeCss=standard  */
+/*"standard"：标准的压缩方式；*/
+/*"standard.keepLines"：保留换行；*/
+/*"standard.keepComments"：保留注释；*/
+/*"standard.keepComments.keepLines"：保留换行；*/
+/*"none"：不压缩；*/
+@import url("common/normalize.css");
+@import url("common/animate.css");
+@import url("app/style.css");
+@import url("app/html5.css");
+@import url("app/slider.css");
+@import url("app/path.css");
+@import url("app/animate.css");
+@import "common/normalize.css"; 
