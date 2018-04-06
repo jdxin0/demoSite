@@ -1,0 +1,17 @@
+{
+  "name": "requirejs_dev",
+  "version": "1.0.0",
+  "description": "RequireJS Development Project",
+  "private":true,
+  "scripts": {
+    "build":"node ../js/r.js -o build.js",
+    "none":"node ../js/r.js -o cssIn=css/style.css out=css/style.min.css optimizeCss=none",
+    "standard":"node ../js/r.js -o cssIn=css/style.css out=css/style.min.css optimizeCss=standard",
+    "standardKeepLines":"node ../js/r.js -o cssIn=css/style.css out=css/style.min.css optimizeCss=standard.keepLines",
+    "standardKeepComments":"node ../js/r.js -o cssIn=css/style.css out=css/style.min.css optimizeCss=standard.keepComments",
+    "standardKeepCommentsKeepLines":"node ../js/r.js -o cssIn=css/style.css out=css/style.min.css optimizeCss=standard.keepComments.keepLines"
+  },
+  "keywords": [],
+  "author": "luojianet <997948809@163.com>",
+  "license": "ISC"
+}
