@@ -167,3 +167,23 @@ Last 2 versions
 IE 8 # sorry
 ```
 *  When `postcss-loader` is used standalone (without `css-loader`) don't use `@import` in your CSS, since this can lead to quite bloated bundles
+* postcss config
+```
+"browserslist": [
+    "last 4 versions",
+    "> 0.1%"
+  ],
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+```
+* postcss.config.js
+```
+module.exports = {
+  plugins: {
+    autoprefixer: {}
+  }
+}
+```

@@ -27,9 +27,11 @@ module.exports = {
 				loader:"css-loader",
 				options:{
 					minimize:false,
-					sourceMap: true
+					sourceMap: true,
+				 	importLoaders: 1
 				}
-			}
+			},
+			"postcss-loader"
 			]
 		}, {
 			test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
