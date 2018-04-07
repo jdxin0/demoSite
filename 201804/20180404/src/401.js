@@ -1,5 +1,7 @@
+import "../css/normalize.css";
 import "../css/style.css";
+import txt from "./poem.txt";
 
 var ele = document.getElementById("appenBox");
-var txt = document.createTextNode("Text come from appJS.");
-ele.appendChild(txt);
+// var poem = document.createTextNode(txt);
+ele.innerHTML=txt;
