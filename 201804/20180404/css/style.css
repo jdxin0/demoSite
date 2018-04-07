@@ -1,3 +1,7 @@
+.banner-steps{
+    float: left;
+    margin-top: 20px;
+}
 .banner-steps ul {
     font-size: 0;
     text-align: center;
@@ -5,7 +9,6 @@
 }
 
 .banner-steps ul li {
-    display: inline-block;
     vertical-align: middle;
     width: 126px;
     height: 126px;
@@ -13,7 +16,7 @@
     background-position: -643px -75px;
     background-repeat: no-repeat;
     position: relative;
-    margin: 0 30px
+    margin: 10px 30px
 }
 
 .banner-steps ul li .steps-img {
@@ -64,7 +67,9 @@
     background-position: -795px -40px;
     background-repeat: no-repeat
 }
-
-.banner-steps ul li.last:after {
-    display: none
+pre{
+    font-size: 35px;
+    float: left;
+    margin-left: 30px;
+    font-family: 微软雅黑;
 }
