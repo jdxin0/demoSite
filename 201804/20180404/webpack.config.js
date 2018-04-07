@@ -41,6 +41,12 @@ module.exports = {
 		},{
 			test:/\.txt$/,
 			loader:"raw-loader"
+		},{
+			test:/\.xml$/,
+			loader:"xml-loader",
+			options:{
+				explicitChildren:true
+			}
 		}]
 	},
 	output: {
