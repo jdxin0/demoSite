@@ -15,8 +15,8 @@
   "scripts": {
     "buildNoPostcssProperty": "postcss css/style.css --use autoprefixer --output dist/style.css --no-map",
     "build": "postcss css/transition.css --output dist/transition.css --no-map",
-    "development": "set NODE_ENV=development && node env.js",
-    "production": "set NODE_ENV=production && node env.js",
+    "dev": "set NODE_ENV=development && webpack --progress --display-modules --color",
+    "pro": "set NODE_ENV=production && node env.js",
     "start": "cross-env NODE_ENV=development node env.js"
   },
   "keywords": [],
