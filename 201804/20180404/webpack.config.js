@@ -38,6 +38,9 @@ module.exports = {
 			use:[{
 			  loader: 'url-loader?limit=10240&name=[path][name].[ext]?[hash]&emitFile=false'
 			}]
+		},{
+			test:/\.txt$/,
+			loader:"raw-loader"
 		}]
 	},
 	output: {
