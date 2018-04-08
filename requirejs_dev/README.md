@@ -13,23 +13,15 @@ See https://github.com/requirejs/r.js for usage.
 ```
 * input css,output minify css
 ```
-$ npm run standard
+$ node js/r.js -o cssIn=css/style.css out=css/style.min.css optimizeCss=none
 
-> requirejs_dev@1.0.0 standard C:\wamp64\www\www.yanhu.com\requirejs_dev
-> node ../js/r.js -o cssIn=css/style.css out=css/style.min.css optimizeCss=standard
-
-
-C:/wamp64/www/www.yanhu.com/requirejs_dev/css/style.min.css
+C:/xlgit/act.vip.xunlei.com/pc/vip/2018/jd/css/style.min.css
 ----------------
-C:/wamp64/www/www.yanhu.com/requirejs_dev/css/common/normalize.css
-C:/wamp64/www/www.yanhu.com/requirejs_dev/css/common/animate.css
-C:/wamp64/www/www.yanhu.com/requirejs_dev/css/app/style.css
-C:/wamp64/www/www.yanhu.com/requirejs_dev/css/app/html5.css
-C:/wamp64/www/www.yanhu.com/requirejs_dev/css/app/slider.css
-C:/wamp64/www/www.yanhu.com/requirejs_dev/css/app/path.css
-C:/wamp64/www/www.yanhu.com/requirejs_dev/css/app/animate.css
-C:/wamp64/www/www.yanhu.com/requirejs_dev/css/style.css
-
+C:/xlgit/act.vip.xunlei.com/pc/vip/2018/jd/css/reset-min-1.3.css
+C:/xlgit/act.vip.xunlei.com/pc/vip/2018/jd/css/index.css
+C:/xlgit/act.vip.xunlei.com/pc/vip/2018/jd/css/../../../../../static/pc/css/main.css
+C:/xlgit/act.vip.xunlei.com/pc/vip/2018/jd/css/style.css
+打包顺序说明：先打包@import url()对应的文件，最后打包 cssIn="file.path.name.ext"
 ```
 # 笔记
 * REQUIREJS API [API](http://requirejs.org/docs/api.html)
