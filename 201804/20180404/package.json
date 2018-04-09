@@ -5,7 +5,8 @@
   "private": true,
   "browserslist": [
     "last 4 versions",
-    "> 0.1%"
+    "> 0.1%",
+    "not ie <= 8"
   ],
   "postcss": {
     "plugins": {
@@ -15,7 +16,8 @@
   "scripts": {
     "buildNoPostcssProperty": "postcss css/style.css --use autoprefixer --output dist/style.css --no-map",
     "build": "postcss css/transition.css --output dist/transition.css --no-map",
-    "dev": "rm dist -rf && set NODE_ENV=development && webpack --progress --color --watch",
+    "dev": "webpack --progress --color",
+    "devw": "rm dist -rf && set NODE_ENV=development && webpack --progress --color --watch",
     "pro": "set NODE_ENV=production && node env.js",
     "start": "cross-env NODE_ENV=development node env.js"
   },
@@ -24,6 +26,7 @@
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^8.2.0",
+    "clean-webpack-plugin": "^0.1.19",
     "cross-env": "^5.1.4",
     "css-loader": "^0.28.11",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
