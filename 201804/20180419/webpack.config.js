@@ -11,12 +11,24 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: "Code Spliting"
-        })
+        }),
+        new CleanWebpackPlugin(["dist"])
     ],
-    optimization:{
-    	splitChunks:{
-    		
-    	}
+    optimization: {
+        splitChunks: {
+            chunks: "async",
+            minSize: 30000,
+            minChunks: 1,
+            maxAsyncRequests: 5,
+            maxInitialRequests: 3,
+            cacheGroups: {
+                commons: {
+                    name: "commons",
+                    chunks: "initial",
+                    minChunks: 2
+                }
+            }
+        }
     },
     output: {
         filename: "[name].js",
