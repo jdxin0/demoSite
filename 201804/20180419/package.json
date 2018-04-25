@@ -4,7 +4,12 @@
   "description": "",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack --progress --display-modules --color",
+    "dev": "set NODE_ENV=development&&webpack-dev-server --progress --display-modules --color --env development",
+    "pro": "set NODE_ENV=production&&webpack --progress --display-modules --color --env production",
+    "nodemon-dev": "nodemon --watch webpack.config.js --exec \"npm run dev\"",
+    "nodemon-pro": "nodemon --watch webpack.config.js --exec \"npm run pro\"",
+    "build": "webpack"
   },
   "keywords": [],
   "author": "luojianet <997948809@163.com>",
