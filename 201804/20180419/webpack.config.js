@@ -1,35 +1,37 @@
 var path = require("path");
 var webpack = require('webpack');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+var htmlWebpackPlugin = require('html-webpack-plugin');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
+var UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 module.exports = {
-    entry: {
-        first: "./src/first.js",
-        second: "./src/second.js"
-    },
+    entry: { app: "./src/app.js" },
     mode: "none",
-    plugins: [
-        new HtmlWebpackPlugin({
-            title: "Code Spliting"
-        }),
-        new CleanWebpackPlugin(["dist"])
-    ],
-    optimization: {
-        splitChunks: {
-            chunks: "async",
-            minSize: 30000,
-            minChunks: 1,
-            maxAsyncRequests: 5,
-            maxInitialRequests: 3,
-            cacheGroups: {
-                commons: {
-                    name: "commons",
-                    chunks: "initial",
-                    minChunks: 2
-                }
-            }
-        }
+    module: {
+        rules: [{
+            test: /\.js$/,
+            exclude: /node_modules/,
+            loader: "babel-loader"
+        }, {
+            test: require.resolve('zepto'),
+            loader: 'exports-loader?window.Zepto!script-loader'
+        }]
     },
+    plugins: [
+        new htmlWebpackPlugin({
+            title: "Code Spliting",
+            template: 'index.html'
+        }),
+        new CleanWebpackPlugin(["dist"]),
+        new UglifyJSPlugin({
+            uglifyOptions: {
+                output: {
+                    beautify: false,
+                    comments: false
+                },
+                ie8: true
+            }
+        })
+    ],
     output: {
         filename: "[name].js",
         path: path.resolve(__dirname, "./dist")

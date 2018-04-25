@@ -1,0 +1,13 @@
+{
+    "presets": ["env"],
+    "plugins": [
+        "add-module-exports",
+        "transform-es3-member-expression-literals",
+        "transform-es3-property-literals",
+        ["transform-es2015-modules-commonjs",
+        {
+            "strict":true
+        }],
+        "dynamic-import-webpack"
+    ]
+}
