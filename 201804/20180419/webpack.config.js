@@ -16,7 +16,7 @@ var commonConfig = {
     output: {
         filename: '[name].js',
         path: path.resolve(__dirname, 'dist'),
-        chunkFilename: '[id].js'
+        chunkFilename: '[name].bundle.js',
     }
 };
 function getProConfig() {

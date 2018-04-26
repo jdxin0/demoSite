@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[1],{
 
-/***/ 7:
+/***/ 6:
 /***/ (function(module, exports, __webpack_require__) {
 
-var JQ = __webpack_require__(8);
+var JQ = __webpack_require__(7);
 function jsonp() {
     JQ.ajax({
         url: "http://www.xuliehaonet.com/interface/jsonp.php",
