@@ -9,7 +9,7 @@ var commonConfig = {
     plugins:[
         new htmlWebpackPlugin({
             title: "Code Spliting",
-            template: 'index.html'
+            template: 'template.html'
         }),
         new CleanWebpackPlugin(['dist']),
     ],

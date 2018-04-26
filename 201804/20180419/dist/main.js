@@ -187,10 +187,11 @@ __webpack_require__(1);
 __webpack_require__(2);
 var btn = document.getElementById("btn");
 btn.onclick = function(){
-	Promise.all(/* import() | dynamic */[__webpack_require__.e(2), __webpack_require__.e(1)]).then(function() { var module = __webpack_require__(7); return typeof module === "object" && module && module.__esModule ? module : Object.assign({/* fake namespace object */}, typeof module === "object" && module, { "default": module }); }).then(function(dynamicModule){
+	Promise.all(/* require.ensure | dynamic */[__webpack_require__.e(2), __webpack_require__.e(1)]).then((function(require) {
+		var dynamicModule = __webpack_require__(7);
 		dynamicModule.jsonp();
 		dynamicModule.time();
-	});
+	}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 }
 
 /***/ }),
