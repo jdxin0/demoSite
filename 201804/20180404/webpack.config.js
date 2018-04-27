@@ -84,6 +84,10 @@ module.exports = {
             filename: '20180404001.html'
         }), // Generates default index.html
         new HtmlWebpackPlugin({ // Also generate a test.html
+            filename: 'first.html',
+            template: './20180404001.html'
+        }),
+        new HtmlWebpackPlugin({ // Also generate a test.html
             filename: '20180404002.html',
             template: './20180404002.html'
         }),
