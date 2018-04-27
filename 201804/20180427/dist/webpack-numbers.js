@@ -1,10 +1,10 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("_"));
+		module.exports = factory(require("lodash"));
 	else if(typeof define === 'function' && define.amd)
-		define(["_"], factory);
+		define(["lodash"], factory);
 	else if(typeof exports === 'object')
-		exports["webpackNumbers"] = factory(require("_"));
+		exports["webpackNumbers"] = factory(require("lodash"));
 	else
 		root["webpackNumbers"] = factory(root["_"]);
 })(window, function(__WEBPACK_EXTERNAL_MODULE__1__) {
