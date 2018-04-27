@@ -1,7 +1,7 @@
 {
-  "name": "20180427",
-  "version": "1.0.0",
-  "description": "",
+  "name": "numbers-convert",
+  "version": "1.2.0",
+  "description": "Webpack Documentation Authoring Libraries",
   "main": "dist/webpack-numbers.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,6 @@
   "author": "luojianet <997948809@163.com>",
   "license": "ISC",
   "devDependencies": {
-    "lodash": "^4.17.10",
     "webpack": "^4.6.0",
     "webpack-cli": "^2.0.15"
   }
