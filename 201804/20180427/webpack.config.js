@@ -4,12 +4,17 @@ module.exports = {
   entry: './src/index.js',
   mode:'none',
   externals: {
-    lodash: '_'
+    lodash: {
+      commonjs: 'lodash',
+      commonjs2: 'lodash',
+      amd: 'lodash',
+      root: '_'
+    }
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'webpack-numbers.js',
-    library: 'webpackNumbers',//string,{root: "webpackNumbers",amd: "webpack-Numbers",commonjs: "webpack-cmd-Numbers"}
+    filename: 'numbers-convert.js',
+    library: 'numbersConvert',//string,{root: "numbersConvert",amd: "webpack-Numbers",commonjs: "webpack-cmd-Numbers"}
     libraryTarget: 'umd'//jsonp,amd,commonjs2,commonjs,global,window,this,var,umd,assign
   }
 };
