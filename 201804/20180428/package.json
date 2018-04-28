@@ -14,6 +14,6 @@
     "webpack-cli": "^2.0.15"
   },
   "dependencies": {
-    "numbers-convert": "^1.2.0"
+    "numbers-convert": "^1.2.1"
   }
 }
