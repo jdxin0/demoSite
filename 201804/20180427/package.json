@@ -2,7 +2,7 @@
   "name": "numbers-convert",
   "version": "1.2.1",
   "description": "Webpack Documentation Authoring Libraries",
-  "main": "dist/webpack-numbers.js",
+  "main": "dist/numbers-convert.js",
   "scripts": {
     "start": "webpack --color --distplay-modules",
     "test": "echo \"Error: no test specified\" && exit 1"
