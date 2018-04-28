@@ -4,9 +4,9 @@
 	else if(typeof define === 'function' && define.amd)
 		define(["lodash"], factory);
 	else if(typeof exports === 'object')
-		exports["webpackNumbers"] = factory(require("lodash"));
+		exports["numbersConvert"] = factory(require("lodash"));
 	else
-		root["webpackNumbers"] = factory(root["_"]);
+		root["numbersConvert"] = factory(root["_"]);
 })(window, function(__WEBPACK_EXTERNAL_MODULE__1__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
