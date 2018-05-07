@@ -1,6 +1,6 @@
 {
   "name": "numbers-convert",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Webpack Documentation Authoring Libraries",
   "main": "dist/numbers-convert.js",
   "scripts": {

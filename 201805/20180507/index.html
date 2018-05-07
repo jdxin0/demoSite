@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.add{
+			width: 300px;
+		    height: 100px;
+		    background: #ccc;
+		    display: inline-block;
+		    position: relative;
+		    margin-top: 100px;
+		}
+		.add:before{
+			width: 100px;
+			height: 100px;
+			background: #ccc;
+			content: "";
+			display: inline-block;
+			position: absolute;
+			z-index: 10;
+			left: 100px;
+			top: -100px;
+		}
+		.add:after{
+			width: 100px;
+			height: 100px;
+			background: #ccc;
+			content: "";
+			display: inline-block;
+			position: absolute;
+			z-index: 11;
+			left: 100px;
+		    top: 100px;
+		}
+		.sanjiao{
+		    margin-top: 100px;
+			width: 0px;
+			height: 0px;
+			border-style: solid;
+			border-width: 100px;
+			border-top-color: red;
+			border-right-color: red;
+			border-bottom-color: white;
+			border-left-color: white;
+		}
+	</style>
+</head>
+<body>
+	<div class="add"></div>
+	<div class="sanjiao"></div>
+</body>
+</html>
