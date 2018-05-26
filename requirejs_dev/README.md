@@ -1,16 +1,19 @@
 # Study List
-[Integration with has.js](http://requirejs.org/docs/optimization.html#hasjs)
+* [Integration with has.js](http://requirejs.org/docs/optimization.html#hasjs)
+
 # r.js
 * node js/r.js -v
 ```
 $ node js/r.js -v
 r.js: 2.3.5, RequireJS: 2.3.5, UglifyJS: 2.8.29
 ```
+
 * node js/r.js
 ```
 $ node js/r.js
 See https://github.com/requirejs/r.js for usage.
 ```
+
 * input css,output minify css
 ```
 $ node js/r.js -o cssIn=css/style.css out=css/style.min.css optimizeCss=none
@@ -23,6 +26,7 @@ C:/xlgit/act.vip.xunlei.com/pc/vip/2018/jd/css/../../../../../static/pc/css/main
 C:/xlgit/act.vip.xunlei.com/pc/vip/2018/jd/css/style.css
 打包顺序说明：先打包@import url()对应的文件，最后打包 cssIn="file.path.name.ext"
 ```
+
 # 笔记
 * REQUIREJS API [API](http://requirejs.org/docs/api.html)
 * REQUIREJS OPTIMIZER [Optimization](http://requirejs.org/docs/optimization.html)
