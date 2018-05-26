@@ -121,6 +121,7 @@
         "Util": "app/util",
         "urlTest": "app/urlTest",
         "multipleGlobalFun": "app/multipleGlobalFun",
-        "testAnim": "app/animate.css"
+        "testAnim": "app/animate.css",
+        "loginModel":"app/login"
     }
 })
