@@ -68,7 +68,8 @@ var requireOne = require.config({
         "Util": "app/util",
         "urlTest":"app/urlTest",
         "multipleGlobalFun":"app/multipleGlobalFun",
-        "testAnim":"app/animate.css"
+        "testAnim":"app/animate.css",
+        "loginModel":"app/login",
     }
 });
 //requireJS插件列表https://github.com/requirejs/requirejs/wiki/Plugins
@@ -95,7 +96,8 @@ require([
     'testAnim',
     'jquery.path',
     'qrcode',
-    'danmu'], function( 
+    'danmu',
+    'loginModel'], function( 
         Promise,
         util, 
         exclamation, 
@@ -118,7 +120,8 @@ require([
         testAnim,
         path,
         QRCode,
-        danmu) {
+        danmu,
+        loginModel) {
     domReady(function() {
         console.log("require.s.contexts._.config:",require.s.contexts._.config);
         console.log("require.s.contexts._.defined:",require.s.contexts._.defined);
@@ -440,6 +443,16 @@ require([
             playList: buildData(prizelistDanMu)
         });
     })
+    domReady(function(){
+        console.log(loginModel);
+        loginModel.login_callbacks.add(function(){
+          console.log("init");
+        });
+        loginModel.login_callbacks.add(function(){
+            $("#loginModule").text("LoginInit");
+          console.log("LoginInit");
+        });
+    });
 })
 /*requirejs.onResourceLoad = function (context, map, depArray) {
     console.log(map);
