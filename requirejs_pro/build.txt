@@ -39,6 +39,10 @@ css/style.min.css
 ----------------
 css/style.min.css
 
+css/style.mini.css
+----------------
+css/style.mini.css
+
 js/./app.js
 ----------------
 js/require-2.3.5.min.js
@@ -66,4 +70,5 @@ js/app/animate.css.js
 js/jQuery-plugins/jquery.path.js
 js/tools/qrcode.min.js
 js/tools/danmu.js
+js/app/login.js
 js/app.js

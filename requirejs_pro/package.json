@@ -2,16 +2,30 @@
   "name": "requirejs_dev",
   "version": "1.0.0",
   "description": "RequireJS Development Project",
-  "private":true,
+  "private": true,
+  "browserslist": [
+    "last 4 versions",
+    "> 0.1%"
+  ],
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
   "scripts": {
-    "build":"node ../js/r.js -o build.js",
-    "none":"node ../js/r.js -o cssIn=css/style.css out=css/style.min.css optimizeCss=none",
-    "standard":"node ../js/r.js -o cssIn=css/style.css out=css/style.min.css optimizeCss=standard",
-    "standardKeepLines":"node ../js/r.js -o cssIn=css/style.css out=css/style.min.css optimizeCss=standard.keepLines",
-    "standardKeepComments":"node ../js/r.js -o cssIn=css/style.css out=css/style.min.css optimizeCss=standard.keepComments",
-    "standardKeepCommentsKeepLines":"node ../js/r.js -o cssIn=css/style.css out=css/style.min.css optimizeCss=standard.keepComments.keepLines"
+    "build": "node ../js/r.js -o build.js",
+    "none": "node ../js/r.js -o cssIn=css/style.css out=css/style.min.css optimizeCss=none",
+    "standard": "node ../js/r.js -o cssIn=css/style.css out=css/style.min.css optimizeCss=standard",
+    "standardKeepLines": "node ../js/r.js -o cssIn=css/style.css out=css/style.min.css optimizeCss=standard.keepLines",
+    "standardKeepComments": "node ../js/r.js -o cssIn=css/style.css out=css/style.min.css optimizeCss=standard.keepComments",
+    "standardKeepCommentsKeepLines": "node ../js/r.js -o cssIn=css/style.css out=css/style.min.css optimizeCss=standard.keepComments.keepLines",
+    "autoprefixer": "postcss css/style.css --output css/style.mini.css --no-map"
   },
   "keywords": [],
   "author": "luojianet <997948809@163.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^8.2.0",
+    "postcss-cli": "^5.0.0"
+  }
 }
