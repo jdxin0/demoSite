@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="/js/jquery.js"></script>
+</head>
+<body>
+	
+	<div>
+		<ul>
+			<li>昵称：<span class="nickname"></span></li>
+			<li>年龄：<span class="age"></span></li>
+			<li>性别：<span class="sex"></span></li>
+			<li>电话：<span class="tel"></span></li>
+			<li>QQ：<span class="qq"></span></li>
+			<li>地址：<span class="addr"></span></li>
+			<li>现在时间：<span class="date"></span></li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+		var user={
+			nickname:"luojianet",
+			age:27,
+			sex:"男",
+			tel:"15927572994",
+			qq:"997948809",
+			addr:"山东省菏泽市单县李新庄镇后颜楼村",
+			date:new Date()
+		}
+		function init(obj){
+			window.hostObj = document.createElement("i")
+			for(var key in obj){
+				$("."+key).text(obj[key]);
+				(function(key){
+					Object.defineProperty(hostObj,key,{
+						get:function(){
+							return user[key];
+						},
+					    set:function(value){
+					        $("."+key).text(value);
+					        user[key]=value;
+					    }
+					});
+				})(key)
+			}
+		}
+		init(user);
+		setInterval(function(){
+			hostObj.date = new Date()
+		},1000)
+	</script>
+</body>
+</html>
