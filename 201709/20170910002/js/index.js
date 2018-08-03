@@ -2,7 +2,7 @@ $(document).ready(function(){
 			var toLiveRoom = {
 			    init: function() {
 			        this.runApi();
-			        // this.event();
+			        this.event();
 			    },
 			    initEvents: function(Events) {
 			    	var key, keyArr, delElems, elems;
@@ -32,6 +32,7 @@ $(document).ready(function(){
 			    	}
 			    },
 			    event: function() {
+			    	var that = this;
 			        var Events = {
 			            'document|.openUrl|click': function() {
 			            	client.ui.openUrl({
@@ -39,6 +40,9 @@ $(document).ready(function(){
 			            		url:'http://act.vip.xunlei.com/m/vip/2017/weizhong/',
 			            		openType:1
 			            	});
+			            },
+			            'document|.shareBtn|click':function(){
+			            	that.shareFn();
 			            }
 			        }
 			        this.initEvents(Events);
@@ -180,6 +184,32 @@ $(document).ready(function(){
 			    	client.ui.pay({
 			    	    payType: 3,
 			    	    reportRefer: 123
+			    	});
+			    },
+			    /**
+			     * 分享指定内容到指定的平台
+			     * @param {Object} params 参数
+			     * @param {Number} params.sharePlatform 平台, 1: 微信好友, 2: 微信朋友圈, 3: QQ空间, 4: 新浪微博
+			     * @param {String} params.shareHeadline 标题
+			     * @param {String} params.shareText 内容
+			     * @param {String} params.shareImageUrl 图片地址
+			     * @param {String} params.shareUrl 分享的URL
+			     * @param {Function} callback 回调函数
+			     * @param {Object} callback.response 回调函数参数
+			     * @param {Number} callback.response.result 分享结果，0：成功，1：失败，2：用户取消
+			     */
+			    shareFn:function(){
+			    	client.data.shareTo({
+			    		sharePlatform:1,
+			    		shareHeadline:'分享标题',
+			    		shareText:'分享内容',
+			    		shareImageUrl:'http://act.vip.xunlei.com/m/vip/2018/klb1/images/share.png',
+			    		shareUrl:'http://demo.xuliehaonet.com/',
+
+			    	},function(rs){
+			    		if (rs.result==0) {
+			    			alert("分享成功");
+			    		}
 			    	});
 			    }
 			}
