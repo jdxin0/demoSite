@@ -2,13 +2,11 @@
   "name": "www.yanhu.com",
   "version": "1.0.0",
   "description": "* RequireJS项目开发环境页面[RequireJS](http://demo.xuliehaonet.com/requirejs_dev/index.html)\r * RequireJS项目生产环境页面[RequireJS](http://demo.xuliehaonet.com/requirejs_pro/index.html)\r # 移动端DEMO\r * 移动端触摸滑动[DEMO](http://demo.xuliehaonet.com/201709/20170915001/Scroll.html)\r * 移动端拖动小红点[DEMO](http://demo.xuliehaonet.com/201709/20170915001/TrackPoint.html)\r * 移动端手雷会员中心焦点图[DEMO](http://demo.xuliehaonet.com/201710/20171019/)\r * 移动端[PageSlider DEMO](http://demo.xuliehaonet.com/201711/20171106/20171106001.html)\r # 其它DEMO\r * 手雷API-[Demo](http://demo.xuliehaonet.com/201709/20170910002/)\r * 气泡提示[DEMO](http://demo.xuliehaonet.com/201709/20170912001/20170912001.html)\r * axios接口调用[DEMO](http://demo.xuliehaonet.com/201709/20170924001/20170924002.html)\r * 进制转换[DEMO](http://demo.xuliehaonet.com/201710/20171012/20171012001.html)\r * 简单的jS加密解密[DEMO](http://demo.xuliehaonet.com/201710/20171012/20171012002.html)\r * 浮动元素[DEMO](http://demo.xuliehaonet.com/201710/20171020/20171020001.html)\r * avalon [DEMO](http://demo.xuliehaonet.com/201711/20170711/)\r * BaiDu地铁API [DEMO](http://demo.xuliehaonet.com/201711/20171104/map.html)\r * 视频站[DEMO](http://demo.xuliehaonet.com/201803/20180326/)",
-  "private":true,
+  "private": true,
   "directories": {
     "doc": "doc"
   },
-  "scripts": {
-    
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/luojianet/demoSite.git"
@@ -19,5 +17,6 @@
   "bugs": {
     "url": "https://github.com/luojianet/demoSite/issues"
   },
-  "homepage": "https://github.com/luojianet/demoSite#readme"
+  "homepage": "https://github.com/luojianet/demoSite#readme",
+  "dependencies": {}
 }

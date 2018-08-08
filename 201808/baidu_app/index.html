@@ -91,8 +91,11 @@
             </div>
         </div>
         <!-- 底部按钮 -->
-        <div class="bottom"><a class="btn homebtn">立即下载</a>
-            <div class="bottombtns" id="bottombtns"><a class="probtn">语音版</a> |<a class="litesbtn">极速版</a></div>
+        <div class="bottom">
+            <a class="btn homebtn">立即下载</a>
+            <div class="bottombtns" id="bottombtns">
+                <a class="probtn">语音版</a> |<a class="litesbtn">极速版</a>
+            </div>
             <ul id="J-pager" class="circle">
                 <li class="cur"></li>
                 <li></li>
@@ -103,13 +106,14 @@
                 <p class="arr"></p>
             </ul>
         </div>
-        <div class="blackbg"><img src="//s.bdstatic.com/xbox/mo/img/weixin.png" class="weixinimg"></div>
+        <div class="blackbg">
+            <img src="//s.bdstatic.com/xbox/mo/img/weixin.png" class="weixinimg">
+        </div>
     </div>
     <script type="text/javascript">
     (function(doc, win) {
         var docEl = doc.documentElement;
         var resizeEvt = 'orientationchange' in win ? 'orientationchange' : 'resize';
-
         function recalc() {
             var clientWidth = docEl.clientWidth;
             if (!clientWidth) {
