@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript">
+    (function loop() {
+        requestAnimationFrame(function() {
+            $('#doc').html(document.documentElement.clientWidth);
+            $('#win').html(window.innerWidth);
+            loop();
+        })
+    })();
+    </script>
+</head>
+
+<body>
+    <div id="w" style="border:solid 5px black;width:1200px;margin-top:50px;margin-left:50px;font-size:50px">
+        <div style="float:left">client:<span id="doc"></span></div>
+        <div style="clear:both"></div>
+        <div style="float:left">window:<span id="win"></span></div>
+    </div>
+</body>
+
+</html>
