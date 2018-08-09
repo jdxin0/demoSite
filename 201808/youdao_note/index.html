@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>有道云笔记</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <script>
+    	document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    </script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="header">
+        <img src="images/logo_top.svg" />
+        <a class="header_dl dl" href="http://note.youdao.com/device.html">立即下载</a>
+    </div>
+    <div class="head">
+        <img class="hd-bg" src="images/hd_bg.png" />
+        <img class="head-title" src="images/head_title.png" />
+        <p class="title1">欢迎使用 有道云笔记</p>
+        <p class="title2">3G免费超大空间，开启你的高效办公之旅</p>
+        <a class="dl_btn top dl" href="http://note.youdao.com/device.html">立即下载</a>
+        <img class="arrow" src="images/arrow.svg" />
+    </div>
+    <div class="page">
+        <h1><span>文档管理</span>，高效记录</h1>
+        <div class="des">
+            <p>文字/图片/语音/手写/OCR/Markdown等多种形式，随时随地记录你的精彩。全面兼容office、PDF等办公常用文档，无需下载即可查看编辑。</p>
+        </div>
+        <img class="page1-img" src="images/page1.png" />
+    </div>
+    <div class="page blue">
+        <h1><span>收藏</span>，精彩不错过</h1>
+        <div class="des">
+            <p>支持微信、微博、链接收藏和网页剪报等多种形式，优秀内容一键保存永不丢失，搭建属于你的知识体系。</p>
+        </div>
+        <img class="page2-img" src="images/page2.png" />
+    </div>
+    <div class="page">
+        <h1><span>OCR扫描</span>，快捷准确</h1>
+        <div class="des">
+            <p>满足文档、手写、名片等多场景需求，特别支持PDF转Word功能，无需繁琐操作，一键轻松搞定。</p>
+        </div>
+        <img class="page3-img" src="images/page3.png" />
+    </div>
+    <div class="page blue">
+        <h1><span>多端同步</span>，随时查看</h1>
+        <div class="des">
+            <p>PC/iPhone/Android/web/iPad/Mac/Wap……随时备份，云端同步，重要资料还可加密保存。无惧断网/断电困扰，任何情况下都能轻松查阅。</p>
+        </div>
+        <img class="page4-img" src="images/page4.png" />
+    </div>
+    <div class="page">
+        <h1><span>轻松分享</span>，协同处理</h1>
+        <div class="des">
+            <p>文档一键分享微信、QQ、微博、邮件等平台。团队协作修改，实时处理更高效。</p>
+        </div>
+        <img class="page5-img" src="images/page5.png" />
+    </div>
+    <div class="ft-dl">
+        <img src="images/bt_bg.png" />
+        <p>现在开始使用吧</p>
+        <a class="dl_btn bottom dl" href="http://note.youdao.com/device.html">立即下载</a>
+    </div>
+    <div class="footer">
+        <img src="images/logo_ft.svg" />
+        <p class="copyright"><span id="copyright-year"></span> 网易公司 京ICP证080268号</p>
+    </div>
+    <script type="text/javascript" src="scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/ua-parser.js"></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?ba95730452d68798aea4de242b37be92";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+    <script>
+    window.addEventListener('load', function() {
+        var copyright = document.getElementById('copyright-year');
+        copyright.innerText = '©' + new Date().getFullYear();
+        var xhr = new XMLHttpRequest();
+        xhr.addEventListener('load', function() {
+            var serverTime = new Date(xhr.getResponseHeader('Date'))
+            if (serverTime && serverTime.getFullYear()) {
+                copyright.innerText = '©' + serverTime.getFullYear();
+            }
+        });
+        xhr.open('GET', '');
+        xhr.send();
+    });
+    </script>
+</body>
+
+</html>

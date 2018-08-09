@@ -1,0 +1,207 @@
+html,body {
+    background-color: #fff;
+    width: 100%;
+}
+body { font-family: 'Microsoft Yahei','微软雅黑',simsun,Arial;}
+html,body,div,p,h1,a,img,span {
+    padding: 0;
+    margin: 0 auto;
+}
+img {
+    border: 0 none;
+    height: auto;
+    display: block;
+}
+a {text-decoration: none}
+p {width: 100%;}
+
+.header {
+    height:1.28rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: #fff;
+}
+.header img {
+    width: 2.79rem;
+    margin-left: .36rem;
+    margin-top: .31rem;
+}
+.header a {
+    display: block;
+    width: 1.62rem;
+    height: .62rem;
+    border-radius: 0.06rem;
+    background-color: #248aff;
+    line-height: .62rem;
+    color: #fff;
+    font-size: .26rem;
+    position: absolute;
+    top: .31rem;
+    right: .33rem;
+    text-align: center;
+}
+
+.head {
+    width: 100%;
+    height: 10.56rem;
+    margin-top: 1.28rem;
+    position: relative;
+    text-align: center;
+    color: #fff;
+}
+.head .hd-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+.head .head-title {
+    position: absolute;
+    top: 2.31rem;
+    width: 4.19rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.head p {
+    width: 100%;
+    position: absolute;
+    left: 0;
+}
+.head .title1 {
+    font-size: .56rem;
+    font-weight: bold;
+    top: 0.72rem;
+}
+.head .title2 {
+    font-size: .28rem;
+    top: 1.59rem;
+}
+.dl_btn {
+    display: block;
+    width: 5.02rem;
+    height: 1.04rem;
+    line-height: 1.04rem;
+    color: #fff;
+    border-radius: 6px;
+    background-color: #248aff;
+    box-shadow: 0 8px 16px 0 rgba(24, 135, 255, 0.38);
+    font-size: .32rem;
+    border-radius: 0.06rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.head a {
+    top: 8.46rem;
+}
+.head .arrow {
+    width: .40rem;
+    position: absolute;
+    top: 10.06rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.page {
+    background-color: #fff;
+    height: 12rem;
+    width: 100%;
+    text-align: center;
+}
+.page.blue {background-color: #f5f8fc;}
+.page h1 {
+    font-size: .48rem;
+    font-weight: bold;
+    color: #333333;
+    width: 100%;
+    padding-top: .9rem;
+}
+.page h1 span{
+    color: #248aff;
+}
+.page .des {
+    margin-top: .22rem;
+}
+.page p {
+    color: #999999;
+    font-size: .28rem;
+    line-height: .49rem;
+    text-align: left;
+    width: 5.8rem;
+}
+
+.page p span {
+    color: #4a90e2;
+}
+
+.page p.remark {
+    color: #82b1f2;
+    font-size: .22rem;
+}
+.page img {
+    width: 100%;
+}
+.page1-img {
+    margin-top: 0.69rem;
+}
+.page2-img {
+    margin-top: 0.59rem;
+}
+.page3-img {
+    margin-top: 0.69rem;
+}
+.page4-img {
+    margin-top: 0.69rem;
+}
+.page5-img {
+    margin-top: 0.67rem;
+}
+.page .more {
+    display: block;
+    color: #398dee;
+    font-size: .28rem;
+    margin-top: .44rem;
+}
+
+.ft-dl {
+    height: 4.8rem;
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+.ft-dl img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.ft-dl p {
+    color: #333333;
+    font-size: .6rem;
+    position: absolute;
+    top: 1.2rem;
+    left: 0;
+}
+.ft-dl a {
+    bottom: 1.14rem;
+}
+
+.footer {
+    width: 100%;
+    height: 2.3rem;
+    background-color: #515666;
+    text-align: center;
+}
+.footer img {
+    width: 2.66rem;
+    padding-top: .52rem;
+}
+.footer .copyright {
+    color: #a4a7ad;
+    font-size: .28rem;
+    margin-top: .36rem;
+}
