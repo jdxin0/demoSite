@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="https://img-vip-ssl.a.88cdn.com/lib/thunderjs/static-1.0.0m/css/main.css" />
+</head>
+
+<body>
+    <!-- 手雷分享引导 -->
+    <div class="pop_wp shoulei_share" style="display: none">
+        <div class="pop_wechat">
+            <div class="link_box">
+                <a href="javascript:;" class="btn_friend shoulei_share_pep">微信好友</a>
+                <a href="javascript:;" class="btn_circle shoulei_share_fri">朋友圈</a>
+            </div>
+            <a href="javascript:;" class="btn_cancel">取消</a>
+        </div>
+    </div>
+    <!-- 微信分享引导 -->
+    <div class="pop_wp wechat_share" style="display: none">
+        <div class="pop_area">
+            <div class="pop_share">
+                <div class="share_txt">
+                    <p>1. 点击右上角</p>
+                    <p>2. 分享给好友</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="buy_wp" id="kanjiaGoodsBox" style="display: none">
+        <p class="txt_success">购买成功，还需2人帮忙砍价</p>
+        <p class="txt_stips">砍价成功后3小时内，将立即充值。否则会<br>退款到原账户</p>
+        <a href="javascript:;" class="btn_kan">找人砍价</a>
+    </div>
+    <div class="n_pop_wp" id="freeOrderBox" style="display: none">
+        <!-- 动效：show -->
+        <div class="n_mpop_box"  id="noFreeThisOrderTips">
+            <div class="pop_cont">
+                <div class="pop_main">
+                    <p class="txt_hd">SORRY</p>
+                    <p class="txt_shd">很遗憾
+                        <br>本次您没有获得免单机会</p>
+                </div>
+            </div>
+            <a href="javascript:;" class="btn_npop" style="display: none;">我知道了</a>
+            <a href="javascript:;" class="pop_close" style="display: none"></a>
+        </div>
+        <div class="n_mpop_box" id="freeThisOrderTips">
+            <div class="pop_cont">
+                <div class="pop_main">
+                    <p class="txt_hd">恭喜您，被免单啦</p>
+                    <p class="txt_shd">请关注“迅雷会员”微信公众号并绑定迅雷账号
+                        <br>即可领取返现红包，已付的金额100%全部返还</p>
+                    <p class="txt_en">CONGRATULATION</p>
+                </div>
+            </div>
+            <div class="code_box">
+                <img src="images/code.jpg" alt="二维码">
+                <p class="txt_code">长按二维码关注迅雷会员公众号</p>
+            </div>
+            <a href="javascript:;" class="pop_close" style="display: none"></a>
+        </div>
+        <div class="ns_mpop_box">
+            <div class="pop_cont">
+                <p class="txt_suc">恭喜您，购买成功<em>还有免单机会</em></p>
+            </div>
+            <a href="javascript:;" class="btn_npop loginBtn iWantFreeThisOrderBtn">我要免单</a>
+        </div>
+    </div>
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="https://act-vip-ssl.xunlei.com/common/shoulei/client.min.js"></script>
+    <script src="https://img-vip-ssl.a.88cdn.com/lib/zepto/zepto.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <script src="https://act-vip-ssl.xunlei.com/source/config/vip2018xntq.js"></script>
+    <script src="https://img-vip-ssl.a.88cdn.com/lib/thunderjs/1.8.1m/thunder.min.js"></script>
+    <script src="./js/index.js?timestamp=<!--#echo var='timestamp'-->"></script>
+</body>
+</html>
