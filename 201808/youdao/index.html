@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, width=device-width" />
+	<link rel="shortcut icon" href="//shared.ydstatic.com/dict/v5.15/images/icon.png" type="image/x-icon" />
+	<link rel="apple-touch-icon" href="//shared.ydstatic.com/dict/v5.15/images/icon.png" />
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="p-index_entry">
+	<div id="doc2">
+	    <div id="hd">
+	        <div class="nav-label">
+	            <ul class="nav">
+	                <li class="active"><a class="pr-link-a" href="/dict?q=">词典</a></li>
+	                <li><a href="/translate">翻译</a></li>
+	                <li><a href="/redirect?keyfrom=youdaowap.navigation&url=http%3a%2f%2fm.note.youdao.com%2fnoteproxy%2flogin%3fkeyfrom%3dhome.m">笔记</a></li>
+	            </ul>
+	        </div>
+	    </div>
+	    <div id="bd">
+	        <div class="logo">
+	            <a><img src="//shared.ydstatic.com/images/myth/images/logo.png"></a>
+	        </div>
+	        <div class="search-area">
+	            <form id="formSubmit" class="search-bar search-bar-larger" data-formposition="t" action="/dict" method="get" autocomplete="off">
+	                <a href="#" id="selectedLang" class="selectedLang"><span>中英</span></a>
+	                <input id="inputLang" type="hidden" name="le" value="eng" />
+	                <input id="formInput" type="text" name="q" class="form-control" value="">
+	                <span class="input-group-btn">
+	            <input class="btn" type="submit" value="">
+	        </span>
+	            </form>
+	            <ul class="lang-select-list" name="type">
+	                <li class data-value="eng">中英互译</li>
+	                <li class data-value="fr">中法互译</li>
+	                <li class data-value="jap">中日互译</li>
+	                <li class data-value="ko">中韩互译</li>
+	            </ul>
+	            <a id="clearInput" class="clearInput" href="#">清除</a>
+	        </div>
+	        <div class="other-links">
+	            <ul class="products-dl $DLclassName">
+	                <li><a target="_self" style="margin-left: -27px;" href="/redirect?keyfrom=youdaowap.index&url=http%3a%2f%2fcidian.youdao.com%2fm%2f"><img src="//shared.ydstatic.com/dict/youdaowap/icon/cidian34.png">有道词典</a></li>
+	                <li><a href="/redirect?keyfrom=youdaowap.index&url=http%3a%2f%2fm.note.youdao.com%2fnoteproxy%2flogin%3fkeyfrom%3dhome.m"><img src="//shared.ydstatic.com/dict/youdaowap/icon/note34.png">有道云笔记</a></li>
+	                <li><a href="/redirect?keyfrom=youdaowap.index&url=http%3a%2f%2fwww.huihui.cn%2fapps%2fdeals%2fm"><img src="//shared.ydstatic.com/dict/youdaowap/icon/huihui34.png">惠惠折扣日报</a></li>
+	                <li><a href="/redirect?keyfrom=youdaowap.index&url=http%3A%2F%2Ffanyiguan.youdao.com%2Fm%2F"><img src="//shared.ydstatic.com/dict/youdaowap/icon/fanyi34.png">有道翻译官</a></li>
+	            </ul>
+	        </div>
+	    </div>
+	    <div id="ft">
+	        <p class="copy"> <a href="/">有道首页</a>|<a href="/fankui">反馈意见</a>|
+	            <a href="http://dict.youdao.com/?mct=1">切换到PC版</a>
+	        </p>
+	        <p class="copy">&copy;2015&nbsp;公司&nbsp;京ICP证080268号</p>
+	    </div>
+	</div>
+	<script type="text/javascript" charset="utf-8" src="index.js"></script>
+	<script src="https://c.youdao.com/market/banner/banner-mod.js"></script>
+	<script src="https://c.youdao.com/market/new_banner.js"></script>
+	<script type="text/javascript">
+	document.addEventListener('DOMContentLoaded', function () {
+	    $('formSubmit').onsubmit = function (e){
+	        var query = $('formInput').value;
+	        if (trim(query) === '') {
+	            e.preventDefault();
+	        }
+	    };
+	}, false);
+	</script>
+</body>
+</html>
