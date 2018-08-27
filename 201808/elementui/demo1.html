@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+</head>
+
+<body>
+    <div id="app">
+        <el-container>
+            <el-header>
+            	<el-row>
+            	  <el-col :span="6"><div class="grid-content bg-purple">1</div></el-col>
+            	  <el-col :span="18"><div class="grid-content bg-purple-light">2</div></el-col>
+            	</el-row>
+            </el-header>
+            <el-container>
+                <el-aside>
+					<ul>
+						<li><a href="javascript:;" v-on:click="openInIframe('demo2.html')">1.</a></li>
+						<li><a href="javascript:;" v-on:click="openInIframe()">2.</a></li>
+						<li><a href="javascript:;" v-on:click="openInIframe()">3.</a></li>
+						<li><a href="javascript:;" v-on:click="openInIframe()">4.</a></li>
+						<li><a href="javascript:;" v-on:click="openInIframe()">5.</a></li>
+						<li><a href="javascript:;" v-on:click="openInIframe()">6.</a></li>
+						<li><a href="javascript:;" v-on:click="openInIframe()">7.</a></li>
+						<li><a href="javascript:;" v-on:click="openInIframe()">8.</a></li>
+					</ul>
+                </el-aside>
+                <el-container class="main-container">
+                    <el-main class="main-contarner-wrap">
+                    	<el-row>
+                    	  <el-col :span="24"><div class="grid-content bg-purple-dark"><iframe v-bind:src="url"></iframe></div></el-col>
+                    	</el-row>
+                    </el-main>
+                    <el-footer>Footer</el-footer>
+                </el-container>
+            </el-container>
+        </el-container>
+    </div>
+    <style>
+    .el-header,
+    .el-footer {
+        background-color: #B3C0D1;
+        color: #333;
+        text-align: center;
+        line-height: 60px;
+    }
+
+    .el-aside {
+        background-color: #D3DCE6;
+        color: #333;
+        text-align: center;
+        line-height: 200px;
+    }
+
+    .el-main {
+        background-color: #E9EEF3;
+        color: #333;
+        text-align: center;
+        line-height: 160px;
+    }
+
+    body>.el-container {
+        margin-bottom: 40px;
+    }
+
+    .el-container:nth-child(5) .el-aside,
+    .el-container:nth-child(6) .el-aside {
+        line-height: 260px;
+    }
+
+    .el-container:nth-child(7) .el-aside {
+        line-height: 320px;
+    }
+    .bg-purple{background:#25AB0A}
+    .bg-purple-light{background:#0A22AB}
+    .main-container{
+    	height: 100%;
+    }
+    .main-contarner-wrap{
+    	height: 100%;
+    }
+    .el-container iframe{width: 100%;height: 101%;border: 0;margin: 0;padding: 0;}
+    </style>
+    <!-- import Vue before Element -->
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <script type="text/javascript">
+    	new Vue({
+    		el: '#app',
+    		data() {
+    		    return {
+    		    	url:"demo3.html"
+    		    }
+    		},
+    		methods: {
+    		      openInIframe:function(url){
+    		      	this.url = url;
+    		      }
+    		    }
+    	});
+    </script>
+</body>
+
+</html>

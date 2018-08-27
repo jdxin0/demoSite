@@ -1,0 +1,237 @@
+:root:before{content: "author:lijanchan;design:zhoumeng;time:2017.9.13";display: none;}
+body,button,input,select,textarea{font: 12px/1.5 Arial, PingfangSC, "Microsoft YaHei", sans-serif;-webkit-font-smoothing:antialiased}
+ul,ol{list-style:none;}em,i{font-style:normal;}
+html{}
+body{margin:0;overflow-x:hidden;position: relative;}
+header,ol,ul,input{margin:0; padding:0;}
+dl,dd,h1,h2,h3,h4,h5,h6,p,form{margin:0;font-weight: normal;}
+img{border: 0;display: block;}
+table{ width:auto;border-collapse: collapse;border-spacing: 0;}
+a{text-decoration:none;outline:none;color:#333;}
+a,button,button:active,input{-webkit-tap-highlight-color: transparent;}
+input,textarea{outline: none;box-shadow: none;-webkit-border-radius: 0;border :0;-webkit-appearance: none;}
+mark{background-color:transparent;color:inherit;}
+strong,em,i{font-style: normal;}
+.hide_txt{text-indent: -9999em;font-size: 0;line-height: 0;}
+
+/*layout*/
+html{font-size: 9.25926vw;}
+
+.coupon_list li,.coupon_list li.over:after{background-image: url('../img/ic_spr.png');background-repeat: no-repeat;background-size: 10rem auto;}
+
+
+/*消息列表*/
+.message_empty{position: absolute;top: 1.02rem;left: 0;width: 100%;bottom: 0;border-top: .02rem solid #eaeaea;box-sizing: border-box;display: -webkit-box;-webkit-box-pack: center;-webkit-box-align: center;background: #fff;}
+.message_empty .txt_empty{font-size: .45rem;color: #656565;text-align: center;position: relative;top: -1.5rem;}
+.message_empty .txt_empty:before{content: "";display: block;width: 4.5rem;height: 4.5rem;margin: 0 auto .65rem;background: url('../img/ic_empty.png');background-size: 100% 100%;}
+/*消息列表 end*/
+
+.tab_box{padding: 0 .44rem;background: #fff;position: fixed;top: 0;left: 0;width: 100%;z-index: 10;box-sizing: border-box;}
+.tab_box nav{display: -webkit-box;-webkit-box-pack: center;width: 100%;}
+.tab_box nav a{display: block;width: 33.33%;text-align: center;}
+.tab_box a span{display: inline-block;box-sizing: border-box;font-size: .39rem;line-height: 1.02rem;color: #5a6473;height: 1.02rem;}
+.tab_box a.cur span{border-bottom: .06rem solid #0097ff;}
+
+
+/*优惠券*/
+.coupon_panel{position: relative;background: #eaeaea;min-height: 100vh;padding: 1.42rem 0 .6rem;box-sizing: border-box;}
+.coupon_list{}
+.coupon_list li{width: 9.89rem;height: 2.87rem;margin: 0 auto .35rem;-webkit-border-radius: .08rem;position: relative;}
+.coupon_list .price_box{position: absolute;top: 0;left: 0;width: 3.3rem;height: 100%;display: -webkit-box;-webkit-box-pack: center;-webkit-box-align: center;text-align: center;}
+.coupon_list .txt_ps{font-size: .3rem;}
+.coupon_list .txt_box{position: relative;z-index: 3;padding-left: 3.8rem;height: 100%;display: -webkit-box;-webkit-box-align: center;-webkit-box-pack: start;}
+.coupon_list .txt_coupon{font-size: .45rem;color: #111;line-height: .73rem;}
+.coupon_list .txt_coupon em{color: #f94d4d;}
+.coupon_list .txt_coupon .sm{font-size: .24rem;line-height: .24rem;}
+.coupon_list .txt_time{font-size: .36rem;color: #959595;line-height: .64rem;}
+.coupon_list .txt_limit{font-size: .3rem;color: #959595;}
+.coupon_list .txt_code{font-size: .36rem;color: #959595;line-height: .52rem;}
+.coupon_list .btn_box{position: absolute;top: 0;right: 0;width: 1.2rem;height: 100%;border-left: 1px dashed #cfcfcf;z-index: 4;}
+.coupon_list .btn_box a{display: -webkit-box;height: 100%;text-align: center;color: #ff1e32;-webkit-box-pack: center;-webkit-box-align: center;}
+.coupon_list .btn_box a span{display: block;font-size: .33rem;line-height: .38rem;}
+
+.coupon_list li.flow{background-position: 0 0;}
+.coupon_list li.flow.used,.coupon_list li.flow.over{background-position: 0 -3rem;}
+.coupon_list li.flow .price_box{color: #fff;}
+.coupon_list li.flow .txt_num{font-size: .9rem;line-height: 1rem;}
+
+.coupon_list li.super{background-position: 0 -36rem;}
+.coupon_list li.super.used,.coupon_list li.super.over{background-position: 0 -39rem;}
+.coupon_list li.super .price_box{color: #333;}
+.coupon_list li.super .txt_num{font-size: .42rem;line-height: .62rem;}
+.coupon_list li.super .txt_num em{font-size: 1.26rem;}
+
+.coupon_list li.vip{background-position: 0 -30rem;}
+.coupon_list li.vip.used,.coupon_list li.vip.over{background-position: 0 -33rem;}
+.coupon_list li.vip .price_box{color: #333;}
+.coupon_list li.vip .txt_num{font-size: .42rem;line-height: .62rem;}
+.coupon_list li.vip .txt_num em{font-size: 1.26rem;}
+
+.coupon_list li.gold{background-position: 0 -18rem;}
+.coupon_list li.gold.used,.coupon_list li.gold.over{background-position: 0 -21rem;}
+.coupon_list li.gold .price_box{display: none;}
+
+.coupon_list li.pos{background-position: 0 -24rem;}
+.coupon_list li.pos .price_box{display: none;}
+
+.coupon_list li.jp{background-position: 0 -42rem;}
+.coupon_list li.jp .price_box{display: none;}
+.coupon_list li.jp .btn_box a{width: 9.89rem;-webkit-box-pack: end;position: absolute;top: 0;right: 0;}
+.coupon_list li.jp .btn_box a span{width: 1.2rem;}
+
+.coupon_list li.used .price_box,.coupon_list li.over .price_box{color: #adadad;}
+.coupon_list li.used .txt_coupon,.coupon_list li.over .txt_coupon,.coupon_list li.used .txt_time,.coupon_list li.over .txt_time,.coupon_list li.used .txt_limit,.coupon_list li.over .txt_limit,.coupon_list li.used .txt_code,.coupon_list li.over .txt_code{color: #adadad;}
+.coupon_list li.used .btn_box a{color: #adadad;}
+.coupon_list li.over .btn_box{display: none;}
+.coupon_list li.over:after{content: "";position: absolute;right: 0;bottom: 0;background-position: 0 -27rem;width: 1.9rem;height: 1.89rem;}
+
+.coupon_list li.gold.used .txt_coupon,.coupon_list li.gold.over .txt_coupon{color: #111;}
+.coupon_list li.gold.over .btn_box{display: block;}
+.coupon_list li.gold.used .btn_box a,.coupon_list li.gold.over .btn_box a{color: #0f97ff;}
+.coupon_list li.gold.over:after{right: 1.2rem;margin-right: 1px;}
+
+.coupon_list li.exchange{background-position: 0 -12rem;}
+.coupon_list li.exchange.over{background-position: 0 -15rem;}
+.coupon_list li.exchange.super{background-position: 0 -6rem;}
+.coupon_list li.exchange.super.over{background-position: 0 -9rem;}
+
+.coupon_list li.exchange .txt_num{line-height: 1.26rem;font-size: .42rem;color: #d08a2e;}
+.coupon_list li.exchange .txt_num em{font-size: 1.26rem;}
+.coupon_list li.exchange.super .txt_num{color: #edcd7f;}
+.coupon_list li.exchange.over .txt_num{color: #adadad;}
+
+.bottom_line{text-align: center;display: none;color: #8d8d8d;}
+/*优惠券 end*/
+
+/*弹窗*/
+
+.cpop_wp{position: fixed;top: 0;left: 0;z-index: 99;width: 100%;height: 100%;background: rgba(0,0,0,.5);}
+.cpop_area{position: absolute;top: 0;left: 0;width: 100%;height: 100%;display: -webkit-box;-webkit-box-pack:center;-webkit-box-align:center;}
+.p_b_close{position: absolute;width: .5rem;height: .5rem;top: .15rem;right: .15rem;font-size: 0;line-height: 0;}
+.p_b_close:before,.p_b_close:after{content: "";position: absolute;width: .5rem;height: 2px;background: #b1b1b1;top: 50%;left: 0;margin-top: -1px;}
+.p_b_close:before{transform: rotate(45deg);-webkit-transform: rotate(45deg);}
+.p_b_close:after{transform: rotate(-45deg);-webkit-transform: rotate(-45deg);}
+
+.cpop_flow{position: relative;width: 9rem;background: #fff;padding: .45rem 0 .6rem;}
+.cpop_flow .pf_cont{padding: 0 .6rem;}
+.cpop_flow .pf_hd{text-align: center;font-size: .48rem;font-weight: bold;color: #383838;}
+.cpop_flow .pf_input{margin-top: .28rem;}
+.cpop_flow .pf_input label{font-size: .35rem;line-height: .5rem;color: #383838;margin-bottom: .05rem;display: block;}
+.cpop_flow .pf_input input{display: block;width: 100%;position: relative;box-sizing: border-box;border: 1px solid #dbdbdb;font-size: .43rem;line-height: 1.27rem;height: 1.29rem;-webkit-border-radius: .06rem;color: #383838;text-indent: .3rem;outline: none;margin-top: .22rem;}
+.cpop_flow .txt_price{font-size: .52rem;line-height: .67rem;color: #333;}
+.cpop_flow .txt_price em{color: #ff5656;}
+.cpop_flow .txt_price .down{font-size: .32rem;color: #999;padding-left: .32rem;}
+.cpop_flow .pf_btns{display: -webkit-box;-webkit-box-pack: justify;margin-top: .5rem;}
+.cpop_flow .pf_btns a{display: block;width: 3.58rem;font-size: .46rem;color: #f3d08c;line-height: 1rem;-webkit-border-radius: 1rem;background: #333;text-align: center;}
+.cpop_flow .pf_rule{margin-top: .5rem;border-top: 1px dashed #dcdcdc;padding-top: .3rem;}
+.cpop_flow .txt_rule{text-align: center;font-size: .4rem;color: #383838;}
+.cpop_flow .pf_list{font-size: .35rem;line-height: .61rem;color: #808080;margin-top: .2rem;}
+.cpop_flow.tips .pf_cont{padding: .4rem .6rem;}
+.cpop_flow .pf_tip{text-align: center;font-size: .44rem;line-height: .8rem;}
+.cpop_flow .pf_btns .btn_fcancel{box-sizing: border-box;border: 1px solid #d6d6d6;background: transparent;color: #383838;}
+.cpop_flow .txt_timer{font-size: .42rem;text-align: center;}
+.cpop_flow .txt_timer span{color: #ff5656;}
+/*弹窗 end*/
+
+
+/*load*/
+.load_panel{position: relative;display: -webkit-box;-webkit-box-pack: center;-webkit-box-align: center;height: 100vh;background: #eaeaea;}
+
+.load_box{position: relative;width: 100%;padding-top: 10px;text-align: center;font-size: .4rem;color:#8b8b8b;line-height: 2;-webkit-transition: transform .3s;}
+.ico_load{position: relative;display: block;width: 2px;height: 6px;background-color: rgba(139,139,139,1); box-shadow: 0 18px 0 0 rgba(139,139,139,0.3);border-radius: 3px;-webkit-border-radius: 3px;margin: 3px auto 24px;-webkit-animation: typing1 1.5s linear infinite both;}
+.ico_load:before,.ico_load:after{content: "";}
+.ico_load .il_1,.ico_load .il_2,.ico_load .il_3,.ico_load:before,.ico_load:after{position: absolute;width: 2px;height: 6px;background-color: rgba(139,139,139,0.3); box-shadow: 0 18px 0 0 rgba(139,139,139,0.3);border-radius: 3px;top: 0;left: 0;-webkit-transform-origin:center 12px;}
+
+.ico_load .il_1{-webkit-transform:rotate(-30deg);-webkit-animation: typing2 1.5s linear infinite both;}
+.ico_load .il_2{-webkit-transform:rotate(-60deg);-webkit-animation: typing3 1.5s linear infinite both;}
+.ico_load .il_3{-webkit-transform:rotate(-90deg);-webkit-animation: typing4 1.5s linear infinite both;}
+.ico_load:before{-webkit-transform:rotate(-120deg);-webkit-animation: typing5 1.5s linear infinite both;}
+.ico_load:after{-webkit-transform:rotate(-150deg);-webkit-animation: typing6 1.5s linear infinite both;}
+@-webkit-keyframes typing1{
+    0%,100%{background-color: rgba(139,139,139,1);box-shadow: 0 18px 0 0 rgba(139,139,139,.4);}
+    8.3%{background-color: rgba(139,139,139,.9);box-shadow: 0 18px 0 0 rgba(139,139,139,.4);}
+    16.6%{background-color: rgba(139,139,139,.8);box-shadow: 0 18px 0 0 rgba(139,139,139,.4);}
+    24.9%{background-color: rgba(139,139,139,.7);box-shadow: 0 18px 0 0 rgba(139,139,139,.4);}
+    33.3%{background-color: rgba(139,139,139,.6);box-shadow: 0 18px 0 0 rgba(139,139,139,.4);}
+    41.5%{background-color: rgba(139,139,139,.5);box-shadow: 0 18px 0 0 rgba(139,139,139,.4);}
+    49.8%{background-color: rgba(139,139,139,.4);box-shadow: 0 18px 0 0 rgba(139,139,139,1);}
+    58.1%{background-color: rgba(139,139,139,.4);box-shadow: 0 18px 0 0 rgba(139,139,139,.9);}
+    66.4%{background-color: rgba(139,139,139,.4);box-shadow: 0 18px 0 0 rgba(139,139,139,.8);}
+    74.7%{background-color: rgba(139,139,139,.4);box-shadow: 0 18px 0 0 rgba(139,139,139,.7);}
+    83%{background-color: rgba(139,139,139,.4);box-shadow: 0 18px 0 0 rgba(139,139,139,.6);}
+    91.3%{background-color: rgba(139,139,139,.4);box-shadow: 0 18px 0 0 rgba(139,139,139,.5);}
+}
+@-webkit-keyframes typing2{
+    0%,100%{background-color: rgba(139,139,139,.9);box-shadow: 0 18px 0 0 rgba(139,139,139,.4);}
+    8.3%{background-color: rgba(139,139,139,.8);box-shadow: 0 18px 0 0 rgba(139,139,139,.4);}
+    16.6%{background-color: rgba(139,139,139,.7);box-shadow: 0 18px 0 0 rgba(139,139,139,.4);}
+    24.9%{background-color: rgba(139,139,139,.6);box-shadow: 0 18px 0 0 rgba(139,139,139,.4);}
+    33.3%{background-color: rgba(139,139,139,.5);box-shadow: 0 18px 0 0 rgba(139,139,139,.4);}
+    41.5%{background-color: rgba(139,139,139,.4);box-shadow: 0 18px 0 0 rgba(139,139,139,.1);}
+    49.8%{background-color: rgba(139,139,139,.4);box-shadow: 0 18px 0 0 rgba(139,139,139,.9);}
+    58.1%{background-color: rgba(139,139,139,.4);box-shadow: 0 18px 0 0 rgba(139,139,139,.8);}
+    66.4%{background-color: rgba(139,139,139,.4);box-shadow: 0 18px 0 0 rgba(139,139,139,.7);}
+    74.7%{background-color: rgba(139,139,139,.4);box-shadow: 0 18px 0 0 rgba(139,139,139,.6);}
+    83%{background-color: rgba(139,139,139,.4);box-shadow: 0 18px 0 0 rgba(139,139,139,.5);}
+    91.3%{background-color: rgba(139,139,139,1);box-shadow: 0 18px 0 0 rgba(139,139,139,.4);}
+}
+@-webkit-keyframes typing3{
+    0%,100%{background-color: rgba(139,139,139,.8);box-shadow: 0 18px 0 0 rgba(139,139,139,.4);}
+    8.3%{background-color: rgba(139,139,139,.7);box-shadow: 0 18px 0 0 rgba(139,139,139,.4);}
+    16.6%{background-color: rgba(139,139,139,.6);box-shadow: 0 18px 0 0 rgba(139,139,139,.4);}
+    24.9%{background-color: rgba(139,139,139,.5);box-shadow: 0 18px 0 0 rgba(139,139,139,.4);}
+    33.3%{background-color: rgba(139,139,139,.4);box-shadow: 0 18px 0 0 rgba(139,139,139,1);}
+    41.5%{background-color: rgba(139,139,139,.4);box-shadow: 0 18px 0 0 rgba(139,139,139,.9);}
+    49.8%{background-color: rgba(139,139,139,.4);box-shadow: 0 18px 0 0 rgba(139,139,139,.8);}
+    58.1%{background-color: rgba(139,139,139,.4);box-shadow: 0 18px 0 0 rgba(139,139,139,.7);}
+    66.4%{background-color: rgba(139,139,139,.4);box-shadow: 0 18px 0 0 rgba(139,139,139,.6);}
+    74.7%{background-color: rgba(139,139,139,.4);box-shadow: 0 18px 0 0 rgba(139,139,139,.5);}
+    83%{background-color: rgba(139,139,139,1);box-shadow: 0 18px 0 0 rgba(139,139,139,.4);}
+    91.3%{background-color: rgba(139,139,139,.9);box-shadow: 0 18px 0 0 rgba(139,139,139,.4);}
+}
+@-webkit-keyframes typing4{
+    0%,100%{background-color: rgba(139,139,139,.7);box-shadow: 0 18px 0 0 rgba(139,139,139,.4);}
+    8.3%{background-color: rgba(139,139,139,.6);box-shadow: 0 18px 0 0 rgba(139,139,139,.4);}
+    16.6%{background-color: rgba(139,139,139,.5);box-shadow: 0 18px 0 0 rgba(139,139,139,.4);}
+    24.9%{background-color: rgba(139,139,139,.4);box-shadow: 0 18px 0 0 rgba(139,139,139,1);}
+    33.3%{background-color: rgba(139,139,139,.4);box-shadow: 0 18px 0 0 rgba(139,139,139,.9);}
+    41.5%{background-color: rgba(139,139,139,.4);box-shadow: 0 18px 0 0 rgba(139,139,139,.8);}
+    49.8%{background-color: rgba(139,139,139,.4);box-shadow: 0 18px 0 0 rgba(139,139,139,.7);}
+    58.1%{background-color: rgba(139,139,139,.4);box-shadow: 0 18px 0 0 rgba(139,139,139,.6);}
+    66.4%{background-color: rgba(139,139,139,.4);box-shadow: 0 18px 0 0 rgba(139,139,139,.5);}
+    74.7%{background-color: rgba(139,139,139,1);box-shadow: 0 18px 0 0 rgba(139,139,139,.4);}
+    83%{background-color: rgba(139,139,139,.9);box-shadow: 0 18px 0 0 rgba(139,139,139,.4);}
+    91.3%{background-color: rgba(139,139,139,.8);box-shadow: 0 18px 0 0 rgba(139,139,139,.4);}
+}
+@-webkit-keyframes typing5{
+    0%,100%{background-color: rgba(139,139,139,.6);box-shadow: 0 18px 0 0 rgba(139,139,139,.4);}
+    8.3%{background-color: rgba(139,139,139,.5);box-shadow: 0 18px 0 0 rgba(139,139,139,.4);}
+    16.6%{background-color: rgba(139,139,139,.4);box-shadow: 0 18px 0 0 rgba(139,139,139,1);}
+    24.9%{background-color: rgba(139,139,139,.4);box-shadow: 0 18px 0 0 rgba(139,139,139,.9);}
+    33.3%{background-color: rgba(139,139,139,.4);box-shadow: 0 18px 0 0 rgba(139,139,139,.8);}
+    41.5%{background-color: rgba(139,139,139,.4);box-shadow: 0 18px 0 0 rgba(139,139,139,.7);}
+    49.8%{background-color: rgba(139,139,139,.4);box-shadow: 0 18px 0 0 rgba(139,139,139,.6);}
+    58.1%{background-color: rgba(139,139,139,.4);box-shadow: 0 18px 0 0 rgba(139,139,139,.5);}
+    66.4%{background-color: rgba(139,139,139,1);box-shadow: 0 18px 0 0 rgba(139,139,139,.4);}
+    74.7%{background-color: rgba(139,139,139,.9);box-shadow: 0 18px 0 0 rgba(139,139,139,.4);}
+    83%{background-color: rgba(139,139,139,.8);box-shadow: 0 18px 0 0 rgba(139,139,139,.4);}
+    91.3%{background-color: rgba(139,139,139,.7);box-shadow: 0 18px 0 0 rgba(139,139,139,.4);}
+}
+@-webkit-keyframes typing6{
+    0%,100%{background-color: rgba(139,139,139,.5);box-shadow: 0 18px 0 0 rgba(139,139,139,.4);}
+    8.3%{background-color: rgba(139,139,139,.4);box-shadow: 0 18px 0 0 rgba(139,139,139,1);}
+    16.6%{background-color: rgba(139,139,139,.4);box-shadow: 0 18px 0 0 rgba(139,139,139,.9);}
+    24.9%{background-color: rgba(139,139,139,.4);box-shadow: 0 18px 0 0 rgba(139,139,139,.8);}
+    33.3%{background-color: rgba(139,139,139,.4);box-shadow: 0 18px 0 0 rgba(139,139,139,.7);}
+    41.5%{background-color: rgba(139,139,139,.4);box-shadow: 0 18px 0 0 rgba(139,139,139,.6);}
+    49.8%{background-color: rgba(139,139,139,.4);box-shadow: 0 18px 0 0 rgba(139,139,139,.5);}
+    58.1%{background-color: rgba(139,139,139,1);box-shadow: 0 18px 0 0 rgba(139,139,139,.4);}
+    66.4%{background-color: rgba(139,139,139,.9);box-shadow: 0 18px 0 0 rgba(139,139,139,.4);}
+    74.7%{background-color: rgba(139,139,139,.8);box-shadow: 0 18px 0 0 rgba(139,139,139,.4);}
+    83%{background-color: rgba(139,139,139,.7);box-shadow: 0 18px 0 0 rgba(139,139,139,.4);}
+    91.3%{background-color: rgba(139,139,139,.6);box-shadow: 0 18px 0 0 rgba(139,139,139,.4);}
+}
+
+/*load end*/
+
+

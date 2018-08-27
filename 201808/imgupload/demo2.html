@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form action="<%=path %>/fileUpload" method="post" enctype="multipart/form-data">
+	    文件:
+	    <input type="file" name="file">
+	    姓名:
+	    <input name="name" />
+	    <input type="hidden" name="add" value="深圳"/>
+	    <input type="submit">
+	   </form>
+</body>
+</html>
