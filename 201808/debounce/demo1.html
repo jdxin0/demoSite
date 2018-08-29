@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Debounce</title>
+    <script src="https://cdn.bootcss.com/underscore.js/1.9.0/underscore.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.12.4/jquery.js"></script>
+</head>
+
+<body>
+    <div>Underscore Debounce</div>
+    Debounce输入框：<input id="inputBox" type="text" name="name"><br>
+    普通输入框：<input id="putongInput" type="text" name="name">
+    <script type="text/javascript">
+    // `_.debounce` 是一个通过 underscore 限制操作频率的函数。
+    // `_.debounce` 函数 (及其近亲 `_.throttle`) 的知识，
+    // 请参考：https://lodash.com/docs#debounce
+    var dePrintInput = _.debounce(printInput, 500)
+    $(document).on("keyup", "#inputBox", dePrintInput);
+    $(document).on("keyup", "#putongInput", putongInput);
+    function printInput() {
+        console.log($("#inputBox").val());
+    }
+    function putongInput() {
+        console.log($("#putongInput").val());
+    }
+    </script>
+</body>
+
+</html>

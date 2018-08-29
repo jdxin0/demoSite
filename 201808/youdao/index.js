@@ -259,7 +259,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 suggestId: "suggest",
                 data: function(e, t) {
                     a = "" == $("inputLang").value ? "eng" : $("inputLang").value;
-                    var n = "http://www.holdon.ltd/api/suggest?type=DESKDICT&num=4&q=" + e + "&ver=2.0&le=" + a
+                    var n = "http://www.yanhu.com/api/suggest?type=DESKDICT&num=4&q=" + e + "&ver=2.0&le=" + a
                       , o = new XMLHttpRequest;
                     o.onreadystatechange = function() {
                         if (4 == o.readyState) {

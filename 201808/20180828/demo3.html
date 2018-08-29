@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.12.4/jquery.js"></script>
+</head>
+
+<body>
+    <div>Bootcdn-jQuery</div>
+    <button id="btn">I'm A Button</button>
+    <script type="text/javascript">
+    var app = {
+        init: function() {
+            this.events();
+            this.getData();
+        },
+        data: {
+            a: 1,
+            b: 2
+        },
+        events: function() {
+            $("#btn").click($.proxy(function() {
+                console.log(this.data.a);
+            }, this));
+        },
+        getData:function(){
+        	$.ajax({
+        		url:"./demo3.json",
+        		data:{},
+        		dataType:"json",
+        		success:$.proxy(function(rs){
+        			console.log(this);
+        		},this),
+        		error:function(){}
+        	});
+        }
+    }
+    app.init();
+    </script>
+</body>
+
+</html>
