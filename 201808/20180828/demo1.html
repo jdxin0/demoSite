@@ -10,13 +10,23 @@
 <body>
     <div id="app">
         <ol>
-            <todo-item v-for="item in groceryList" v-bind:todo="item" v-bind:key="item.id+1"></todo-item>
+            <todo-item  v-for="item in groceryList" 
+            			v-bind:todo="item" 
+            			v-bind:key="item.id+1"
+            			v-on:cz2-parent="chuliValueFromChild"
+            			>
+            </todo-item>
         </ol>
     </div>
     <script type="text/javascript">
-    Vue.component("todo-item", {
+    Vue.component("TodoItem", {
         props: ['todo'],
-        template: '<li>{{todo.text}}</li>'
+        template: '<li v-on:click="cz2Parent">{{todo.text}}</li>',
+        methods:{
+        	cz2Parent:function(id){
+        		this.$emit('cz2-parent',this.todo.id)
+        	}
+        }
     });
     var app = new Vue({
         el: '#app',
@@ -28,7 +38,9 @@
             ]
         },
         methods: {
-
+        	chuliValueFromChild:function(){
+        		console.log(arguments);
+        	}
         }
     })
     </script>
