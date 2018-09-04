@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="/js/vue-2.5.17.js"></script>
+</head>
+<body>
+	<div id="app">
+		<template v-if="show">姓名：<span style="color: #ccc">1</span></template>
+		<template v-else>邮箱：<span style="color: #ddd">1</span></template>
+	</div>
+	<script type="text/javascript">
+		var app = new Vue({
+			el:"#app",
+			data:{
+				show:true
+			}
+		});
+	</script>
+</body>
+</html>

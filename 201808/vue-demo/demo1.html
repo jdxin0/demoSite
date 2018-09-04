@@ -4,17 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="/js/vue-2.5.17.js"></script>
 </head>
 
 <body>
     <div id="app">
         <ol>
-            <todo-item  v-for="item in groceryList" 
+            <todo-item 	v-for="item in groceryList" 
             			v-bind:todo="item" 
-            			v-bind:key="item.id+1"
-            			v-on:cz2-parent="chuliValueFromChild"
-            			>
+            			v-bind:key="item.id+1" 
+            			v-on:get-data-from-todoitem="chuliValueFromChild">
             </todo-item>
         </ol>
     </div>
@@ -22,10 +21,10 @@
     Vue.component("TodoItem", {
         props: ['todo'],
         template: '<li v-on:click="cz2Parent">{{todo.text}}</li>',
-        methods:{
-        	cz2Parent:function(id){
-        		this.$emit('cz2-parent',this.todo.id)
-        	}
+        methods: {
+            cz2Parent: function() {
+                this.$emit('get-data-from-todoitem', this.todo.id)
+            }
         }
     });
     var app = new Vue({
@@ -38,9 +37,9 @@
             ]
         },
         methods: {
-        	chuliValueFromChild:function(){
-        		console.log(arguments);
-        	}
+            chuliValueFromChild: function(msg) {
+                
+            }
         }
     })
     </script>

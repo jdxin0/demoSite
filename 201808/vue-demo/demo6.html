@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>用 key 管理可复用的元素</title>
+	<script type="text/javascript" src="/js/vue-2.5.17.js"></script>
+</head>
+<body>
+	<div id="app">
+		<template v-if="loginType === 'username'">
+		  <label  key="username-input">Username</label>
+		  <input placeholder="Enter your username">
+		</template>
+		<template v-else>
+		  <label  key="email-input">Email</label>
+		  <input placeholder="Enter your email address">
+		</template>
+		<br>
+		<button v-on:click="loginType = loginType=='username'?'email':'username'">Toggle login type</button>
+	</div>
+	<script type="text/javascript">
+		var app = new Vue({
+			data:{
+				loginType:"username"
+			},
+			beforeCreate:function(){
+				console.log("beforeCreated");
+			},
+			created:function(){
+				console.log("created");
+			},
+			beforeMount:function(){
+				console.log(this.$el);
+				console.log("beforeMount");
+			},
+			mounted:function(){
+				this.a=3;
+				console.log(this.$el);
+				console.log("mounted");
+			},
+			beforeUpdate:function(){
+				console.log("beforeUpdate");
+			},
+			updated:function(){
+				console.log("updated");
+				// this.$destroy();
+			},
+			beforeDestroy:function(){
+				console.log("beforeDestroy");
+			},
+			destroyed:function(){
+				console.log("destroyed");
+			}
+		}).$mount("#app");
+	</script>
+</body>
+</html>

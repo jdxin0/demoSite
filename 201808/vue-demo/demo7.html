@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>v-for  Array</title>
+	<script type="text/javascript" src="/js/vue-2.5.17.js"></script>
+</head>
+<body>
+	<div id="app">
+		<ul>
+			<li v-for="(item, index) of forLists" v-bind:title="item" is="liTag"></li>
+		</ul>
+		<ul>
+			<li v-for="(item,index) of forLists" v-if="index%2">{{item}}</li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+		Vue.component("liTag",{
+			props:['title'],
+			template:"<li>{{title}}</li>"
+		});
+		var app = new Vue({
+			el:"#app",
+			data:{
+				forLists:['push','pop','shift','unshift','splice','sort','reverse']
+			}
+		});
+	</script>
+</body>
+</html>
