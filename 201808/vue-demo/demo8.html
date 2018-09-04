@@ -6,6 +6,19 @@
 	<script type="text/javascript" src="/js/vue-2.5.17.js"></script>
 </head>
 <body>
-	
+	<div id="app">
+		<button v-on:click="buttonClickHandler">click me!</button>
+	</div>
+	<script type="text/javascript">
+		var app = new Vue({
+			el:"#app",
+			data:{},
+			methods:{
+				buttonClickHandler:function(msg,events){
+					console.log(msg,events);
+				}
+			}
+		});
+	</script>
 </body>
 </html>
