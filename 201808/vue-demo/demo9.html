@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="/js/vue-2.5.17.js"></script>
+</head>
+<body>
+	<div id="app">
+		<div>
+			<App num="10,11,12"/>456
+			<App num="10,11,12"/>999
+		</div>
+		<button v-on:click="handleBtnClick('hello',$event)">button</button>
+	</div>
+	<script type="text/javascript">
+		Vue.component("App",{
+			props:['num'],
+			template:'<p><span>123，<slot></slot>，</span><span>789</span><span>,{{num}}</span></p>'
+		});
+		var app = new Vue({
+			el:"#app",
+			data:{
+				xb:"男",
+				age:"20",
+				sj:"15927572994"
+			},
+			methods:{
+				handleBtnClick:function(msg){
+					console.log(msg);
+				}
+			},
+			template:"<App num='10'>456</App>"
+		});
+	</script>
+</body>
+</html>
