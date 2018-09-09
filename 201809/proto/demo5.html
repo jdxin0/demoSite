@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function isLoadedObjV(){
+			var obj={};
+			return function(num){
+				if (obj[num]) {
+					console.log(true);
+				}else{
+					console.log(false);
+					obj[num]=num;
+				}
+			}
+		}
+		function isLoadedArrV(){
+			var arr=[];
+			return function(num){
+				if (-1!==arr.indexOf(num)) {
+					console.log(true);
+				}else{
+					console.log(false);
+					arr.push(num);
+				}
+			}
+		}
+	</script>
+</body>
+</html>

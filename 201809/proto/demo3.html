@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="app"></div>
+	<script type="text/javascript">
+		for(var num=0;num<10;num++){
+			var a = document.createElement("a");
+			a.setAttribute("href","javascript:;")
+			a.innerHTML= num;
+			app.appendChild(a);
+			app.appendChild(document.createElement("br"));
+			(function(n){
+				a.addEventListener("click",function(){
+					// console.log(this.innerHTML);
+					console.log(n);
+				});
+			})(num);
+		}
+	</script>
+</body>
+</html>

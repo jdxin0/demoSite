@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.1/jquery.js"></script>
+</head>
+<body>
+	<ul>
+		<li><a href="demo1.html">1. This is link 1</a></li>
+		<li><a href="demo2.html">2. This is link 2</a></li>
+		<li><a href="demo3.html">3. This is link 3</a></li>
+		<li><a href="demo4.html">4. This is link 4</a></li>
+		<li><a href="demo5.html">5. This is link 5</a></li>
+		<li><a href="demo6.html">6. This is link 6</a></li>
+	</ul>
+	<script type="text/javascript">
+		function Link(){
+			this.$elem = $("a");
+		}
+		Link.prototype.linksRed = function(){
+			var $elme = this.$elem;
+			$elme.css("color","red");
+			return this;
+		}
+		Link.prototype.showLink = function(){
+			var $elem = this.$elem;
+			$elem.each(function(index){
+				$(this).append($(this).attr("href"));
+			});
+		}
+		var links = new Link();
+	</script>
+</body>
+</html>

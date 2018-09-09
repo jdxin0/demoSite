@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="app">Hello Prototype</div>
+	<script type="text/javascript">
+		function Elem(id){
+			this.elem = document.getElementById(id);
+		}
+
+		Elem.prototype.html = function(val){
+			var elem = this.elem;
+			if (val) {
+				elem.innerHTML = val;
+				return this;
+			}else{
+				return elem.innerHTML;
+			}
+		}
+		
+		Elem.prototype.on = function(type, fn){
+			var elem = this.elem;
+			elem.addEventListener(type,fn);
+			return this;
+		}
+		var app = new Elem("app");
+	</script>
+</body>
+</html>

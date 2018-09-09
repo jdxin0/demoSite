@@ -18,5 +18,7 @@
     "url": "https://github.com/luojianet/demoSite/issues"
   },
   "homepage": "https://github.com/luojianet/demoSite#readme",
-  "dependencies": {}
+  "dependencies": {
+    "element-ui": "^2.4.6"
+  }
 }
