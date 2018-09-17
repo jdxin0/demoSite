@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>v-on:click</title>
+    <script src="/js/vue-2.5.17.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <button v-on:click="fn1();fn2()">btn</button>
+    </div>
+    <script type="text/javascript">
+    var app = new Vue({
+        el: "#app",
+        methods: {
+            fn1: function() {
+                console.log(1);
+            },
+            fn2: function() {
+                console.log(2);
+            }
+        }
+    });
+    </script>
+</body>
+
+</html>

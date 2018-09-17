@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>VueRouter-全局组件</title>
+    <script src="/js/vue-2.5.17.js"></script>
+    <script src="/js/vue-router-3.0.1.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <ul>
+            <li>
+                <router-link to="/user/foo">/user/foo</router-link>
+            </li>
+            <li>
+                <router-link to="/user/bar">/user/bar</router-link>
+            </li>
+            <li>
+                <router-link to="/user/zs">/user/zs</router-link>
+            </li>
+            <li>
+                <router-link to="/user/ls">/user/ls</router-link>
+            </li>
+            <li>
+                <router-link to="/user/ls/test/blue">/user/ls</router-link>
+            </li>
+        </ul>
+        <router-view></router-view>
+    </div>
+    <script type="text/javascript">
+    const UserP1 = {
+        template: `<div>User {{ $route.params.p1 }}</div>`,
+        watch: {
+            '$route' (to, from) {
+                console.log(from.path, to.path);
+            }
+        }
+    }
+    const UserP2 = {
+        template: `<div>User {{ $route.params.p1 }}-{{ $route.params.p2 }}</div>`
+    }
+
+    const router = new VueRouter({
+        routes: [
+            { 
+            	path: '/user/:p1', 
+            	name: 'p1',
+            	component: UserP1 
+            },
+            { 
+            	path: '/user/:p1/test/:p2', 
+            	name: 'p2',
+            	component: UserP2 
+            }
+        ]
+    })
+
+    const app = new Vue({ router }).$mount('#app')
+    </script>
+</body>
+
+</html>

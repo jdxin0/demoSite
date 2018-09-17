@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vue Router Demo2</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <ul>
+            <li>
+                <router-link to="/foo">go to foo</router-link>
+            </li>
+            <li>
+                <router-link to="/bar">go to bar</router-link>
+            </li>
+        </ul>
+        <router-view></router-view>
+    </div>
+    <script type="text/javascript">
+    Vue.use(VueRouter);
+    var Foo = {
+        template: "<span>Foo</span>"
+    }
+    var Bar = {
+        template: "<span>Bar</span>"
+    }
+
+    var router = new VueRouter({
+        routes: [{
+            path: "/foo",
+            component: Foo
+        }, {
+            path: "/bar",
+            component: Bar
+        }]
+    });
+    var app = new Vue({
+        el: "#app",
+        router: router
+    });
+    </script>
+</body>
+
+</html>
