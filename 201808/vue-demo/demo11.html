@@ -7,14 +7,19 @@
 </head>
 <body>
 	<div id="app">
-		<div v-bind:class="['a','b',{c:show},classD]"></div>
+		<home-header></home-header>
 	</div>
 	<script type="text/javascript">
+		var HomeHeader = {
+			template:"<h1>Header</h1>"
+		};
 		var app = new Vue({
 			el:"#app",
 			data:{
-				show:true,
-				classD:'d'
+				show:true
+			},
+			components:{
+				HomeHeader
 			}
 		});
 	</script>
