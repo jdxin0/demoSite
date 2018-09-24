@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/luojianet/demoSite#readme",
   "dependencies": {
-    "element-ui": "^2.4.6"
+    "body-parser": "^1.18.3",
+    "element-ui": "^2.4.6",
+    "express": "^4.16.3"
   }
 }
