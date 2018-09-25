@@ -1,12 +1,12 @@
 <template>
-  <div class="first-num-one">
-    <h1>First Page:component1</h1>
+  <div class="second-num-two">
+    <h1>Second Page:component2</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'FirstNumOne'
+  name: 'SecondNumTwo'
 }
 </script>
 
@@ -14,7 +14,8 @@ export default {
     h1{
         font-size: 20px;
     }
-    .first-num-one{
+    .second-num-two{
+        margin-top: 10px;
         border: 1px solid #ddd;
     }
 </style>

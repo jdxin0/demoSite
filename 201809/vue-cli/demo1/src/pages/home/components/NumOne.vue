@@ -1,12 +1,12 @@
 <template>
-  <div class="first-num-one">
-    <h1>First Page:component1</h1>
+  <div class="home-num-one">
+    <h1>Home Page:component1</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'FirstNumOne'
+  name: 'HomeNumOne'
 }
 </script>
 
@@ -14,7 +14,7 @@ export default {
     h1{
         font-size: 20px;
     }
-    .first-num-one{
+    .home-num-one{
         border: 1px solid #ddd;
     }
 </style>
