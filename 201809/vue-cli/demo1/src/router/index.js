@@ -7,17 +7,17 @@ import Second from '@/pages/second/Index'
 Vue.use(Router)
 
 export default new Router({
-  routes: [{
-    path: '/home',
-    name: 'HomePage',
-    component: Home
-  }, {
-    path: '/first',
-    name: 'FirstPage',
-    component: First
-  }, {
-    path: '/second',
-    name: 'SecondPage',
-    component: Second
-  }]
+	routes: [{
+		path: '/home',
+		name: 'HomePage',
+		component: Home
+	}, {
+		path: '/first',
+		name: 'FirstPage',
+		component: First
+	}, {
+		path: '/second',
+		name: 'SecondPage',
+		component: Second
+	}]
 })
