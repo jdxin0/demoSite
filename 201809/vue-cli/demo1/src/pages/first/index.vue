@@ -1,11 +1,7 @@
 <template>
 	<div>
 		<common-header></common-header>
-		<first-num-one>
-			<div name="slot1">1</div>
-			<div name="slot2">2</div>
-			<div>3</div>
-		</first-num-one>
+		<first-num-one></first-num-one>
 		<first-num-two></first-num-two>
 	</div>
 </template>
