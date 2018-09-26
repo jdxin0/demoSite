@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/pages/home/index'
-import First from '@/pages/first/index'
-import Second from '@/pages/second/index'
+import Home from '@/pages/home/Index'
+import First from '@/pages/first/Index'
+import Second from '@/pages/second/Index'
 
 Vue.use(Router)
 
