@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>XHR</title>
+</head>
+
+<body>
+	<button id="getDataBtn">获取数据</button>
+	<script>
+		var btn = document.getElementById("getDataBtn");
+		var xhr = new XMLHttpRequest();
+		btn.onclick = function() {
+			xhr.onreadystatechange = function() {
+				console.log(xhr.readyState);//[计] 就绪状态
+			};
+			xhr.open('get', './data.json', true);
+			xhr.send();
+		}
+	</script>
+</body>
+
+</html>
