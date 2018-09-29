@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>v-bind:class</title>
+	<script type="text/javascript" src="/js/countup.js"></script>
+	<script type="text/javascript" src="/js/vue-2.5.17.js"></script>
+</head>
+
+<body>
+	<div id="app">
+		<p ref="countup">{{totalMoney}}</p>
+	</div>
+	<script type="text/javascript">
+		var app = new Vue({
+			el: "#app",
+			data: {
+				totalMoney: 2000
+			},
+			watch: {
+				totalMoney: function(val,oldVal) {
+					// console.log(val);
+					// console.log(oldVal);
+					console.log(arguments);
+				}
+			}
+		});
+	</script>
+</body>
+
+</html>
