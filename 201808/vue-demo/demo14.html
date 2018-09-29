@@ -4,21 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <title>v-bind:class</title>
+    <script type="text/javascript" src="/js/countup.js"></script>
     <script type="text/javascript" src="/js/vue-2.5.17.js"></script>
 </head>
 
 <body>
     <div id="app">
-        <div v-bind:class="['a','b',{c:show},classD]"></div>
+        <p class="msg">
+            <p ref="countup" style="display:none">{{totalMoney}}</p>
+            <em v-for="item of cutedList">{{item}}</em>
+        </p>
     </div>
     <script type="text/javascript">
-    var app = new Vue({
-        el: "#app",
-        data: {
-            show: true,
-            classD: 'd'
-        }
-    });
+        var app = new Vue({
+            el: "#app",
+            data: {
+                totalMoney: 2000,
+                oldTotalMoney: 1999,
+                changingTotalMoney:0
+            },
+            computed: {
+                cutedList: function() {
+                    var cutedList = String(this.changingTotalMoney).split("");
+                    while (cutedList.length < 4) {
+                        cutedList.unshift(0);
+                    }
+                    return cutedList;
+                }
+            },
+            watch: {
+                totalMoney: function(val) {
+                    new CountUp(this.$refs.countup, this.oldTotalMoney, this.totalMoney, 0, 1, {
+                        useEasing: true,
+                        useGrouping: true,
+                        separator: '',
+                        formattingFn: (num) => {
+                            this.changingTotalMoney = num;
+                            // console.log(num);
+                        }
+                    }).start();
+                    // console.log(this.oldTotalMoney ,this.totalMoney);
+                    // console.log(this.$refs.countup);
+                    this.oldTotalMoney = this.totalMoney;
+                }
+            }
+        });
     </script>
 </body>
 
