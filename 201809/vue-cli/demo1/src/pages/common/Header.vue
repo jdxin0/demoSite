@@ -1,8 +1,8 @@
 <template lang="html">
     <div class="common-header">
-        <router-link :to="{ name: 'HomePage', params: {} }">Home</router-link>
-        <router-link :to="{ name: 'FirstPage', params: {} }">First</router-link>
-        <router-link :to="{ name: 'SecondPage', params: {} }">Second</router-link>
+        <router-link v-bind:to="{ name: 'HomePage', query: {num:1} }">Home</router-link>
+        <router-link v-bind:to="{ name: 'FirstPage', query: {num:2} }">First</router-link>
+        <router-link v-bind:to="{ name: 'SecondPage', query: {num:3} }">Second</router-link>
     </div>
 </template>
 

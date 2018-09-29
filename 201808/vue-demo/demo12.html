@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>computed计算属性，watch，methods箭头函数内的this</title>
+    <script type="text/javascript" src="/js/vue-2.5.17.js"></script>
+</head>
+
+<body>
+    <div id="app">
+    </div>
+    <script type="text/javascript">
+    var app = new Vue({
+        el: "#app",
+        data: (that) => {
+        	console.log(that);
+            return {
+                num: 1,
+                wat1: 2,
+                wat2: 3,
+                wat3: 4
+            }
+        },
+        computed: {
+            com1: function() {
+                return this.num + 2
+            },
+            com2: (that) => {
+                console.log(that);
+                return that.num + 3
+            }
+        },
+        watch: {
+            wat1: function() {
+                console.log(this);
+            },
+            wat2: () => {
+                console.log(this);
+            },
+            wat3: (that) => {
+                console.log(that);
+            }
+        },
+        methods: {
+            met1: function() {
+                console.log("met1", this);
+            },
+            met2: () => {
+                console.log("met2", this);
+            },
+            met3: (that) => {
+                console.log("met3", that);
+            }
+        }
+    });
+    </script>
+</body>
+
+</html>

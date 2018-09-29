@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>v-bind:class</title>
+	<script type="text/javascript" src="/js/vue-2.5.17.js"></script>
+</head>
+<body>
+	<div id="app">
+		<div v-pre>{{now}}</div>
+		<childx v-on:btn-Handler-Teset="handlerChild"></childx>
+		<button v-on:click="clickHandler1">btn1</button>
+		<button v-on:click="clickHandler2($event)">btn2</button>
+	</div>
+	<script type="text/javascript">
+		var childx = {
+			name:"xxx",
+			template:"<p>xxx<button v-on:click='childClick'>btn</button></p>",
+			methods:{
+				childClick:function(){
+					this.$emit('btn-handler-teset')
+				}
+			}
+		}
+		var app = new Vue({
+			el:"#app",
+			data:{
+			},
+			components:{
+				childx:childx
+			},
+			methods:{
+				handlerChild:function(){
+					console.log(this);
+				},
+				clickHandler1:function(e){
+					console.log(e);
+					console.log(this);
+				},
+				clickHandler2:function(e){
+					console.log(e);
+					console.log(this);
+				}
+			},
+			mounted:function(){
+				setInterval(()=>{
+					// this.now = new Date();
+				},1000);
+			}
+		});
+	</script>
+</body>
+</html>

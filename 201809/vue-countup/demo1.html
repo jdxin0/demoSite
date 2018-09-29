@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src='https://unpkg.com/vue@2.3.3'></script>
+    <script src='https://unpkg.com/vue-countupjs'></script>
+</head>
+
+<body>
+    <div id="app">
+        <v-countup :start-value="start" :end-value="end"></v-countup>
+    </div>
+    <script type="text/javascript">
+    Vue.use(VueCountUp)
+    var app = new Vue({
+        data: {
+            start: 1,
+            end: 100
+        },
+        el: "#app"
+    })
+    </script>
+</body>
+
+</html>

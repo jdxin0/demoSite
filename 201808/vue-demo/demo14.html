@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>v-bind:class</title>
+    <script type="text/javascript" src="/js/vue-2.5.17.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div v-bind:class="['a','b',{c:show},classD]"></div>
+    </div>
+    <script type="text/javascript">
+    var app = new Vue({
+        el: "#app",
+        data: {
+            show: true,
+            classD: 'd'
+        }
+    });
+    </script>
+</body>
+
+</html>

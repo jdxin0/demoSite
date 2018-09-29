@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="https://unpkg.com/jquery"></script>
+</head>
+
+<body>
+	<span id="myTargetElement"></span>
+    <script type="text/javascript">
+    new CountUp("myTargetElement", 24.02, 99.99).start();
+    /*new CountUp('myTargetElement', 300, 3000, 0, 1, {
+        useEasing: false,
+        useGrouping: false,
+        formattingFn: function(num) {
+            var html = '';
+            $.each(("00000" + num.toString()).slice(-5).split(''), function(key, value) {
+                html += "<em>" + value + "</em>";
+            });
+            return html;
+        }
+    }).start();*/
+    </script>
+</body>
+
+</html>
