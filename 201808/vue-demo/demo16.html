@@ -12,22 +12,49 @@
     <div id="app">
         <h1>数组迭代</h1>
         <ul>
-            <li v-for="(item, index) of alphabet" v-bind:key="index">{{item}}</li>
+            <li v-for="(item, index) of alphabetFn1">{{item}}</li>
         </ul>
         <h1>对象迭代</h1>
         <ul>
-            <li v-for="(value,key,index) of person" v-bind:key="key">{{key}}-{{value}}</li>
+            <li v-for="(value,key,index) of person">{{key}}-{{value}}</li>
         </ul>
+        <h1>v-for函数调用</h1>
+        <ul>
+            <li v-for="(item,index) of alphabetFn2()">{{item}}-{{index}}</li>
+        </ul>
+        <h1>一段取值范围的 v-for</h1>
+        <p><span v-for="num of 5">{{num}},</span></p>
+        <h1>一个组件的 v-for</h1>
+        <keycom v-for="num of 5"></keycom>
     </div>
     <script type="text/javascript">
+        Vue.component("keycom", {
+            template: "<span>xl</span>"
+        });
         var app = new Vue({
             el: "#app",
             data: {
-                alphabet: ["a", "b", "c"],
+                alphabet: [1, 5, 9, 2, 7, 5, 7, 2, 9, 9, 4],
                 person: {
                     name: "SidYan",
                     age: 28,
                     sex: "Man"
+                }
+            },
+            computed: {
+                alphabetFn1: function() {
+                    console.log("执行了一次1");
+                    return this.alphabet.filter(function(val) {
+                        return val
+                    });
+                }
+            },
+            methods: {
+                alphabetFn2: function() {
+                    console.log("执行了一次2");
+                    return this.alphabet.filter(function(val) {
+                        return val
+                    });
                 }
             }
         });
