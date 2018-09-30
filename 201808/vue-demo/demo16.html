@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>v-bind:class</title>
+    <script type="text/javascript" src="/js/underscore.js"></script>
+    <script type="text/javascript" src="/js/vue-2.5.17.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h1>数组迭代</h1>
+        <ul>
+            <li v-for="(item, index) of alphabet" v-bind:key="index">{{item}}</li>
+        </ul>
+        <h1>对象迭代</h1>
+        <ul>
+            <li v-for="(value,key,index) of person" v-bind:key="key">{{key}}-{{value}}</li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        var app = new Vue({
+            el: "#app",
+            data: {
+                alphabet: ["a", "b", "c"],
+                person: {
+                    name: "SidYan",
+                    age: 28,
+                    sex: "Man"
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

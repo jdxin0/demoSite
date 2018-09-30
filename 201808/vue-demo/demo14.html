@@ -10,9 +10,9 @@
 
 <body>
 	<div id="app">
+		<p ref="countup" style="display:">{{totalMoney}}</p>
 		<p class="msg">
-			<p ref="countup" style="display:none">{{totalMoney}}</p>
-			<p><em v-for="item of cutedList">{{item}}</em></p>
+			<em v-for="item of cutedList">{{item}}</em>
 		</p>
 	</div>
 	<script type="text/javascript">
