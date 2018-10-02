@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>v-bind:class</title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
+</head>
+
+<body>
+	<div id="app">
+		<ul ref='uls'>
+			<li><button v-on:click="handlClick('cp1')">cp</button></li>
+			<li><button v-on:click="handlClick('cp2')">cp</button></li>
+		</ul>
+		<keep-alive>
+			<component v-bind:is="curCp" ref="cps"></component>
+		</keep-alive>
+	</div>
+	<script type="text/javascript">
+		Vue.component('cp1', {
+			data: function() {
+				return {
+					time: +new Date()
+				}
+			},
+			template: "<div>component1{{time}}</div>"
+		});
+		Vue.component('cp2', {
+			data: function() {
+				return {
+					time: +new Date()
+				}
+			},
+			template: "<div>component2{{time}}</div>"
+		});
+		var app = new Vue({
+			el: "#app",
+			data: {
+				curCp:"cp1"
+			},
+			methods:{
+				handlClick:function(cp){
+					this.curCp = cp;
+				}
+			}
+		});
+	</script>
+</body>
+
+</html>

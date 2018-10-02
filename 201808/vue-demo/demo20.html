@@ -9,15 +9,31 @@
 
 <body>
 	<div id="app">
-
+		<div>
+			<bll v-bind="person"></bll>
+		</div>
 	</div>
 	<script type="text/javascript">
-		Vue.component("child", {
-			template: "<div>This is component</div>"
-		});
+		Vue.component('bll', {
+			props: ["name",
+				"age",
+				"sex"
+			],
+			template: `<p>Person Info:<br/>
+							Name:{{name}}<br/>
+							Age:{{age}}<br/>
+							Sex:{{sex}}<br/>
+					   </p>`
+		})
 		var app = new Vue({
 			el: "#app",
-			data: {}
+			data: {
+				person: {
+					name: "SidYan",
+					age: 18,
+					sex: "man"
+				}
+			}
 		});
 	</script>
 </body>

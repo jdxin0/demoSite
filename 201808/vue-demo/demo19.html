@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>v-bind:class</title>
+	<script type="text/javascript" src="/js/vue-2.5.17.js"></script>
+	<style media="screen">
+		table,
+		td {
+		border: 1px solid #333;
+		}
+
+		thead,
+		tfoot {
+		background-color: #333;
+		color: #fff;
+		}
+
+		</style>
+</head>
+
+<body>
+	<div id="app">
+		<table>
+			<thead>
+				<tr>
+					<th colspan="2">The table header</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr is="row"></tr>
+				<tr is="row"></tr>
+				<tr is="row"></tr>
+				<tr is="row"></tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="2">The table footer</td>
+				</tr>
+			</tfoot>
+		</table>
+		<blo></blo>
+	</div>
+	<script type="text/javascript">
+		var bll = {
+			template:"<span>xl - <slot></slot></span>"
+		}
+		Vue.component('row', {
+			template: "<tr><td>key</td><td>value</td></tr>"
+		});
+		Vue.component("blo",{
+			components:{
+				xx:bll
+			},
+			template:'<xx>Hello VueJS</xx>'
+		})
+
+		var app = new Vue({
+			el: "#app",
+			data: {
+				show: true,
+				classD: 'd'
+			},
+			components:{
+				bll1:bll
+			}
+		});
+	</script>
+</body>
+
+</html>

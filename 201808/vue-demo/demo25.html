@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
 	<title>v-bind:class</title>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
 </head>
-
 <body>
 	<div id="app">
-
+		<com proxs='5'></com>
 	</div>
 	<script type="text/javascript">
-		Vue.component("child", {
-			template: "<div>This is component</div>"
+		Vue.component("com",{
+			template:"<div>This is component</div>"
 		});
 		var app = new Vue({
-			el: "#app",
-			data: {}
+			el:"#app",
+			data:{
+				show:true,
+				classD:'d'
+			}
 		});
 	</script>
 </body>
-
 </html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>v-bind:class</title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
+</head>
+
+<body>
+	<div id="app">
+		<counter ref="first" v-on:add="handlerAdd"></counter>
+		<counter ref="second" v-on:add="handlerAdd"></counter>
+		<div>sum:{{sum}}</div>
+	</div>
+	<script type="text/javascript">
+		Vue.component("counter", {
+			data: function() {
+				return {
+					times: 0
+				}
+			},
+			template: `<p v-on:click="handlerAdd">{{times}}</p>`,
+			methods:{
+				handlerAdd:function(){
+					this.times++;
+					this.$emit("add");
+				}
+			}
+		})
+		var app = new Vue({
+			el: "#app",
+			data: {
+				sum:0
+			},
+			methods: {
+				handlerAdd: function() {
+					this.sum = this.$refs.first.times+this.$refs.second.times;
+				}
+			}
+		});
+	</script>
+</body>
+
+</html>
