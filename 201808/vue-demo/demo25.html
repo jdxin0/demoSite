@@ -1,25 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>v-bind:class</title>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
 </head>
+
 <body>
 	<div id="app">
-		<com proxs='5'></com>
+		<child v-on:click.native="handleClick">
+			<template slot-scope="childData">
+				<h1 v-if='childData.num===1'>{{childData.num}}</h1>
+				<h2 v-else-if='childData.num===2'>{{childData.num}}</h2>
+				<h3 v-else-if='childData.num===3'>{{childData.num}}</h3>
+				<h4 v-else-if='childData.num===4'>{{childData.num}}</h4>
+				<h5 v-else>{{childData.num}}</h5>
+			</template>
+		</child>
 	</div>
 	<script type="text/javascript">
-		Vue.component("com",{
-			template:"<div>This is component</div>"
+		Vue.component("child", {
+			template: `<div class='child'>
+							<slot v-for="item of 5" v-bind:num="item"></slot>
+					   		<p>This is component</p>
+					   </div>`,
+			methods: {
+				handleClick: function() {
+					console.log(2);
+				}
+			}
 		});
 		var app = new Vue({
-			el:"#app",
-			data:{
-				show:true,
-				classD:'d'
+			el: "#app",
+			data: {
+				num1:"h1",
+				num2:'h2'
+			},
+			methods: {
+				handleClick: function(e) {
+					console.log(e);
+				}
 			}
 		});
 	</script>
 </body>
+
 </html>
