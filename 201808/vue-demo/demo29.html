@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>v-bind:class</title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
+	<style type="text/css">
+		.redBox {
+			width: 100px;
+			height: 100px;
+			background: red;
+			position: relative;
+		}
+
+		.bounce-enter-active {
+			animation: mymove 5s alternate;
+			-webkit-animation: mymove 5s alternate;
+			/*Safari and Chrome*/
+		}
+
+		.bounce-leave-active {
+			animation: mymove 5s reverse;
+			-webkit-animation: mymove 5s reverse;
+			/*Safari and Chrome*/
+		}
+
+		@keyframes mymove {
+			from {
+				left: 0px;
+			}
+
+			to {
+				left: 200px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div id="app">
+		<button v-on:click="show = !show">切换</button>
+		<transition name="bounce">
+			<div class="redBox" v-show="show">Hello Transition</div>
+		</transition>
+	</div>
+	<script type="text/javascript">
+		Vue.component("child", {
+			template: `<div class="child">
+					   		<p>This is component</p>
+					   </div>`
+		});
+		var app = new Vue({
+			el: "#app",
+			data: {
+				show: false
+			}
+		});
+	</script>
+</body>
+
+</html>

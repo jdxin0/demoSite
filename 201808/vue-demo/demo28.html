@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>v-bind:class</title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+</head>
+
+<body>
+	<div id="app">
+		<button v-on:click="show = !show">
+			Toggle render
+		</button>
+		<transition enter-active-class="animated bounceInLeft" leave-active-class="animated bounceOutLeft">
+			<p v-show="show">Hello Transition</p>
+		</transition>
+	</div>
+	<script type="text/javascript">
+		Vue.component("child", {
+			template: `<div class="child">
+					   		<p>This is component</p>
+					   </div>`
+		});
+		var app = new Vue({
+			el: "#app",
+			data: {
+				show: true
+			}
+		});
+	</script>
+</body>
+
+</html>
