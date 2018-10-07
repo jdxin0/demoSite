@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>v-bind:class</title>
+	<style>
+		.fade-enter, .fade-leave-to{
+		  opacity: 0;
+		}
+		.fade-enter-active, .fade-leave-active {
+		  transition: opacity 5s;
+		}
+		.fade-leave,.fade-enter-to{
+			opacity: 1;
+		}
+	</style>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
+</head>
+
+<body>
+	<div id="app">
+		<button type="button" name="button" v-on:click='show = !show'>切换</button>
+		<transition name="fade">
+			<h1 v-if='show'>hello world</h1>
+		</transition>
+	</div>
+	<script type="text/javascript">
+		Vue.component("child", {
+			template: `<div class="child">
+					   		<p>This is component</p>
+					   </div>`
+		});
+		var app = new Vue({
+			el: "#app",
+			data: {
+				show: true
+			}
+		});
+	</script>
+</body>
+
+</html>
