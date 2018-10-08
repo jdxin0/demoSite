@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="/js/jquery-1.12.4.js" charset="utf-8"></script>
+    <script src="/js/velocity.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/2.0.5/velocity.ui.js" charset="utf-8"></script>
+    <style>
+        .block-bk{
+            width: 100px;
+            height: 100px;
+            border: 1px solid;
+            background: #ccc;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="right">»</button>
+    <p class="block" id="content">在600毫秒内切换段落的高度和透明度</p>
+    <script type="text/javascript">
+        $("#right").click(function() {
+            $("p").velocity({
+                height: 'toggle',
+                opacity: 0
+            }, "slow");
+        });
+    </script>
+</body>
+
+</html>

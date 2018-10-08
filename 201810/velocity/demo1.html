@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="/js/jquery-1.12.4.js" charset="utf-8"></script>
+    <script src="/js/velocity.js" charset="utf-8"></script>
+</head>
+
+<body>
+    <button id="go"> Run</button>
+    <div id="block" style="position:relative">Hello Velocity!</div>
+    <script type="text/javascript">
+        // 在一个动画中同时应用三种类型的效果
+        $("#go").click(function() {
+            $("#block").velocity({
+                opacity: 0
+            }, {
+                loop: 3
+            });
+        });
+    </script>
+</body>
+
+</html>
