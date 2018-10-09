@@ -1,1 +1,2 @@
-document.getElementById("app").innerHTML="Hello webpack"
+import css from './css/index.css';
+document.getElementById("app").innerHTML="Hello webpack";

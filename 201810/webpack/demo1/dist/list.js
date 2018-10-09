@@ -60,14 +60,16 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ 6:
 /***/ (function(module, exports) {
 
-document.getElementById("app").innerHTML="Hello webpack"
+console.log(4);
 
 /***/ })
-/******/ ]);
+
+/******/ });

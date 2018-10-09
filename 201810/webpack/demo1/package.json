@@ -4,13 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "server": "webpack-dev-server"
   },
   "keywords": [],
   "author": "luojianet <997948809@163.com>",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
-    "webpack": "^3.6.0"
+    "css-loader": "^0.28.11",
+    "style-loader": "^0.23.1",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.8.2"
   }
 }
