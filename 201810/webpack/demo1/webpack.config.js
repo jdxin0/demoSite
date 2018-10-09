@@ -1,4 +1,6 @@
 var path = require('path');
+var Uglify = require('uglifyjs-webpack-plugin');
+
 module.exports = {
 	entry: {
 		entry: './src/entry.js',
@@ -17,7 +19,7 @@ module.exports = {
 			]
 		}]
 	},
-	plugins: [],
+	plugins: [new Uglify()],
 	devServer: {
 		contentBase: path.resolve(__dirname, 'dist'),
 		host: 'www.yanhu.com',
