@@ -68,8 +68,7 @@ thunder(function() {
 		Data.goodsList = data.goodslist;
 		initTJdata();
 		console.log(1);
-		if(data){
-		}
+		if (data) {}
 	});
 
 	main.onLoginInit(function(data) {
@@ -129,7 +128,9 @@ thunder(function() {
 						}
 					});
 				} else {
-					msgbox.showErrorMsg('还未领取任何激活码，快去逛逛吧', { title: '知道了' });
+					msgbox.showErrorMsg('还未领取任何激活码，快去逛逛吧', {
+						title: '知道了'
+					});
 					xla.push({
 						type: 'event',
 						category: 'hygw_fltq',
@@ -220,7 +221,10 @@ thunder(function() {
 					this.tips.type = '_blank';
 					msgbox.show('canNotGetPrizeTips');
 				} else if (this.usertype == 0) { //非会员
-					pay('vip2018shfl_cj01', { 'vip2018shfl_cj01': '超级会员', 'vip2018shfl_bj01': '白金会员' });
+					pay('vip2018shfl_cj01', {
+						'vip2018shfl_cj01': '超级会员',
+						'vip2018shfl_bj01': '白金会员'
+					});
 				} else if (this.usertype == 1) { //目标用户
 					$.ajax({
 						url: 'https://dyactive2-vip-ssl.xunlei.com/iface/?action=getcode&actid=vip2018shfl',

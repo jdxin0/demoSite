@@ -27,6 +27,7 @@ module.exports = {
             "error"
         ],
         "no-console": [0],
-        "no-empty": ["off"]//禁用规则
+        "no-empty": ["off"],//禁用规则
+        "valid-jsdoc":["error"]
     }
 };

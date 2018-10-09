@@ -1,0 +1,14 @@
+/**
+ * npm i ink-docstrap
+ * jsdoc -c ../../jsdoc-conf.json demo6.js
+ * jsdoc demo6.js
+ */
+{
+    "templates": {
+      "theme": "journal"//模板主题。可取值: cosmo, cyborg, flatly, journal, lumen, paper,readable, sandstone, simplex, slate, spacelab, superhero, united, yeti
+
+    },
+    "opts": {
+        "template": "./node_modules/ink-docstrap/template"
+    }
+}
