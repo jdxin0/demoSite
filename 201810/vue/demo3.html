@@ -5,21 +5,38 @@
     <meta charset="UTF-8">
     <title>v-bind:class</title>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
+    <script src="/js/velocity.js" charset="utf-8"></script>
 </head>
 
 <body>
     <div id="app">
-
+        <button v-on:click="show=!show">切换</button>
+        <transition name="fade" v-on:before-enter="handleBeforEnter" v-on:enter="handleEnter" v-on:after-enter="handleAfterEnter">
+            <h1 v-if="show">Hello VueJS!</h1>
+        </transition>
     </div>
     <script type="text/javascript">
-        Vue.component("child", {
-            template: `<div class="child">
-					   		<p>This is component</p>
-					   </div>`
-        });
         var app = new Vue({
             el: "#app",
-            data: {}
+            data: {
+                show: true
+            },
+            methods: {
+                handleBeforEnter: function(el) {
+                    el.style.opacity = 0;
+                },
+                handleEnter: function(el, done) {
+                    Velocity(el, {
+                        opacity: 1
+                    }, {
+                        duration: 1000,
+                        complete: done
+                    });
+                },
+                handleAfterEnter: function(el) {
+                    el.style.color = "blue";
+                }
+            }
         });
     </script>
 </body>
