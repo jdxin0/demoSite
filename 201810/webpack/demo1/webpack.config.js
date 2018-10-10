@@ -24,7 +24,7 @@ module.exports = {
 		new Uglify(),
 		new HtmlPlugin({
 			minify:{//https://github.com/kangax/html-minifier
-				removeAttributeQuotes:false
+				removeAttributeQuotes:true
 			},
 			hash:true,
 			template:'./src/index.html'
