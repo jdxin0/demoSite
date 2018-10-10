@@ -12,4 +12,9 @@ body{
     height: 400px;
     background-image: url(http://www.yanhu.com/201810/webpack/demo1/dist/images/ffd12889.head20.jpg);
     background-repeat: no-repeat;
+}#header {
+  color: #4D926F;
+}
+h2 {
+  color: #4D926F;
 }

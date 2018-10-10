@@ -21,18 +21,24 @@ module.exports = {
 				use: "css-loader"
 			})
 		}, {
+			test: /\.less$/,
+			use: ExtractTextPlugin.extract({
+				fallback: "style-loader",
+				use: ["css-loader","less-loader"]
+			})
+		}, {
 			test: /\.(png|jpg|gif)$/,
 			use: [{
 				loader: 'url-loader',
 				options: {
 					limit: 15000,
-					name:'[hash:8].[name].[ext]',
+					name: '[hash:8].[name].[ext]',
 					outputPath: 'images/'
 				}
 			}]
-		},{
-			test:/\.html$/,
-			use:['html-loader']
+		}, {
+			test: /\.html$/,
+			use: ['html-loader']
 		}]
 	},
 	plugins: [
