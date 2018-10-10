@@ -1,7 +1,7 @@
 {
   "name": "demo1",
   "version": "1.0.0",
-  "description": "",
+  "description": "16 finished",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,9 +11,7 @@
   "keywords": [],
   "author": "luojianet <997948809@163.com>",
   "license": "ISC",
-  "dependencies": {
-    "video":"15 is finished"
-  },
+  "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^9.1.5",
     "babel-core": "^6.26.3",

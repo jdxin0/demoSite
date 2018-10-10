@@ -5,5 +5,6 @@ let str="xl";
 function test(a=1){
     console.log(a);
     console.log(str);
+    wq();
 }
 test(2);

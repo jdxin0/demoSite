@@ -1,11 +1,12 @@
 var path = require('path');
-const glob = require('glob');
+var glob = require('glob');
 var UglifyPlugin = require('uglifyjs-webpack-plugin');
 var HtmlPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var PurifyCSSPlugin = require('purifycss-webpack');
 
 module.exports = {
+	devtool: "source-map",
 	entry: {
 		entry: './src/js/entry.js',
 		list: './src/js/list.js'
@@ -41,17 +42,19 @@ module.exports = {
 		}, {
 			test: /\.html$/,
 			use: ['html-loader']
-		},{
-			test:/\.js$/,
-			use:{
-				loader:"babel-loader"
+		}, {
+			test: /\.js$/,
+			use: {
+				loader: "babel-loader"
 			}
 		}]
 	},
 	plugins: [
-		new UglifyPlugin(),
+		new UglifyPlugin({
+			sourceMap: true
+		}),
 		new HtmlPlugin({
-			minify: {//https://github.com/kangax/html-minifier
+			minify: { //https://github.com/kangax/html-minifier
 				removeAttributeQuotes: false,
 				collapseWhitespace: false,
 				removeComments: false,
