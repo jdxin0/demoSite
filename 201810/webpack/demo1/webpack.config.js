@@ -1,45 +1,49 @@
 var path = require('path');
-var Uglify = require('uglifyjs-webpack-plugin');
+var UglifyPlugin = require('uglifyjs-webpack-plugin');
 var HtmlPlugin = require('html-webpack-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
 	entry: {
-		entry: './src/entry.js',
-		list:'./src/list.js'
+		entry: './src/js/entry.js',
+		list: './src/js/list.js'
 	},
 	output: {
 		path: path.resolve(__dirname, 'dist'),
-		filename: '[name].js'
+		filename: 'js/[name].js',
+		publicPath:'http://www.yanhu.com/201810/webpack/demo1/dist/'
 	},
 	module: {
 		rules: [{
 			test: /\.css$/,
-			use: [
-				'style-loader',
-				'css-loader'
-			]
-		},{
-			test:/\.(png|jpg|gif)$/,
-			use:[{
-				loader:'url-loader',
-				options:{
-					limit:15000
+			use: ExtractTextPlugin.extract({
+				fallback: "style-loader",
+				use: "css-loader"
+			})
+		}, {
+			test: /\.(png|jpg|gif)$/,
+			use: [{
+				loader: 'url-loader',
+				options: {
+					limit: 15000,
+					name:'images/[hash:8].[name].[ext]'
 				}
 			}]
 		}]
 	},
 	plugins: [
-		// new Uglify(),
+		new UglifyPlugin(),
 		new HtmlPlugin({
-			minify:{//https://github.com/kangax/html-minifier
-				removeAttributeQuotes:false,
-				collapseWhitespace:false,
-				removeComments:false,
-				removeScriptTypeAttributes:false
+			minify: {//https://github.com/kangax/html-minifier
+				removeAttributeQuotes: false,
+				collapseWhitespace: false,
+				removeComments: false,
+				removeScriptTypeAttributes: false
 			},
-			hash:true,
-			template:'./src/index.html'
-		})
+			hash: true,
+			template: './src/index.html'
+		}),
+		new ExtractTextPlugin('/css/index.css')
 	],
 	devServer: {
 		contentBase: path.resolve(__dirname, 'dist'),
