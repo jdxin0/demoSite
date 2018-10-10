@@ -1,4 +1,15 @@
 body{
-    background: blue;
-    color: #ccc;
+    background: #ccc;
+}
+#headImg1{
+    width: 200px;
+    height: 200px;
+    background-image: url(../images/head12.jpg);
+    background-repeat: no-repeat;
+}
+#headImg2{
+    width: 400px;
+    height: 400px;
+    background-image: url(../images/head20.jpg);
+    background-repeat: no-repeat;
 }

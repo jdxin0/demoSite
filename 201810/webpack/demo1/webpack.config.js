@@ -18,16 +18,24 @@ module.exports = {
 				'style-loader',
 				'css-loader'
 			]
+		},{
+			test:/\.(png|jpg|gif)$/,
+			use:[{
+				loader:'url-loader',
+				options:{
+					limit:15000
+				}
+			}]
 		}]
 	},
 	plugins: [
-		new Uglify(),
+		// new Uglify(),
 		new HtmlPlugin({
 			minify:{//https://github.com/kangax/html-minifier
 				removeAttributeQuotes:false,
 				collapseWhitespace:false,
-				removeComments:true,
-				removeScriptTypeAttributes:true
+				removeComments:false,
+				removeScriptTypeAttributes:false
 			},
 			hash:true,
 			template:'./src/index.html'
