@@ -6,10 +6,17 @@ body{
     height: 200px;
     background-image: url(../images/head12.jpg);
     background-repeat: no-repeat;
+    border:1px solid;
+    border-radius: 30px;
+    transform: rotate(30deg);
 }
 #headImg2{
     width: 400px;
     height: 400px;
     background-image: url(../images/head20.jpg);
     background-repeat: no-repeat;
+}
+.what{
+    width: 100px;
+    height: 800px;
 }

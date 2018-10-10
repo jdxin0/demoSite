@@ -1,7 +1,9 @@
 var path = require('path');
+const glob = require('glob');
 var UglifyPlugin = require('uglifyjs-webpack-plugin');
 var HtmlPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var PurifyCSSPlugin = require('purifycss-webpack');
 
 module.exports = {
 	entry: {
@@ -18,13 +20,13 @@ module.exports = {
 			test: /\.css$/,
 			use: ExtractTextPlugin.extract({
 				fallback: "style-loader",
-				use: "css-loader"
+				use: ["css-loader", "postcss-loader"]
 			})
 		}, {
 			test: /\.less$/,
 			use: ExtractTextPlugin.extract({
 				fallback: "style-loader",
-				use: ["css-loader","less-loader"]
+				use: ["css-loader", "less-loader"]
 			})
 		}, {
 			test: /\.(png|jpg|gif)$/,
@@ -53,7 +55,10 @@ module.exports = {
 			hash: true,
 			template: './src/index.html'
 		}),
-		new ExtractTextPlugin('css/index.css')
+		new ExtractTextPlugin('css/index.css'),
+		new PurifyCSSPlugin({
+			paths: glob.sync(path.resolve(__dirname, 'src/*.html')),
+		})
 	],
 	devServer: {
 		contentBase: path.resolve(__dirname, 'dist'),

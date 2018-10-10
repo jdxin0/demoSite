@@ -6,13 +6,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "server": "webpack-dev-server --open"
+    "start": "webpack-dev-server --open"
   },
   "keywords": [],
   "author": "luojianet <997948809@163.com>",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
+    "autoprefixer": "^9.1.5",
     "css-loader": "^0.28.11",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.11",
@@ -20,6 +21,9 @@
     "html-webpack-plugin": "^3.2.0",
     "less": "^3.8.1",
     "less-loader": "^4.1.0",
+    "postcss-loader": "^3.0.0",
+    "purify-css": "^1.2.5",
+    "purifycss-webpack": "^0.7.0",
     "style-loader": "^0.23.1",
     "url-loader": "^1.1.1",
     "webpack": "^3.12.0",
