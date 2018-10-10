@@ -7,3 +7,4 @@ function test(a=1){
     console.log(str);
 }
 test(2);
+$('#version').html($.fn.jquery);

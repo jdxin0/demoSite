@@ -1,12 +1,12 @@
 {
   "name": "demo1",
   "version": "1.0.0",
-  "description": "16 finished",
+  "description": "20 finished",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "development": "set NODE_ENV=development&&webpack",
-    "production": "set NODE_ENV=production&&webpack",
+    "dev": "set NODE_ENV=development&&webpack",
+    "pro": "set NODE_ENV=production&&webpack",
     "server": "webpack-dev-server --open"
   },
   "keywords": [],
