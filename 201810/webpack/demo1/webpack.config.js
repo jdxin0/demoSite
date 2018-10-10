@@ -41,6 +41,11 @@ module.exports = {
 		}, {
 			test: /\.html$/,
 			use: ['html-loader']
+		},{
+			test:/\.js$/,
+			use:{
+				loader:"babel-loader"
+			}
 		}]
 	},
 	plugins: [
