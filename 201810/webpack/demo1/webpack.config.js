@@ -4,9 +4,15 @@ var UglifyPlugin = require('uglifyjs-webpack-plugin');
 var HtmlPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var PurifyCSSPlugin = require('purifycss-webpack');
+var publicPath = '';
+if (process.env.NODE_ENV=="production"){
+	publicPath = 'http://www.yanhu.com/201810/webpack/demo1/dist/';
+}else{
+	publicPath = 'http://127.0.0.1/201810/webpack/demo1/dist/'
+}
 
 module.exports = {
-	devtool: "source-map",
+	// devtool: "source-map",
 	entry: {
 		entry: './src/js/entry.js',
 		list: './src/js/list.js'
@@ -14,7 +20,7 @@ module.exports = {
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: 'js/[name].js',
-		publicPath: 'http://www.yanhu.com/201810/webpack/demo1/dist/'
+		publicPath: publicPath
 	},
 	module: {
 		rules: [{
@@ -50,9 +56,9 @@ module.exports = {
 		}]
 	},
 	plugins: [
-		new UglifyPlugin({
-			sourceMap: true
-		}),
+		// new UglifyPlugin({
+		// 	sourceMap: false
+		// }),
 		new HtmlPlugin({
 			minify: { //https://github.com/kangax/html-minifier
 				removeAttributeQuotes: false,

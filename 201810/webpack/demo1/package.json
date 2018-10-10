@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
-    "start": "webpack-dev-server --open"
+    "development": "set NODE_ENV=development&&webpack",
+    "production": "set NODE_ENV=production&&webpack",
+    "server": "webpack-dev-server --open"
   },
   "keywords": [],
   "author": "luojianet <997948809@163.com>",
