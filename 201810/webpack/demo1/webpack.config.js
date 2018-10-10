@@ -11,7 +11,7 @@ module.exports = {
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: 'js/[name].js',
-		publicPath:'http://www.yanhu.com/201810/webpack/demo1/dist/'
+		publicPath: 'http://www.yanhu.com/201810/webpack/demo1/dist/'
 	},
 	module: {
 		rules: [{
@@ -26,9 +26,13 @@ module.exports = {
 				loader: 'url-loader',
 				options: {
 					limit: 15000,
-					name:'images/[hash:8].[name].[ext]'
+					name:'[hash:8].[name].[ext]',
+					outputPath: 'images/'
 				}
 			}]
+		},{
+			test:/\.html$/,
+			use:['html-loader']
 		}]
 	},
 	plugins: [
@@ -43,7 +47,7 @@ module.exports = {
 			hash: true,
 			template: './src/index.html'
 		}),
-		new ExtractTextPlugin('/css/index.css')
+		new ExtractTextPlugin('css/index.css')
 	],
 	devServer: {
 		contentBase: path.resolve(__dirname, 'dist'),
