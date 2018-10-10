@@ -11,7 +11,9 @@
   "keywords": [],
   "author": "luojianet <997948809@163.com>",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "video":"15 is finished"
+  },
   "devDependencies": {
     "autoprefixer": "^9.1.5",
     "babel-core": "^6.26.3",
