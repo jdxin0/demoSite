@@ -15,12 +15,15 @@ if (process.env.NODE_ENV == "production") {
 
 module.exports = {
 	// devtool: "source-map",
-	externals:{
-		$:'jQuery'
-	},
+	// externals:{
+	// 	$:'jQuery',
+	// 	Vue:'vue'
+	// },
 	entry: {
 		entry: './src/js/entry.js',
-		list: './src/js/list.js'
+		list: './src/js/list.js',
+		jquery:'jquery',
+		vue:'vue'
 	},
 	output: {
 		path: path.resolve(__dirname, 'dist'),
@@ -57,13 +60,14 @@ module.exports = {
 			test: /\.js$/,
 			use: {
 				loader: "babel-loader"
-			}
+			},
+			exclude: /node_modules/
 		}]
 	},
 	plugins: [
-		// new UglifyPlugin({
-		// 	sourceMap: false
-		// }),
+		new UglifyPlugin({
+			sourceMap: false
+		}),
 		new HtmlPlugin({
 			minify: { //https://github.com/kangax/html-minifier
 				removeAttributeQuotes: false,
@@ -78,12 +82,17 @@ module.exports = {
 		new PurifyCSSPlugin({
 			paths: glob.sync(path.resolve(__dirname, 'src/*.html')),
 		}),
-		// new webpack.ProvidePlugin({
-		// 	$:'jquery'
-		// }),
+		new webpack.ProvidePlugin({
+			$:'jquery'
+		}),
+		new webpack.optimize.CommonsChunkPlugin({
+			name: ['jquery','vue'],
+			filename: "lib/[name].min.js",
+			minChunks: 2
+		}),
 		new CopyPlugin([{
 			from:path.resolve(__dirname+'/src/static'),
-			to: './static'
+			to: 'static'
 		}])
 	],
 	devServer: {
