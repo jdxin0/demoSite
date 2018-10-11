@@ -5,6 +5,7 @@ var UglifyPlugin = require('uglifyjs-webpack-plugin');
 var HtmlPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var PurifyCSSPlugin = require('purifycss-webpack');
+var CopyPlugin = require('copy-webpack-plugin');
 var publicPath = '';
 if (process.env.NODE_ENV == "production") {
 	publicPath = 'http://www.yanhu.com/201810/webpack/demo1/dist/';
@@ -79,7 +80,11 @@ module.exports = {
 		}),
 		// new webpack.ProvidePlugin({
 		// 	$:'jquery'
-		// })
+		// }),
+		new CopyPlugin([{
+			from:path.resolve(__dirname+'/src/static'),
+			to: './static'
+		}])
 	],
 	devServer: {
 		contentBase: path.resolve(__dirname, 'dist'),

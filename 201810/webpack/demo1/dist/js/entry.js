@@ -57,7 +57,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "http://www.yanhu.com/201810/webpack/demo1/dist/";
+/******/ 	__webpack_require__.p = "http://127.0.0.1/201810/webpack/demo1/dist/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 0);
@@ -81,12 +81,17 @@ var _style2 = _interopRequireDefault(_style);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 document.getElementById("welcome").innerHTML = "Hello webpack!";
+var share = {
+	title: '收到一个新会员礼包',
+	desc: '迅雷会员送你豪华礼包，快去看看',
+	imgUrl: '../static/share.jpg'
+};
 var str = "xl";
 function test() {
-    var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+	var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
 
-    console.log(a);
-    console.log(str);
+	console.log(a);
+	console.log(str);
 }
 test(2);
 $('#version').html($.fn.jquery);
