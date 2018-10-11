@@ -89,6 +89,7 @@ function test() {
     console.log(str);
 }
 test(2);
+$('#version').html($.fn.jquery);
 
 /***/ }),
 /* 1 */

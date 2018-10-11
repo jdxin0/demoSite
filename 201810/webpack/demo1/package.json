@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "set NODE_ENV=development&&webpack",
     "pro": "set NODE_ENV=production&&webpack",
-    "server": "webpack-dev-server --open"
+    "start": "webpack-dev-server --open"
   },
   "keywords": [],
   "author": "luojianet <997948809@163.com>",
@@ -26,11 +26,15 @@
     "less": "^3.8.1",
     "less-loader": "^4.1.0",
     "postcss-loader": "^3.0.0",
-    "purify-css": "^1.2.5",
+    "purify-css": "^1.2.6",
     "purifycss-webpack": "^0.7.0",
     "style-loader": "^0.23.1",
-    "url-loader": "^1.1.1",
+    "url-loader": "^0.6.2",
     "webpack": "^3.12.0",
     "webpack-dev-server": "^2.8.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luojianet/demoSite.git"
   }
 }
