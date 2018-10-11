@@ -12,7 +12,10 @@
   "keywords": [],
   "author": "luojianet <997948809@163.com>",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "jquery": "^1.12.4",
+    "vue": "^2.5.17"
+  },
   "devDependencies": {
     "autoprefixer": "^9.1.5",
     "babel-core": "^6.26.3",
