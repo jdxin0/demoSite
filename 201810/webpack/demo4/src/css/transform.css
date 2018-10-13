@@ -1,0 +1,8 @@
+div#div2 {
+    width:100px;
+    height:75px;
+    background-color:red;
+    border:1px solid black;
+    margin: 50px;
+    transform:rotate(30deg);
+}
