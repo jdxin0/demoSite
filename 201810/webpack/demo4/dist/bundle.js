@@ -179,8 +179,8 @@ var update = __webpack_require__(5)(content, options);
 if(content.locals) module.exports = content.locals;
 
 if(false) {
-	module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/postcss-loader/src/index.js??ref--0-2!./style.css", function() {
-		var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/postcss-loader/src/index.js??ref--0-2!./style.css");
+	module.hot.accept("!!../../node_modules/css-loader/index.js??ref--0-1!../../node_modules/postcss-loader/src/index.js??ref--0-2!./style.css", function() {
+		var newContent = require("!!../../node_modules/css-loader/index.js??ref--0-1!../../node_modules/postcss-loader/src/index.js??ref--0-2!./style.css");
 
 		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 
@@ -228,7 +228,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "div#div2 {\r\n    width:100px;\r\n    height:75px;\r\n    background-color:red;\r\n    border:1px solid black;\r\n    margin: 50px;\r\n    transform:rotate(30deg);\r\n}", ""]);
+exports.push([module.i, "div#div2 {\r\n    width:100px;\r\n    height:75px;\r\n    background-color:red;\r\n    border:1px solid black;\r\n    margin: 50px;\r\n    -webkit-transform:rotate(30deg);\r\n       -moz-transform:rotate(30deg);\r\n        -ms-transform:rotate(30deg);\r\n         -o-transform:rotate(30deg);\r\n            transform:rotate(30deg);\r\n}", ""]);
 
 // exports
 
