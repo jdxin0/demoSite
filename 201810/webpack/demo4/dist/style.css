@@ -1,0 +1,31 @@
+div#div2 {
+    width:100px;
+    height:75px;
+    background-color:red;
+    border:1px solid black;
+    margin: 50px;
+    -webkit-transform:rotate(30deg);
+       -moz-transform:rotate(30deg);
+        -ms-transform:rotate(30deg);
+         -o-transform:rotate(30deg);
+            transform:rotate(30deg);
+}* {
+    margin: 0;
+    padding:0;
+}
+body{
+    background: #ccc;
+}
+div#div1 {
+    width: 100px;
+    height: 75px;
+    background-color: red;
+    border: 1px solid black;
+    margin: 50px;
+    -webkit-transform: rotate(-30deg);
+       -moz-transform: rotate(-30deg);
+        -ms-transform: rotate(-30deg);
+         -o-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+    border-radius: 20px;
+}
