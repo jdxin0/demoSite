@@ -7,8 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "luojianet <997948809@163.com>",
   "license": "ISC",
+  "repository": "https://www.xuliehaonet.com",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
