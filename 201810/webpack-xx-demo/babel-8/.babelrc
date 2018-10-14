@@ -1,4 +1,8 @@
 {
-	"presets": ["@babel/env"],
+	"presets": [["@babel/env",{
+		"targets":{
+			"browsers": ["defaults", ">0.01%", "ie 8"]
+		}
+	}]],
 	"plugins": ["@babel/plugin-transform-runtime"]
 }
