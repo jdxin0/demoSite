@@ -9,13 +9,7 @@ module.exports={
     module:{
         rules:[{
             test:/\.js$/,
-            use:{
-                loader:'babel-loader',
-                options:{
-                   presets:'env',
-                   plugins:["transform-runtime"]
-                }
-            },
+            use: 'babel-loader',
             exclude:/node_modules/
         }]
     }
