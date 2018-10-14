@@ -2607,4 +2607,3 @@ $export($export.S, 'Promise', { 'try': function (callbackfn) {
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=bundle.js.map
