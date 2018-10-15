@@ -1,10 +1,13 @@
 module.exports = {
     "env": {
-        "browser": true
+        "browser": true,
+        "commonjs": true,
+        "es6": true
     },
     "extends": "eslint:recommended",
     "parserOptions": {
-        "ecmaVersion": 5
+        "ecmaVersion": 2015,
+        "sourceType": "module"
     },
     "rules": {
         "indent": [
@@ -23,11 +26,6 @@ module.exports = {
             "error",
             "always"
         ],
-        "no-sequences": [
-            "error"
-        ],
-        "no-console": [0],
-        "no-empty": ["off"],//禁用规则
-        "valid-jsdoc":["error"]
+        "no-console":["off"]
     }
 };
