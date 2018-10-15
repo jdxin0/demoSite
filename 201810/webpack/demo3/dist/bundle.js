@@ -65,15 +65,22 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-
-
-{
-    var a = 1;
-    console.log(a);
+function timer(t) {
+    return new Promise((resolve, reject) => {
+        setTimeout(function () {
+            resolve();
+        }, t);
+    });
 }
+;(async () => {
+    for (let i = 0; i < 10; i++) {
+        await timer(1000);
+        console.log(i);
+    }
+})();
 
 /***/ })
 /******/ ]);
+//# sourceMappingURL=bundle.js.map
