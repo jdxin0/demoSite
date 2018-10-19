@@ -1,0 +1,22 @@
+{
+  "name": "demo5",
+  "version": "1.0.0",
+  "description": "webpack jspang demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/luojianet/demosite.git"
+  },
+  "keywords": [
+    "webpack",
+    "jspang"
+  ],
+  "author": "luojianet <997948809@163.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^3.12.0"
+  }
+}
