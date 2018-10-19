@@ -67,19 +67,76 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var style = __webpack_require__(1);
-style.style();
-document.getElementById('app').innerText = 'Hello Webpack!';
+/*global app*/
+var mod1 = __webpack_require__(1);
+var mod2 = __webpack_require__(2);
+var mod3 = __webpack_require__(3);
+var mod4 = __webpack_require__(4);
+window.app = {
+	init: function () {
+		this.loadFn();
+		this.setText();
+		this.setStyle();
+		this.printDataA();
+		this.printDataB();
+	},
+	data: {
+		a: 1,
+		b: 2
+	},
+	loadFn: function () {
+		for (var key in this.methods) {
+			this[key] = this.methods[key];
+		}
+	},
+	methods: {
+		setText: mod1.setText,
+		setStyle: mod2.setStyle,
+		printDataA: mod3.printDataA,
+		printDataB: mod4.printDataB
+	}
+};
+app.init();
 
 /***/ }),
 /* 1 */
 /***/ (function(module, exports) {
 
 module.exports = {
-	style:function(){
-		document.getElementById('app').style.color='blue';
+	setText: function () {
+		document.getElementById('app').innerText = 'Hello Webpack!';
 	}
-}
+};
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+module.exports = {
+	setStyle: function () {
+		document.getElementById('app').style.color = 'blue';
+	}
+};
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
+module.exports = {
+	printDataA: function () {
+		console.log(this.data.a);
+	}
+};
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports) {
+
+module.exports = {
+	printDataB: function () {
+		console.log(this.data.b);
+	}
+};
 
 /***/ })
 /******/ ]);
