@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>v-bind:class</title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
+</head>
+
+<body>
+	<div id="app">
+		<ul>
+			<li v-for="item in arr" v-if="item.seat==1">
+				<span>{{item.seat}}{{getDataType(item)}}</span>
+				<span v-bind:class="{test:getDataType(item)}"></span>
+			</li>
+		</ul>
+		<ul>
+			<li v-for="item in arr" v-if="item.seat==2">
+				<span>{{item.seat}}{{getDataType(item)}}</span>
+				<span v-bind:class="{test:getDataType(item)}"></span>
+			</li>
+		</ul>
+		<ul>
+			<li v-for="item in arr" v-if="item.seat==3">
+				<span>{{item.seat}}{{getDataType(item)}}</span>
+				<span v-bind:class="{test:getDataType(item)}"></span>
+			</li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+		var app = new Vue({
+			el: "#app",
+			data: {
+				isbuy: 0,
+				arr: [{
+					id: '001',
+					seat: 1,
+					remain: 0
+				}, {
+					id: '002',
+					seat: 1,
+					remain: 12
+				}, {
+					id: '003',
+					seat: 2,
+					remain: 0
+				}, {
+					id: '004',
+					seat: 2,
+					remain: 12
+				}, {
+					id: '005',
+					seat: 3,
+					remain: 12
+				}, {
+					id: '006',
+					seat: 3,
+					remain: 12
+				}]
+			},
+			methods: {
+				getDataType: function(item) {
+					if (item.remain == 0 && this.isbuy == 1) {
+						return true;
+					} else {
+						return false;
+					}
+				}
+			}
+		});
+	</script>
+</body>
+
+</html>
