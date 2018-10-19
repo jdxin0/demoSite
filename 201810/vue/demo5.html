@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>v-bind:class</title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
+</head>
+
+<body>
+	<div id="app">
+
+	</div>
+	<script type="text/javascript">
+		Vue.component("child", {
+			template: `<div class="child">
+					   		<p>This is component</p>
+					   </div>`
+		});
+		var app = new Vue({
+			el: "#app",
+			data: {
+				arr: [],
+				a: 0
+			},
+			computed: {
+				isOk: function() {
+					if (this.arr.length > 0 && this.a == 4) {
+						return true;
+					} else {
+						return false;
+					}
+				}
+			},
+			watch: {
+				isOk: function(val, oldVal) {
+					if (val) {
+						console.log("两个条件都满足");
+					}
+				}
+			}
+		});
+	</script>
+</body>
+
+</html>
