@@ -21,6 +21,12 @@
   },
   "homepage": "https://github.com/luojianet/webpack#readme",
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^1.0.0",
+    "style-loader": "^0.23.1",
     "webpack": "^3.12.0",
     "webpack-dev-server": "^2.11.3"
   }

@@ -4,12 +4,17 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
         {
             "type": "node",
             "request": "launch",
-            "name": "启动程序",
-            "program": "${workspaceFolder}/201810\\module\\demo4\\main.js"
+            "name": "webpack-demo6 test.js",
+            "program": "${workspaceFolder}\\201810\\webpack\\demo6\\test.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "module-demo4 main.js",
+            "program": "${workspaceFolder}\\201810\\module\\demo4\\main.js"
         }
     ]
 }
