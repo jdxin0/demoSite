@@ -1,6 +1,7 @@
 var path = require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
 	devtool: 'source-map',
@@ -19,14 +20,22 @@ module.exports = {
 			test: /\.css$/,
 			use: ['style-loader', 'css-loader'],
 			include: path.resolve('./src/css')
+		}, {
+			test: /\.(png|jpg|gif)$/,
+			use: [{
+				loader: 'url-loader',
+				options: {
+                    limit:'10000',
+					name: (file) => {
+                        var url = path.resolve(file, '../');
+                        var dir = path.basename(url)+'/';
+						return dir+'[name].[ext]'
+					}
+				}
+			}]
 		},{
-            test:/\.(png|jpg|gif)$/,
-            use:[{
-                loader:'file-loader',
-                options:{
-                    name:'[name].[ext]'
-                }
-            }]
+            test:/\.html$/,
+            use:'html-loader'
         }]
 	},
 	plugins: [
@@ -48,7 +57,8 @@ module.exports = {
 			title: 'Custom template',
 			filename: 'index.html',
 			template: './src/index.html'
-		})
+		}),
+		new CleanWebpackPlugin('dist')
 	],
 	devServer: {
 		contentBase: path.resolve('dist')
