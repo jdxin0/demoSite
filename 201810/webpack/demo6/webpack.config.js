@@ -25,18 +25,18 @@ module.exports = {
 			use: [{
 				loader: 'url-loader',
 				options: {
-                    limit:'10000',
+					limit: '10000',
 					name: (file) => {
-                        var url = path.resolve(file, '../');
-                        var dir = path.basename(url)+'/';
-						return dir+'[name].[ext]'
+						var url = path.resolve(file, '../');
+						var dir = path.basename(url) + '/';
+						return dir + '[name].[ext]?v=[hash:8]'
 					}
 				}
 			}]
-		},{
-            test:/\.html$/,
-            use:'html-loader'
-        }]
+		}, {
+			test: /\.html$/,
+			use: 'html-loader'
+		}]
 	},
 	plugins: [
 		new webpack.optimize.UglifyJsPlugin({
