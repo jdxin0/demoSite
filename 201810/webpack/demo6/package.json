@@ -1,0 +1,27 @@
+{
+  "name": "demo6",
+  "version": "1.0.0",
+  "description": "webpack dev server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luojianet/webpack.git"
+  },
+  "keywords": [
+    "webpack-dev-ser"
+  ],
+  "author": "SidYan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luojianet/webpack/issues"
+  },
+  "homepage": "https://github.com/luojianet/webpack#readme",
+  "devDependencies": {
+    "webpack": "^3.12.0",
+    "webpack-dev-server": "^2.11.3"
+  }
+}
