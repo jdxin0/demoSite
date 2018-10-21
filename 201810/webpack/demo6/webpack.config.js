@@ -31,14 +31,6 @@ module.exports = {
 					name: '[1]/[name].[ext]?v=[hash:8]',
 				}
 			}]
-		}, {
-			test: /\.html$/,
-			use: [{
-				loader: 'html-loader',
-				options: {
-					attrs: [':data-src','custom:data-img','img:src']
-				}
-			}]
 		}]
 	},
 	plugins: [
