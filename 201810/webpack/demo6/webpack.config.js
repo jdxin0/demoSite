@@ -21,20 +21,24 @@ module.exports = {
 			use: ['style-loader', 'css-loader'],
 			include: path.resolve('./src/css')
 		}, {
-			test: /\.(png|jpg|gif)$/,
+			test: /\.(png|jpg|jpeg|gif)$/,
 			use: [{
 				loader: 'url-loader',
 				options: {
 					limit: '10240',
-					outputPath: 'asset',
 					fallback: 'file-loader',
-					name: '[folder]/[name].[ext]',
-					publicPath: 'http://www.yanhu.com/201810/webpack/demo6/dist/asset',
+					regExp: /\\([a-z0-9]+)\\[a-z-0-9]+\.(png|jpg|jpeg|gif)$/,
+					name: '[1]/[name].[ext]?v=[hash:8]',
 				}
 			}]
 		}, {
 			test: /\.html$/,
-			use: 'html-loader'
+			use: [{
+				loader: 'html-loader',
+				options: {
+					attrs: [':data-src','custom:data-img','img:src']
+				}
+			}]
 		}]
 	},
 	plugins: [
