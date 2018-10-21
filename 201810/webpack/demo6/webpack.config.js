@@ -25,12 +25,11 @@ module.exports = {
 			use: [{
 				loader: 'url-loader',
 				options: {
-					limit: '10000',
-					name: (file) => {
-						var url = path.resolve(file, '../');
-						var dir = path.basename(url) + '/';
-						return dir + '[name].[ext]?v=[hash:8]'
-					}
+					limit: '10240',
+					outputPath: 'asset',
+					fallback: 'file-loader',
+					name: '[folder]/[name].[ext]',
+					publicPath: 'http://www.yanhu.com/201810/webpack/demo6/dist/asset',
 				}
 			}]
 		}, {
