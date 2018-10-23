@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>v-bind:class</title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
+</head>
+
+<body>
+	<div id="app">
+		<a href="javascript:;" v-if="show" v-on:click="handleClickBtn">btn</a>
+		<ul>
+			<li v-for="(item,index) in arr">{{index+1}}</li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+		Vue.component("child", {
+			template: `<div class="child">
+					   		<p>This is component</p>
+					   </div>`
+		});
+		var app = new Vue({
+			el: "#app",
+			data: {
+				show: false,
+				arr: ["a", "b", "c"]
+			},
+			methods: {
+				handleClickBtn: function() {
+					console.log(new Date());
+				}
+			}
+		});
+	</script>
+</body>
+
+</html>
