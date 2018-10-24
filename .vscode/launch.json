@@ -15,6 +15,12 @@
             "request": "launch",
             "name": "module-demo4 main.js",
             "program": "${workspaceFolder}\\201810\\module\\demo4\\main.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "process.env",
+            "program": "${workspaceFolder}\\201810\\webpack-xx-demo\\css-module\\webpack.config.js"
         }
     ]
 }
