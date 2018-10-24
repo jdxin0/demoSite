@@ -1,0 +1,20 @@
+{
+  "name": "js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "luojianet <997948809@163.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^0.28.11",
+    "style-loader": "^0.23.1",
+    "vue-loader": "^15.4.2",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.5.17",
+    "webpack": "^3.12.0"
+  }
+}

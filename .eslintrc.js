@@ -18,6 +18,7 @@ module.exports = {
             4
         ],
         "linebreak-style": [
+            "off",
             "error",
             "windows"
         ],

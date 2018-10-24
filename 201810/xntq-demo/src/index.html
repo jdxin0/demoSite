@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>v-bind:class</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.1/jquery.js"></script>
+    <link rel="stylesheet" href="https://act-vip-ssl.xunlei.com/pc/vip/2018/xntq_v2/dest/css/style.css">
+</head>
+
+<body>
+    <div id="app">
+        <goods-area v-bind:goods-list-arr="goodsListArr" v-bind:is-vip-xuser="isVipXuser" seat="3"></goods-area>
+        <goods-area v-bind:goods-list-arr="goodsListArr" v-bind:is-vip-xuser="isVipXuser" seat="1"></goods-area>
+        <goods-area v-bind:goods-list-arr="goodsListArr" v-bind:is-vip-xuser="isVipXuser" seat="2"></goods-area>
+    </div>
+    <script src="../dist/bundle.js"></script>
+</body>
+
+</html>
