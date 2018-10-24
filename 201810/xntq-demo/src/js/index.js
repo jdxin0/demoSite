@@ -40,7 +40,7 @@ window.app = new Vue({
         },
         getGoddsData: function() {
             $.ajax({
-                url: 'http://www.yanhu.com/201810/xntq-demo/src/data/goodslist.json',
+                url: '../src/data/goodslist.json',
                 data: {},
                 context: this,
                 dataType: 'json',
