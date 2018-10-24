@@ -1,20 +1,41 @@
 {
-  "name": "js",
+  "name": "xntq_v2",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "虚拟特权vue版",
+  "main": ".eslintrc.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack"
   },
   "keywords": [],
   "author": "luojianet <997948809@163.com>",
   "license": "ISC",
+  "repository": "https://github.com/luojianet/demoSite.git",
   "devDependencies": {
+    "autoprefixer": "^9.2.1",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.11",
+    "eslint": "^5.7.0",
+    "eslint-loader": "^2.1.1",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^2.0.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "postcss-loader": "^3.0.0",
+    "scp2": "^0.5.0",
     "style-loader": "^0.23.1",
+    "uglifyjs-webpack-plugin": "^1.3.0",
+    "url-loader": "^1.1.2",
     "vue-loader": "^15.4.2",
-    "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.5.17",
     "webpack": "^3.12.0"
+  },
+  "dependencies": {
+    "izitoast": "^1.4.0",
+    "vue-clipboard2": "^0.2.1"
   }
 }

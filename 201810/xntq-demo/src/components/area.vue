@@ -54,38 +54,37 @@
 <script>
 export default {
     name: 'goodsArea',
-    data() {
+    data: function () {
         return {
             msg: 'Welcome to Your Vue.js App!'
         };
     },
-    props: ['goodsListArr','isVipXuser','seat'],
-    computed:{
-        title:function(){
+    props: ['goodsListArr', 'isVipXuser', 'seat'],
+    computed: {
+        title: function () {
             if (this.seat == 3) {
                 return '1元砍价专区';
-            }else if(this.seat == 1){
+            } else if (this.seat == 1) {
                 return '超级会员乐购区';
-            }else if(this.seat==2){
+            } else if (this.seat == 2) {
                 return '年费超级会员荣耀区';
             }
         },
-        subtitle: function(){
+        subtitle: function () {
             if (this.seat == 3) {
                 return '以下任意商品每月限购一次';
-            }else if(this.seat == 1){
+            } else if (this.seat == 1) {
                 return '该区商品每月限购一款';
-            }else if(this.seat==2){
+            } else if (this.seat == 2) {
                 return '该区商品每月限购一款，不与乐购区重复购买';
             }
         }
     }
 };
-
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
     .goodsArea{
-        color: blue;
+        border:1px solid;
     }
 </style>
