@@ -1,11 +1,11 @@
-/*global __dirname */
+/*global __dirname process*/
 var webpack = require('webpack');
 var path = require('path');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-module.exports = {
+var webpackConfig = {
     entry: {
         index: './src/js/index.js'
     },
@@ -60,4 +60,15 @@ module.exports = {
             template: './src/index.html'
         })
     ]
-}
+};
+webpack(webpackConfig, function(err, stats) {
+    if (err) throw err;
+    process.stdout.write(stats.toString({
+        colors: true,
+        modules: false,
+        children: false, // If you are using ts-loader, setting this to true will make TypeScript errors show up during build.
+        chunks: false,
+        chunkModules: false
+    }) + '\n\n');
+    console.log('done');
+});

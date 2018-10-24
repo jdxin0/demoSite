@@ -4,26 +4,28 @@ const ora = require('ora');
 const chalk = require('chalk');
 const rm = require('rimraf');
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const NODE_ENV = process.env.NODE_ENV;
 var webpackConfig = {
     entry: './src/js/main.js',
     output: {
         path: path.resolve('dist'),
-        filename: '[hash].js'
+        filename: 'bundle.js'
     },
     module: {
         rules: [{
             test: /\.css$/,
-            use: 'css-loader'
+            use: ['style-loader','css-loader']
         }]
     },
     plugins: [
         new webpack.DefinePlugin({
-            PRODUCTION: JSON.stringify(true),
-            VERSION: JSON.stringify('5fa3b9'),
-            BROWSER_SUPPORTS_HTML5: true,
-            TWO: '1+1',
-            'typeof window': JSON.stringify('object')
+            'process.env': {
+                NODE_ENV: '"production"'
+            }
+        }),
+        new HtmlWebpackPlugin({
+            template:'./src/index.html'
         })
     ]
 };
@@ -55,7 +57,7 @@ rm(path.resolve('dist'), err => {
         console.log(chalk.cyan('  Build complete.\n'));
         console.log(chalk.yellow(
             '  Tip: built files are meant to be served over an HTTP server.\n' +
-      '  Opening index.html over file:// won\'t work.\n'
+            '  Opening index.html over file:// won\'t work.\n'
         ));
     });
 

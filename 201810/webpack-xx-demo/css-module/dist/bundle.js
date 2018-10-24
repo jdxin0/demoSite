@@ -1,4 +1,3 @@
-/*! [@luojianet](http://www.xuliehaonet.com) */
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -61,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -69,107 +68,17 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_index_js_vue_loader_options_area_vue_vue_type_script_lang_js___ = __webpack_require__(1);
-/* unused harmony namespace reexport */
- /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_index_js_vue_loader_options_area_vue_vue_type_script_lang_js___["a" /* default */]); 
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__css_style_css__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__css_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__css_style_css__);
+
 
 /***/ }),
 /* 1 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["a"] = ({
-    name: 'goodsArea',
-    data() {
-        return {
-            msg: 'Welcome to Your Vue.js App!'
-        };
-    },
-    props: ['goodsListArr','isVipXuser','seat'],
-    computed:{
-        title:function(){
-            if (this.seat == 3) {
-                return '1元砍价专区';
-            }else if(this.seat == 1){
-                return '超级会员乐购区';
-            }else if(this.seat==2){
-                return '年费超级会员荣耀区';
-            }
-        },
-        subtitle: function(){
-            if (this.seat == 3) {
-                return '以下任意商品每月限购一次';
-            }else if(this.seat == 1){
-                return '该区商品每月限购一款';
-            }else if(this.seat==2){
-                return '该区商品每月限购一款，不与乐购区重复购买';
-            }
-        }
-    }
-});
-
-
-
-/***/ }),
-/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(8);
+var content = __webpack_require__(2);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -183,13 +92,13 @@ var options = {"hmr":true}
 options.transform = transform
 options.insertInto = undefined;
 
-var update = __webpack_require__(10)(content, options);
+var update = __webpack_require__(4)(content, options);
 
 if(content.locals) module.exports = content.locals;
 
 if(false) {
-	module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../node_modules/vue-loader/lib/index.js??vue-loader-options!./area.vue?vue&type=style&index=0&lang=css&", function() {
-		var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../node_modules/vue-loader/lib/index.js??vue-loader-options!./area.vue?vue&type=style&index=0&lang=css&");
+	module.hot.accept("!!../../node_modules/css-loader/index.js!./style.css", function() {
+		var newContent = require("!!../../node_modules/css-loader/index.js!./style.css");
 
 		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 
@@ -215,301 +124,21 @@ if(false) {
 }
 
 /***/ }),
-/* 3 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_area_vue__ = __webpack_require__(4);
-/*global Vue $*/
-
-window.app = new Vue({
-    el: '#app',
-    data: {
-        isVipXuser: false,
-        goodsList: null,
-        goodsListArr: []
-    },
-    components: { 'goodsArea': __WEBPACK_IMPORTED_MODULE_0__components_area_vue__["a" /* default */] },
-    computed: {
-        areaNum: function() {
-            var arr = [0, 0, 0];
-            for (var item of this.goodsListArr) {
-                if (item.seat == 1) {
-                    arr[1]++;
-                } else if (item.seat == 2) {
-                    arr[2]++;
-                } else if (item.seat == 3) {
-                    arr[0]++;
-                }
-            }
-            return arr;
-
-        }
-    },
-    methods: {
-        bubbleSort: function(arr) {
-            var len = arr.length;
-            for (var i = 0; i < len; i++) {
-                for (var j = 0; j < len - 1 - i; j++) {
-                    if (arr[j].order - 0 > arr[j + 1].order - 0) {
-                        var temp = arr[j + 1];
-                        arr[j + 1] = arr[j];
-                        arr[j] = temp;
-                    }
-                }
-            }
-            return arr;
-        },
-        getGoddsData: function() {
-            $.ajax({
-                url: '../src/data/goodslist.json',
-                data: {},
-                context: this,
-                dataType: 'json',
-                success: function(rs) {
-                    if (rs.result == 0) {
-                        this.goodsList = rs.data.glist;
-                        for (var key in this.goodsList) {
-                            this.goodsListArr.push(this.goodsList[key]);
-                        }
-                        this.bubbleSort(this.goodsListArr);
-                    }
-                },
-                error: function() {
-                    throw new Error('获取商品数据失败');
-                }
-            });
-        }
-    },
-    mounted: function() {
-        this.getGoddsData();
-    }
-});
-
-
-/***/ }),
-/* 4 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__area_vue_vue_type_template_id_6eed0a1d___ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__area_vue_vue_type_script_lang_js___ = __webpack_require__(0);
-/* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__area_vue_vue_type_style_index_0_lang_css___ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__node_modules_vue_loader_lib_runtime_componentNormalizer_js__ = __webpack_require__(12);
-
-
-
-
-
-
-/* normalize component */
-
-var component = Object(__WEBPACK_IMPORTED_MODULE_3__node_modules_vue_loader_lib_runtime_componentNormalizer_js__["a" /* default */])(
-  __WEBPACK_IMPORTED_MODULE_1__area_vue_vue_type_script_lang_js___["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_0__area_vue_vue_type_template_id_6eed0a1d___["a" /* render */],
-  __WEBPACK_IMPORTED_MODULE_0__area_vue_vue_type_template_id_6eed0a1d___["b" /* staticRenderFns */],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) {
-  var api = require("C:\\www\\www.yanhu.com\\201810\\xntq-demo\\node_modules\\vue-hot-reload-api\\dist\\index.js")
-  api.install(require('vue'))
-  if (api.compatible) {
-    module.hot.accept()
-    if (!module.hot.data) {
-      api.createRecord('6eed0a1d', component.options)
-    } else {
-      api.reload('6eed0a1d', component.options)
-    }
-    module.hot.accept("./area.vue?vue&type=template&id=6eed0a1d&", function () {
-      api.rerender('6eed0a1d', {
-        render: render,
-        staticRenderFns: staticRenderFns
-      })
-    })
-  }
-}
-component.options.__file = "src/components/area.vue"
-/* harmony default export */ __webpack_exports__["a"] = (component.exports);
-
-/***/ }),
-/* 5 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_area_vue_vue_type_template_id_6eed0a1d___ = __webpack_require__(6);
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_area_vue_vue_type_template_id_6eed0a1d___["a"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_area_vue_vue_type_template_id_6eed0a1d___["b"]; });
-
-
-/***/ }),
-/* 6 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return staticRenderFns; });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "goodsArea" }, [
-    _c("div", { staticClass: "box__hd" }, [
-      _c("h2", [_vm._v(_vm._s(_vm.title))]),
-      _vm._v(" "),
-      _c("span", [_vm._v(_vm._s(_vm.subtitle))]),
-      _vm._v(" "),
-      _c("i", { staticClass: "hd-bg" }),
-      _vm._v(" "),
-      _c("i", { staticClass: "box-line" })
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "box__bd" }, [
-      _c(
-        "ul",
-        { staticClass: "list" },
-        [
-          _vm.goodsListArr.length === 0
-            ? _vm._l(5, function(n) {
-                return _c("li", { staticClass: "item load" }, [
-                  _c("i", { staticClass: "load-inner" })
-                ])
-              })
-            : _vm._l(_vm.goodsListArr, function(item) {
-                return item.seat == _vm.seat
-                  ? _c(
-                      "li",
-                      {
-                        key: item.gid,
-                        staticClass: "item",
-                        attrs: { "data-gid": item.gid }
-                      },
-                      [
-                        _c("div", { staticClass: "xl-figure" }, [
-                          _c("div", { staticClass: "figure" }, [
-                            _c("img", {
-                              attrs: { src: item.banner_upload, alt: item.name }
-                            })
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "figure-info" }, [
-                            _c("div", { staticClass: "figure-title" }, [
-                              _vm._v(_vm._s(item.title))
-                            ]),
-                            _vm._v(" "),
-                            _c("i", { staticClass: "info-line" }),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "figure-subtitle" }, [
-                              _vm._v(_vm._s(item.descript))
-                            ]),
-                            _vm._v(" "),
-                            item.goods_type == 2
-                              ? _c(
-                                  "a",
-                                  {
-                                    staticClass: "card-rule",
-                                    attrs: { href: "javascript:;" }
-                                  },
-                                  [_vm._v("使用规则>>")]
-                                )
-                              : _vm._e()
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "item-info" }, [
-                          _c("div", { staticClass: "item-tit" }, [
-                            _c("span", [_vm._v(_vm._s(item.name))]),
-                            _vm._v(" "),
-                            !item.remain
-                              ? _c("i", { staticClass: "ico-sellout" })
-                              : _vm._e()
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "price" }, [
-                            _c("span", { staticClass: "price-new" }, [
-                              _vm._v(_vm._s(item.sj_price) + "元")
-                            ]),
-                            _vm._v(" "),
-                            _c("span", { staticClass: "price-old" }, [
-                              _vm._v(_vm._s(item.yj_price) + "元")
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "xl-progress__txt" }, [
-                              _vm._v("剩余" + _vm._s(item.remain) + "个")
-                            ])
-                          ]),
-                          _vm._v(" "),
-                          _vm._m(0, true)
-                        ]),
-                        _vm._v(" "),
-                        _vm._m(1, true)
-                      ]
-                    )
-                  : _vm._e()
-              })
-        ],
-        2
-      )
-    ])
-  ])
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "xl-progress-wp" }, [
-      _c("div", { staticClass: "xl-progress" }, [
-        _c("i", { staticClass: "xl-progress__inner" })
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "operations" }, [
-      _c("a", { attrs: { href: "javascript:;" } }, [_vm._v("购买按钮")])
-    ])
-  }
-]
-render._withStripped = true
-
-
-
-/***/ }),
-/* 7 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_area_vue_vue_type_style_index_0_lang_css___ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_area_vue_vue_type_style_index_0_lang_css____default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_area_vue_vue_type_style_index_0_lang_css___);
-/* unused harmony reexport namespace */
- /* unused harmony default export */ var _unused_webpack_default_export = (__WEBPACK_IMPORTED_MODULE_0__node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_area_vue_vue_type_style_index_0_lang_css____default.a); 
-
-/***/ }),
-/* 8 */
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(9)(false);
+exports = module.exports = __webpack_require__(3)(false);
 // imports
 
 
 // module
-exports.push([module.i, "\n.goodsArea{\n    color: blue;\n}\n", ""]);
+exports.push([module.i, ".css{\r\n    width: 100px;\r\n    height: 100px;\r\n    border: 1px solid;\r\n}", ""]);
 
 // exports
 
 
 /***/ }),
-/* 9 */
+/* 3 */
 /***/ (function(module, exports) {
 
 /*
@@ -591,7 +220,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 10 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -660,7 +289,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(11);
+var	fixUrls = __webpack_require__(5);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -997,7 +626,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 11 */
+/* 5 */
 /***/ (function(module, exports) {
 
 
@@ -1089,107 +718,6 @@ module.exports = function (css) {
 	// send back the fixed css
 	return fixedCss;
 };
-
-
-/***/ }),
-/* 12 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = normalizeComponent;
-/* globals __VUE_SSR_CONTEXT__ */
-
-// IMPORTANT: Do NOT use ES2015 features in this file (except for modules).
-// This module is a runtime utility for cleaner component module output and will
-// be included in the final webpack user bundle.
-
-function normalizeComponent (
-  scriptExports,
-  render,
-  staticRenderFns,
-  functionalTemplate,
-  injectStyles,
-  scopeId,
-  moduleIdentifier, /* server only */
-  shadowMode /* vue-cli only */
-) {
-  // Vue.extend constructor export interop
-  var options = typeof scriptExports === 'function'
-    ? scriptExports.options
-    : scriptExports
-
-  // render functions
-  if (render) {
-    options.render = render
-    options.staticRenderFns = staticRenderFns
-    options._compiled = true
-  }
-
-  // functional template
-  if (functionalTemplate) {
-    options.functional = true
-  }
-
-  // scopedId
-  if (scopeId) {
-    options._scopeId = 'data-v-' + scopeId
-  }
-
-  var hook
-  if (moduleIdentifier) { // server build
-    hook = function (context) {
-      // 2.3 injection
-      context =
-        context || // cached call
-        (this.$vnode && this.$vnode.ssrContext) || // stateful
-        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
-      // 2.2 with runInNewContext: true
-      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
-        context = __VUE_SSR_CONTEXT__
-      }
-      // inject component styles
-      if (injectStyles) {
-        injectStyles.call(this, context)
-      }
-      // register component module identifier for async chunk inferrence
-      if (context && context._registeredComponents) {
-        context._registeredComponents.add(moduleIdentifier)
-      }
-    }
-    // used by ssr in case component is cached and beforeCreate
-    // never gets called
-    options._ssrRegister = hook
-  } else if (injectStyles) {
-    hook = shadowMode
-      ? function () { injectStyles.call(this, this.$root.$options.shadowRoot) }
-      : injectStyles
-  }
-
-  if (hook) {
-    if (options.functional) {
-      // for template-only hot-reload because in that case the render fn doesn't
-      // go through the normalizer
-      options._injectStyles = hook
-      // register for functioal component in vue file
-      var originalRender = options.render
-      options.render = function renderWithStyleInjection (h, context) {
-        hook.call(context)
-        return originalRender(h, context)
-      }
-    } else {
-      // inject component registration as beforeCreate hook
-      var existing = options.beforeCreate
-      options.beforeCreate = existing
-        ? [].concat(existing, hook)
-        : [hook]
-    }
-  }
-
-  return {
-    exports: scriptExports,
-    options: options
-  }
-}
 
 
 /***/ })
