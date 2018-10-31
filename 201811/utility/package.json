@@ -1,0 +1,25 @@
+{
+  "name": "@luojianet/utility",
+  "version": "1.0.0",
+  "description": "js lib use in vip act",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luojianet/demosite.git"
+  },
+  "keywords": [
+    "js",
+    "lib",
+    "js",
+    "utility"
+  ],
+  "author": "luojianet <997948809@163.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luojianet/demosite/issues"
+  },
+  "homepage": "https://github.com/luojianet/demosite#readme"
+}
