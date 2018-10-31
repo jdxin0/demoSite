@@ -12,7 +12,7 @@ module.exports = {
             use: [{
                 loader: 'url-loader',
                 options: {
-                    limit: '1024',
+                    limit: '8192',
                     outputPath: 'asset',
                     fallback: 'file-loader',
                     name: '[folder]/[name].[ext]?v=[hash:8]'
