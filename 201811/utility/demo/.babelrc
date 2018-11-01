@@ -1,0 +1,9 @@
+{
+	"presets": [["env",{
+		"targets":{
+			"browsers": ["defaults", ">0.01%", "ie > 8"]
+        },
+        "modules": false
+	}]],
+	"plugins": ["transform-runtime"]
+}
