@@ -1,4 +1,5 @@
 var path = require('path');
+var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: './src/index.js',
@@ -14,6 +15,7 @@ module.exports = {
         }]
     },
     plugins: [
+        new webpack.optimize.UglifyJsPlugin(),
         new HtmlWebpackPlugin({
             hash: true,
             title: 'Custom template',

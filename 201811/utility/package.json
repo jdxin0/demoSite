@@ -1,6 +1,6 @@
 {
   "name": "@luojianet/utility",
-  "version": "2.0.4",
+  "version": "2.0.6",
   "description": "js lib use in vip act",
   "main": "index.js",
   "scripts": {

@@ -65,54 +65,57 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__index_js__ = __webpack_require__(1);
 
-console.log(Object(__WEBPACK_IMPORTED_MODULE_0__index_js__["a" /* formatDate */])('2018-01-01 01:02:03', 'yyyy-MM-DD'));
+
+var _index = __webpack_require__(1);
+
+var formatDateStr = (0, _index.formatDate)({ fmt: 'yyyy年MM月dd日 hh点mm分ss秒', date: new Date('2018/08/05 12:23:45') });
+console.log(formatDateStr);
 
 /***/ }),
 /* 1 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* unused harmony export hidePhoneNum */
-/* unused harmony export hideEmailSec */
-/* unused harmony export deepCopy */
-/* unused harmony export toThousands */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return formatDate; });
-/* unused harmony export getDataType */
-/* unused harmony export getUrlParam */
-/* unused harmony export objectLength */
-/* unused harmony export setCookie */
-/* unused harmony export getCookie */
-/* unused harmony export clearCookie */
-/* unused harmony export getRandomNum */
-/* unused harmony export getRandomNum1_10 */
-/* unused harmony export getRandomNum0_9 */
-/* unused harmony export getRandomNum0or1 */
-/* unused harmony export getRandomNum1_Max */
-/* unused harmony export getRandomNum0_Max */
-/* unused harmony export initEvents */
-/* unused harmony export htmlencode */
-/* unused harmony export htmldecode */
-/* unused harmony export isShoulei */
-/* unused harmony export isWeixin */
-/* unused harmony export isIpad */
-/* unused harmony export isIOS */
-/* unused harmony export isAndroid */
-/* unused harmony export injectStyle */
-/* unused harmony export injectScript */
-/* unused harmony export isElementInView */
-/* unused harmony export encodeUnicode */
-/* unused harmony export decodeUnicode */
-/* unused harmony export thousandsSeparator */
-/* unused harmony export thousandsSeparator2 */
-/* unused harmony export bubbleSort */
-/* unused harmony export trim */
-/* unused harmony export moneyCountUp */
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hidePhoneNum", function() { return hidePhoneNum; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hideEmailSec", function() { return hideEmailSec; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deepCopy", function() { return deepCopy; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "toThousands", function() { return toThousands; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formatDate", function() { return formatDate; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getDataType", function() { return getDataType; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getUrlParam", function() { return getUrlParam; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "objectLength", function() { return objectLength; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setCookie", function() { return setCookie; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getCookie", function() { return getCookie; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "clearCookie", function() { return clearCookie; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getRandomNum", function() { return getRandomNum; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getRandomNum1_10", function() { return getRandomNum1_10; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getRandomNum0_9", function() { return getRandomNum0_9; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getRandomNum0or1", function() { return getRandomNum0or1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getRandomNum1_Max", function() { return getRandomNum1_Max; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getRandomNum0_Max", function() { return getRandomNum0_Max; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initEvents", function() { return initEvents; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "htmlencode", function() { return htmlencode; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "htmldecode", function() { return htmldecode; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isShoulei", function() { return isShoulei; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isWeixin", function() { return isWeixin; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isIpad", function() { return isIpad; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isIOS", function() { return isIOS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isAndroid", function() { return isAndroid; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "injectStyle", function() { return injectStyle; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "injectScript", function() { return injectScript; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isElementInView", function() { return isElementInView; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "encodeUnicode", function() { return encodeUnicode; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "decodeUnicode", function() { return decodeUnicode; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "thousandsSeparator", function() { return thousandsSeparator; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "thousandsSeparator2", function() { return thousandsSeparator2; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "bubbleSort", function() { return bubbleSort; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "trim", function() { return trim; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "moneyCountUp", function() { return moneyCountUp; });
 /*global $ CountUp*/
 function hidePhoneNum(num) {
     return String(num).replace(/(\d{3})\d{4}(\d{4})/, '$1****$2');
@@ -152,13 +155,12 @@ function toThousands(num) {
 // 调用：
 // 项目中：import {formatDate} from "./formatDate.js"
 // js中：formate(new Date(),'yyyy-MM-DD hh:mm:ss')
-function formatDate(date, fmt) {
-    date = date ? new Date(date) : new Date();
+function formatDate({ date = new Date(), fmt }) {
     var o = {
-        "M+": date.getMonth() + 1, //月份
-        "D+": date.getDay(), //日
-        "h+": date.getHours(), //hours
-        "m+": date.getMinutes(), //分钟
+        'M+': date.getMonth() + 1, //月份
+        'd+': date.getDay(), //日
+        'h+': date.getHours(), //hours
+        'm+': date.getMinutes(), //分钟
         's+': date.getSeconds() //秒,
     };
     if (/(y+)/.test(fmt)) {
@@ -166,8 +168,8 @@ function formatDate(date, fmt) {
         fmt = fmt.replace(RegExp.$1, (date.getFullYear() + '').substr(4 - RegExp.$1.length));
     }
     for (var k in o) {
-        if (new RegExp("(" + k + ")").test(fmt)) {
-            fmt = fmt.replace(RegExp.$1, RegExp.$1.length === 1 ? o[k] : ("00" + o[k]).substr(("" + o[k]).length));
+        if (new RegExp('(' + k + ')').test(fmt)) {
+            fmt = fmt.replace(RegExp.$1, RegExp.$1.length === 1 ? o[k] : ('00' + o[k]).substr(('' + o[k]).length));
         }
     }
     return fmt;
