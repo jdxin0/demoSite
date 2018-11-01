@@ -11,7 +11,6 @@ module.exports = {
         rules: [{
             test: /\.js$/,
             use: 'babel-loader',
-            include: /node_modules\/@luojianet\/utiltity/,
             exclude: /node_modules/
         }]
     },
