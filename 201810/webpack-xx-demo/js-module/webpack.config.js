@@ -11,7 +11,7 @@ module.exports = {
         rules: [{
             test: /\.js$/,
             use: 'babel-loader',
-            include:path.resolve('node_modules/@luojianet/utility/index.js'),
+            exclude:/node_modules/
         }]
     },
     plugins: [
