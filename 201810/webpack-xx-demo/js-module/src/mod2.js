@@ -14,7 +14,7 @@ function deepCopy(source, des) {
             } else {
                 des[key] = {};
             }
-            this.deepCopy(source[key], des[key]);
+            deepCopy(source[key], des[key]);
         } else {
             des[key] = source[key];
         }
@@ -34,21 +34,27 @@ function toThousands(num) {
     }
     return result.join('');
 }
-function getNowFormatDate() {
-    var date = new Date();
-    var seperator1 = '-';
-    var seperator2 = ':';
-    var month = date.getMonth() + 1;
-    var strDate = date.getDate();
-    if (month >= 1 && month <= 9) {
-        month = '0' + month;
+// 调用：
+// 项目中：import {formatDate} from "./formatDate.js"
+// js中：formate(new Date(),'yyyy-MM-DD hh:mm:ss')
+function formatDate(date,fmt){
+    var o = {
+        'M+':date.getMonth() + 1,//月份
+        'd+':date.getDay(),//日
+        'h+':date.getHours(),//hours
+        'm+':date.getMinutes(),//分钟
+        's+':date.getSeconds(),//秒,
+    };
+    if(/(y+)/.test(fmt)){
+        //RegExp.$1 是RegExp的一个属性,指的是与正则表达式匹配的第一个 子匹配(以括号为标志)字符串，以此类推，RegExp.$2，RegExp.$3，..RegExp.$99总共可以有99个匹配
+        fmt = fmt.replace(RegExp.$1,(date.getFullYear()+'').substr(4 - RegExp.$1.length));
     }
-    if (strDate >= 0 && strDate <= 9) {
-        strDate = '0' + strDate;
+    for(var k in o){
+        if(new RegExp('('+k+')').test(fmt)){
+            fmt = fmt.replace(RegExp.$1,(RegExp.$1.length===1)?(o[k]):(('00'+o[k]).substr((''+o[k]).length)));
+        }
     }
-    // var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate;//return type 2017-08-28
-    var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate + ' ' + date.getHours() + seperator2 + date.getMinutes() + seperator2 + date.getSeconds(); //return type 2017-08-28 15:48:36
-    return currentdate;
+    return fmt;
 }
 function getDataType(obj) {
     var rst = Object.prototype.toString.call(obj);
@@ -60,7 +66,6 @@ function getUrlParam(key) {
     key = key.replace(/\]/g, '%5D');
     var query = arguments[1] ? arguments[1] : location.search;
     var reg = new RegExp('^.*[\\?|\\&]' + key + '\\=([^\\&]*)');
-    // reg = eval(reg);
     var ret = query.match(reg);
     if (ret != null) {
         return decodeURIComponent(ret[1]);
@@ -285,15 +290,12 @@ function moneyCountUp(startMoney, endMoney) {
         }
     }).start();
 }
-function testWith() {
-    console.log(arguments.callee.caller);  //number
-}
 export {
     hidePhoneNum,
     hideEmailSec,
     deepCopy,
     toThousands,
-    getNowFormatDate,
+    formatDate,
     getDataType,
     getUrlParam,
     objectLength,
@@ -323,6 +325,5 @@ export {
     thousandsSeparator2,
     bubbleSort,
     trim,
-    moneyCountUp,
-    testWith
+    moneyCountUp
 };
