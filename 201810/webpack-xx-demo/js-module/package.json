@@ -25,6 +25,6 @@
     "webpack": "^3.12.0"
   },
   "dependencies": {
-    "@luojianet/utility": "^2.0.3"
+    "@luojianet/utility": "^2.0.8"
   }
 }
