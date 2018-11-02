@@ -14,7 +14,7 @@ function deepCopy(source, des) {
             } else {
                 des[key] = {};
             }
-            this.deepCopy(source[key], des[key]);
+            deepCopy(source[key], des[key]);
         } else {
             des[key] = source[key];
         }
