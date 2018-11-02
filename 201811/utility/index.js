@@ -21,22 +21,9 @@ function deepCopy(source, des) {
     }
     return des;
 }
-function toThousands(num) {
-    var result = []
-        , counter = 0;
-    num = (num || 0).toString().split('');
-    for (var i = num.length - 1; i >= 0; i--) {
-        counter++;
-        result.unshift(num[i]);
-        if (!(counter % 3) && i != 0) {
-            result.unshift(',');
-        }
-    }
-    return result.join('');
-}
 // 调用：
 // 项目中：import {formatDate} from "./formatDate.js"
-// js中：formate(new Date(),'yyyy-MM-DD hh:mm:ss')
+// js中：formate(new Date(),'yyyy-MM-dd hh:mm:ss')
 function formatDate(date,fmt){
     var o = {
         'M+':date.getMonth() + 1,//月份
@@ -235,7 +222,20 @@ function decodeUnicode(str) {
     str = str.replace(/\\/g, '%');
     return unescape(str);
 }
-function thousandsSeparator(num) {
+function thousandsSeparator1(num) {
+    var result = []
+        , counter = 0;
+    num = (num || 0).toString().split('');
+    for (var i = num.length - 1; i >= 0; i--) {
+        counter++;
+        result.unshift(num[i]);
+        if (!(counter % 3) && i != 0) {
+            result.unshift(',');
+        }
+    }
+    return result.join('');
+}
+function thousandsSeparator2(num) {
     num = num.toString().split('.');  // 分隔小数点
     var arr = num[0].split('').reverse();  // 转换成字符数组并且倒序排列
     var res = [];
@@ -253,7 +253,7 @@ function thousandsSeparator(num) {
     }
     return res;
 }
-function thousandsSeparator2(num) {
+function thousandsSeparator3(num) {
     var res = num.toString().replace(/\d+/, function (n) { // 先提取整数部分
         return n.replace(/(\d)(?=(\d{3})+$)/g, function ($1) {
             return $1 + ',';
@@ -294,7 +294,6 @@ export {
     hidePhoneNum,
     hideEmailSec,
     deepCopy,
-    toThousands,
     formatDate,
     getDataType,
     getUrlParam,
@@ -321,8 +320,9 @@ export {
     isElementInView,
     encodeUnicode,
     decodeUnicode,
-    thousandsSeparator,
+    thousandsSeparator1,
     thousandsSeparator2,
+    thousandsSeparator3,
     bubbleSort,
     trim,
     moneyCountUp
