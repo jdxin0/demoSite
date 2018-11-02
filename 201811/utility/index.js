@@ -37,7 +37,7 @@ function toThousands(num) {
 // 调用：
 // 项目中：import {formatDate} from "./formatDate.js"
 // js中：formate(new Date(),'yyyy-MM-DD hh:mm:ss')
-function formatDate({date=new Date(),fmt}){
+function formatDate(date,fmt){
     var o = {
         'M+':date.getMonth() + 1,//月份
         'd+':date.getDay(),//日
