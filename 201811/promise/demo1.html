@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+<script>
+// setTimeout(function(){
+//     console.log(1);
+//     setTimeout(function(){
+//         console.log(2);
+//         setTimeout(function(){
+//             console.log(3);
+//         },500);
+//     },500)
+// },500)
+var p1,p2,p3;
+p1 = new Promise(function(resolve) {
+    setTimeout(function() {
+        console.log(1);
+        resolve('a');
+    }, 1000);
+});
+p2 = p1.then(function(val){
+    if(val=='vip'){
+        return new Promise(function(resolve) {
+            setTimeout(function() {
+                console.log(2);
+                resolve('b');
+            }, 1000);
+        });
+    }else{
+        return new Promise(function(resolve) {
+            setTimeout(function() {
+                console.log(3);
+                resolve('c');
+            }, 1000);
+        });
+    }
+    
+});
+p3 = p2.then(function(val){
+    if(val=='vip'){
+        return new Promise(function(resolve){
+            setTimeout(function(){
+                console.log(4);
+                resolve('d');
+            },1000);
+        });
+    }else{
+        return new Promise(function(resolve){
+            setTimeout(function(){
+                console.log(4);
+                resolve('d');
+            },1000);
+        });
+    }
+    
+});
+
+Promise.all([p1, p2, p3]).then(function(arr) {
+    console.log(arr);
+});
+
+setTimeout(function(){
+    p3.then(function(){
+        console.log('what');
+    });
+},10000);
+p3.then(function(){
+    console.log('?');
+});
+</script>
+</body>
+
+</html>
