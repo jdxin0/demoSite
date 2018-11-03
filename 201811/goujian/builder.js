@@ -16,32 +16,25 @@
         return colorArr[Math.floor(Math.random() * 10)];
     }
     function init() {
-        var clientFolder = process.argv[2];
-        var projectFolder = process.argv[3];
-        console.log(process.argv);
-        if (!clientFolder) {
-            console.log(chalk.red('  注意！需要填写参数告知是pc或m(例：node build pc spring)'));
+        var input = process.argv[2];
+        if (!input) {
+            console.log(chalk.red('  输入要打包js文件的相对路径，例：build src/index.js'));
             process.exit(1);
         }
-        if (!projectFolder) {
-            console.log(chalk.red('  注意！需要填写活动开发目录的文件名(例：node build pc spring)'));
-            process.exit(1);
-        }
-        var entryFilePath = path.resolve(clientFolder + '/vip/2018/' + projectFolder + '/source/js/index.js');
+        var entryFilePath = path.resolve(process.cwd(), process.argv[2]);
         var entryFileName = path.parse(entryFilePath).name;
         var projectPath = path.resolve(entryFilePath + '/../../../');
         var destPath = path.resolve(projectPath + '/dist');
         var tplFilePath = path.resolve(projectPath + '/source/' + entryFileName + '.html');
-        return { clientFolder, projectFolder, entryFilePath, projectPath, destPath, tplFilePath };
+        return { entryFilePath, entryFileName, projectPath, destPath, tplFilePath };
     }
     var config = init();
-    return;
     var webpackConfig = {
         entry: config.entryFilePath,
         output: {
             path: config.destPath,
             filename: 'js/index.js',
-            publicPath: 'https://act-vip-ssl.xunlei.com/' + config.clientFolder + '/vip/2018/' + config.projectFolder + '/dist/'
+            publicPath:'dist/'
         },
         module: {
             rules: [{
@@ -68,7 +61,7 @@
                             pathstr = path.resolve(file);
                             pathstr = pathstr.split('source')[1];
                             pathstr = pathstr.split(/[^\\]*\.(png|jpg|gif|svg)$/)[0];
-                            pathstr = pathstr.replace(/\\/g,'/');
+                            pathstr = pathstr.replace(/\\/g, '/');
                             pathstr = pathstr.substr(1);
                             return pathstr + '[name].[ext]?v=[hash:8]';
                         }
@@ -87,13 +80,13 @@
             new webpack.BannerPlugin('[@luojianet](http://www.xuliehaonet.com)'),
             new ExtractTextPlugin('css/style.css'),
             new HtmlWebpackPlugin({
-                filename: '../index.html',
                 hash: true,
+                filename: '../index.html',
                 template: config.tplFilePath
             })
         ]
     };
-    if (process.argv.indexOf('--copy')>1) {
+    if (process.argv.indexOf('--copy') > 1) {
         webpackConfig.plugins.push(
             new CopyPlugin([{
                 from: path.resolve(config.projectPath + '/source/static'),
@@ -101,8 +94,8 @@
             }])
         );
     }
-    if (process.argv.indexOf('--pro')>1) {
-        webpackConfig.devtool='source-map';
+    if (process.argv.indexOf('--pro') > 1) {
+        webpackConfig.devtool = 'source-map';
         webpackConfig.plugins.push(
             new webpack.optimize.UglifyJsPlugin({
                 sourceMap: true
@@ -129,14 +122,7 @@
                 process.exit(1);
             }
             console.log(chalk.hex('#51a351')(`主人，小奴已帮您构建完成啦...耗时${(stats.endTime - stats.startTime) / 1000}s\n`));
-            client.scp(config.projectPath, {
-                host: '10.10.45.12',
-                username: 'devweb',
-                password: 'I48OJ34Y',
-                path: '/usr/local/zeus/htdocs/act.vip.xunlei.com/' + config.clientFolder + '/vip/2018/' + config.projectFolder
-            }, function () {
-                console.log(chalk[getColor()].bold(`已上传服务器:${new Date()}`));
-            });
+            
         });
     });
 })();

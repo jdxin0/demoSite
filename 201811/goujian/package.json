@@ -1,10 +1,10 @@
 {
     "name": "@luojianet/builder",
-    "version": "1.1.1",
-    "description": "构建器",
+    "version": "1.2.1",
+    "description": "通用前端项目构建器",
     "main": "builder.js",
     "bin": {
-        "builder": "./builder.js"
+        "build": "./builder.js"
     },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
