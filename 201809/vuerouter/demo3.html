@@ -12,9 +12,9 @@
     <div id="app">
         <p>
         	<ul>
-        		<li><router-link to="/user/foo">/user/foo</router-link></li>
-        		<li><router-link to="/user/foo/profile">/user/foo/profile</router-link></li>
-        		<li><router-link to="/user/foo/posts">/user/foo/posts</router-link></li>
+        		<li><router-link v-bind:to="'/user/'+$route.params.name">/user/{{ $route.params.name }}</router-link></li>
+        		<li><router-link v-bind:to="'/user/'+$route.params.name+'/profile'">/user/{{ $route.params.name }}/profile</router-link></li>
+        		<li><router-link v-bind:to="'/user/'+$route.params.name+'/posts'">/user/{{ $route.params.name }}/posts</router-link></li>
         	</ul>
         </p>
         <router-view></router-view>
@@ -23,7 +23,7 @@
     const User = {
         template: `
 		    <div class="user">
-		      <h2>User {{ $route.params.id }}</h2>
+		      <h2>User {{ $route.params.name }}</h2>
 		      <router-view></router-view>
 		    </div>
 		  `
@@ -35,7 +35,7 @@
 
     const router = new VueRouter({
         routes: [{
-            path: '/user/:id',
+            path: '/user/:name',
             component: User,
             children: [
                 // UserHome will be rendered inside User's <router-view>
