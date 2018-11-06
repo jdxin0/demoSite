@@ -5,21 +5,20 @@ function hidePhoneNum(num) {
 function hideEmailSec(email) {
     return String(email).replace(/(.{2}).+(.{2}@.+)/, '$1****$2');
 }
-function deepCopy(source, des) {
-    des = des || (Object.prototype.toString.call(source) == '[object Array]' ? [] : {});
-    for (var key in source) {
-        if (typeof source[key] === 'object') {
-            if (source[key].constructor === Array) {
-                des[key] = [];
-            } else {
-                des[key] = {};
-            }
-            deepCopy(source[key], des[key]);
-        } else {
-            des[key] = source[key];
-        }
+function deepClone(obj) {
+    if (typeof obj !== 'object')
+        return obj;
+    if (obj == null)
+        return null;
+    if (obj instanceof Date)
+        return new Date(obj);
+    if (obj instanceof RegExp)
+        return new RegExp(obj);
+    let o = new obj.constructor();
+    for (var key in obj) {
+        o[key] = typeof obj[key] === 'object' ? deepClone(obj[key]) : obj[key];
     }
-    return des;
+    return o;
 }
 // 调用：
 // 项目中：import {formatDate} from "./formatDate.js"
