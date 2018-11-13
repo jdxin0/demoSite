@@ -17,6 +17,6 @@
   "homepage": "https://github.com/luojianet/demoSite#readme",
   "devDependencies": {},
   "dependencies": {
-    "@luojianet/utility": "^2.1.1"
+    "@luojianet/utility": "file:201811/utility"
   }
 }
