@@ -292,7 +292,7 @@ function moneyCountUp(startMoney, endMoney) {
 export {
     hidePhoneNum,
     hideEmailSec,
-    deepCopy,
+    deepClone,
     formatDate,
     getDataType,
     getUrlParam,
