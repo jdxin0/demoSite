@@ -6,7 +6,7 @@ function hideEmailSec(email) {
     return String(email).replace(/(.{2}).+(.{2}@.+)/, '$1****$2');
 }
 function deepClone(obj) {
-    if (typeof obj !== 'object')
+    if (Object.prototype.toString.call(obj)!=='[object Object]')
         return obj;
     if (obj == null)
         return null;
@@ -14,9 +14,9 @@ function deepClone(obj) {
         return new Date(obj);
     if (obj instanceof RegExp)
         return new RegExp(obj);
-    let o = new obj.constructor();
+    var o = new obj.constructor();
     for (var key in obj) {
-        o[key] = typeof obj[key] === 'object' ? deepClone(obj[key]) : obj[key];
+        o[key] =Object.prototype.toString.call(obj[key])!=='[object Object]'? deepClone(obj[key]) : obj[key];
     }
     return o;
 }
