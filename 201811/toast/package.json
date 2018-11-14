@@ -1,0 +1,26 @@
+{
+  "name": "@luojianet/toast",
+  "version": "1.0.0",
+  "description": "toast",
+  "main": "main.js",
+  "dependencies": {
+    "izitoast": "^1.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luojianet/demosite.git"
+  },
+  "keywords": [
+    "toast"
+  ],
+  "author": "luojianet <997948809@163.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luojianet/demosite/issues"
+  },
+  "homepage": "https://github.com/luojianet/demosite#readme"
+}
