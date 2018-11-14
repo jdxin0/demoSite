@@ -3,7 +3,7 @@ export methods
 export {
     hidePhoneNum,
     hideEmailSec,
-    deepCopy,
+    deepClone,
     formatDate,
     getDataType,
     getUrlParam,
