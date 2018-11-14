@@ -4,3 +4,4 @@ document.getElementById('timer').innerText = dateStr;
 document.getElementById('timer').style.color='blue';
 var a=1,b=2;
 console.log(`${a},${b}`);
+console.log(Object.assign({},{a:1},{b:2}));
