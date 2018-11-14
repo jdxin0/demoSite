@@ -17,6 +17,7 @@
   "homepage": "https://github.com/luojianet/demoSite#readme",
   "devDependencies": {},
   "dependencies": {
+    "@luojianet/toast": "file:201811/toast",
     "@luojianet/utility": "file:201811/utility"
   }
 }
