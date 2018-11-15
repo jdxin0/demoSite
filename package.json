@@ -19,6 +19,7 @@
   "dependencies": {
     "@luojianet/toast": "file:201811/toast",
     "@luojianet/utility": "file:201811/utility",
+    "addone": "file:201811/addOne",
     "babel-runtime": "^6.26.0"
   }
 }
