@@ -1,3 +1,4 @@
+/*global process*/
 module.exports = function(api) {
     api.cache(false);
     const presets = [
@@ -12,7 +13,10 @@ module.exports = function(api) {
         ],
     ];
     const plugins = [];
-
+    if (process.env['ENV'] === 'prod') {
+        console.log('production mode');
+        plugins.push();
+    }
     return {
         presets,
         plugins
