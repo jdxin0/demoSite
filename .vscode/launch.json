@@ -21,6 +21,12 @@
             "request": "launch",
             "name": "process.env",
             "program": "${workspaceFolder}\\201810\\webpack-xx-demo\\css-module\\webpack.config.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "fs模块",
+            "program": "${workspaceFolder}\\201811\\fs-module\\demo1.js"
         }
     ]
 }

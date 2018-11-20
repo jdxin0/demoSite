@@ -1,0 +1,17 @@
+{
+  "name": "fs-module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "demo1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "luojianet <997948809@163.com>",
+  "license": "ISC",
+  "dependencies": {
+    "load-json-file": "^5.1.0",
+    "parse-json": "^4.0.0",
+    "strip-json-comments": "^2.0.1"
+  }
+}
