@@ -1,11 +1,12 @@
 {
   "name": "@luojianet/addone",
-  "version": "1.1.2",
+  "version": "1.1.4",
   "description": "数量加1动画",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": "https://github.com/luojianet/demoSite/tree/master/npm-module/addOne",
   "author": "luojianet <997948809@163.com>",
   "license": "ISC"
 }

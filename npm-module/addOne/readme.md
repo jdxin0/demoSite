@@ -3,7 +3,7 @@
 
     http://demo.xuliehaonet.com/201811/addone-demo/
 * html
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,14 +18,14 @@
 </html>
 ```
 * js
-```
+```js
 var addone = require('addone');
 document.getElementById('zanBtn').onclick=function(){
     addone(this);
 };
 ```
 * use
-````
+````js
 function (node,options){}
 options = $.extend({
     obj: obj || null, // jq对象，要在那个html标签上显示

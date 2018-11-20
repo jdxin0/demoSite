@@ -1,6 +1,6 @@
 {
   "name": "@luojianet/toast",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "toast",
   "main": "main.js",
   "dependencies": {
@@ -11,8 +11,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/luojianet/demosite.git"
+    "type": "https",
+    "url": "https://github.com/luojianet/demoSite/tree/master/npm-module/toast"
   },
   "keywords": [
     "toast"
