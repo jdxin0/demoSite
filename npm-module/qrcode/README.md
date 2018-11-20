@@ -3,36 +3,36 @@ QRCode.js is javascript library for making QRCode. QRCode.js supports Cross-brow
 QRCode.js has no dependencies.
 
 ## Basic Usages
-```
+```html
 <div id="qrcode"></div>
 <script type="text/javascript">
-var QRCode = require('@luojianet/qrcode');
-new QRCode(document.getElementById("qrcode"), "http://jindo.dev.naver.com/collie");
+    var QRCode = require('@luojianet/qrcode');
+    new QRCode(document.getElementById("qrcode"), "http://jindo.dev.naver.com/collie");
 </script>
 ```
 
 or with some options
 
-```
+```html
 <div id="qrcode"></div>
 <script type="text/javascript">
-var QRCode = require('@luojianet/qrcode');
-var qrcode = new QRCode(document.getElementById("qrcode"), {
-	text: "http://jindo.dev.naver.com/collie",
-	width: 128,
-	height: 128,
-	colorDark : "#000000",
-	colorLight : "#ffffff",
-	correctLevel : QRCode.CorrectLevel.H
-});
+    var QRCode = require('@luojianet/qrcode');
+    var qrcode = new QRCode(document.getElementById("qrcode"), {
+    	text: "http://jindo.dev.naver.com/collie",
+    	width: 128,
+    	height: 128,
+    	colorDark : "#000000",
+    	colorLight : "#ffffff",
+    	correctLevel : QRCode.CorrectLevel.H
+    });
 </script>
 ```
 
 and you can use some methods
 
-```
-qrcode.clear(); // clear the code.
-qrcode.makeCode("http://naver.com"); // make another code.
+```js
+    qrcode.clear(); // clear the code.
+    qrcode.makeCode("http://naver.com"); // make another code.
 ```
 
 ## Browser Compatibility
