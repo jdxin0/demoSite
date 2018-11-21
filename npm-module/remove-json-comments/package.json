@@ -1,0 +1,16 @@
+{
+  "name": "@luojianet/remove-json-comments",
+  "version": "1.0.3",
+  "description": "remove json comments",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "remove",
+    "json",
+    "comments"
+  ],
+  "author": "luojianet <997948809@163.com>",
+  "license": "ISC"
+}
