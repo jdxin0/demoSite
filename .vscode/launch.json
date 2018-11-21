@@ -7,6 +7,12 @@
         {
             "type": "node",
             "request": "launch",
+            "name": "demo2",
+            "program": "${workspaceFolder}/201811/fs-module/demo2.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
             "name": "webpack-demo6 test.js",
             "program": "${workspaceFolder}\\201810\\webpack\\demo6\\test.js"
         },
