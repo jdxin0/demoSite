@@ -31,5 +31,10 @@ module.exports = {
             "always"
         ],
         "no-console":["off"]
+    },
+    "globals": {
+        "$": true,
+        "app": true,
+        "Vue": true
     }
 };
