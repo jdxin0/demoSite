@@ -1,7 +1,7 @@
 ## demo
 * link
 
-    http://demo.xuliehaonet.com/201811/addone-demo/
+    http://demo.xuliehaonet.com/npm-module/addone-demo/
 * html
 ```html
 <!DOCTYPE html>
