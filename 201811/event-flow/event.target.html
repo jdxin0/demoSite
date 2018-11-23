@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>event.target</title>
+</head>
+
+<body>
+    <ul id="ul">ul
+        <li>li<a href="">a</a></li>
+        <li>li<a href="">a</a></li>
+        <li>li<a href="">a</a></li>
+    </ul>
+<script>
+var ul = document.getElementById('ul');
+ul.onclick = function(event) {
+    var tar = event.target;
+    var tagName = tar.nodeName.toLowerCase();
+    console.log('你点击了:' + tagName);
+    event.preventDefault();
+};
+</script>
+</body>
+
+</html>

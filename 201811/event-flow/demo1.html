@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冒泡</title>
+    <script type="text/javascript" src="/js/jquery-1.12.4.js"></script>
+</head>
+<body>
+    <!-- <p>结合JD和自己的项目经验，复盘一下初试问的问题，思考深度可以关注</p> -->
+    <div id="handleBtnClick3" style="border: 1px solid #111">
+        div outer
+        <div id="handleBtnClick2" style="border: 1px solid #222">
+            div inner
+            <a id="handleBtnClick1" style="border: 1px solid #333">
+                div inner inner
+                <button id="handleBtnClick0">click me</button>
+            </a>
+        </div>
+    </div>
+<script type="text/javascript">
+document.getElementById('handleBtnClick0').addEventListener('click',function(){
+    console.log('目标捕获阶段事件');
+},true);
+document.getElementById('handleBtnClick1').addEventListener('click',function(){
+    console.log('handleBtnClick1捕获阶段事件');
+},true);
+document.getElementById('handleBtnClick2').addEventListener('click',function(){
+    console.log('handleBtnClick2捕获阶段事件');
+},true);
+document.getElementById('handleBtnClick3').addEventListener('click',function(){
+    console.log('handleBtnClick3捕获阶段事件');
+},true);
+document.getElementById('handleBtnClick0').addEventListener('click',function(){
+    console.log('目标冒泡阶段事件');
+},false);
+document.getElementById('handleBtnClick1').addEventListener('click',function(){
+    console.log('handleBtnClick1冒泡阶段事件');
+},false);
+document.getElementById('handleBtnClick2').addEventListener('click',function(){
+    console.log('handleBtnClick2冒泡阶段事件');
+},false);
+document.getElementById('handleBtnClick3').addEventListener('click',function(){
+    console.log('handleBtnClick3冒泡阶段事件');
+},false);
+</script>
+</body>
+</html>
