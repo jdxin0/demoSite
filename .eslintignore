@@ -3,5 +3,6 @@
 # Ignore built files except build/index.js
 bundle.js
 build
+portal
 my-project
 *.vue
