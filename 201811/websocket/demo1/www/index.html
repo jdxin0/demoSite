@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <title>Welcome</title>
+    <script src="http://localhost:8080/socket.io/socket.io.js"></script>
     <script>
-        var server = io.connect('ws://localhost:3000');
+        var server = io.connect('ws://localhost:8080');
         // server.emit("say",'hello');
         server.on("reply",function(data){
             console.log(data);
@@ -15,6 +15,6 @@
     </script>
 </head>
 <body>
-    
+    Hello World!
 </body>
 </html>
