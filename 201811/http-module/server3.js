@@ -7,7 +7,8 @@ var server = http.createServer(function(req,res){
     fsLib.readFile(`www${req.url}`,function(err,data){
         if(err){
             // console.log(err);
-            res.write('404');
+            res.writeHead(404);
+            res.write('Not Found');
             res.end();
         }else{
             res.write(data);
