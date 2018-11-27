@@ -12,6 +12,7 @@
   "author": "luojianet <997948809@163.com>",
   "license": "ISC",
   "dependencies": {
+    "mysql": "^2.16.0",
     "socket.io": "^2.1.1"
   }
 }

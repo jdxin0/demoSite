@@ -1,0 +1,3 @@
+var url = require('url');
+var link = url.parse('https://www.baidu.com/s?wd=xsrf&rsv_spt=1&rsv_iqid=0xeb275bfd0000377c&issp=1&f=8&rsv_bp=1&rsv_idx=2&ie=utf-8&rqlang=cn&tn=baiduhome_pg&rsv_enter=1&inputT=5891&rsv_t=3b7fGKFhV2VFxccFU1CRK5PILmLERX%2FkOd7ZgRGzhQxC%2BJcSQpJf%2FmGrVIW%2FyDakKMXb&oq=ssf&rsv_pq=f881c26f00003cca&rsv_sug3=10&rsv_sug1=9&rsv_sug7=100&rsv_sug2=0&rsv_sug4=5891', true);
+console.log(link);
